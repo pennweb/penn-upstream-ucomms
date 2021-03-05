@@ -1,0 +1,79 @@
+.penn-priorities {
+	background: url(/themes/custom/penn_global/assets/img/blue-pattern-bg.png) repeat 50% 0;
+	padding: 70px 0;
+	min-height: 662px;
+	box-sizing: border-box;
+	overflow: hidden;
+
+	@media #{$large-up} {
+		background-color: #F7F7F7;
+		padding: 140px 0 70px;
+		background-repeat: repeat-x;
+	}
+
+	&__arrows {
+		position: absolute;
+		width: calc(100% - 20px);
+		max-width: 1600px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%);
+
+	}
+
+	.slick-track {
+
+		.slick-slide {
+			margin: 0 10px;
+
+			@media #{$tablet-up} {
+				img {
+					opacity: .5;
+					transition: $animation
+				}
+
+				&.slick-center {
+					img {
+						opacity: 1;
+					}
+				}
+			}
+
+			@media #{$tablet-up} {}
+
+			@media #{$large-up} {
+				margin: 0 20px;
+			}
+
+			@media #{$xlarge-up} {
+				margin: 0 40px;
+			}
+		}
+	}
+
+	.slick-dots {
+		bottom: -35px;
+
+		@media #{$large-down} {
+			li button::before {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+@media print {
+	.penn-priorities {
+		padding: 0;
+		min-height: 1px;
+
+		.slick-slide {
+			visibility: hidden;
+		}
+
+		.slick-center {
+			visibility: visible;
+		}
+
+	}
+}

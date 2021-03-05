@@ -1,0 +1,23 @@
+add penn entity entities:
+  title: 'Create new Penn Entity entities'
+
+administer penn entity entities:
+  title: 'Administer Penn Entity entities'
+  description: 'Allow to access the administration form to configure Penn Entity entities.'
+  restrict access: true
+
+delete penn entity entities:
+  title: 'Delete Penn Entity entities'
+
+edit penn entity entities:
+  title: 'Edit Penn Entity entities'
+
+view published penn entity entities:
+  title: 'View published Penn Entity entities'
+
+view unpublished penn entity entities:
+  title: 'View unpublished Penn Entity entities'
+
+view individual penn entity entities:
+  title: 'View individiual Penn Entity entities'
+

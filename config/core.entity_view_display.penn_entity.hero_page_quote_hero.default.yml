@@ -1,0 +1,58 @@
+uuid: 0673d6ef-61d3-4493-bf8b-4411eb17a1d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.hero_page_quote_hero.field_image
+    - field.field.penn_entity.hero_page_quote_hero.field_quote
+    - field.field.penn_entity.hero_page_quote_hero.field_quote_author
+    - field.field.penn_entity.hero_page_quote_hero.field_select_list
+    - penn_entity.penn_entity_type.hero_page_quote_hero
+  module:
+    - fences
+    - options
+id: penn_entity.hero_page_quote_hero.default
+targetEntityType: penn_entity
+bundle: hero_page_quote_hero
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: hero_page_hero
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_quote:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_quote_author:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_select_list:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden:
+  name: true

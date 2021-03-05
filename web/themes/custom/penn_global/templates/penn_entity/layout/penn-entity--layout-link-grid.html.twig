@@ -1,0 +1,31 @@
+<section id="linkGrid" class="link-grid">
+
+  {# Build the styles #}
+  <style>
+    {% for item in content.field_penn_entity_reference['#items'] %}
+      .link-grid__image--active.link-grid__image--{{item.entity.id.value}}, .link-grid__image--loading.link-grid__image--{{item.entity.id.value}}{
+        background-image: url({{ item.entity.field_image|view }});
+      }
+    {% endfor %}
+  </style>
+
+  <div class="contain">
+    <h2 class="link-grid__title">{{ content.field_title }}</h2>
+    <ul class="link-grid__items">
+      {{ content.field_penn_entity_reference }}
+    </ul>
+  </div>
+
+  {# Build the background divs #}
+  {% for item in content.field_penn_entity_reference['#items'] %}
+    {% if loop.first %}
+      <div class="link-grid__image link-grid__image--{{ item.entity.id.value }} link-grid__image--active link-grid__image--opacity"></div>
+      {# uncomment to reengage the rollover image switch functionality #}
+    {# {% else %}
+      <div class="link-grid__image link-grid__image--{{ item.entity.id.value }}"></div> #}
+    {% endif %}
+  {% endfor %}
+
+</section>
+
+{# background-image: url('{{ item.entity.field_image|view|render|trim }}'); #}

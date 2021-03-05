@@ -1,0 +1,10 @@
+{% set column_count = content.field_callout_column['#items']|length %}
+{% set column_class = column_count >= 2 ? 2 : 1 %}
+
+<div class="callout {{ content.field_background_color }} {{ content.field_margins }}">
+  <div class="{{ content.field_container_width }}">
+    <div class="callout__content callout__content--{{ column_class }}">
+      {{ content.field_callout_column }}
+    </div>
+  </div>
+</div>

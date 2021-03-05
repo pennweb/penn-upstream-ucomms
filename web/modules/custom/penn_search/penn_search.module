@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_theme
+ */ 
+function penn_search_theme($existing, $type, $theme, $path) {
+  return [
+    'penn_search' => [
+      'variables' => [
+        'penn_search_label' => NULL,
+        'penn_search_cx' => NULL,
+        'site_name' => NULL,
+        'search_terms' => NULL,
+        'search_pg_title' => NULL,
+        'search_pg_tagline' => NULL,
+        'search_query_parameter' => NULL,
+      ],
+    ],
+  ];
+}

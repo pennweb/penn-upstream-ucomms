@@ -1,0 +1,107 @@
+@mixin headings($lines:true) {
+	font-family: $serif;
+	color: $primary;
+	letter-spacing: 0;
+	position: relative;
+	font-weight: 400;
+
+	.bg-blue &,
+	.bg-red & {
+		color: #FFF;
+	}
+
+	@if $lines {
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -15px;
+			background: $primary;
+			opacity: .4;
+			width: 40px;
+			height: 4px;
+		}
+	}
+
+	@else {
+		margin-bottom: 0;
+	}
+}
+
+@mixin h1() {
+
+	font-family: $serif;
+	font-size: 4.5rem;
+	color: #000;
+	letter-spacing: 0;
+	line-height: 1.222222222;
+
+	position: relative;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: .65em;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -11px;
+		background: $red;
+		width: 40px;
+		height: 4px;
+	}
+
+	@media #{$large-up} {
+		font-size: 6rem;
+	}
+
+}
+
+@mixin h2($full:false) {
+	@if $full {
+		@include headings;
+	}
+
+	font-size: 3.5rem;
+	line-height: 1.2;
+
+	@media #{$large-up} {
+		font-size: 5rem;
+	}
+}
+
+@mixin h3($full:false) {
+	@if $full {
+		@include headings;
+	}
+
+	font-size:2.8rem;
+	line-height: 1.25;
+}
+
+@mixin h4($full:false) {
+	@if $full {
+		@include headings;
+	}
+
+	font-size:2.4rem;
+	line-height: 1.294117647;
+}
+
+@mixin h5($full:false) {
+	@if $full {
+		@include headings;
+	}
+
+	font-size:2.2rem;
+	line-height: 1.333333333;
+}
+
+@mixin h6($full:false) {
+	@if $full {
+		@include headings;
+	}
+
+	font-size:2.1rem;
+	line-height: 1.357142857;
+}

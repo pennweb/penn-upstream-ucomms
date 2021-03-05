@@ -1,0 +1,12 @@
+{# This is a slideshow for items > 1, else a static image #}
+{% set item_count = content.field_penn_entity_reference['#items'] | length %}
+{% set data_slider = item_count > 1 ? 'data-slider=gallery' : '' %}
+<div class="gallery-slider">
+  <div class="gallery" {{ data_slider }}>
+    {{ content.field_penn_entity_reference }}
+  </div>
+  <div class="gallery__navigation">
+    <div class="gallery__arrows"></div>
+    <div class="gallery__dots"></div>
+  </div>
+</div>

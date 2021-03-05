@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Increase the max length of entity names to 255 characters.
+ */
+function penn_entity_update_8901() {
+  // Change length of the name field.
+  $schema = Database::getConnection()->schema();
+  $schema->changeField('penn_entity', 'name', 'name', [
+    'length' => '255',
+    'not null' => TRUE,
+    'type' => 'varchar',
+  ]);
+}

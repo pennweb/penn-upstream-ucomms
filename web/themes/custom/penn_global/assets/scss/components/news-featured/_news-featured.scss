@@ -1,0 +1,160 @@
+.news-featured {
+	padding: 43px 0;
+
+	@media #{$large-up} {
+		padding: 90px 0;
+	}
+
+	&__grid {
+		@media #{$tablet-up} {
+			display: flex;
+		}
+	}
+
+	&__featured {
+		@media #{$tablet-up} {
+			flex: 0 1 46.48%;
+			width: 46.48%;
+			padding: 0 20px;
+			box-sizing: border-box;
+			border: 1px solid $gray-border;
+			border-width: 0 1px;
+		}
+	}
+
+	&__featured,
+	&__articles {
+		@media #{$tablet-up} {
+			.article-card {
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+
+					height: 1px;
+					background: $gray-border;
+				}
+			}
+		}
+	}
+
+	&__articles {
+		@media #{$tablet-up} {
+			flex: 0 1 53.52%;
+			width: 53.52%;
+			box-sizing: border-box;
+			border-right: 1px solid $gray-border;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.article-card {
+				padding-top: 20px;
+				padding-left: 20px;
+				padding-right: 20px;
+				flex: 0 1 50%;
+				width: 50%;
+				max-width: 50%;
+
+				&:first-child {
+					padding-top: 0;
+
+					+.article-card {
+						padding-top: 0;
+					}
+				}
+
+				&::before {
+					width: calc(100% - 40px);
+					left: 20px;
+				}
+
+				&:nth-child(even) {
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						height: 100%;
+						left: 0px;
+						width: 1px;
+						height: 100%;
+						background: $gray-border;
+					}
+				}
+			}
+
+			&--full {
+				flex: 0 1 100%;
+				width: 100%;
+				margin-top: 20px;
+
+				.article-card {
+					flex: 0 1 33.3%;
+					width: 33.3%;
+					max-width: 33.3%;
+
+
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						height: 100%;
+						left: 0px;
+						width: 1px;
+						height: 100%;
+						background: $gray-border;
+
+					}
+
+
+
+
+					&:first-child {
+						padding-top: 0;
+
+						+.article-card {
+							padding-top: 0;
+
+							+.article-card {
+								padding-top: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media #{$large-up} {
+			&--full {
+				.article-card {
+					&__image {
+						width: 100%;
+						max-width: 150%;
+					}
+				}
+			}
+		}
+	}
+
+	&__links {
+		padding: 10px 20px 0;
+		text-align: center;
+		flex: 0 1 100%;
+		width: 100%;
+
+		@media #{$tablet-up} {
+			padding-top: 40px;
+		}
+
+		.btn {
+			margin-top: 10px;
+		}
+	}
+
+}

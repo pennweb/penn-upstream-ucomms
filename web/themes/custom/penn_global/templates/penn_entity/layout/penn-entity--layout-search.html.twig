@@ -1,0 +1,22 @@
+{# /search is built by the penn_search module #}
+{# This entity is for arbitrarily embedding a search box on a page #}
+{% set heading_class = content.field_title_has_value or content.field_description_formatted_has_value ? 'page-heading page-heading--center' : '' %}
+<div class="layout--search {{ content.field_borders }} {{ content.field_background_color }}">
+  <div class="wysiwyg contain {{ content.field_padding }} {{ heading_class }} "> 
+    {{ content.field_title }}
+    {{ content.field_description_formatted }}
+  <form class="search__form" action="/search" data-drupal-form-fields="keywords">
+    <label class="search__label" for="keywords">Search</label>
+    <div class="search__row">
+      <input id="keywords" type="text" class="search__input" name="terms" placeholder="" value="">
+      <button type="submit" class="search__button">
+        <span class="a11y">Search</span>
+        <svg width="20" height="16">
+          <use xlink:href="#icon-search" href="#icon-search"></use>
+        </svg>
+      </button>
+    </div>
+  </form>
+</div>
+</div>
+

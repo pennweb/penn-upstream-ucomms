@@ -1,0 +1,202 @@
+.nav {
+	&--secondary {
+		margin-top: 20px;
+		transform: translate3d(0, 0, 0);
+
+		@media #{$large-up} {
+			position: absolute;
+			right: 20px;
+			top: 30px;
+			margin-top: 0;
+		}
+
+		@media #{$xxlarge-up} {
+			.header:not(.header--extended) & {
+				top: calc(-100% - 4.5px);
+
+				@-moz-document url-prefix() {
+					top: calc(-100% - 5px);
+				}
+
+				pointer-events: initial;
+			}
+
+		}
+
+		@media screen and (min-width: 1640px) {
+			right: 0;
+		}
+
+		>.nav__menu {
+			border-bottom: 1px solid $gray-border;
+
+			@media #{$large-up} {
+				display: none;
+				position: absolute;
+				right: 140px;
+				top: 100%;
+				width: 100%;
+			}
+
+			.nav__menu-item:last-child {
+
+				.nav__menu-link {
+					border: 0;
+				}
+			}
+		}
+
+		.nav__menu-link {
+			font-size: 1.6rem;
+			font-weight: normal;
+			border: 0;
+			padding-top: 14px;
+			padding-bottom: 14px;
+
+			@media #{$large-up} {
+				padding-left: 0;
+				padding-right: 0;
+				font-size: 1.3rem;
+				line-height: 1.2;
+				color: $text-color;
+			}
+
+			&:hover,
+			&:focus {
+				color: $red;
+			}
+
+			&:focus {
+				outline: 1px dotted;
+			}
+		}
+
+
+
+		.btn {
+			margin: 30px 0 30px 30px;
+
+			@media #{$large-up} {
+				margin: 0;
+
+				.keyboard--focus & {
+					&:focus {
+						outline: 1px dotted #fff;
+					}
+				}
+			}
+		}
+
+		.header__toggle-btn--search {
+			@media #{$large-down} {
+				display: none;
+			}
+		}
+	}
+
+	&-dropdown {
+		@media #{$large-up} {
+			position: absolute;
+			right: 140px;
+			min-width: 140px;
+			border: 5px solid transparent;
+
+			&--active {
+				background: #FFF;
+				border-color: $gray-border;
+
+				.nav-dropdown__menu {
+					display: block;
+				}
+
+				.nav-dropdown__toggle-btn {
+					color: $primary;
+
+					&::after {
+						display: block;
+					}
+
+					.headroom--top & {
+						.homepage & {
+							color: $primary;
+
+							svg {
+								fill: $primary;
+							}
+						}
+					}
+
+					svg {
+						transform: rotate(0deg);
+						fill: $primary;
+					}
+				}
+			}
+
+		}
+
+		&__toggle-btn {
+			display: none;
+
+			@media #{$large-up} {
+				display: block;
+				padding: 15px;
+				font-size: 1.2rem;
+				text-transform: uppercase;
+				letter-spacing: 1.8px;
+				font-weight: 700;
+				color: $primary;
+				position: relative;
+				width: 100%;
+				text-align: left;
+
+				&:focus {
+					outline: 1px dotted;
+
+					.homepage.keyboard--focus & {
+						outline: 1px dotted #fff;
+					}
+				}
+
+				.headroom--top & {
+					.homepage & {
+						color: #fff;
+
+						svg {
+							fill: #fff;
+
+						}
+					}
+				}
+
+				svg {
+					position: absolute;
+					top: 0;
+					height: 100%;
+					right: 15px;
+					fill: $primary;
+					transform: rotate(180deg);
+
+				}
+
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					height: 1px;
+					width: calc(100% - 30px);
+					left: 15px;
+					background: $gray-border;
+					display: none;
+				}
+			}
+		}
+
+		&__menu {
+			@media #{$large-up} {
+				display: none;
+				padding: 0 15px 10px;
+			}
+		}
+	}
+}

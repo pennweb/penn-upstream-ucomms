@@ -1,0 +1,49 @@
+.accordion-columns {
+	&__content {
+		@media #{$tablet-up} {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -20px;
+		}
+	}
+
+	&__col {
+		@media #{$tablet-up} {
+
+			.accordion-columns__content--2 & {
+				flex: 0 1 calc(50% - 40px);
+				margin: 0 20px;
+
+				@include ie11() {
+					width: calc(50% - 40px);
+				}
+			}
+
+			.accordion-columns__content--3 & {
+				margin: 0 20px;
+				width: 100%;
+			}
+		}
+
+		@media #{$medium-up} {
+			.accordion-columns__content--3 & {
+				flex: 0 1 calc(33% - 40px);
+				margin: 0 20px;
+
+				@include ie11() {
+					width: calc(33% - 40px);
+				}
+			}
+		}
+	}
+
+	&__title {
+		@include headings($lines:false);
+		padding-bottom: 20px;
+		border-bottom: 1px solid $gray-border;
+
+		@media #{$tablet-up} {
+			font-size: 3rem;
+		}
+	}
+}

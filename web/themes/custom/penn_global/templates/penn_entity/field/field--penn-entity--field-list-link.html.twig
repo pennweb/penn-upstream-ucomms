@@ -1,0 +1,5 @@
+{% for item in items %}
+  <li class="link-list__item">
+    <a href="{{ item.content['#url'] }}" class="link-list__link">{{ item.content['#title'] }}</a>
+  </li>
+{% endfor %}

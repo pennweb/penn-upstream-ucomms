@@ -1,0 +1,24 @@
+name: Penn Global
+type: theme
+description: 'Penn Global Theme'
+package: Other
+core: 8.x
+core_version_requirement: ^8 || ^9
+ckeditor_stylesheets:
+  - assets/dist/site.css
+  # - assets/dist/site.js
+libraries:
+  - penn_global/global-styling
+  - penn_global/global-scripts
+ 
+base theme: false
+
+regions:
+  alert: Alert
+  header: Header
+  prefix: Main Prefix
+  filters: Filters
+  content: Content
+  suffix: Main Suffix
+  footer: Footer
+  hidden: Hidden

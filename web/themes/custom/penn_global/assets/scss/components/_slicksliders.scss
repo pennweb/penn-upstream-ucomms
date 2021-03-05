@@ -1,0 +1,171 @@
+.slick-track {
+	display: flex;
+	align-items: stretch;
+
+	.slick-slide {
+		float: none;
+		height: auto;
+		position: relative;
+	}
+
+	.slick-active {
+		outline: none;
+	}
+}
+
+[data-slider="three-across"] {
+	.slick-slide {
+		border-right: 1px solid $gray-border;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
+
+.slick-dots {
+	bottom: -60px;
+	left: 0;
+
+	li {
+		width: 30px;
+		height: 30px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		button {
+			position: relative;
+			width: 30px;
+			height: 30px;
+
+			&::before {
+				height: 8px;
+				width: 8px;
+				border-radius: 100%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: $red;
+				content: '';
+				opacity: 1;
+
+				.bg-red &,
+				.bg-blue & {
+					background: #fff;
+				}
+			}
+		}
+
+		&.slick-active {
+			button::before {
+				height: 12px;
+				width: 12px;
+			}
+		}
+	}
+}
+
+@include slick-arrows();
+
+[data-slider="three-across-cards"] {
+	$tac: -55px;
+	$tac2: -65px;
+
+	@media #{$tablet-up} {
+		padding: 0 55px
+	}
+
+	@media #{$xxlarge-up} {
+		padding: 0px
+	}
+
+	.slick-dots {
+		bottom: 0;
+	}
+
+	.slick-prev,
+	.slick-next {
+		@media #{$tablet-down} {
+			display: none !important;
+		}
+
+		transform: scale(.8);
+
+		@media #{$xxlarge-up} {
+			transform: translate(0, -50%) scale(.8);
+		}
+
+		@media (min-width:1500px) {
+			transform: translate(0, -50%);
+		}
+	}
+
+	@media #{$xxlarge-up} {
+		.slick-prev {
+			left: #{$tac};
+		}
+
+		.slick-next {
+			right: #{$tac};
+		}
+	}
+
+	@media (min-width:1500px) {
+		.slick-prev {
+			left: #{$tac2};
+		}
+
+		.slick-next {
+			right: #{$tac2};
+
+		}
+	}
+}
+
+.slick-dotted.slick-slider {
+	padding-bottom: 20px;
+}
+
+
+[data-slider="gallery"] {
+	.slick-track {
+		display: block;
+
+		.slick-slide {
+			float: left;
+			height: 100%;
+			min-height: 1px;
+
+		}
+	}
+}
+
+@media print {
+
+	.slick-arrow,
+	.gallery-card__buttons {
+		display: none !important;
+	}
+
+	[data-slider="gallery"] {
+		.slick-slide {
+			visibility: hidden;
+		}
+
+		.slick-current {
+			visibility: visible;
+		}
+	}
+
+	.slick-list {
+		height: auto !important;
+	}
+
+}

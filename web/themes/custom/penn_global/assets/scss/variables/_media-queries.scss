@@ -1,0 +1,53 @@
+// Media queries
+$mq-xsmall: 0;
+$mq-small: 640;
+$mq-tablet: 768;
+$mq-medium: 960;
+$mq-large: 1024;
+$mq-xlarge: 1200;
+$mq-xxlarge: 1400;
+$mq-xxxlarge: 1920;
+//
+//
+$small-up: "(min-width: #{$mq-small}px)";
+$tablet-up: "(min-width: #{$mq-tablet}px)";
+$medium-up: "(min-width: #{$mq-medium}px)";
+$large-up: "(min-width: #{$mq-large}px)";
+$post-tablet: "(min-width: #{$mq-large + 1}px)";
+$xlarge-up: "(min-width: #{$mq-xlarge}px)";
+$xxlarge-up: "(min-width: #{$mq-xxlarge}px)";
+$xxxlarge-up: "(min-width: #{$mq-xxxlarge}px)";
+//
+//
+$small-down: "(max-width: #{$mq-small - 1}px)";
+$tablet-down: "(max-width: #{$mq-tablet - 1}px)";
+$medium-down: "(max-width: #{$mq-medium - 1}px)";
+$large-down: "(max-width: #{$mq-large - 1}px)";
+$xlarge-down: "(max-width: #{$mq-xlarge - 1}px)";
+$xxlarge-down: "(max-width: #{$mq-xxlarge - 1}px)";
+$xxxlarge-down: "(max-width: #{$mq-xxxlarge - 1}px)";
+//
+//
+$xsmall-only: "(min-width: #{$mq-xsmall}px) and (max-width: #{$mq-small - 1}px)";
+$small-only: "(min-width: #{$mq-small}px)  and (max-width: #{$mq-medium - 1}px)";
+$tablet-only: "(min-width: #{$mq-tablet}px) and (max-width: #{$mq-large - 1}px)";
+$medium-only: "(min-width: #{$mq-medium}px) and (max-width: #{$mq-large - 1}px)";
+$large-only: "(min-width: #{$mq-large}px)  and (max-width: #{$mq-xlarge - 1}px)";
+$xlarge-only: "(min-width: #{$mq-xlarge}px)  and (max-width: #{$mq-xxlarge - 1}px)";
+$xxlarge-only: "(min-width: #{$mq-xxlarge}px)  and (max-width: #{$mq-xxxlarge - 1}px)";
+$xxxlarge-only: $xxxlarge-up;
+//
+//
+$max-width: #{mq-xlarge};
+//
+//https://dev.to/mario/lots-of-fun-with-hover-css-selectors-on-mobile-devices-3kh6
+$coarse-pointer: "(-moz-touch-enabled: 1), (pointer: coarse)";
+$fine-pointer: "(-moz-touch-enabled: 0), (pointer: fine)";
+//
+//
+$admin-bar-mobile: "( min-width: 0px ) and ( max-width: 600px )";
+$admin-bar-tablet: "( min-width: 601px ) and ( max-width: 781px )";
+$admin-bar-desktop: "( min-width: 782px )"; //
+//
+//IE 11 only fix
+$ie11: "screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none)";

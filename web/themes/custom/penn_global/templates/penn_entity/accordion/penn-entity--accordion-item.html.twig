@@ -1,0 +1,27 @@
+{% set entity_id = content.penn_entity.id() %}
+<article class="js-wikit-accordion__item">
+  <div class="js-wikit-accordion__wrap">
+    <h3 class="js-wikit-accordion__heading">
+      <button aria-expanded="false" class="js-wikit-accordion__trigger" aria-controls="accordion-id-{{ entity_id }}" id="accordion-id-{{ entity_id }}-id">
+        <span class="js-wikit-accordion__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewbox="0 0 14 9">
+            <g>
+              <g>
+                <path fill="none" class="strok" stroke-linecap="round" stroke-miterlimit="20" stroke-width="2.1" d="M1 1v0l6 6v0l6-6v0"></path>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="js-wikit-accordion__title">
+          {{ content.field_title }}
+        </span>
+      </button>
+    </h3>
+    <div id="accordion-id-{{ entity_id }}" role="region" aria-labelledby="accordion-id-{{ entity_id }}-id" class="js-wikit-accordion__panel ">
+      <div class="js-wikit-accordion__panel-content">
+        {{ content.field_description_formatted }}
+        {# {{ content.field_button_link }} #}
+      </div>
+    </div>
+  </div>
+</article>

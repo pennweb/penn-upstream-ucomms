@@ -1,0 +1,14 @@
+penn_search.settings:
+  type: mapping
+  label: Settings
+  mapping:
+    penn_search_label:
+      type: string
+    penn_search_cx:
+      type: string
+    search_page_title:
+      type: string
+    search_page_tagline:
+      type: string
+    search_query_parameter:
+      type: string

@@ -1,0 +1,23 @@
+// FONTS
+
+$sans: 'Roboto',
+Helvetica,
+Arial,
+sans-serif;
+
+$serif:'EB Garamond',
+serif;
+// Google Fonts
+$meta: $sans;
+$font-stack-system: $sans;
+$base-font-family: $font-stack-system;
+
+$base-line-height: 26px;
+
+.font-sans {
+	font-family: $sans;
+}
+
+.font-serif {
+	font-family: $serif;
+}

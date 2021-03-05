@@ -1,0 +1,74 @@
+.facts-sidebar {
+	border: 5px solid $gray-border;
+	background: #FFF;
+	padding: 32px 18px;
+
+	@media #{$large-up} {
+		padding: 32px 26px;
+	}
+
+	&__title {
+		font-family: $serif;
+		font-size: 2rem;
+		color: $blue;
+		position: relative;
+		font-weight: 400;
+		margin-bottom: 2.5rem;
+
+		@media #{$large-up} {
+			font-size: 2.4rem;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -9px;
+			background: $primary;
+			opacity: .2;
+			width: 20px;
+			height: 3px;
+		}
+	}
+
+	p {
+		font-family: $sans;
+		font-size: 1.4rem;
+		color: $text-color;
+		line-height: 2;
+
+		@media #{$large-up} {
+			font-size: 1.7rem;
+			line-height: 1.647058824;
+		}
+	}
+
+	&__facts {
+		margin-top: 5.5rem;
+	}
+
+	.fact__figure {
+		text-align: center;
+		margin-bottom: 3.7rem;
+	}
+
+	.fact__title {
+		font-family: $serif;
+		font-size: 3.5rem;
+		color: $blue;
+		line-height: 1.142857143;
+		margin-bottom: 1.3rem;
+	}
+}
+
+@media print {
+	.facts-sidebar__facts {
+		display: flex;
+		flex-wrap: wrap;
+
+		.fact__figure {
+			flex: 0 1 50%;
+			width: 50%;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+administer_penn_search:
+  title: 'Administer Penn Search'
+  description: 'Grants access to the Penn Search Administration page.'
+  'restrict access': true
+use_penn_search:
+  title: 'Use Penn Search'
+  description: 'Grants access to view the Penn Search results page.'

@@ -1,0 +1,51 @@
+.fact-list {
+
+	@media #{$large-down} {
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		font-family: $serif;
+		font-weight: 400;
+		font-size: 2.4rem;
+		line-height: 1.3;
+
+		color: #011F5B;
+		letter-spacing: 0;
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__fact {
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		position: relative;
+		z-index: 2;
+		opacity: 0.68;
+		font-size: 1.6rem;
+		color: $blue;
+		padding: 0 0 15px;
+		border-bottom: 1px solid #979797;
+		margin-bottom: 15px;
+
+		&:last-child {
+			border-bottom: none
+		}
+	}
+
+	&__text {
+		flex: 0 1 68%;
+	}
+
+	&__number {
+		flex: 0 1 30%;
+		text-align: right;
+	}
+
+}

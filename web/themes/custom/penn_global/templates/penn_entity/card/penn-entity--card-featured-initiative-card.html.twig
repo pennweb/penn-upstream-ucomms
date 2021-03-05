@@ -1,0 +1,22 @@
+<article class="featured-initiative-card {{ content.field_fi_background_color }}">
+  <div class="featured-initiative-card__wrap">
+  {% if content.field_subtitle_has_value %}
+  <h3 class="featured-initiative-card__category">{{ content.field_subtitle }}</h3>
+  {% endif %}
+    <h2 class="featured-initiative-card__title">
+      <a href="{{ content.field_link }}" class="featured-initiative-card__title__link">
+      {# Component can have an image or text title #}
+      {% set image_title = render_var(content.field_image_title) %}
+        {% if image_title is not empty %}
+          <img src="{{ content.field_image_title }}" alt="{{ content.field_title }}" class="featured-initiative-card__image" aria-hidden="true"/>
+          <span class="a11y">{{ content.field_title }}</span>
+        {% else %}
+          {{ content.field_title }}
+        {% endif %}
+      </a>
+    </h2>
+    {{ content.field_description }}
+    {{ content.field_button_link }}
+  </div>
+</article>
+  

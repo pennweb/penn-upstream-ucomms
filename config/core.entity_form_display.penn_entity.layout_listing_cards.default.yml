@@ -1,0 +1,97 @@
+uuid: e7cefba7-f438-4a93-9231-6385b56708d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_listing_cards.field_background_color
+    - field.field.penn_entity.layout_listing_cards.field_borders
+    - field.field.penn_entity.layout_listing_cards.field_container_width
+    - field.field.penn_entity.layout_listing_cards.field_description_formatted
+    - field.field.penn_entity.layout_listing_cards.field_margins
+    - field.field.penn_entity.layout_listing_cards.field_padding
+    - field.field.penn_entity.layout_listing_cards.field_penn_entity_reference
+    - field.field.penn_entity.layout_listing_cards.field_title
+    - penn_entity.penn_entity_type.layout_listing_cards
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - text
+id: penn_entity.layout_listing_cards.default
+targetEntityType: penn_entity
+bundle: layout_listing_cards
+mode: default
+content:
+  field_background_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_borders:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_container_width:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_description_formatted:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_margins:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_padding:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_penn_entity_reference:
+    weight: 8
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Listing Card'
+      label_plural: 'Listing Cards'
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      revision: false
+      collapsible: false
+      collapsed: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

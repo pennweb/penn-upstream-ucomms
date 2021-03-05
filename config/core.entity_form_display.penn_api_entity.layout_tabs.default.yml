@@ -1,0 +1,84 @@
+uuid: 22b641c4-9430-4123-9f20-4d5ea575c9ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_api_entity.layout_tabs.field_background_color
+    - field.field.penn_api_entity.layout_tabs.field_description_formatted
+    - field.field.penn_api_entity.layout_tabs.field_entity_reference
+    - field.field.penn_api_entity.layout_tabs.field_margins
+    - field.field.penn_api_entity.layout_tabs.field_padding
+    - field.field.penn_api_entity.layout_tabs.field_title
+    - penn_api_entity.penn_api_entity_type.layout_tabs
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - text
+id: penn_api_entity.layout_tabs.default
+targetEntityType: penn_api_entity
+bundle: layout_tabs
+mode: default
+content:
+  field_background_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_description_formatted:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_entity_reference:
+    weight: 6
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Tab
+      label_plural: Tabs
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      revision: false
+      collapsible: false
+      collapsed: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_margins:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_padding:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true

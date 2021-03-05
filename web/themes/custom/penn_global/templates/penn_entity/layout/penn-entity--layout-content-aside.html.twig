@@ -1,0 +1,16 @@
+<section class="content-aside {{ content.field_margins }} {{ content.field_borders }}  {{ content.field_background_color }}">
+  <div class="contain {{content.field_padding }} content-aside__flex">
+    {{ content.field_title }}
+    <div class="content-aside__content">
+      {# Content #}
+      <div class="wysiwyg">
+        {{ content.field_wysiwyg }}
+      </div>
+    </div>
+    <div
+      class="content-aside__aside">
+      {# Aside #}
+      {{ content.field_penn_entity_reference }}
+    </div>
+  </div>
+</section>

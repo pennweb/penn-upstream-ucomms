@@ -1,0 +1,151 @@
+.upcoming-events {
+	padding: 61px 0;
+
+	@media #{$large-up} {
+		padding: 90px 0;
+		overflow: hidden;
+	}
+
+	&__grid {
+		margin-right: -20px;
+
+		@media #{$tablet-up} {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@media #{$large-up} {
+			margin: 0 -20px;
+		}
+
+		@media screen and (min-width:1335px) {
+			margin: 0 -30px;
+		}
+	}
+
+	&__header {
+		@media #{$large-up} {
+			padding: 0 30px;
+		}
+	}
+
+	.slick-list {
+		margin-left: -15px;
+	}
+
+	.slick-slide::after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 14px;
+		width: calc(100% - 28px);
+		height: 1px;
+		background: $gray-border;
+	}
+
+	.slick-active::after {
+		background: $red;
+		height: 2px;
+	}
+
+	@media #{$large-up} {
+		.event-card {
+			border-right: 1px solid $gray-border;
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+
+	.link {
+		display: inline-block;
+		margin-top: 50px;
+
+		@media #{$large-down} {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&--horizontal {
+
+		.upcoming-events__button-small {
+			@media #{$tablet-up} {
+				display: none;
+			}
+		}
+
+		@media #{$large-up} {
+			.contain {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.section-header {
+				flex: 0 1 300px;
+				border: 1px solid blue;
+			}
+
+			.upcoming-events__content {
+				flex: 0 1 calc(100% - 320px);
+			}
+
+		}
+
+		[data-slider="three-across"] .slick-slide {
+			border-right: none;
+		}
+
+		.slick-slide::after {
+			display: none;
+		}
+
+		.upcoming-events__grid {
+			margin: 0 !important;
+
+			@media #{$tablet-up} {
+				justify-content: space-between;
+
+				.event-card {
+					flex: 0 1 31.58%;
+					width: 31.58%;
+				}
+			}
+		}
+
+		.event-card {
+			border-right: none;
+			margin-bottom: 25px;
+			padding: 95px 30px 20px;
+
+			&__title {
+				margin-bottom: 5px;
+			}
+
+			&--no-image {
+				&::before {
+					left: 0;
+					width: 100%
+				}
+			}
+		}
+	}
+}
+
+@media print {
+	.upcoming-events__grid {
+		display: flex;
+		flex-wrap: wrap;
+
+		.event-card {
+			flex: 0 1 50%;
+		}
+	}
+
+	.upcoming-events .link {
+		display: none;
+	}
+}

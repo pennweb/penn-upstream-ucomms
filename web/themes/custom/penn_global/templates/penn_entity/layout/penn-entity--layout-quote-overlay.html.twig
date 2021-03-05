@@ -1,0 +1,13 @@
+<div class="quote-overlay {{ content.field_padding }} {{ content.field_borders }}">
+  <div class="quote-overlay__figure">
+    {% if content.field_image|render is not empty %}
+      <picture class="quote-overlay__picture {{ content.field_quote_background_color }}">
+        {{ content.field_image }}
+      </picture>
+    {% endif %}
+    <blockquote class="quote-overlay__content">
+      <p>{{ content.field_quote }}</p>
+      <cite>{{ content.field_quote_author }}</cite>
+    </blockquote>
+  </div>
+</div>

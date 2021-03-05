@@ -1,0 +1,17 @@
+{# content.left_aligned, content.field_title_has_value: see penn_entity_preprocess_penn_entity #}
+{% set facts__25 = content.left_aligned ? 'facts--25' : '' %}
+{% set __small = content.left_aligned ? '--small' : '' %}
+
+<section class="facts {{ facts__25 }} {{ content.field_borders }}">
+  <div class="contain">
+    {% if content.field_title_has_value %}
+      <header class="section-header section-header--centered{{ __small }}">
+        <h2 class="section-header__title">{{ content.field_title }}</h2>
+      </header>
+    {% endif %}
+    <div class="facts__wrap">
+      {{ content.field_penn_entity_reference }}
+    </div>
+    {{ content.field_button_link }}
+  </div>
+</section>

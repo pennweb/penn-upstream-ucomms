@@ -1,0 +1,77 @@
+<section class="{{ content.field_borders }} {{ content.field_margins }} {{ content.field_padding }} {{content.field_background_color }}">
+  <div class="contain contain--sm">
+    {% if content.field_title_has_value or content.field_description_formatted_has_value %}
+      <header class="section-header section-header--centered {{ content.section_header_class }}">
+        <h2 class="section-header__title">{{ content.field_title }}</h2>
+        {{ content.field_description_formatted }}
+      </header>
+    {% endif %}
+    <div class="image-slider" data-slider="single-image">
+      {% set total_slides = content.field_penn_entity_reference['#items']|length %}
+      {% for item in content.field_penn_entity_reference['#items']   %}
+        <article class="image-slider-card">
+          <div class="image-slider-card__image-contain">
+            <img src="{{ item.entity.field_image.entity.field_media_image.entity.fileuri|image_style('image_slider_card_3x2') }}" alt = "{{ item.entity.field_image.entity.field_media_image.alt }}" class="image-slider-card__image">
+            <div class="image-slider-card__controls">
+              <div class="image-slider-card__numbers">
+                <span class="image-slider-card__current">
+                  {{ loop.index }}
+                </span>/<span class="image-slider-card__total">
+                  {{ total_slides }}
+                </span>
+              </div>
+              <div class="image-slider-card__buttons">
+                <button type="button" class="image-slider-card__button" data-direction="prev">
+                  <span class="a11y">Previous</span>
+                  <span class="image-slider-card__button__svg" aria-hidden="true">
+                    <svg width="10px" height="14px" viewbox="0 0 10 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-991.000000, -4851.000000)" class="fill" fill-rule="nonzero">
+                          <g transform="translate(-223.000000, 4319.000000)">
+                            <g transform="translate(1219.000000, 539.000000) scale(-1, 1) translate(-1219.000000, -539.000000) translate(1214.000000, 532.000000)">
+                              <polygon points="0.492614108 14 0 13.3307884 6.313361 7.01742739 0 0.669211618 0.492614108 0 9.94522822 6.98257261"></polygon>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </button>
+                <button type="button" class="image-slider-card__button" data-direction="next">
+                  <span class="a11y">Next</span>
+                  <span class="image-slider-card__button__svg" aria-hidden="true">
+                    <svg width="10px" height="14px" viewbox="0 0 10 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-991.000000, -4851.000000)" class="fill" fill-rule="nonzero">
+                          <g transform="translate(-223.000000, 4319.000000)">
+                            <g transform="translate(1219.000000, 539.000000) scale(-1, 1) translate(-1219.000000, -539.000000) translate(1214.000000, 532.000000)">
+                              <polygon points="0.492614108 14 0 13.3307884 6.313361 7.01742739 0 0.669211618 0.492614108 0 9.94522822 6.98257261"></polygon>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="image-slider-card__content">
+            <span class="image-slider-card__caption">{{ item.entity.field_caption.value }}</span>
+            {% if item.entity.field_link.value is not empty %}
+              <h3 class="image-slider-card__title">
+                <a href="{{ item.entity.field_link.0.uri }}" class="image-slider-card__title__link">{{ item.entity.field_link.0.title }}</a>
+              </h3>
+            {% endif %}
+            {% if item.entity.field_description_formatted.value is not empty %}
+              <div class="wysiwyg">
+              {{ item.entity.field_description_formatted.value|raw }}
+              </div>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+      {# {{ content.field_penn_entity_reference }} #}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+uuid: 332649f7-ee0b-4f3c-a695-1e8a4c42ae4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_contact_information.field_contact_background_color
+    - field.field.penn_entity.layout_contact_information.field_container_width
+    - field.field.penn_entity.layout_contact_information.field_padding
+    - field.field.penn_entity.layout_contact_information.field_penn_entity_reference
+    - penn_entity.penn_entity_type.layout_contact_information
+  module:
+    - options
+id: penn_entity.layout_contact_information.default
+targetEntityType: penn_entity
+bundle: layout_contact_information
+mode: default
+content:
+  field_contact_background_color:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_container_width:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_padding:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_penn_entity_reference:
+    weight: 3
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  name:
+    label: above
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

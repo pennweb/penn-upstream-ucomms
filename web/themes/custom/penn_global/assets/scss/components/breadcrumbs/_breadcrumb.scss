@@ -1,0 +1,50 @@
+.breadcrumb {
+	margin: 0 0 20px;
+	padding: 0;
+	list-style: none;
+	display: none;
+
+	@media #{$tablet-up} {
+		display: block;
+	}
+
+
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: 500;
+		font-family: $sans;
+		font-size: 1.2rem;
+		color: #767676;
+		letter-spacing: 1.6px;
+		text-transform: uppercase;
+	}
+
+	&__current {
+		color: #767676;
+	}
+
+	&__link,
+	a {
+		display: inline-block;
+		vertical-align: middle;
+		color: #767676;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			color: $red;
+		}
+
+	}
+
+	&__divide {
+		display: inline-block;
+		width: 20px;
+		text-align: center;
+		position: relative;
+		top: 1px;
+	}
+
+}

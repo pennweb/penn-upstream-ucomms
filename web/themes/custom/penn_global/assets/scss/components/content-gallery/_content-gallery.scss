@@ -1,0 +1,38 @@
+.content-gallery {
+	@include section-margin;
+
+	.js-wikit-tabbed & {
+		margin: 0;
+	}
+
+	&.bg-color {
+		@include section-padding;
+	}
+
+	&__flex {
+		@media #{$tablet-up} {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.js-wikit-tabbed & {
+				align-items: flex-start;
+			}
+		}
+	}
+
+
+	&__column {
+		@media #{$tablet-down} {
+			&:first-child {
+				margin-bottom: 40px
+			}
+		}
+
+		@media #{$tablet-up} {
+			flex: 0 1 46%;
+			width: 46%;
+			max-width: 46%;
+		}
+	}
+}

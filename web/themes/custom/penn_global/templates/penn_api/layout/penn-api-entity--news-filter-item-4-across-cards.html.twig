@@ -1,0 +1,31 @@
+{% if content.items|length > 0 %}
+{% set active = ("On" in content.field_active.0) ? ' filter-section--active filter-section--showing' : '' %}
+
+<div id="nf-{{ content.penn_api_entity.id() }}" class="filter-section{{active}}" aria-labelledby="filter-nf-{{ content.penn_api_entity.id() }}">
+
+<div class="grid__content grid__content--4 news-featured__grid">
+
+  {% for item in content.items %}
+    <article class="grid-card grid-card--plain">
+      <a href="{{ item.url }}" class="grid-card__image-link">
+        <picture>
+          <source srcset="{{ item.image }}" media="(min-width:1023px)">
+          <source srcset="{{ item.image }}" media="(min-width:640px)">
+          <img src="{{ item.image }}" alt="{{ item.image_alt }}" class="grid-card__image">
+        </picture>
+      </a>
+      <div class="grid-card__content">
+        <h3 class="grid-card__title">
+          <a href="{{ item.url }}" class="grid-card__link">
+            {{ item.title }}
+          </a>
+        </h3>
+        <p class="grid-card__date">{{ item.date|date("F j, Y") }}</p>
+      </div>
+    </article>
+  {% endfor %}
+
+</div>
+
+</div>
+{% endif %}

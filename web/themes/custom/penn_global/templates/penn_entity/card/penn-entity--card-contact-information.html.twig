@@ -1,0 +1,12 @@
+<article class="contact-information contact-information{{ content.field_contact_card_background }}">
+  <div class="contact-information__wrap">
+    <img src="/{{ directory ~ '/assets/img/svg/icon-contact-building' }}{{ content.field_contact_card_background }}{{'.svg'}}" alt="Contact Building Icon" class="contact-information__icon">
+    <h2 class="contact-information__title">
+      <a href="{{ content.field_link }}" class="contact-information__title__link">{{ content.field_title }}</a>
+    </h2>
+    {{ content.field_subtitle }}
+    <div class="contact-information__columns">
+      {{ content.field_contact_card_column }}
+    </div>
+  </div>
+</article>

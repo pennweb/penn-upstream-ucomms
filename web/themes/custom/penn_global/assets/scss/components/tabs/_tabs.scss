@@ -1,0 +1,141 @@
+.js-wikit-tabbed {
+	[role="tablist"]:not(.slick-dots) {
+		.js & {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			border-bottom: 1px solid $gray-border;
+			display: flex;
+			justify-content: center;
+			display: none;
+			margin-bottom: 50px;
+			text-align: center;
+
+			@media #{$large-up} {
+				display: block;
+
+			}
+		}
+	}
+
+	[role="presentation"]:not(.slick-active) {
+		.js & {
+			display: inline-block;
+		}
+	}
+
+	[role="tab"].tab-nav__link {
+		.js & {
+			text-decoration: none;
+			padding: 10px 20px;
+			display: block;
+			font-family: $sans;
+			font-weight: 500;
+			font-size: 1.8rem;
+			color: #000;
+			text-align: center;
+
+			&:hover {
+				color: $red;
+			}
+
+			&[aria-selected="true"] {
+				color: $red;
+				border-bottom: 2.5px solid $red;
+			}
+		}
+	}
+}
+
+.js {
+
+	.bg-blue,
+	.bg-red {
+		.js-wikit-tabbed [role="tab"].tab-nav__link {
+			color: #FFF;
+
+			&[aria-selected="true"] {
+
+				border-bottom-color: rgba(#FFF, .7);
+			}
+		}
+	}
+}
+
+
+.wikit-tab {
+	outline: none;
+
+
+	.no-js & {
+
+		&[hidden] {
+			display: block;
+
+		}
+	}
+}
+
+.accordion-toggle-tab {
+	font-family: $serif;
+	font-size: 2rem;
+	color: $blue;
+	letter-spacing: 0;
+	background: none;
+	border: none;
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid $gray-border;
+	text-align: left;
+	padding: 20px 0;
+
+	.bg-blue &,
+	.bg-red & {
+		color: #FFF;
+	}
+
+	@media #{$tablet-up} {
+		font-size: 2.4rem;
+	}
+
+	@media #{$large-up} {
+		display: none;
+	}
+
+	&__icon {
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		top: 0px;
+		width: 16px;
+		text-align: center;
+		margin-right: 8px;
+		pointer-events: none;
+
+		svg {
+			stroke: $red;
+			transition: all .2s ease;
+
+			.bg-blue &,
+			.bg-red & {
+				stroke: #FFF;
+			}
+		}
+
+	}
+
+	&[aria-expanded="true"] {
+		.accordion-toggle-tab__icon svg {
+			transform: rotate(180deg);
+		}
+
+		border-bottom: none;
+
+		+.wikit-tab {
+			@media #{$large-down} {
+				border-bottom: 1px solid $gray-border;
+			}
+		}
+	}
+
+}

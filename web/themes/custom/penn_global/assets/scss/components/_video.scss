@@ -1,0 +1,133 @@
+.video {
+	margin: 87px 0;
+	position: relative;
+
+	&-button {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		border: none;
+		background: none;
+
+		&__circle {
+			background: rgba(0, 0, 0, 0.23);
+			border: 2px solid rgba(255, 255, 255, 0.55);
+			border-radius: 100%;
+			width: 43px;
+			height: 43px;
+			position: absolute;
+			bottom: 34px;
+			left: 27px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			bottom: 0;
+			top: 0;
+			left: 0;
+			opacity: 0.6;
+			background-image: radial-gradient(50% 147%, rgba(0, 0, 0, 0.00) 48%, #000000 100%);
+		}
+
+		.icon {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&--pause {
+			.icon {
+				background: url(/themes/custom/penn_global/assets/img/svg/icon-pause.svg) no-repeat 50% 50%;
+			}
+		}
+
+		&--play {
+			.icon {
+				background: url(/themes/custom/penn_global/assets/img/svg/icon-play.svg) no-repeat 50% 50%;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			.video-button__circle {
+				background: rgba(#fff, .25);
+			}
+		}
+	}
+
+	&-meta {
+
+		margin-top: 10px;
+		position: absolute;
+		left: 10px;
+
+		@media screen and (min-width: 1315px) {
+			left: 0;
+		}
+
+
+
+		&__item {
+			@extend .link;
+			margin-right: 10px;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+
+		a.video-meta__item {
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&-title {
+		@include headings;
+		margin-top: 70px;
+		line-height: 1.4;
+		padding-left: 10px;
+
+		@media #{$tablet-up} {
+			font-size: 4rem;
+			margin-top: 50px;
+		}
+
+		@media screen and (min-width: 1315px) {
+			padding: 0;
+		}
+	}
+}
+
+@media print {
+	.video-button {
+
+		&::before,
+		&::after,
+		&__circle {
+			display: none;
+		}
+	}
+}

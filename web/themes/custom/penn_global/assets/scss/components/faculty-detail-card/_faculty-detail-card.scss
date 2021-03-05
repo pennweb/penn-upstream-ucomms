@@ -1,0 +1,27 @@
+.faculty-detail-card {
+	&__image {
+		display: block;
+		margin-bottom: 27px;
+	}
+
+	&__content {
+		p {
+			font-family: $sans;
+			font-size: 1.6rem;
+			color: #545B73;
+			letter-spacing: 0;
+			line-height: 1.5625;
+		}
+
+		a {
+			color: $blue;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+				;
+			}
+		}
+	}
+}

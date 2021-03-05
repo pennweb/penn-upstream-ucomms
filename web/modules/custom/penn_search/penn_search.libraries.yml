@@ -1,0 +1,6 @@
+penn_search:
+  version: 1.x
+  js:
+    js/penn_search.js: {}
+  dependencies:
+    - core/drupalSettings

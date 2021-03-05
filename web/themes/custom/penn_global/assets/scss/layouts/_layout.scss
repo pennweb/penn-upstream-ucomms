@@ -1,0 +1,126 @@
+#content {
+	padding-top: 78px;
+
+	.homepage & {
+		padding: 0;
+	}
+
+	@media #{$tablet-up} {
+		padding-top: 96px;
+	}
+
+	@media #{$large-up} {
+		padding-top: 149px;
+	}
+
+	@media #{$xlarge-up} {
+		padding-top: 157px;
+	}
+}
+
+.contain {
+	max-width: 1315px;
+	padding: 0 20px;
+	width: 100%;
+	margin: auto;
+
+	&--no-padding {
+		padding: 0;
+	}
+
+	&--sm {
+		max-width: 950px;
+
+		@media screen and (min-width: 990px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&--wide {
+		max-width: 1450px;
+	}
+
+	&--xl {
+		max-width: 1600px;
+
+		@media screen and (min-width: 1640px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.contain {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&.page-heading {
+		margin-top: 38px;
+		margin-bottom: 38px;
+
+		&.page-heading--center {
+			text-align: center;
+		}
+	}
+}
+
+.bg-color {
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		height: 1px;
+	}
+
+	+.bg-color {
+		@include section-margin-negative-top;
+	}
+
+	&--margin+.bg-color {
+		margin-top: 0;
+	}
+}
+
+.section-padding {
+	@include section-padding;
+}
+
+.section-margin {
+	@include section-margin;
+}
+
+.section-margin-top {
+	@include section-margin-top;
+}
+
+.section-margin-bottom {
+	@include section-margin-bottom;
+}
+
+.border-top {
+	@include border-top;
+}
+
+.border-bottom {
+	@include border-bottom;
+}
+
+.small-only {
+	@media #{$tablet-up} {
+		display: none
+	}
+}
+
+.medium-up {
+	@media #{$tablet-down} {
+		display: none;
+	}
+}
+
+.large-up {
+	@media #{$large-down} {
+		display: none;
+	}
+}

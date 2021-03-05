@@ -1,0 +1,19 @@
+{% set entity_id = content.penn_entity.id() %}
+<button type="button" class="accordion-toggle-tab" aria-controls="tabpanel-{{ entity_id }}">
+  <span class="accordion-toggle-tab__icon" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewbox="0 0 14 9">
+      <g>
+        <g><path fill="none" class="strok" stroke-linecap="round" stroke-miterlimit="20" stroke-width="2.1" d="M1 1v0l6 6v0l6-6v0"/></g>
+      </g>
+    </svg>
+  </span>
+  <span class="accordion-toggle-tab_text">{{ content.field_title }}</span>
+</button>
+
+<section class="wikit-tab" role="tabpanel" id="tabpanel-{{ entity_id }}" aria-labelledby="tab-{{ entity_id }}" tabindex="-1">
+
+  {# The tab content #}
+  {# Pretty much anything should be embeddable here #}
+  {{ content.field_penn_entity_reference }}
+
+</section>

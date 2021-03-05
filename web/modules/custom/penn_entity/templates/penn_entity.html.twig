@@ -1,0 +1,22 @@
+{#
+/**
+ * @file penn_entity.html.twig
+ * Default theme implementation to present Penn Entity data.
+ *
+ * This template is used when viewing Penn Entity pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_penn_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+{# <div{{ attributes.addClass('penn_entity') }}> #}
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+{# </div> #}

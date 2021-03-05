@@ -1,0 +1,14 @@
+penn_search.admin:
+  path: /admin/config/search/penn-search
+  defaults:
+    _title: 'Penn Search'
+    _form: \Drupal\penn_search\Form\PennSearchAdmin
+  requirements:
+    _permission: administer_penn_search
+penn_search.results:
+  path: /search
+  defaults:
+    _title: University of Pennsylvania Search Results
+    _controller: '\Drupal\penn_search\Controller\SearchResultsController::pennSearchResults'
+  requirements:
+    _permission: use_penn_search

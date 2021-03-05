@@ -1,0 +1,287 @@
+<?php
+
+use Drupal\image\Entity\ImageStyle;
+use Drupal\file\Entity\File;
+
+/**
+ * @file
+ * Functions to support theming in the penn_global theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function penn_global_preprocess_html(array &$variables) {
+  /* Add class to html tag */
+  //$variables['html_attributes']->addClass('no-js');
+
+  // Don't display the site name twice on the front page (and potentially others)
+  /*if (isset($variables['head_title_array']['title']) && isset($variables['head_title_array']['name']) && ($variables['head_title_array']['title'] == $variables['head_title_array']['name'])) {
+    $variables['head_title'] = $variables['head_title_array']['name'];
+  }*/
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function penn_global_page_attachments_alter(array &$page) {
+  // Tell IE to use latest rendering engine (not to use compatibility mode).
+  /*$ie_edge = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+    'http-equiv' => 'X-UA-Compatible',
+    'content' => 'IE=edge',
+    ],
+  ];
+  $page['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
+}
+
+/**
+ * Implements hook_preprocess_page() for page.html.twig.
+ */
+function penn_global_preprocess_page(array &$variables) {
+  // Get the search query parameter from penn_search module for the header search box
+  $penn_search_config = \Drupal::config('penn_search.settings');
+  $search_query_parameter = $penn_search_config->get('search_query_parameter');
+  if (!empty($search_query_parameter)) {
+    $variables['search_query_parameter'] = $search_query_parameter;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function penn_global_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function penn_global_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  /*$node = $variables['elements']['#node'];
+
+  if ($variables['elements']['#view_mode'] == "full") {
+
+  }*/
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for Block document templates.
+ */
+function penn_global_preprocess_block(array &$variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function penn_global_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  $element = $variables['element'];
+  $suggestions[] = 'field__' . $element['#entity_type'] . '__' . $element['#field_name'] . '__' . $element['#bundle'] . '__' . $element['#view_mode'];
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function penn_global_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
+  /*$element = $variables['element'];
+  if (isset($element['#attributes']['class']) && in_array('form-composite', $element['#attributes']['class'])) {
+    $suggestions[] = 'fieldset__form_composite';
+  }*/
+}
+
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function penn_global_theme_suggestions_container_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+
+  if (isset($element['#type']) && $element['#type'] == 'view') {
+    $suggestions[] = 'container__view__' . $element['#name'];
+    $suggestions[] = 'container__view__' . $element['#name'] . '__' . $element['#display_id'];
+  }
+
+  if (isset($element['#type']) && $element['#type'] == 'container' && isset($element['children']['#type'])) {
+    $suggestions[] = 'container__' . $element['children']['#type'];
+  }
+}
+/**
+ * Implements hook_preprocess_node().
+ */
+function penn_global_preprocess_node(array &$variables) {
+  // Default to turning off byline/submitted.
+  //$variables['display_submitted'] = FALSE;
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ */
+function penn_global_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function penn_global_preprocess_form(array &$variables) {
+  //$variables['attributes']['novalidate'] = 'novalidate';
+}
+
+/**
+ * Implements hook_preprocess_select().
+ */
+function penn_global_preprocess_select(array &$variables) {
+  //$variables['attributes']['class'][] = 'select-chosen';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function penn_global_preprocess_field(&$vars) {
+  if ($vars['field_type'] == 'entity_reference_revisions' 
+    && $vars['element']['#items']->getItemDefinition()->getSetting('target_type') == 'paragraph') {
+    foreach ($vars['items'] as $idx => $item) {
+      $vars['items'][$idx]['content']['#paragraph']->index = $idx;
+    }
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_details().
+ */
+function penn_global_preprocess_details(array &$variables) {
+  /*$variables['attributes']['class'][] = 'details';
+  $variables['summary_attributes']['class'] = 'summary';*/
+}
+
+/**
+ * Implements hook_theme_suggestions_details_alter().
+ */
+function penn_global_theme_suggestions_details_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_menu_local_task().
+ */
+function penn_global_preprocess_menu_local_task(array &$variables) {
+  //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
+}
+
+/**
+ * Implements template_preprocess_image().
+ */
+function penn_global_preprocess_image(&$vars) {
+  if ($vars['style_name'] == 'aside_testimonial_3x2') {
+    $vars['attributes']['class'][] = 'testimonial__image';
+  }
+  if ($vars['style_name'] == 'article_card_3x2') {
+    $vars['attributes']['class'][] = 'article-card__image';
+  }
+  if ($vars['style_name'] == 'card_3x2') {
+    $vars['attributes']['class'][] = 'card__image';
+  }
+  if ($vars['style_name'] == 'featured_story_mobile') {
+    $vars['attributes']['class'][] = 'featured-story__image';
+  }
+  if ($vars['style_name'] == 'gallery_card') {
+    $vars['attributes']['class'][] = 'gallery-card__image';
+  }
+  if ($vars['style_name'] == 'grid_card_landscape') {
+    $vars['attributes']['class'][] = 'grid-card__image';
+  }
+  if ($vars['style_name'] == 'grid_card_portrait') {
+    $vars['attributes']['class'][] = 'grid-card__image';
+  }
+  if ($vars['style_name'] == 'image_slider_card_3x2') {
+    $vars['attributes']['class'][] = 'image-slider-card__image';
+  }
+  if ($vars['style_name'] == 'listing_card_3x2') {
+    $vars['attributes']['class'][] = 'listing-card__image';
+  }
+  if ($vars['style_name'] == 'page_hero_1x1') {
+    $vars['attributes']['class'][] = 'page-header-hero__image';
+  }
+  if ($vars['style_name'] == 'priority_card_3x2') {
+    $vars['attributes']['class'][] = 'priority-card__image';
+  }
+  if ($vars['style_name'] == 'quote_1x1') {
+    $vars['attributes']['class'][] = 'quote__image';
+  }
+  if ($vars['style_name'] == 'quote_overlay_5x3') {
+    $vars['attributes']['class'][] = 'quote-overlay__image';
+  }
+  if ($vars['style_name'] == 'social_card_1x1') {
+    $vars['attributes']['class'][] = 'social-card__image';
+  }
+  if ($vars['style_name'] == 'video_modal_16x9') {
+    $vars['attributes']['class'][] = 'video-w-card__image';
+  }
+}
+
+function penn_global_preprocess_breadcrumb(&$variables) {
+  if ($variables['breadcrumb']) {
+    $request = \Drupal::request();
+    $route_match = \Drupal::routeMatch();
+    $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+    
+    if (!empty($page_title)) {
+      $variables['breadcrumb'][] = [
+        'text' => $page_title,
+      ];
+    }
+  }
+}
+
+function penn_global_preprocess_penn_entity(&$variables) {
+  $entity = $variables['content']['penn_entity'];
+
+  switch ($entity->bundle()) {
+    case 'hero_homepage':
+      if ($entity->field_image->count() > 0) {
+        $mediaEntity = $entity->field_image->referencedEntities()[0];
+        penn_global_fetch_image_style($mediaEntity->field_media_image->target_id, 'crop_5x3');
+      }
+      if ($entity->field_image_mobile->count() > 0) {
+        $mediaEntity = $entity->field_image_mobile->referencedEntities()[0];
+        penn_global_fetch_image_style($mediaEntity->field_media_image->target_id, 'crop_1x2');
+      }
+      break;
+    case 'hero_homepage_light_left':
+    case 'hero_homepage_light_right':
+      if ($entity->field_image->count() > 0) {
+        $mediaEntity = $entity->field_image->referencedEntities()[0];
+        penn_global_fetch_image_style($mediaEntity->field_media_image->target_id, 'crop_5x3');
+      }
+      break;
+    case 'link_grid_item':
+      if ($entity->field_image->count() > 0) {
+        $mediaEntity = $entity->field_image->referencedEntities()[0];
+        penn_global_fetch_image_style($mediaEntity->field_media_image->target_id, 'crop_2x1');
+      }
+      break;
+  }
+}
+
+/**
+ * Helper function that returns the URL to an image with a specific image style applied. If the image doesn't already exist, this function will generate it.
+ */
+function penn_global_fetch_image_style($image_id, $image_style) {
+  $style = ImageStyle::load($image_style);
+  if (!empty($image_id)) {
+    // Get the new image URL.
+    $photo_file = File::load($image_id);
+    $original_image_path = $photo_file->uri->value;
+    $new_image_url = $style->buildUrl($original_image_path);
+
+    // If the new image doesn't already exist, generate it.
+    $new_image_uri = $style->buildUri($original_image_path);
+    if (!file_exists($new_image_uri)) {
+      $style->createDerivative($original_image_path, $new_image_uri);
+    }
+  }
+  return $new_image_url;
+}

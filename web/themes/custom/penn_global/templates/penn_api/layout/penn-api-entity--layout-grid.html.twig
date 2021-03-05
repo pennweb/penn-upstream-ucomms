@@ -1,0 +1,36 @@
+{% if content.items|length > 0 %}
+<section class="grid {{ content.padding }} {{ content.field_borders }} {{content.field_background_color }}">
+  <div class="{{ content.field_container_width }}">
+    {% if content.field_title_has_value or content.field_description_formatted_has_value %}
+      <header class="section-header section-header--centered {{ content.section_header_class }}">
+        <h2 class="section-header__title">{{ content.field_title }}</h2>
+        {{ content.field_description_formatted }}
+      </header>
+    {% endif %}
+    <div class="grid__content {{ content.field_grid_layout }} news-featured__grid">
+      {% for item in content.items %}
+        <article class="grid-card grid-card--plain">
+          <a href="{{ item.url }}" class="grid-card__image-link">
+            <picture>
+              <source srcset="{{ item.image }}" media="(min-width:1023px)">
+              <source srcset="{{ item.image }}" media="(min-width:640px)">
+              <img src="{{ item.image }}" alt="{{ item.image_alt }}" class="grid-card__image">
+            </picture>
+          </a>
+          <div class="grid-card__content">
+            <h3 class="grid-card__title">
+              <a href="{{ item.url }}" class="grid-card__link">
+                {{ item.title }}
+              </a>
+            </h3>
+            <p class="grid-card__date">{{ item.date|date("F j, Y") }}</p>
+          </div>
+        </article>
+      {% endfor %}
+      <footer class="section-footer section-footer--centered">
+        {{ content.field_button_link }}
+      </footer>
+    </div>
+  </div>
+</section>
+{% endif %}

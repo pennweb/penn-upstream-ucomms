@@ -1,0 +1,8 @@
+<div class="fact-bar">
+  <p class="fact-bar__fact">
+    <span class="fact-bar__text">{{ content.field_description }}</span>
+    <span class="fact-bar__number">{{ content.field_title }}</span>
+  </p>
+  {% set percentage = render_var(content.field_percentage)|trim %}
+  <div class="fact-bar__bar" data-percentage="{{ percentage }}" ></div>
+</div>

@@ -1,0 +1,341 @@
+<?php
+
+/**
+ * @file
+ * Contains penn_entity.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function penn_entity_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+      // Main module help for the penn_entity module.
+    case 'help.page.penn_entity':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Creates the Penn Entity entity type') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+// function penn_entity_theme() {
+//   return [
+//     'penn_entity' => [
+//       'render element' => 'children',
+//     ],
+//   ];
+// }
+
+/**
+ * Implements hook_theme().
+ */
+function penn_entity_theme() {
+  $theme = [];
+  $theme['penn_entity'] = [
+    'render element' => 'elements',
+    'file' => 'penn_entity.page.inc',
+    'template' => 'penn_entity',
+  ];
+  $theme['penn_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'penn_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_preprocess_entity
+ * Generic Penn Entity preprocessor
+ * - Adds variables for use in Twig templates
+ */
+function penn_entity_preprocess_penn_entity(&$vars) {
+  if(isset($vars['elements']['#penn_entity']) ) {
+    $penn_entity = $vars['elements']['#penn_entity'];
+    $bundle = $penn_entity->bundle();
+
+    //Expose the Entity object to the templates
+    $vars['content']['penn_entity'] = $penn_entity;
+
+    //Set a <field>_has_value boolean for certain TEXT fields
+    //This is a helper to prevent having to render fields in twig templates when determing to hide/show
+    $fields = [
+      'field_title',
+      'field_description',
+      'field_description_formatted',
+      'field_subtitle',
+      'field_video_source_url',
+    ];
+    foreach($fields as $field) {
+      if($penn_entity->hasField($field) && !empty($penn_entity->get($field)->getString())) {
+        $vars['content'][$field . "_has_value"] = true;
+      }
+    }
+
+    //Fact Bars
+    if($bundle == 'layout_fact_bars') {
+      //Sanitize the total. This is used as a divisor so make sure it's not zero or empty.
+      $total = $penn_entity->get('field_total')->getString();
+      if(empty($total) || !is_numeric($total) || $total <= 0) {
+        $total = 1;
+      }
+      $vars['content']['total'] = $total;
+
+      //Sanitize the bar_scale. This is used as a multiplier.
+      $bar_scale = $penn_entity->get('field_bar_scale')->getString();
+      if(empty($bar_scale) || !is_numeric($bar_scale) || $bar_scale <= 0) {
+        $bar_scale = 1;
+      }
+      $vars['content']['bar_scale'] = $bar_scale;      
+    }
+
+    //Add a 'left-aligned' boolean for facts layout
+    if($bundle == 'layout_facts') {
+      $field_facts_style = $penn_entity->get('field_facts_style')->getString();
+      $vars['content']['left_aligned'] = $field_facts_style == 'left' ? true : false;
+    }
+
+    //Set appropriate header classes for entities with background colors. 
+    $bundles_with_background = [
+      'layout_card_listing',
+      'layout_tabs',
+      'layout_grid',
+      'layout_card_slider',
+      'layout_listing_cards',
+    ];
+    if(in_array($bundle, $bundles_with_background)) {
+      $background_color = $penn_entity->get('field_background_color')->getString();
+      $section_header_class = '';
+      switch($background_color) {
+        case 'bg-color bg-blue':
+        case 'bg-color bg-red':
+          $section_header_class = 'section-header--dark';
+          break;
+      }
+      $vars['content']['section_header_class'] = $section_header_class;
+    }
+    
+    //TODO: Image Slider Card: Pass along total slides/current slide count
+    if($bundle == 'card_image_slider_card') {
+      $vars['content']['total_slides'] = '00';
+      $vars['content']['current_slide'] = '00';
+    }
+
+  }
+}
+
+/**
+ * Implements hook preprocess field
+ */
+function penn_entity_preprocess_field(&$variables, $hook) {
+  $element = $variables['element'];
+  $field_name = $variables['field_name'];
+  $entity = $element['#object'];
+  $bundle = $element['#bundle'];
+  //Add an align left class for facts
+  if($field_name == 'field_button_link' && $bundle == 'layout_facts') {
+    $field_facts_style = $entity->get('field_facts_style')->getString();
+    if($field_facts_style == 'left') {
+      foreach ($variables['items'] as $delta => &$item) {
+        $item['content']['#align'] = 'facts__button--left';
+      }
+    }
+  }
+  //Add button_link classes for certain bundles
+  $bundles_with_background = [
+    'layout_content_spotlight',
+    'layout_tabs',
+    'layout_grid',
+  ];
+  if ($field_name == 'field_button_link' && in_array($bundle, $bundles_with_background)) {
+    $background_color = $entity->get('field_background_color')->getString();
+    $button_link_class = '';
+    switch($background_color) {
+      case 'bg-color bg-blue':
+      case 'bg-color bg-red':
+        $button_link_class = 'btn--outline-white';
+        break;
+    }
+    foreach ($variables['items'] as $delta => &$item) {
+      $item['content']['#button_link_class'] = $button_link_class;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter
+ */
+function penn_entity_form_alter(&$form, $form_state, $form_id) {
+  //Set the default "name" to the bundle name
+  if($form_state->getFormObject() instanceof \Drupal\Core\Entity\EntityFormInterface) {
+    $entity = $form_state->getFormObject()->getEntity();
+    $entity_type = $entity->getEntityTypeId();
+    $bundle = $entity->bundle();
+    if($entity_type == 'penn_entity') {
+      $bundle_label = penn_entity_get_bundle_label($entity);
+      $bundle_label = $bundle_label ? $bundle_label : 'Penn Entity';
+      //Set the default "name" to the bundle name, trimmed to 255 characters, the max allowable.
+      if(empty($form['name']['widget'][0]['value']['#default_value'])) {
+        $form['name']['widget'][0]['value']['#default_value'] = substr($bundle_label, 0, 254);
+      }
+
+      //Accordion items: set default text format to "accordion".
+      if ($entity->bundle() == 'accordion_item') {
+        if (!isset($form['field_description_formatted']['widget'][0]['#format'])) {
+            $form['field_description_formatted']['widget'][0]['#format'] = "accordion";
+        }
+      }
+    }
+    //Node/Page Body: set default text format to "entity_embed"
+    if($entity_type == 'node' && $bundle = 'page') {
+      if (!isset($form['body']['widget'][0]['#format'])) {
+        $form['body']['widget'][0]['#format'] = "entity_embed";
+      }
+    }
+
+  }
+
+  // UX improvements for the entity_embed modal in CKeditor
+  if ($form_id == 'entity_embed_dialog' && $form_state->get('step') == 'embed') {
+    // Add a link to the entity edit page
+    $edit_url = $form_state->get('entity')->urlInfo('edit-form');
+
+    //$form['actions']['entity_edit'] = [
+    $form['entity_edit'] = [
+      '#type' => 'link',
+      '#title' => 'Edit Entity',
+      '#url' => $edit_url,
+      '#attributes' => [
+        'target' => '_blank',
+        'class' => ['button'],
+      ],
+    ];
+
+    // Clarify what the Back button is for
+    $form['actions']['back']['#value'] = 'Back (select a different entity)';
+  }
+}
+
+/**
+ * Implements hook_inline_entity_form_entity_form_alter 
+ * from the inline entity form module
+ */
+function penn_entity_inline_entity_form_entity_form_alter(&$entity_form, &$form_state) {
+if ($entity_form['#entity_type'] == 'penn_entity') {
+    // $parent_entity = $form_state->getBuildInfo()['callback_object']->getEntity();
+    // $entity = $form_state->getFormObject()->getEntity();
+    $entity = $entity_form['#entity'];
+    $bundle_label = penn_entity_get_bundle_label($entity);
+    $bundle_label = $bundle_label ? $bundle_label : 'Penn Entity';
+    if(empty($entity_form['name']['widget'][0]['value']['#default_value'])) {
+      $entity_form['name']['widget'][0]['value']['#default_value'] = substr($bundle_label, 0, 254);
+    }
+  }
+
+  //Accordion items: set default text format to "accordion".
+  if ($entity_form['#bundle'] == 'accordion_item') {
+    if (!isset($entity_form['field_description_formatted']['widget'][0]['#format'])) {
+      $entity_form['field_description_formatted']['widget'][0]['#format'] = "accordion";
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function penn_entity_theme_suggestions_penn_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#penn_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'penn_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'penn_entity__' . $entity->bundle();
+  $suggestions[] = 'penn_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'penn_entity__' . $entity->id();
+  $suggestions[] = 'penn_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Given an entity object, return the bundle label or false
+ */
+function penn_entity_get_bundle_label($entity) {
+  $bundle_label = false;
+  $bundle = $entity->bundle();
+  if ($bundle) {
+    $bundle_type_id = $entity->getEntityType()->getBundleEntityType();
+    $bundle_label = \Drupal::entityTypeManager()
+      ->getStorage($bundle_type_id)
+      ->load($bundle)
+      ->label();
+  }
+  return $bundle_label;
+}
+
+/**
+ * Documentation for this hook is found here: https://git.drupalcode.org/project/inline_entity_form/blob/HEAD/inline_entity_form.api.php
+ * Examples: https://drupal.stackexchange.com/a/184001
+ */
+function penn_entity_inline_entity_form_table_fields_alter(&$fields, $context) {
+  //Accordions
+  if (($context['parent_bundle'] == 'accordion_column' || $context['parent_bundle'] == 'accordion') && $context['field_name'] == 'field_penn_entity_reference') {
+    $fields['field_title'] = [
+      'type' => 'field',
+      'label' => t('Title'),
+      'weight' => 1,
+    ];
+    $fields['field_description_formatted'] = [
+      'type' => 'field',
+      'label' => t('Description'),
+      'weight' => 2,
+    ];
+    //Don't show the generic "accordion item" label
+    unset($fields['label']);
+  }
+  //Facts 
+  $fact_bundles = ['layout_facts', 'fact_list'];
+  if (in_array($context['parent_bundle'], $fact_bundles) && $context['field_name'] == 'field_penn_entity_reference') {
+    $fields['field_title'] = [
+      'type' => 'field',
+      'label' => t('Fact Number'),
+      'weight' => 1,
+    ];
+    $fields['field_total'] = [
+      'type' => 'field',
+      'label' => t('Fact Number'),
+      'weight' => 1,
+    ];
+    $fields['field_description'] = [
+      'type' => 'field',
+      'label' => t('Fact Description'),
+      'weight' => 2,
+    ];
+    //Don't show the generic "accordion item" label
+    unset($fields['label']);
+  }  
+  //Facts Bars
+  $fact_bundles = ['layout_fact_bars'];
+  if (in_array($context['parent_bundle'], $fact_bundles) && $context['field_name'] == 'field_penn_entity_reference') {
+    $fields['field_total'] = [
+      'type' => 'field',
+      'label' => t('Fact Number'),
+      'weight' => 1,
+    ];
+    $fields['field_description'] = [
+      'type' => 'field',
+      'label' => t('Fact Description'),
+      'weight' => 2,
+    ];
+    //Don't show the generic "accordion item" label
+    unset($fields['label']);
+  }  
+}

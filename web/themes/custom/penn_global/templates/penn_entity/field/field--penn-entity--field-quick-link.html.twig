@@ -1,0 +1,5 @@
+{% for item in items %}
+  <li class="quick-links__item">
+    <a href="{{ item.content['#url'] }}" class="quick-links__link">{{ item.content['#title'] }}</a>
+  </li>
+{% endfor %}

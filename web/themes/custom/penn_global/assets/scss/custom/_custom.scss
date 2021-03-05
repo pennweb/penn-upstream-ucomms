@@ -1,0 +1,895 @@
+/**
+ * General
+ */
+
+.section-padding-top {
+  @include section-padding-top(true);
+}
+
+.section-padding-bottom {
+  @include section-padding-bottom(true);
+}
+
+/**
+ * Accordions
+ */
+.accordion-columns {
+  .accordion-columns__content {
+    .accordion-columns__col {
+      @media #{$tablet-down} {
+        //Remove gap between accordion columns on smaller devices
+        .js-wikit-accordion {
+          margin-bottom: 0;
+        }
+        //Add a margin to not-first-child headers to compensate for removing the gap above
+        &:not(:first-child) {
+          .accordion-columns__title {
+            margin-top: 54px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Search
+ */
+
+//Fixes search outline becoming offset at screens > 1400px
+#header:after {
+  left: 9px;
+  @media #{$xxlarge-up} {
+    top: 141px;
+  }
+}
+
+// Remove excess padding
+.layout--search {
+  &.border-top {
+    padding-top: 0;
+  }
+  &.border-bottom {
+    padding-bottom: 0;
+  }
+}
+
+// Increase input height
+.search__input {
+  font-size: 2.8rem;
+}
+
+.search__label {
+  font-size: 2.5rem;
+}
+
+//Vertically center the search input
+.header .search {
+  margin-top: 40px;
+}
+
+/**
+ * Tabs
+ */
+.tabs__button {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.wikit-tab {
+  .card-listing {
+    padding: 0;
+  }
+}
+
+/*
+ * Blockquote
+ */
+.bg-blue,
+.bg-red {
+  blockquote {
+    p {
+      font-size: 3rem;
+    }
+    cite {
+      color: #fff;
+    }
+  }
+}
+
+.wysiwyg blockquote {
+  margin-bottom: 50px;
+}
+
+/*
+ * Cards
+ */
+.card-listing .card--align-left {
+  text-align: left;
+}
+
+.card-listing .card--align-center {
+  text-align: center;
+}
+
+.card-listing .card--align-right {
+  text-align: right;
+}
+
+/**
+ * Content Spotlight
+ */
+#content .content-spotlight:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * Grids
+ */
+
+//text should be white in colored grid cards
+.bg-blue,
+.bg-red {
+  .grid-card {
+    p {
+      color: #fff;
+    }
+  }
+}
+
+.grid {
+  &.bg-color {
+    @include section-padding-top(true);
+    @include section-padding-bottom(true);
+  }
+}
+
+/**
+ * Main Nav Menu
+ */
+
+// Fixes homepage main nav link color when dropdowns are activated via keyboard navigation. Without this, the links are unreadable white-on-white.
+.homepage .header:not(.headroom--not-top) {
+  @media #{$large-up} {
+    .nav__menu--level-0 > .nav__menu-item.nav__menu-item--open {
+      .nav__menu-link--children {
+        color: $primary;
+      }
+      .nav__menu-hassub .nav__menu-button svg {
+        fill: $primary;
+      }
+    }
+  }
+}
+// Add focus indicator to nav dropdown buttons (especially mobile)
+.nav__menu-button.nav__menu-button--level-0 {
+  &:focus {
+    border: 1px solid $gray-border;
+    background: rgba($gray-border, 0.5);
+  }
+}
+// Prevent color contrast errors for header search close button, and fix focus indicator
+.search--header .search__close {
+  background-color: $primary;
+  .keyboard--focus &:focus {
+    outline: 1px dotted #fff;
+  }
+}
+
+/**
+ * Local Tasks Menu
+ */
+
+#block-penn-global-local-tasks {
+  z-index: 10;
+  top: 200px;
+  right: 0;
+  background: white;
+  position: absolute;
+  padding: 10px 40px 10px 0px;
+  border: 2px solid #ddd;
+  li {
+    margin: 0 10px;
+    list-style-type: none;
+    color: $red;
+    margin: 6px 0;
+    a {
+      color: $red;
+      font-size: 14px;
+    }
+  }
+}
+
+/**
+ * CKEditor
+ */
+.ckeditor-accordion {
+  background: #011f5b;
+  color: #fff;
+}
+
+drupal-entity {
+  width: 100%;
+}
+
+/*
+ * Contact Cards
+ */
+.contact-information__columns {
+  justify-content: center;
+  text-align: left;
+  .contact-information__column:only-child {
+    padding: 0;
+    flex: 0 1 auto;
+  }
+}
+
+.contact-information__column__title.contact-information__column__subtitle {
+  margin-bottom: 21px;
+}
+
+//Gray contact card by request
+.contact-information.contact-information--gray,
+.contact-information.contact-information--white {
+  background: $gray;
+  .contact-information__title__link,
+  .contact-information__wrap,
+  p {
+    color: $blue;
+  }
+  .contact-information__title::after {
+    background: $blue;
+    opacity: 0.4;
+  }
+  .contact-information__wrap {
+    border: 1px solid rgba(1, 31, 91, 0.15);
+  }
+
+  .contact-information__column:first-child {
+    border-color: rgba(1, 31, 91, 0.15);
+  }
+}
+
+//White contact card by request
+.contact-information.contact-information--white {
+  background: white;
+  border: 1px solid rgba(1, 31, 91, 0.2);
+  .contact-information__icon {
+    opacity: 0.9;
+  }
+  .contact-information__wrap {
+    border: 1px solid rgba(1, 31, 91, 0.2);
+  }
+  .contact-information__column:first-child {
+    border-color: rgba(1, 31, 91, 0.2);
+  }
+}
+
+// Contact Cards in a content aside
+.content-aside__aside .contact-information:last-child {
+  margin-bottom: 0;
+}
+
+//Stack content-aside contact info columns between two breakpoints
+.content-aside__aside {
+  @media #{$tablet-up} and #{$xlarge-down} {
+    .contact-information {
+      padding: 10px;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      .contact-information__wrap {
+        .contact-information__columns {
+          display: block;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          text-align: left;
+          .contact-information__column {
+            padding: 0;
+
+            -webkit-box-flex: 0;
+            -ms-flex: 0 1 260px;
+            flex: 0 1 260px;
+          }
+          .contact-information__column:first-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+            border-right: none;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+          }
+          .contact-information__column:last-child {
+            .contact-information__column:last-child {
+              border-bottom: none;
+            }
+          }
+          .contact-information__column:only-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Adjust contact column padding in a content-aside
+.content-aside__aside .contact-information__columns {
+  @media #{$xlarge-up} {
+    .contact-information__column:first-child {
+      padding-right: 20px;
+    }
+    .contact-information__column:last-child {
+      padding-left: 20px;
+    }
+    .contact-information__column:only-child {
+      padding: 0;
+    }
+  }
+}
+
+.contact-information-contain .contact-information {
+  @media #{$large-up} {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Facts
+ */
+.fact-bars {
+  .section-footer {
+    padding: 0 7px;
+  }
+  .section-footer,
+  .section-footer p {
+    font-size: 1.6rem;
+    color: #011f5b;
+    opacity: 0.85;
+  }
+  @media #{$small-down} {
+    .fact-bar__fact {
+      line-height: 1em;
+    }
+  }
+}
+
+.fact {
+  @media #{$tablet-down} {
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  @media #{$large-up} {
+    /* override fact styles in a wysiwyg */
+    &__title,
+    .wysiwyg &__title {
+      font-family: $serif;
+      font-size: 5.2rem;
+      color: $blue;
+      letter-spacing: 0;
+      line-height: 0.64516129;
+      font-weight: 400;
+      margin: 0 0 2.4rem;
+
+      @media #{$tablet-up} {
+        font-size: 6.2rem;
+      }
+    }
+
+    &__caption,
+    .wysiwyg &__caption {
+      opacity: 0.68;
+      font-size: 1.4rem;
+      color: $blue;
+      line-height: 1.5625;
+      text-align: center;
+
+      @media #{$tablet-up} {
+        font-size: 1.6rem;
+        padding: 0 15px;
+      }
+
+      @media #{$xxlarge-up} {
+        padding: 0 35px;
+      }
+    }
+  }
+}
+
+//mimics "fact--50" class in a column layout
+.layout__column {
+  .facts {
+    @media #{$large-down} {
+      .section-header--centered--small {
+        text-align: center;
+        .section-header__title::after {
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+        }
+      }
+    }
+    .fact {
+      @media #{$tablet-up} {
+        border-left: 1px solid #dfdfdf;
+        border-bottom: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
+        width: 50%;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+//Fixes border dropping off on a fact card
+.fact.fact--card {
+  border-bottom: 5px solid #e3e4e6;
+}
+
+//Styles for fact card embedded in wysiwyg
+.wysiwyg {
+  .fact {
+    padding: 32px 10px;
+    .fact__title {
+      font-family: "EB Garamond", serif;
+      font-size: 5.2rem;
+      color: #011f5b;
+      letter-spacing: 0;
+      line-height: 0.64516129;
+      font-weight: 400;
+      margin: 0 0 2.4rem;
+      @media #{$tablet-up} {
+        font-size: 6.2rem;
+      }
+    }
+    .fact__caption {
+      font-size: 1.4rem;
+      padding: 0 15px;
+      opacity: 0.68;
+      color: #011f5b;
+      line-height: 1.5625;
+      text-align: center;
+      @media #{$tablet-up} {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+/**
+ * Fact Sidebar
+ */
+.facts-sidebar {
+  .facts-sidebar__title {
+    text-align: center;
+    &:after {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/** Featured Story
+ *
+ */
+.featured-story {
+  @media #{$large-up} {
+    .featured-initiative-card {
+      display: inline-block;
+    }
+    &--right {
+      .featured-story__contain {
+        text-align: right;
+      }
+    }
+    &--center {
+      .featured-story__contain {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/**
+ * Featured Initiative Card
+ */
+
+.featured-initiative-card__wrap {
+  height: 100%;
+}
+
+//constrain initiative card image titles
+.featured-initiative-card {
+  .featured-initiative-card__image {
+    max-width: 90%;
+    @media #{$large-up} {
+      max-width: 290px;
+    }
+  }
+}
+
+/**
+ * Image Slider
+ */
+
+.image-slider-card__caption {
+  margin-bottom: 25px;
+}
+
+.image-slider-card__content p {
+  opacity: 1;
+}
+
+.bg-blue,
+.bg-red {
+  .image-slider-card__caption,
+  .image-slider-card__title,
+  .wysiwyg {
+    color: white;
+  }
+}
+
+//Enlarge hitbox for the buttons
+.image-slider-card__buttons {
+  width: 100px;
+  .image-slider-card__button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/**
+ * Layout Columns
+ */
+//Remove default margin.
+//Margins are added by 'section-margin' instead.
+.layout:not(.section-margin, .section-margin-top, section-margin-bottom) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/**
+ * Callouts
+ */
+
+// Standardize headings
+@for $i from 1 through 6 {
+  .callout__column h#{$i} {
+    font-family: "EB Garamond", serif;
+    color: #011f5b;
+    letter-spacing: 0;
+    position: relative;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 2.8rem;
+    line-height: 1.25;
+    color: inherit;
+    margin-top: 0;
+  }
+}
+
+//Last paragraph doesn't need padding
+.callout p:last-child,
+.text-cta p {
+  margin-bottom: 0;
+}
+
+//Lose the margins on buttons in callouts
+.callout p {
+  .btn:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//Allow CTAs to have multiple paragraphs
+.text-cta p {
+  margin-bottom: inherit;
+}
+
+//text should be white in background-colored items
+.callout,
+.callout__column {
+  &.bg-blue,
+  &.bg-red,
+  &.wysiwyg.bg-blue,
+  &.wysiwyg.bg-red {
+    p {
+      color: #fff;
+    }
+    a:not(.btn) {
+      color: #fff;
+    }
+  }
+  @media #{$tablet-down} {
+    //Force centered text below the point that columns become vertical
+    text-align: center;
+    .text-align-right,
+    .text-align-left {
+      text-align: center;
+    }
+  }
+}
+
+/**
+ * Homepage Hero
+ */
+.hero {
+  &__content {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+    //increase text box width
+    @media #{$large-up} {
+      max-width: 800px;
+    }
+  }
+  //Don't hide excerpt on touch-devices
+  &__text {
+    @media (hover: none) and (pointer: coarse) {
+      transition: none;
+      .hero__excerpt {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  //Fix safari/ff not observing max-height
+  &__title {
+    @media (min-width: 1024px), (max-height: 825px) {
+      font-size: 4.8rem;
+    }
+  }
+}
+
+/**
+ * Page Quote Hero
+ */
+// Add default/fallback background color to prevent color contrast errors in WAVE
+// This color will never be visually seen, but prevents false positives in reports.
+.page-header-hero__figure--quote {
+  background: $blue;
+}
+
+/**
+ * WYSIWYG
+ */
+
+.clearfix {
+  @include clearfix;
+}
+
+//Make wysiwyg class more flexible with bg-color
+@for $i from 1 through 6 {
+  .wysiwyg.bg-blue h#{$i},
+  .wysiwyg.bg-red h#{$i} {
+    font-family: "EB Garamond", serif;
+    color: #011f5b;
+    letter-spacing: 0;
+    position: relative;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 2.8rem;
+    line-height: 1.25;
+    color: inherit;
+    margin-top: 0;
+  }
+}
+
+.wysiwyg {
+  &.bg-blue p,
+  &.bg-red p {
+    color: #fff;
+  }
+
+  //Fix <p> inside figcaption
+  figcaption {
+    p {
+      font-family: "Roboto", Helvetica, Arial, sans-serif;
+      font-size: 1.5rem;
+      color: #434343;
+      letter-spacing: 0;
+      line-height: 1.866666667;
+      padding-top: 5px;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    p:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  h2.plain::after {
+    content: none;
+  }
+
+  // Make h2 match content aside h2
+  h2,
+  .h2 {
+    font-size: 4.5rem;
+  }
+
+  p {
+    color: #000;
+  }
+}
+
+// Prevent image floating on smaller devices
+.wysiwyg {
+  figure {
+    @media #{$tablet-down} {
+      &.align-left {
+        float: initial;
+        margin: 0 auto 40px auto;
+        width: 100%;
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+
+        figcaption {
+          margin: 0 auto;
+        }
+      }
+
+      &.align-right {
+        float: initial;
+        margin: 0 auto 40px auto;
+        width: 100%;
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+
+        figcaption {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Content Gallery
+ */
+
+.content-gallery {
+  &__column {
+    //Style links
+    .text-cta a {
+      color: #011f5b;
+      text-decoration: underline;
+    }
+    //Prevent long captions from moving the right side copy up and down
+    @media #{$tablet-up} {
+      align-self: normal;
+    }
+  }
+  // Hide < > chevron controls on smaller devices
+  @media #{$large-down} {
+    .gallery__navigation {
+      .gallery__arrows {
+        display: none;
+      }
+      .slick-dots {
+        width: 100%;
+      }
+    }
+  }
+}
+/**
+ * Section Footer
+ */
+.section-footer {
+  width: 100%;
+  &--centered {
+    text-align: center;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+/**
+ * Social Cards
+ */
+
+// Keeps the social cards squared on Safari
+.social-card {
+  max-height: 413px;
+  @media #{$tablet-down} {
+    max-height: 300px;
+  }
+}
+
+.social__link.flickr .social__icon {
+  max-width: 20px;
+}
+
+.social__link.youtube .social__icon {
+  max-width: 21px;
+}
+
+.social__link.linkedin .social__icon {
+  max-width: 16px;
+}
+
+.social__grid {
+  margin-right: 0px;
+}
+
+/**
+ * Navigation
+ */
+// Keeps header sticky - JS forces positon absolute otherwise
+.header {
+  .header-sticky & {
+    @media #{$large-down} {
+      position: fixed !important;
+    }
+  }
+}
+/*
+ * Form Styling
+ */
+
+select {
+  margin-bottom: 15px;
+  padding: 10px 60px 10px 0;
+  border: none;
+  border-bottom: 1px solid $gray-border;
+  appearance: none;
+  font-family: $serif;
+  font-size: 1.8rem;
+  color: $blue;
+  outline: 0;
+  background-image: url(/themes/custom/penn_global/assets/img/svg/icon-down-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+/**
+ * Penn API News Filter
+ */
+
+// Apply original padding to the news filter after moving it to a different twig template
+.news-featured {
+  @media #{$small-up} {
+    .filter-section .section-header__title {
+      width: calc(100% - 235px);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<article
+  class="article-card article-card--featured article-card--full">
+  {# show video or image #}
+  {% if content.field_video_source_url_has_value %}
+    <div class="article-card__figure">
+      <div class="video-inline">
+        <video loop muted autoplay="autoplay" class="video-inline__video ">
+          <source src="{{ content.field_video_source_url }}" type="video/mp4"/>
+        </video>
+        <button class="video-button video-button--play-toggle video-button--pause">
+          <span class="video-button__circle">
+            <span class="icon"></span>
+          </span>
+          <span class="a11y">Play</span>
+        </button>
+      </div>
+    </div>
+  {% else %}
+    <picture class="article-card__figure">
+      <source srcset="{{ content.field_image_mobile }}" media="(min-width: 1024px)">
+      {{ content.field_image }}
+    </picture>
+  {% endif %}
+  <a href="{{ content.field_link }}" class="article-card__category">{{ content.field_subtitle }}</a>
+  <h3 class="article-card__title">
+    <a href="{{ content.field_link }}" class="article-card__link">
+      {{ content.field_title }}
+    </a>
+  </h3>
+</article>

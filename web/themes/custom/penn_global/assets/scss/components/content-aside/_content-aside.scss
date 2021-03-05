@@ -1,0 +1,117 @@
+.content-aside {
+	@include section-padding;
+
+
+	@media #{$tablet-up} {
+
+		&--divide {
+			.content-aside__divide {
+				display: block;
+			}
+		}
+
+		&__flex {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+	}
+
+	.bg-color & {
+		padding: 75px 0 50px;
+
+		@media #{$tablet-up} {
+			padding: 110px 0;
+		}
+	}
+
+	&__title {
+		flex: 0 1 100%;
+		@include h2(true);
+		margin-top: 0;
+
+		@media #{$large-up} {
+			font-size: 4.5rem;
+		}
+	}
+
+	&__bottom {
+		flex: 0 1 100%;
+		border-top: 1px solid $gray-border;
+		text-align: center;
+		padding-top: 58px;
+		margin-top: 40px;
+
+		margin-bottom: 47px;
+	}
+
+	&__divide {
+		flex: 0 1 1px;
+		width: 1px;
+		background: $gray-border;
+		display: none;
+	}
+
+	&__content {
+		position: relative;
+
+		@media #{$tablet-up} {
+			width: calc(100% - 340px);
+			flex: 0 1 calc(100% - 340px);
+		}
+
+		@media #{$large-up} {
+			width: 63.14%;
+			flex: 0 1 63.14%;
+		}
+
+		.wysiwyg>*:first-child {
+			margin-top: 0;
+		}
+
+		.wysiwyg>*:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__aside {
+		margin-top: 30px;
+
+		@media #{$tablet-up} {
+			margin-top: 0;
+			width: 32.55%;
+			flex: 0 1 32.55%;
+			min-width: 320px;
+		}
+	}
+
+	.contain+.contain {
+		margin-top: 50px;
+	}
+
+	.js-wikit-accordion {
+		h3 {
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			letter-spacing: 1.6px;
+			font-weight: 500;
+			margin: 0;
+		}
+
+		p {
+			font-size: 1.5rem;
+			margin-top: 0;
+		}
+	}
+}
+
+.page-header+.content-aside {
+	@media #{$large-up} {
+		padding-top: 50px;
+	}
+}
+
+
+.article-card-hero+.content-aside {
+	padding-top: 13px;
+}

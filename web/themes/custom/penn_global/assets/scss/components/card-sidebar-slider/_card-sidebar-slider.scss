@@ -1,0 +1,40 @@
+.card-sidebar-slider {
+	border: 1px solid $gray-border;
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+
+
+	.card {
+		max-width: none;
+
+		&__content {
+			border: 0;
+
+			p {
+				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+		}
+
+		&.is-hovered,
+		&:focus-within {
+			box-shadow: none;
+		}
+	}
+
+	.slick-dotted.slick-slider {
+		padding-bottom: 0;
+	}
+
+	.slick-track {
+		align-items: start;
+	}
+
+	.slick-dots {
+		bottom: -40px;
+	}
+}

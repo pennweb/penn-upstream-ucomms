@@ -1,0 +1,7 @@
+@mixin date($display: inline-block) {
+	display: $display;
+	font-size: 1.2rem;
+	color: #757575;
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+}

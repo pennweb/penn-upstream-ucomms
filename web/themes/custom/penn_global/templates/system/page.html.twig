@@ -1,0 +1,18 @@
+{% if page.alert|render is not empty %}
+  <div class="alert-content">
+    {{ page.alert }}
+  </div>
+{% endif %}
+{% include '@penn_global/layouts/header.html.twig' %}
+<main id="content">
+  {% if page.prefix %}
+  {{ page.prefix }}
+  {% endif %}
+  {% if page.content %}
+  {{ page.content }}
+  {% endif %}
+  {% if page.suffix %}
+  {{ page.suffix }}
+  {% endif %}
+</main>
+{% include '@penn_global/layouts/footer.html.twig' %}

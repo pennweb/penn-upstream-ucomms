@@ -1,0 +1,12 @@
+<article class="card ">
+  <figure class="card__figure">
+  {{ content.field_image }}
+  </figure>
+  <div class="card__content">
+    <h2 class="card__title">
+      <a href="{{ content.field_link.0['#url'] }}" class="card__title__link">{{ content.field_link[0]['#title'] }}</a>
+    </h2>
+    <p>{{ content.field_description_formatted }}</p>
+    {{ content.field_button_link }}
+  </div>
+</article>

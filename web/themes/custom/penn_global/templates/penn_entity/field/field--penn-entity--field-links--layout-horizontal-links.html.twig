@@ -1,0 +1,5 @@
+{% for item in items %}
+    <li class="horizontal-link__item">
+      <a class="horizontal-link__link" href="{{ item.content['#url'] }}">{{ item.content['#title'] }}</a>
+    </li>
+{% endfor %}

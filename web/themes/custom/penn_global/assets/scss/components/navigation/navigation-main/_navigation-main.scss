@@ -1,0 +1,549 @@
+.nav {
+	&--primary {
+		transform: translate3d(0, 0, 0);
+
+		@media screen and (orientation:landscape) and (min-width:1024px) and (max-width:1024px) {
+			pointer-events: all;
+		}
+
+		@media #{$large-up} {
+			margin-top: 5px;
+			border-top: 1px solid rgba(223, 223, 223, 0.7);
+
+			.js .homepage & {
+				border-top: 1px solid rgba(223, 223, 223, 0.7);
+			}
+		}
+
+		@media #{$xxlarge-up} {
+			.header:not(.header--extended) & {
+				border-top: 0;
+
+				.js .homepage & {
+					border-top: 0;
+				}
+			}
+		}
+	}
+
+	&__menu {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		&-item {
+			position: relative;
+
+			&:first-child>.nav__menu-link {
+				border: 0;
+			}
+
+			@media #{$large-up} {
+				&--open {
+					background: #FAFAFA;
+				}
+
+				&--level-0 {
+
+					.nav__menu-link {
+
+						&:focus,
+						&[aria-expanded="true"] {
+							background: transparent;
+						}
+					}
+				}
+			}
+		}
+
+
+
+		&-link {
+			display: block;
+			padding: 24px 80px 24px 30px;
+			font-size: 1.7rem;
+			font-weight: 500;
+			color: $black;
+			text-decoration: none;
+			position: relative;
+			border-top: 1px solid $gray-border;
+
+			@media #{$large-up} {
+				padding: 10px 20px;
+			}
+
+			&:hover,
+			&:focus,
+			&--active {
+				outline: none;
+				color: $red;
+			}
+
+
+
+			&:focus,
+			&[aria-expanded="true"] {
+				background: #FAFAFA;
+			}
+
+
+		}
+
+		&-hassub {
+			@media #{$large-up} {
+				position: relative;
+
+
+
+				.nav__menu-button {
+
+					display: block;
+					right: 3px;
+					top: 0;
+					transform: scale(.85);
+					pointer-events: none;
+
+					@media (hover: none) and (pointer: coarse) {
+						/* Touch screen device style goes here */
+						pointer-events: auto;
+					}
+
+					svg {
+						.headroom--top & {
+							.homepage & {
+								fill: #fff;
+							}
+						}
+					}
+				}
+			}
+
+		}
+
+		&-button {
+			position: absolute;
+			right: 20px;
+			top: 15px;
+			width: 42px;
+			height: 42px;
+			border-radius: 100%;
+			fill: $primary;
+
+			.nav__menu--level-1 & {
+				border: 1px solid $gray-border;
+
+				&:hover {
+					background: rgba(233, 233, 233, .5);
+				}
+			}
+
+			svg {
+				vertical-align: middle;
+				width: 18px;
+				height: 10px;
+				transform: rotate(180deg);
+			}
+
+			&--open {
+				border: 1px solid $gray-border;
+
+				&.nav__menu-button--level-0 {
+					border: none;
+				}
+
+				svg {
+					transform: rotate(0deg);
+				}
+			}
+
+
+			&:focus {
+				outline: none;
+				border: 1px solid $gray-border;
+				background: rgba($gray-border, .5);
+			}
+
+			&.nav__menu-button--level-0:focus {
+				border: none;
+				background: none;
+
+				.js .homepage.keyboard--focus & {
+					outline: 1px dotted #fff;
+				}
+			}
+		}
+
+		&--level-1 {
+			>.nav__menu-item {
+
+				&:last-child {
+					>.nav__menu-link {
+						border-bottom: 1px solid $gray-border;
+						padding-left: 10px;
+
+						&--active {
+							border-bottom: 0
+						}
+					}
+				}
+			}
+
+			@media #{$large-down} {
+				&:last-child {
+					>.nav__menu-item {
+						&:last-child {
+							>.nav__menu-link {
+								border-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+
+			@media #{$large-up} {
+				display: block;
+				margin: 0 auto;
+				max-width: 1320px;
+				padding: 0 20px;
+				flex: 1 0 33%;
+
+				>.nav__menu-item {
+					flex: 1 0 33%;
+				}
+			}
+
+			.nav__menu-link {
+				font-size: 1.6rem;
+				font-weight: 400;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				padding-left: 10px;
+			}
+
+			.nav__menu-button {
+				transform: scale(.8);
+				right: 0;
+
+				svg {
+					width: 12px;
+				}
+			}
+		}
+
+		&--level-2 {
+			display: none;
+			margin-top: -10px;
+
+			&.nav__submenu--active {
+				display: block;
+			}
+
+			.nav__menu-link {
+				font-size: 1.4rem;
+				border: 0;
+				padding-top: 14px;
+				padding-bottom: 14px;
+				padding-left: 20px;
+			}
+		}
+	}
+
+	&__submenu {
+		display: none;
+		margin: -10px 30px 0;
+
+		@media #{$large-up} {
+			position: absolute;
+			width: 100vw;
+			left: 0;
+			background: #fff;
+			border: 7px solid $gray;
+			border-width: 7px 0;
+			padding: 50px 0;
+			margin: auto;
+			max-height: 80vh;
+			overflow-y: auto;
+			opacity: 0;
+			visibility: hidden;
+			transition: visibility .25s linear .125s,
+				.25s opacity .125s;
+		}
+
+		@media(min-width:1600px) {
+			left: calc((-100vw + 100% - 15px) /2)
+		}
+
+		&--active {
+			display: block;
+
+			&:not(.nav__menu--level-2) {
+				margin-left: 0;
+				margin-right: 0px;
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+
+			&:not(.nav__menu--level-2):not(.nav__submenu--visible) {
+				background: #FAFAFA;
+			}
+
+			@media #{$large-up} {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		.contain {
+
+
+			@media #{$large-down} {
+				padding: 0;
+			}
+
+			@media #{$large-up} {
+				display: flex;
+
+			}
+
+		}
+
+
+	}
+
+	&__menu--level-0 {
+		@media #{$large-up} {
+			display: flex;
+			justify-content: flex-end;
+
+			>.nav__menu-item {
+				position: static;
+
+				>.nav__menu-link,
+				.nav__menu-link--children {
+					border: 0;
+					color: $primary;
+					text-transform: uppercase;
+					font-weight: bold;
+					font-size: 1.4rem;
+					letter-spacing: 1px;
+
+
+					.headroom--top & {
+						.homepage & {
+							color: #fff;
+
+							&:before {
+								background: $yellow;
+							}
+
+							&:after {
+								color: rgba(#fff, .4);
+							}
+
+						}
+					}
+
+					&:before {
+						content: "";
+						position: absolute;
+						left: 20px;
+						background: $red;
+						height: 0;
+						width: calc(100% - 40px);
+						bottom: 0;
+						pointer-events: none;
+						opacity: 0;
+						transition: all .125s ease-in-out;
+					}
+
+					&:after {
+						content: "/";
+						position: absolute;
+						right: 0;
+						color: rgba($coal, .4);
+						pointer-events: none;
+					}
+
+
+
+					&:hover,
+					&:focus,
+					&--active {
+						background: none;
+
+						&:before {
+							height: 3px;
+							opacity: 1;
+						}
+					}
+
+					.js .homepage.keyboard--focus & {
+						&:focus {
+							outline: 1px dotted #fff;
+						}
+					}
+
+
+
+				}
+
+				.nav__menu-link--children {
+					padding-right: 50px;
+				}
+
+				&:last-child {
+
+					>.nav__menu-link,
+					.nav__menu-link--children {
+						&:after {
+							display: none;
+						}
+					}
+				}
+
+			}
+
+			.nav__menu-item--children {
+				.no-js & {
+					&:hover {
+						.nav__submenu {
+							display: block;
+						}
+					}
+				}
+
+				&.nav__menu-item--visible {
+					.nav__submenu {
+						display: block;
+					}
+				}
+
+				&.nav__menu-item--active {
+
+					.nav__submenu {
+						opacity: 1;
+						visibility: visible;
+						transition: visibility 0s linear 0s,
+							.25s opacity 0s;
+					}
+
+				}
+
+				&:hover,
+				&:focus {
+					.nav__menu-link--children {
+						&:before {
+							height: 3px;
+							opacity: 1;
+						}
+					}
+
+					.nav__submenu {
+
+						@media (hover: none) and (pointer: coarse) {
+							/* Touch screen device style goes here */
+							opacity: 0;
+							visibility: hidden;
+
+							&--active {
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+					}
+				}
+
+
+				&:focus-within {
+
+
+					.nav__submenu {
+						opacity: 1;
+						visibility: visible;
+						transition: visibility .5s linear .25s, .25s opacity .25s;
+
+						@media (hover: none) and (pointer: coarse) {
+							/* Touch screen device style goes here */
+							opacity: 0;
+							visibility: hidden;
+
+							&--active {
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+					}
+				}
+			}
+
+
+		}
+
+		>.nav__menu-item:last-child {
+			// border: 1px solid red;
+
+			.nav__menu-link {
+				@media #{$large-down} {
+					border-bottom: 1px solid $gray-border;
+				}
+			}
+		}
+
+
+	}
+}
+
+.js .homepage .header:not(.headroom--not-top) {
+	.header__toggle-btn {
+		fill: #FFF;
+	}
+
+	.nav-dropdown__toggle-btn svg {
+		fill: #FFF;
+	}
+
+	.header__logo {
+
+		#Mark,
+		#Logotype {
+			.cls-3 {
+				fill: #FFF;
+			}
+		}
+	}
+
+	@media #{$large-up} {
+		.nav__menu--level-0>.nav__menu-item {
+
+			>.nav__menu-link,
+			.nav__menu-link--children {
+				color: #fff;
+
+				&::after {
+					color: rgba(255, 255, 255, 0.4);
+				}
+
+				&::before {
+					background: $yellow;
+				}
+			}
+		}
+
+		.nav__menu-hassub .nav__menu-button svg {
+			fill: #FFF;
+		}
+
+		.nav-dropdown__toggle-btn:not(.nav__dropdown-toggle-btn--open) {
+			color: #FFF;
+
+			svg {
+				fill: #FFF;
+			}
+		}
+
+		.nav-dropdown__toggle-btn.nav__dropdown-toggle-btn--open svg {
+			fill: $primary;
+		}
+	}
+
+}

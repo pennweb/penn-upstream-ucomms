@@ -1,0 +1,66 @@
+uuid: a493afd4-79bf-4fc2-9960-c64f7c517b88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_container.field_background_color
+    - field.field.penn_entity.layout_container.field_borders
+    - field.field.penn_entity.layout_container.field_container_width
+    - field.field.penn_entity.layout_container.field_margins
+    - field.field.penn_entity.layout_container.field_padding
+    - field.field.penn_entity.layout_container.field_wysiwyg
+    - penn_entity.penn_entity_type.layout_container
+  module:
+    - text
+id: penn_entity.layout_container.default
+targetEntityType: penn_entity
+bundle: layout_container
+mode: default
+content:
+  field_background_color:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_borders:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_container_width:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_margins:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_padding:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_wysiwyg:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

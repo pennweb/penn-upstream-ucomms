@@ -1,0 +1,181 @@
+.faculty-card {
+	position: relative;
+	border-left: 1px solid $gray-border;
+	border-right: 1px solid $gray-border;
+	text-align: center;
+	padding: 0 20px 34px;
+	margin-bottom: 20px;
+	max-width: 640px;
+	width: 100%;
+
+	&::after {
+		display: block;
+		content: '';
+		width: calc(100% - 40px);
+		height: 1px;
+		background: $gray-border;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__photo-name {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		position: relative;
+	}
+
+	&__image {
+		display: block;
+		margin: 0 auto;
+		transition: $animation;
+	}
+
+
+	&__name {
+		font-family: $serif;
+		font-size: 2.4rem;
+		color: $blue;
+		letter-spacing: 0;
+		font-weight: 400;
+		margin: 32px 0 3px;
+	}
+
+	&__link {
+		color: $blue;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+
+			.faculty-card__image {
+				box-shadow: 0 12px 14px 0 rgba(0, 0, 0, .15);
+			}
+		}
+
+	}
+
+
+	&__title {
+		font-family: $sans;
+		font-weight: 700;
+		font-size: 1.2rem;
+		color: $blue;
+		letter-spacing: 1.6px;
+		display: block;
+		position: relative;
+		margin-bottom: 34px;
+		text-transform: uppercase;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 20px;
+			height: 4px;
+			background: rgba($blue, .2);
+			left: 50%;
+			top: 43px;
+			transform: translateX(-50%);
+		}
+	}
+
+
+	&__school,
+	&__contact {
+		display: block;
+		opacity: 0.68;
+		font-family: $sans;
+		font-size: 1.6rem;
+		color: #000F3A;
+		line-height: 1.5625;
+		margin-bottom: 7px;
+	}
+
+	&__contact {
+
+		&__phone {
+			display: block;
+		}
+	}
+}
+
+.faculty-grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: center;
+	margin-bottom: 100px;
+	margin-top: 80px;
+
+	@include ie11() {
+		overflow: hidden;
+	}
+
+	@media #{$small-up} {
+		.faculty-card {
+			flex: 0 1 50%;
+
+			@include ie11() {
+				max-width: 50%;
+			}
+
+			&:nth-child(odd) {
+				border-right: none;
+			}
+		}
+	}
+
+	@media #{$large-up} {
+		justify-content: flex-start;
+
+		.faculty-card {
+			flex: 0 1 33%;
+			border-right: none;
+
+			@include ie11() {
+				max-width: 33%;
+			}
+
+			&:nth-child(3n),
+			&:last-child {
+				border-right: 1px solid $gray-border;
+			}
+		}
+	}
+
+	@media #{$xlarge-up} {
+		.faculty-card {
+			flex: 0 1 25%;
+
+			@include ie11() {
+				max-width: 25%;
+			}
+
+			&:nth-child(3n) {
+				border-right: none;
+				border-left: 1px solid $gray-border;
+			}
+
+			&:nth-child(4n),
+			&:last-child {
+				border-right: 1px solid $gray-border;
+			}
+		}
+	}
+}
+
+@media print {
+	.faculty-card {
+		flex: 0 1 50%;
+		page-break-inside: avoid;
+		display: block;
+
+		&:nth-child(odd) {
+			border-right: none;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{% if content.items|length > 0 %}
+
+<div class="content-aside__aside">
+  <div class="card-sidebar-slider">
+    <div data-slider="single">
+      {% for item in content.items %}
+      <article class="card ">
+        <figure class="card__figure">
+          <img src="{{ item.image }}" alt="{{ item.image_alt }}" class="card__image">
+        </figure>
+        <div class="card__content">
+          <h2 class="card__title">
+            <a href="{{ item.url }}" class="card__title__link">{{ item.title }}</a>
+          </h2>
+          <p>{{ item.summary }}</p>
+
+          {% if not content.field_button_link|render is empty %}
+            <br>
+            {{ content.field_button_link }}
+          {% endif %}
+
+          {% if not content.field_link|render is empty %}
+            <br>
+            {{ content.field_link }}
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+
+    </div>
+  </div>
+  
+</div>
+
+{% endif %}

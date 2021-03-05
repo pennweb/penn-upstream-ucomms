@@ -1,0 +1,25 @@
+.gallery-slider {
+	position: relative;
+}
+
+.gallery__navigation {
+	position: absolute;
+	width: 100%;
+	transition: all .25s ease;
+
+	.slick-arrow {
+		width: 48px;
+		height: 48px;
+
+		&.slick-prev {
+			left: auto;
+			right: 62px;
+		}
+	}
+
+	.slick-dots {
+		bottom: -17px;
+		width: calc(100% - 125px);
+		text-align: left;
+	}
+}

@@ -1,0 +1,49 @@
+.card-slider {
+	&__flex {
+		@media #{$large-up} {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__column {
+
+
+		@media #{$large-down} {
+			&.section-header {
+				text-align: center;
+
+				.section-header__title::after {
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+
+			&:first-child {
+				margin-bottom: 40px
+			}
+		}
+
+		@media #{$large-up} {
+			flex: 0 1 30%;
+
+			&--wide {
+				flex-basis: calc(70% - 50px);
+				margin-left: 50px;
+				overflow: hidden;
+				padding-bottom: 25px;
+			}
+
+			&.section-header p {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.slick-slide {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}

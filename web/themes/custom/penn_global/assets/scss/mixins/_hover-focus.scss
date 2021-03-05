@@ -1,0 +1,24 @@
+@mixin hover_focus() {
+	&:hover {
+		@content;
+	}
+
+	&:focus {
+
+		.js .keyboard--focus &,
+		.no-js & {
+			@content;
+		}
+	}
+}
+
+@mixin focus() {
+
+	&:focus {
+
+		.js .keyboard--focus &,
+		.no-js & {
+			@content;
+		}
+	}
+}

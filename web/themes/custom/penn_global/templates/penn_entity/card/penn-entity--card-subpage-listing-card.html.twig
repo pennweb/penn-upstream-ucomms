@@ -1,0 +1,16 @@
+<article class="listing-card listing-card--small">
+  <figure class="listing-card__figure">
+    <a href="{{ content.field_link }}" class="list-card__figure__link">
+      <picture>
+        <source srcset="{{ content.field_image }}" media="(min-width: 640px)">
+        <img src="/assets/img/transparent.png" alt="Subpage listing thumbnail" class="listing-card__image">
+      </picture>
+    </a>
+  </figure>
+  <div class="listing-card__detail">
+    <h2 class="listing-card__title ">
+      <a href="{{ content.field_link }}" class="listing-card__title__link">{{ content.field_title }}</a>
+    </h2>
+    {{ content.field_description }}
+  </div>
+</article>

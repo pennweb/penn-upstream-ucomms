@@ -1,0 +1,80 @@
+$img: "../img/";
+$icons: "../img/icons/";
+$black: #000;
+$gray:#f2f2f3;
+$gray-light:#F7F7F7;
+$gray-border:#DFDFDF;
+$blue: #011F5B;
+$red: #95001A;
+$red-hover: #720014;
+$light_blue: #82AFD3;
+$orange: #c35a00;
+$green: #008e00;
+$yellow:#f2C100;
+$purple: #4a0042;
+$gray: #F2F2F2;
+$steel: #CCC;
+$slate: #999;
+$coal: #333;
+$text-color: #434343;
+
+$primary: $blue;
+$primary-hover: darken($primary, 30%);
+$gray-dark:$coal;
+
+
+.bg-black {
+	background: $black;
+	color: #FFF;
+}
+
+.bg-primary,
+.bg-blue {
+	background: $primary;
+	color: #FFF;
+}
+
+.bg-red {
+	background: $red;
+	color: #FFF;
+}
+
+.bg-light_blue {
+	background: $light_blue
+}
+
+.bg-orange {
+	background: $orange;
+}
+
+.bg-green {
+	background: $green;
+}
+
+.bg-yellow {
+	background: $yellow;
+}
+
+.bg-purple {
+	background: $purple;
+}
+
+.bg-gray {
+	background: $gray;
+}
+
+.bg-gray-light {
+	background: $gray-light
+}
+
+.bg-steel {
+	background: $steel;
+}
+
+.bg-slate {
+	background: $slate;
+}
+
+.bg-coal {
+	background: $coal;
+}

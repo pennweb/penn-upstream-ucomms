@@ -1,0 +1,33 @@
+<div class="a-z-search" id="a-z-search">
+  <div class="contain">
+    <form class="a-z-search__form" action="#">
+      <label class="a-z-search__label" for="a-z-search__input">Search</label>
+      <div class="a-z-search__row">
+        <input type="text" placeholder="Search Penn A-Z" class="a-z-search__input" id="a-z-search__input">
+        <span class="a-z-search__submit" aria-hidden="true">
+          <svg width="20" height="16">
+            <use xlink:href="#icon-search" href="#icon-search"></use>
+          </svg>
+        </span>
+      </div>
+      <fieldset>
+        <legend class="a11y">Filter by Letter</legend>
+        <div class="a-z-search__buttons">
+          <button type="button" value="ALL" class="a-z-search__button a-z-search__button--active">All</button>
+          {% for row in rows %}
+            <button type="button" class="a-z-search__button" value="{{- row.content -}}">{{- row.content -}}</button>
+          {% endfor %}
+        </div>
+      </fieldset>
+      <div class="a-z-search__select-wrap">
+        <label for="a-z-search__select">Filter by Letter</label>
+        <select class="a-z-search__select" id="a-z-search__select">
+          <option value="ALL">All</option>
+          {% for row in rows %}
+            <option value="{{- row.content -}}">{{- row.content -}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </form>
+  </div>
+</div>

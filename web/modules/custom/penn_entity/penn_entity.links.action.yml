@@ -1,0 +1,10 @@
+entity.penn_entity.add_form:
+  route_name: entity.penn_entity.add_page
+  title: 'Add Penn Entity'
+  appears_on:
+    - entity.penn_entity.collection
+entity.penn_entity_type.add_form:
+  route_name: entity.penn_entity_type.add_form
+  title: 'Add Penn Entity type'
+  appears_on:
+    - entity.penn_entity_type.collection

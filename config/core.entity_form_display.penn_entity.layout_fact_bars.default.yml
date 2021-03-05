@@ -1,0 +1,92 @@
+uuid: d2ff85dc-c542-4c7b-9722-955f1331b8f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_fact_bars.field_bar_scale
+    - field.field.penn_entity.layout_fact_bars.field_borders
+    - field.field.penn_entity.layout_fact_bars.field_description_formatted
+    - field.field.penn_entity.layout_fact_bars.field_fact_bar_color
+    - field.field.penn_entity.layout_fact_bars.field_margins
+    - field.field.penn_entity.layout_fact_bars.field_penn_entity_reference
+    - field.field.penn_entity.layout_fact_bars.field_title
+    - field.field.penn_entity.layout_fact_bars.field_total
+    - penn_entity.penn_entity_type.layout_fact_bars
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - text
+id: penn_entity.layout_fact_bars.default
+targetEntityType: penn_entity
+bundle: layout_fact_bars
+mode: default
+content:
+  field_bar_scale:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_borders:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_description_formatted:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_fact_bar_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_margins:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_penn_entity_reference:
+    weight: 7
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Fact Bar'
+      label_plural: 'Fact Bars'
+      allow_new: true
+      match_operator: CONTAINS
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_total: true

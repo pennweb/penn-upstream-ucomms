@@ -1,0 +1,15 @@
+penn_ckeditor:
+  version: 1.x
+  css:
+    layout:
+      css/penn-global-ckeditor.css: {}
+
+textarea_bgcolor:
+  version: 1.x
+  js:
+    js/textarea-bgcolor.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

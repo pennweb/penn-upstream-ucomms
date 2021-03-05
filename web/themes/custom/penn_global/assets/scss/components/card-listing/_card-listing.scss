@@ -1,0 +1,90 @@
+.card-listing {
+	padding: 70px 0px;
+
+	.contain {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media #{$tablet-up} {
+
+			flex-direction: row;
+			align-items: stretch;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+	}
+
+	@media #{$tablet-up} {
+		padding: 95px 0 45px;
+
+
+		.card {
+			flex: 0 1 calc(50% - 10px);
+
+			@include ie11 {
+				max-width: calc(50% - 10px);
+			}
+
+			&:nth-child(even) {
+				margin-right: 0;
+			}
+		}
+
+	}
+
+
+	@media #{$tablet-only} {
+		&--3 {
+			.card {
+				flex: 0 1 calc(50% - 10px);
+
+				&:nth-child(even) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	@media #{$large-up} {
+		&--3 {
+			.card {
+				flex: 0 1 calc(33.3% - 13.33px);
+
+				@include ie11 {
+					max-width: calc(33.3% - 13.33px);
+				}
+
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&--align-left {
+		.card {
+			text-align: left;
+		}
+	}
+}
+
+.section-header+.card-listing {
+	padding-top: 0;
+}
+
+@media print {
+	.card-listing .contain {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-direction: row;
+
+	}
+
+	.card-listing--3 .card,
+	.card-listing--2 .card {
+		flex: 0 1 48%;
+	}
+}

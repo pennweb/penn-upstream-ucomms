@@ -1,0 +1,23 @@
+{% if content.items|length > 0 %}
+
+<div class="event-calendar">
+	<h2 class="event-calendar__title">{{ content.field_title }}</h2>
+
+  {% for item in content.items %}
+		<div class="event-calendar__item">
+      <time class="event-card__date" datetime="{{ item.start_date }}">
+        <span class="event-card__month">{{ item.start_month }}</span>
+        <span class="event-card__day">{{ item.start_day }}</span>
+      </time>
+      <h3 class="event-card__title">
+      	<a href="{{ item.url }}" class="event-card__link">{{ item.title }}</a>
+      </h3>
+	  </div>
+  {% endfor %}
+
+	<hr>
+	{{ content.field_link }}
+</div>
+
+{% endif %}
+

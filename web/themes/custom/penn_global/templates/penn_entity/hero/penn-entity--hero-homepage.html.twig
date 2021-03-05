@@ -1,0 +1,29 @@
+<section class="{{ content.field_hero_style}} {{ content.field_text_align }}" data-hero="hero1">
+  <div class="hero__shadows"></div>
+  <div class="contain contain--wide">
+    <div class="hero__content">
+      <div class="hero__text">
+        <h3 class="hero__category">{{ content.field_subtitle }}</h3>
+        <a href="{{ content.field_link }}" class="hero__link">
+          <h1 class="hero__title">
+            {{ content.field_title }}
+          </h1>
+          {{ content.field_description }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .hero[data-hero="hero1"] {
+    background-image: url({{ content.field_image_mobile }});
+  }
+  @media(min-width:640px) {
+    .hero[data-hero="hero1"] {
+      background-image: url({{ content.field_image }});
+    }
+  }
+  {# .hero[data-hero="hero2"] {
+    background-image: url({{ content.field_image }});
+  } #}
+</style>

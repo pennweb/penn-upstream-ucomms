@@ -1,0 +1,192 @@
+.card {
+	background: #FFF;
+	position: relative;
+	overflow: hidden;
+
+	margin-bottom: 25px;
+	max-width: 630px;
+	transition: box-shadow .2s ease;
+
+	&.is-hovered,
+	&:focus-within {
+		box-shadow: $boxshadow-card;
+
+		.card__title__link {
+			text-decoration: underline;
+		}
+
+		.card__image {
+			transform: $scale;
+		}
+	}
+
+	@include ie11() {
+
+		&.is-hovered {
+			box-shadow: $boxshadow-card;
+		}
+
+		.card__title__link {
+			text-decoration: underline;
+		}
+
+		.card__image {
+			transform: $scale;
+		}
+
+	}
+
+	&--align-center {
+		text-align: center;
+	}
+
+
+	.content-aside__aside & {
+		max-width: 410px;
+
+		&:last-child {
+			@media #{$tablet-up} {
+				margin-bottom: 0;
+			}
+		}
+
+	}
+
+	&--large,
+	.card-listing--2 & {
+		text-align: center;
+
+		.card__title {
+			padding-top: 30px;
+
+			@media #{$large-up} {
+				padding-top: 60px;
+			}
+		}
+
+		.card__content {
+			@media #{$large-up} {
+				padding: 0 60px 40px;
+			}
+		}
+	}
+
+
+	@media #{$tablet-up} {
+		margin-bottom: 0;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 25px;
+	}
+
+	&__figure,
+	&__picture {
+		display: block;
+		overflow: hidden;
+		flex: 1 0 auto;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		transition: $scale_transition;
+	}
+
+	&__title {
+		font-family: $serif;
+		font-weight: 400;
+		font-size: 2rem;
+		padding-top: 30px;
+		margin-top: 0;
+
+		@media #{$tablet-up} {
+			font-size: 2.4rem;
+			line-height: 1.291666667;
+		}
+
+		&__link {
+			color: $blue;
+			position: relative;
+			display: block;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				position: absolute;
+				background: transparent;
+				height: 500px;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+
+	.card__title+.card__date {
+		margin-top: -15px;
+	}
+
+	&__date {
+		font-size: 1.2rem;
+		letter-spacing: 1.6px;
+		text-transform: uppercase;
+		color: rgba(#000, .8);
+		display: block;
+
+	}
+
+	&__location,
+	&__author {
+		text-transform: uppercase;
+		color: $primary;
+		font-style: normal;
+		font-size: 1.2rem;
+		letter-spacing: 1.6px;
+		font-weight: 500;
+	}
+
+	&__content {
+		padding: 0 20px;
+		border: 2px solid #E3E4E6;
+		border-top: none;
+
+		@media #{$tablet-up} {
+			padding: 0 35px;
+			height: 100%;
+			padding-bottom: 15px;
+		}
+
+		p {
+			font-size: 1.5rem;
+			color: $text-color;
+			line-height: 1.866666667;
+
+
+			@media #{$tablet-up} {
+				font-size: 17px;
+				line-height: 1.647058824;
+			}
+		}
+	}
+
+}
+
+@media print {
+	.card {
+
+		&__content {
+			border: none
+		}
+
+		.btn {
+			display: none;
+		}
+	}
+}

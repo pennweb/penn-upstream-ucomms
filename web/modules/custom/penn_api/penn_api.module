@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file
+ * Contains penn_api.module.
+ */
+
+/**
+ * Fetch a Penn API feed
+ * Return a json array from $url, or false
+ */ 
+function penn_api_get($url) {
+  if(empty($url))
+    return false;
+  $result = file_get_contents($url);
+  $json = json_decode($result, true); //array
+  return $json;
+}
+
+/**
+ * Implements hook preprocess field
+ */
+function penn_api_entity_preprocess_field(&$variables, $hook) {
+  $element = $variables['element'];
+  $field_name = $variables['field_name'];
+  $entity = $element['#object'];
+  $bundle = $element['#bundle'];
+
+  //Add button_link classes for certain bundles
+  $bundles_with_background = [
+    'layout_grid',
+    'layout_card_listing',
+  ];
+  if ($field_name == 'field_button_link' && in_array($bundle, $bundles_with_background)) {
+    $background_color = $entity->get('field_background_color')->getString();
+    $button_link_class = '';
+    switch($background_color) {
+      case 'bg-color bg-blue':
+      case 'bg-color bg-red':
+        $button_link_class = 'btn--outline-white';
+        break;
+    }
+    foreach ($variables['items'] as $delta => &$item) {
+      $item['content']['#button_link_class'] = $button_link_class;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_entity
+ */
+function penn_api_preprocess_penn_api_entity(&$vars) {
+  if(isset($vars['elements']['#penn_api_entity']) ) {
+    $penn_api_entity = $vars['elements']['#penn_api_entity'];
+    $bundle = $penn_api_entity->bundle();
+
+    //Expose the Entity object to the templates
+    $vars['content']['penn_api_entity'] = $penn_api_entity;
+
+    //Set a <field>_has_value booleans for certain fields
+    //This is a helper to prevent having to render fields in twig templates when determing to hide/show
+    $fields = [
+      'field_title',
+      'field_description',
+      'field_description_formatted',
+      'field_subtitle',
+      'field_video_source_url',
+    ];
+    foreach($fields as $field) {
+      if($penn_api_entity->hasField($field) && !empty($penn_api_entity->get($field)->getString())) {
+        $vars['content'][$field . "_has_value"] = true;
+      }
+    }
+
+    //Set appropriate header classes for entities with background colors. 
+    $bundles_with_background = [
+      'layout_grid',
+      'layout_tabs',
+      'layout_card_listing',
+    ];
+    if(in_array($bundle, $bundles_with_background)) {
+      $background_color = $penn_api_entity->get('field_background_color')->getString();
+      $section_header_class = '';
+      switch($background_color) {
+        case 'bg-color bg-blue':
+        case 'bg-color bg-red':
+          $section_header_class = 'section-header--dark';
+          break;
+      }
+      $vars['content']['section_header_class'] = $section_header_class;
+    }    
+
+    //Add an items array for entities with a feed_url field
+    if($penn_api_entity->hasField('field_feed_url')) {
+      $items = [];
+      $feed_url = $penn_api_entity->get('field_feed_url')->getString();
+      if($feed_url) {
+        $items = penn_api_get($feed_url)['items'];
+      }
+      $vars['content']['items'] = $items;
+    }
+    //Add a secondary_items array for entities with a secondary_feed_url field
+    if($penn_api_entity->hasField('field_secondary_feed_url')) {
+      $secondary_items = [];
+      $secondary_feed_url = $penn_api_entity->get('field_secondary_feed_url')->getString();
+      if($secondary_feed_url) {
+        $secondary_items = penn_api_get($secondary_feed_url)['items'];
+      }
+      $vars['content']['secondary_items'] = $secondary_items;
+    }
+  }
+}

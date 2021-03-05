@@ -1,0 +1,30 @@
+.event-calendar {
+	border: 5px solid $gray-border;
+	background: $gray;
+	padding: 25px;
+	margin-bottom: 50px;
+
+	&__title {
+		@include headings;
+		@include h4;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 15px 0;
+	}
+
+	.event-card__date {
+		position: static;
+		flex: 1 0 60px;
+		max-width: 60px;
+	}
+
+	.event-card__title {
+		font-size: 2rem;
+		margin: 0 0 0 15px;
+	}
+}

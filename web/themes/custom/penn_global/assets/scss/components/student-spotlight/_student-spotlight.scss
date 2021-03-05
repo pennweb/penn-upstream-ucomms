@@ -1,0 +1,76 @@
+.student-spotlight {
+	@include section-margin;
+	@include section-padding;
+
+	&--red {
+		background: $red;
+	}
+
+	&__column {
+		@media #{$tablet-down} {
+			&:first-child {
+				margin-bottom: 40px
+			}
+
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		@media #{$tablet-up} {
+			flex: 0 1 auto;
+
+			&--wide {
+				flex-basis: 85%;
+				margin-left: 50px;
+			}
+		}
+	}
+
+	&__flex {
+		@media #{$tablet-up} {
+			display: flex;
+			justify-content: space-between;
+
+			.student-spotlight--reverse & {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+
+	&__caption {
+		color: $blue;
+		position: relative;
+		display: block;
+		font-size: 1.2rem;
+		line-height: 1.8;
+		letter-spacing: 1.6px;
+		margin-top: 20px;
+		text-transform: uppercase;
+		text-align: center;
+		padding-bottom: 30px;
+
+
+		&::after {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 20px;
+			height: 4px;
+			background: rgba($blue, .4);
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+		}
+
+		&-title {
+			font-family: $serif;
+			letter-spacing: 0;
+			font-size: 2.4rem;
+			display: block;
+			text-transform: none;
+			margin-bottom: 5px;
+		}
+	}
+}

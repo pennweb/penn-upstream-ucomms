@@ -1,0 +1,63 @@
+{% if content.items|length > 0 %}
+  <section class="events-listing {{ content.field_borders }}">
+    <div class="contain">
+      <header class="section-header">
+        <h2 class="section-header__title">{{ content.field_title }}</h2>
+        <a href="{{ content.field_button_link.0['#url'] }}" class="btn btn--outline-secondary events-listing__button-large">{{ content.field_button_link[0]['#title'] }}</a>
+      </header>
+      <div class="events-listing__content">
+        <div class="events-listing__grid" data-slider="single-small">
+        
+          {% for item in content.items %}
+            <article class="event-card{{ item.image is empty ? ' event-card--no-image' : '' }}">
+              <time class="event-card__date" datetime="{{ item.start_date }}">
+                <span class="event-card__month">{{ item.start_month }}</span>
+                <span class="event-card__day">{{ item.start_day }}</span>
+              </time>
+
+              {% if not item.image is empty %}
+                <img src="{{ item.image }}" alt="{{ item.image_alt }}" class="event-card__image">
+              {% endif %}
+
+              <span class="event-card__category">{{ item.category }}</span>
+              <div class="event-card__content">
+                <h3 class="event-card__title">
+                  <a href="{{ item.url }}" class="event-card__link">{{ item.title }}</a>
+                </h3>
+                <p>
+
+                {# Print the times or All Day #}
+                {# All day? #}
+                {% if item.all_day == 'True' %}
+                  All Day
+                {% elseif item.start_time == item.end_time %}     
+                  {{ item.start_time }}
+                {% else %}
+                  {{ item.start_time }} - {{ item.end_time }}
+                {% endif %}
+
+                <br>
+                
+                {# Through? #}
+                {% if item.start_date|date("n/j/Y") != item.end_date|date("n/j/Y") %}
+                  Through {{ item.end_date|date("n/j/Y") }}          
+                  <br>
+                {% endif %}
+                  
+                {{item.location}}
+                </p>
+              </div>
+            </article>
+          {% endfor %}
+
+        </div>
+        <div class="events-listing__button-container">
+          <a href="{{ content.field_button_link.0['#url'] }}" class="btn btn--outline-secondary">{{ content.field_button_link[0]['#title'] }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endif %}
+
+

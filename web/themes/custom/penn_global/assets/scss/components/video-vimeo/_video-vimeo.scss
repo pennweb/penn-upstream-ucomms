@@ -1,0 +1,24 @@
+// component relies on _video.scss in /assets/scss/components
+
+.video-vimeo {
+	position: relative;
+
+	width: 100%;
+	overflow: hidden;
+
+	&--poster {
+		background-size: cover;
+		background-position: 50% 50%;
+
+		.video-vimeo__vimeo {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	&--hide-buttons {
+		.video-button {
+			display: none;
+		}
+	}
+}

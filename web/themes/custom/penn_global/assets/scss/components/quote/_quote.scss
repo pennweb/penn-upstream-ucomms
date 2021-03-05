@@ -1,0 +1,36 @@
+.quote {
+	&--image {
+		@media #{$tablet-up} {
+			display: flex !important;
+			align-items: flex-start;
+		}
+
+		.quote__image {
+			max-width: 410px;
+
+			@media #{$tablet-down} {
+				margin: 0 auto 20px;
+			}
+		}
+
+		.quote__content {
+			border: 0;
+			margin: 0;
+
+			@media #{$tablet-down} {
+				padding-left: 0;
+			}
+
+			p {
+				margin: 0 0 30px;
+			}
+		}
+	}
+
+	&-slider,
+	&-slider.section-padding {
+		@media #{$large-down} {
+			padding-bottom: 80px;
+		}
+	}
+}

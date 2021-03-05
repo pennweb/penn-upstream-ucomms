@@ -1,0 +1,52 @@
+.callout {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&--sm {
+		max-width: 950px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__content {
+
+		&--2 {
+			@media #{$tablet-up} {
+				display: flex;
+			}
+
+			.callout__column {
+				@media #{$tablet-up} {}
+			}
+		}
+
+
+	}
+
+	&__column {
+		@media #{$tablet-up} {
+			padding: 0 50px;
+
+			.callout__content--2 & {
+				flex: 0 50%;
+				max-width: 50%;
+			}
+		}
+	}
+
+	&__heading {
+		@include headings($lines:false);
+		@include h3;
+		color: inherit;
+		margin-top: 0;
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	strong {
+		font-weight: 500;
+		margin-right: 20px;
+	}
+}

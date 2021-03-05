@@ -1,0 +1,29 @@
+  <article class="js-wikit-accordion__item ">
+    <div class="js-wikit-accordion__wrap">
+      {% block paragraph %}
+      {% block content %}
+      <h2 class="js-wikit-accordion__heading">
+        <button aria-expanded="false" class="js-wikit-accordion__trigger" aria-controls="accordion-id-{{ paragraph.index }}" id="accordion-id-{{ paragraph.index }}-id">
+          <span class="js-wikit-accordion__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9">
+              <g>
+                <g>
+                  <path fill="none" class="strok" stroke-linecap="round" stroke-miterlimit="20" stroke-width="2.1" d="M1 1v0l6 6v0l6-6v0" />
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span class="js-wikit-accordion__title">
+            {{ content.field_title }}
+          </span>
+        </button>
+      </h2>
+      <div id="accordion-id-{{ paragraph.index }}" role="region" aria-labelledby="accordion-id-{{ paragraph.index }}-id" class="js-wikit-accordion__panel ">
+        <div class="js-wikit-accordion__panel-content">
+          <p>{{ content.field_description }}</p>
+        </div>
+      </div>
+      {% endblock %}
+      {% endblock paragraph %}
+    </div>
+  </article>

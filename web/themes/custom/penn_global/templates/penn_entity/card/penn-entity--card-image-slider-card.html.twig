@@ -1,0 +1,57 @@
+<article class="image-slider-card">
+  <div class="image-slider-card__image-contain">
+    {{ content.field_image }}
+    <div class="image-slider-card__controls">
+      <div class="image-slider-card__numbers">
+        <span class="image-slider-card__current">
+          {{ content.total_slides }}
+        </span>/<span class="image-slider-card__total">
+          {{ content.current_slide }}
+        </span>
+      </div>
+      <div class="image-slider-card__buttons">
+        <button type="button" class="image-slider-card__button" data-direction="prev">
+          <span class="a11y">Previous</span>
+          <span class="image-slider-card__button__svg" aria-hidden="true">
+            <svg width="10px" height="14px" viewbox="0 0 10 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(-991.000000, -4851.000000)" class="fill" fill-rule="nonzero">
+                  <g transform="translate(-223.000000, 4319.000000)">
+                    <g transform="translate(1219.000000, 539.000000) scale(-1, 1) translate(-1219.000000, -539.000000) translate(1214.000000, 532.000000)">
+                      <polygon points="0.492614108 14 0 13.3307884 6.313361 7.01742739 0 0.669211618 0.492614108 0 9.94522822 6.98257261"></polygon>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+        </button>
+
+        <button type="button" class="image-slider-card__button" data-direction="next">
+          <span class="a11y">Next</span>
+          <span class="image-slider-card__button__svg" aria-hidden="true">
+            <svg width="10px" height="14px" viewbox="0 0 10 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(-991.000000, -4851.000000)" class="fill" fill-rule="nonzero">
+                  <g transform="translate(-223.000000, 4319.000000)">
+                    <g transform="translate(1219.000000, 539.000000) scale(-1, 1) translate(-1219.000000, -539.000000) translate(1214.000000, 532.000000)">
+                      <polygon points="0.492614108 14 0 13.3307884 6.313361 7.01742739 0 0.669211618 0.492614108 0 9.94522822 6.98257261"></polygon>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="image-slider-card__content wysiwyg">
+    <span class="image-slider-card__caption">{{ content.field_title }}</span>
+    {# <h3 class="image-slider-card__title">
+      <a href="#" class="image-slider-card__title__link"></a>
+    </h3> #}
+    {{ content.field_description_formatted }}
+  </div>
+
+</article>

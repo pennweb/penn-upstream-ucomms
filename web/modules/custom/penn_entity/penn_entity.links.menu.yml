@@ -1,0 +1,17 @@
+
+# Penn Entity menu items definition
+entity.penn_entity.collection:
+  title: 'Penn Entity list'
+  route_name: entity.penn_entity.collection
+  description: 'List Penn Entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Penn Entity type menu items definition
+entity.penn_entity_type.collection:
+  title: 'Penn Entity type'
+  route_name: entity.penn_entity_type.collection
+  description: 'List Penn Entity type (bundles)'
+  parent: system.admin_structure
+  weight: 99

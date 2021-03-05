@@ -1,0 +1,32 @@
+<section class="content-spotlight {{ content.field_background_color }} {{ content.field_borders }}">
+  <div class="contain content-spotlight__flex">
+    <div class="content-spotlight__column">
+      <div class="text-cta">
+        {{ content.field_subtitle }}
+        {{ content.field_title }}
+        <div class="wysiwyg">
+          {{ content.field_description_formatted }}
+          {{ content.field_button_link }}
+        </div>
+      </div>
+    </div>
+    <div class="content-spotlight__column">
+    {# show video or image #}
+    {% if content.field_video_source_url_has_value %}
+        <div class="video-inline">
+        <video loop muted playsinline autoplay="autoplay" class="video-inline__video ">
+          <source src="{{ content.field_video_source_url }}" type="video/mp4"/>
+        </video>
+        <button class="video-button video-button--play-toggle video-button--pause">
+          <span class="video-button__circle">
+            <span class="icon"></span>
+          </span>
+          <span class="a11y">Play</span>
+        </button>
+      </div>
+      {% else %}
+        {{ content.field_image }}
+      {% endif %}
+    </div>
+  </div>
+</section>

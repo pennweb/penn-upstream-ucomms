@@ -1,0 +1,38 @@
+<section class="fact-bars {{ content.field_fact_bar_color }} {{ content.field_borders }} {{ content.field_margins }}">
+  <div class="contain">
+    <h2 class="fact-bars__title">{{ content.field_title }}</h2>
+
+    {# iterate through the "fact bar item" entity references and get the total #}
+    {% set overall_total = 0 %}
+    {% for item in content.field_penn_entity_reference['#items'] %}
+      {% set bar_total = item.entity.field_total.value %}
+      {% if bar_total is not empty %}
+        {% set overall_total = overall_total + bar_total %}
+      {% endif %}
+    {% endfor %}
+
+
+    {# iterate through the "fact bar item" references and print the bar graph #}
+    {% if (overall_total > 0 ) %}
+      {% set bar_scale = content.bar_scale %}
+      {% for item in content.field_penn_entity_reference['#items'] %}
+        <div class="fact-bar">
+          <p class="fact-bar__fact">
+            <span class="fact-bar__text">{{ item.entity.field_description.value }}</span>
+            <span class="fact-bar__number">{{ item.entity.field_total.value|number_format }}</span>
+          </p>
+          {% set bar_total = item.entity.field_total.value %}
+          {% if bar_total is not empty %}
+          {# take the percentage, round up and scale #}
+            {% set percentage = ((bar_total / overall_total) * 100)|round(0, 'ceil') * bar_scale %}
+          <div class="fact-bar__bar" data-percentage="{{ percentage }}"></div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+    <footer class="section-footer">
+      <p class="text-align-right">{{ (overall_total)|number_format }}</p>
+      {{ content.field_description_formatted }}<br>
+    </footer>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+{# Toggle the toggle #}
+{% set show_toggle = "on" in content.field_accordion_toggle.0 ? true : false %}
+{% set accordion_group_class = show_toggle ? 'js-wikit-accordion-group' : '' %}
+
+<section class="{{ content.field_margins }} {{content.field_borders }}">
+  <div class="{{ content.field_container_width }}">
+    <div class="js-wikit-accordion" data-allow-multiple>
+      {{ content.field_title }}
+      <div class="{{ accordion_group_class }}">
+        {% if show_toggle %}
+          <div class="js-wikit-accordion-toggle">
+            <button class="js-wikit-accordion-toggle__btn" data-toggle="expand">Expand All</button>
+            <button class="js-wikit-accordion-toggle__btn" data-toggle="collapse">Collapse All</button>
+          </div>
+        {% endif %}
+        {{ content.field_penn_entity_reference }}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+.page-header .wysiwyg.intro,
+.page-header {
+
+
+	p {
+		font-size: 2rem;
+		line-height: 1.6;
+		max-width: 1055px;
+
+		@media #{$large-up} {
+			font-size: 2.3rem;
+
+			&.smaller-text {
+				font-size: 2rem;
+			}
+		}
+
+		&.page-header__info {
+			font-family: $serif;
+			font-size: 2rem;
+			color: $blue;
+			line-height: 1.5;
+			margin-bottom: 0;
+
+			@media #{$tablet-up} {
+				font-size: 2rem;
+				line-height: 1.5;
+			}
+		}
+	}
+}
+
+.page-header {
+	padding-top: 20px;
+}

@@ -1,0 +1,44 @@
+.content-spotlight {
+	@include section-margin;
+
+	&--red {
+		background: $red;
+	}
+
+	&__column {
+		@media #{$tablet-down} {
+			&:first-child {
+				margin-bottom: 40px
+			}
+		}
+
+		@media #{$tablet-up} {
+			flex: 0 1 49.1764706%;
+		}
+	}
+
+	&__flex {
+		@media #{$tablet-up} {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&.bg-color {
+		@include section-padding;
+
+	}
+}
+
+@media print {
+	.content-spotlight {
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		&.bg-color {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+}

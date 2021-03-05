@@ -1,0 +1,75 @@
+@mixin slick-arrows() {
+	.slick-arrow {
+		border-radius: 100%;
+		border: 2px solid rgba(#DFDFDF, .7);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: none;
+		width: 56px;
+		height: 56px;
+		position: absolute;
+		transition: $animation;
+
+
+		&::before {
+			content: '';
+			background: url(/themes/custom/penn_global/assets/img/svg/icon-priority-arrow-hover.svg) no-repeat 50% 50%;
+			width: 9px;
+			height: 12px;
+		}
+
+		&:hover {
+			background: $blue;
+			border-color: $blue;
+
+			&::before {
+				background-image: url(/themes/custom/penn_global/assets/img/svg/icon-priority-arrow.svg);
+			}
+		}
+
+		&:focus {
+			.keyboard--focus & {
+				background: $blue;
+				border-color: $blue;
+
+				&::before {
+					background-image: url(/themes/custom/penn_global/assets/img/svg/icon-priority-arrow.svg);
+				}
+			}
+		}
+
+
+		.bg-color &,
+		.penn-priorities & {
+			&::before {
+				background-image: url(/themes/custom/penn_global/assets/img/svg/icon-priority-arrow.svg);
+			}
+
+			&:hover,
+			&:focus {
+				background: #FFF;
+				border-color: #FFF;
+
+				&::before {
+					background-image: url(/themes/custom/penn_global/assets/img/svg/icon-priority-arrow-hover.svg);
+				}
+			}
+		}
+
+	}
+
+
+
+	.slick-prev {
+		left: 0;
+
+		&::before {
+			transform: rotate(180deg);
+		}
+	}
+
+	.slick-next {
+		right: 0;
+	}
+}

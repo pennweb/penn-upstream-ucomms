@@ -1,0 +1,33 @@
+{% if content.field_filter_page['#items']|length > 0 %}
+
+<section class="news-featured">
+	<div class="{{ content.field_container_width }}">
+    <header class="section-header--w-filter">
+      {# <h2 class="section-header__title">{{content.field_title}}</h2> #}
+      <div class="filter">
+        <button type="button" class="filter__toggle">
+          <span class="filter__toggle__text">{{content.field_filter_title}}</span>
+          <span class="filter__toggle__triangle" aria-hidden="true"></span>
+        </button>
+        {# Build the filter dropdown from the entity references #}
+        <ul class="filter__dropdown" role="list">
+          {% for item in content.field_filter_page['#items']   %}
+            {# Set the active page #}
+            {% set active = item.entity.field_active.value == 1 ? ' filter__trigger--active' : '' %}
+            {# Set aria-expanded #}
+            {% set aria_expanded = item.entity.field_active.value == 1 ? 'true' : 'false' %}            
+            <li class="filter__item">
+              <button type="button" class="filter__trigger{{active}}" aria-expanded="{{aria_expanded}}" data-controls="nf-{{item.entity.id.value}}" id="filter-nf-{{item.entity.id.value}}">{{item.entity.field_filter_title.value}}</button>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </header>
+
+    {# Print the entity reference panels #}
+    {{ content.field_filter_page }}
+
+  </div>
+</section>
+
+{% endif %}

@@ -1,0 +1,49 @@
+.fact-bars {
+	margin-bottom: 46px;
+
+	&__title {
+		@include h2(true);
+	}
+}
+
+.fact-bar {
+	border-bottom: 1px solid #979797;
+	position: relative;
+	margin-bottom: 7px;
+
+
+	&__fact {
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+		opacity: 0.68;
+		font-size: 1.6rem;
+		color: $blue;
+		height: 46px;
+		padding: 0 7px;
+
+	}
+
+	&__bar {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		max-width: 0;
+		transition: all .4s ease;
+
+		.fact-bars--blue & {
+			background: #82AFD3
+		}
+
+		.fact-bars--yellow & {
+			background: #F2C100
+		}
+	}
+
+}

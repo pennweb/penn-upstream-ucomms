@@ -1,0 +1,77 @@
+.featured-story {
+	max-width: 1660px;
+	margin: auto;
+	position: relative;
+	min-height: 500px;
+	overflow: hidden;
+
+	&__image {
+		display: block;
+		width: 100%;
+		max-width: 200%;
+	}
+
+	&__contain {
+		@media #{$large-up} {
+			max-width: 1314px;
+			padding: 0 20px;
+			width: 100%;
+			margin: auto;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.featured-initiative-card {
+		margin: -178px 20px 50px;
+		max-width: 560px;
+
+		@media (min-width:540px) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media #{$tablet-up} {
+			margin: -178px auto 50px;
+		}
+
+		@media #{$large-up} {
+			margin: 0;
+		}
+
+		p {
+			max-width: 440px
+		}
+	}
+
+}
+
+a.featured-story {
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+@media print {
+	.featured-story {
+		min-height: 1px;
+
+		&__image {
+			display: none;
+		}
+
+		.featured-initiative-card {
+			margin: 0;
+			background: none;
+			max-width: 100%;
+		}
+
+		.btn {
+			display: none;
+		}
+	}
+}

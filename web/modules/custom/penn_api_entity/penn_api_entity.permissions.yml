@@ -1,0 +1,36 @@
+add penn api entity entities:
+  title: 'Create new Penn API Entity entities'
+
+administer penn api entity entities:
+  title: 'Administer Penn API Entity entities'
+  description: 'Allow to access the administration form to configure Penn API Entity entities.'
+  restrict access: true
+
+delete penn api entity entities:
+  title: 'Delete Penn API Entity entities'
+
+edit penn api entity entities:
+  title: 'Edit Penn API Entity entities'
+
+view published penn api entity entities:
+  title: 'View published Penn API Entity entities'
+
+  view individual penn api entity entities:
+  title: 'View individual Penn API Entity entities'
+
+view unpublished penn api entity entities:
+  title: 'View unpublished Penn API Entity entities'
+
+view all penn api entity revisions:
+  title: 'View all Penn API Entity revisions'
+
+revert all penn api entity revisions:
+  title: 'Revert all Penn API Entity revisions'
+  description: 'Role requires permission <em>view Penn API Entity revisions</em> and <em>edit rights</em> for penn api entity entities in question or <em>administer penn api entity entities</em>.'
+
+delete all penn api entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Penn API Entity revisions</em> and <em>delete rights</em> for penn api entity entities in question or <em>administer penn api entity entities</em>.'
+
+permission_callbacks:
+  - \Drupal\penn_api_entity\PennApiEntityPermissions::generatePermissions

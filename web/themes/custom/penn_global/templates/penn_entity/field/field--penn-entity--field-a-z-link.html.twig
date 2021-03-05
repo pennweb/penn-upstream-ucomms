@@ -1,0 +1,5 @@
+{% for item in items %}
+  <li class="a-to-z__item">
+    <a href="{{ item.content['#url'] }}" class="a-to-z__link">{{ item.content['#title'] }}</a>
+  </li>
+{% endfor %}

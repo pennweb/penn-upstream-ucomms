@@ -1,0 +1,12 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      assets/dist/site.css: {}
+global-scripts:
+  version: 1.x
+  js:
+    assets/dist/site.js: {}
+    assets/vendor/slick/slick.js: {}
+  dependencies:
+    - core/jquery

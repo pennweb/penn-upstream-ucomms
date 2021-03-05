@@ -1,0 +1,64 @@
+{% if content.items|length > 0 %}
+
+{% set active = ("On" in content.field_active.0) ? ' filter-section--active filter-section--showing' : '' %}
+
+<div id="nf-{{ content.penn_api_entity.id() }}" class="filter-section{{active}}" aria-labelledby="filter-nf-{{ content.penn_api_entity.id() }}">
+  {% if content.field_title_has_value %}
+    <header class="section-header">
+      <h2 class="section-header__title">{{ content.field_title }}</h2>
+    </header>
+  {% endif %}
+  
+	<div class="news-featured__grid">
+
+    {# The first item has a featured layout treatment #}
+    {% set item = content.items|first %}
+    <div class="news-featured__featured">
+      <article class="article-card article-card--featured ">
+        <picture class="article-card__figure">
+          <!-- <source srcset="" media="(min-width: 1024px)"> -->
+          <img src="{{ item.image }}" alt="{{ featured.image_alt }}" class="article-card__image">
+        </picture>
+        {% for topic in item.topic %}
+          <a href="{{ topic.url }}" class="article-card__category">{{ topic.name }}</a>
+        {% endfor %}
+        <h3 class="article-card__title">
+          <a href="{{ item.url }}" class="article-card__link">{{ item.title }}</a>
+        </h3>
+      </article>
+    </div>
+
+    {# The remaining items have a grid grid layout #}
+    <div class="news-featured__articles">
+      {% for item in content.items[1:] %}
+        <article class="article-card">
+          <picture class="article-card__figure">
+            <source srcset="{{ item.image }}" media="(min-width: 768px)">
+                <img srcset="/themes/custom/penn_global/assets/img/transparent.png" src="/themes/custom/penn_global/assets/img/transparent.png" alt="{{ item.image_alt }}" class="article-card__image">
+          </picture>
+        {% for topic in item.topic %}
+          <a href="{{ topic.url }}" class="article-card__category">{{ topic.name }}</a>
+        {% endfor %}
+          <h3 class="article-card__title">
+            <a href="{{ item.url }}" class="article-card__link">{{item.title}}</a>
+          </h3>
+        </article>
+      {% endfor %}
+
+        {% set link = content.field_link|render %}
+        {% set field_button_link = content.field_button_link|render %}
+        {% if link is not empty or field_button_link is not empty %}
+          <div class="news-featured__links">
+            {{ content.field_link }}
+            <br>
+            {{ content.field_button_link }}
+          </div>
+        {% endif %}
+
+    </div>
+
+  </div>
+</div>
+
+{% endif %}
+

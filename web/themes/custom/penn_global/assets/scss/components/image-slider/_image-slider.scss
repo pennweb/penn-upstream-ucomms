@@ -1,0 +1,208 @@
+.image-slider {
+	max-width: 840px;
+	overflow: hidden;
+	margin: 0 auto;
+
+
+
+	&__content {
+		max-width: 840px;
+		padding-top: 40px;
+		transition: all .15s ease;
+		opacity: 1;
+
+		&--inactive {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+
+
+		.image-slider-card__title {
+			margin-bottom: 0;
+
+			+p {
+				margin-top: 8px;
+			}
+		}
+
+		p {
+			font-size: 1.6rem;
+			color: rgba($blue, .68);
+			line-height: 1.5625;
+		}
+	}
+
+	.slick-list {
+		overflow: visible;
+	}
+
+	.slick-track {
+		align-items: flex-start;
+	}
+
+	.slick-slide {
+		display: flex;
+		flex-direction: column-reverse;
+		max-width: 840px;
+		transition: all .25s ease;
+
+		&:focus {
+			outline: none;
+		}
+
+		&.slick-active:focus {
+
+			outline: none
+		}
+
+	}
+}
+
+
+.image-slider-card {
+
+
+	&__image-contain {
+		position: relative;
+	}
+
+	&__caption {
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.3;
+		color: $blue;
+		letter-spacing: 1.33px;
+		padding-top: 25px;
+		text-transform: uppercase;
+		display: block;
+
+		@media #{$tablet-up} {
+			font-size: 1.2rem;
+			letter-spacing: 1.6px;
+			position: relative;
+		}
+	}
+
+	&__content {
+
+		p {
+			opacity: 0.68;
+			font-size: 1.6rem;
+			color: $blue;
+			line-height: 1.5625;
+
+		}
+	}
+
+	&__title {
+		font-family: $serif;
+		font-weight: 400;
+		font-size: 2rem;
+		color: $blue;
+
+
+		@media #{$tablet-up} {
+			font-size: 2.4rem;
+		}
+
+		&__link {
+			color: $blue;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&--active {
+		max-width: 840px;
+		opacity: 1;
+
+		@media #{$tablet-up} {
+			transition: $animation;
+		}
+	}
+
+	&__controls {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0px;
+		background: #FFF;
+		width: 243px;
+		height: 52px;
+	}
+
+	&__numbers {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 20px;
+		font-size: 1.4rem;
+		font-weight: 500;
+		color: #767676;
+		letter-spacing: 0.5px;
+	}
+
+	&__current {
+		color: #171616;
+	}
+
+	&__buttons {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 52px;
+		width: 60px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__button {
+		border: none;
+		background: none;
+		height: 52px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		svg {
+			width: 10px;
+			height: 14px;
+		}
+
+		&[data-direction="next"] {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+
+		.fill {
+			fill: $blue;
+			transition: $animation;
+		}
+
+		&:hover,
+		&:focus {
+			.fill {
+				fill: $red;
+			}
+		}
+
+		&[disabled] {
+			cursor: default;
+			opacity: 0.5;
+
+			&:hover,
+			&:focus {
+				.fill {
+					fill: $blue;
+				}
+			}
+		}
+	}
+}

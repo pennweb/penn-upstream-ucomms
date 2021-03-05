@@ -1,0 +1,31 @@
+{% set entity_id = content.penn_entity.id() %}
+<div class="modal" id="modal-{{ entity_id }}" aria-hidden="true">
+  <div class="contain">
+    <div class="modal__content">
+      <div class="modal__video">
+        <video class="video-inline__video video-inline__video--controls" controls>
+          <source src="{{ content.field_video_source }}" type="video/mp4"/>
+        </video>
+      </div>
+    </div>
+    <button type="button" class="modal__close">
+      <span class="a11y">Close Modal</span>
+    </button>
+  </div>
+</div>
+<div class="contain contain--no-padding">
+  <div class="video-w-card">
+    {{ content.field_video_transcript }}
+    <button type="button" data-modal="modal-{{ entity_id }}" class="video-w-card__button">
+      {{ content.field_image }}
+      <span class="video-w-card__icons">
+        <span class="video-w-card__icons__circle">
+          <span class="play"></span>
+        </span>
+        <span class="expand"></span>
+        <span class="a11y">Play video in modal window</span>
+      </span>
+    </button>
+    {{ content.field_featured_initiative_card }}
+  </div>
+</div>

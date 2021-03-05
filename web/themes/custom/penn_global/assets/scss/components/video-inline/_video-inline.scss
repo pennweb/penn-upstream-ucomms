@@ -1,0 +1,44 @@
+.video-inline {
+	position: relative;
+
+	&__video {
+		pointer-events: none;
+
+		&[controls] {
+			pointer-events: initial;
+		}
+	}
+
+	&__button {
+		background: rgba(0, 0, 0, 0.23);
+		border: 2px solid rgba(255, 255, 255, 0.55);
+		border-radius: 100%;
+		width: 43px;
+		height: 43px;
+		position: absolute;
+		bottom: 34px;
+		left: 27px;
+		z-index: 2;
+
+		.icon {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&.pause {
+			.icon {
+				background: url(/themes/custom/penn_global/assets/img/svg/icon-pause.svg) no-repeat 50% 50%;
+			}
+		}
+
+		&.play {
+			.icon {
+				background: url(/themes/custom/penn_global/assets/img/svg/icon-play.svg) no-repeat 50% 50%;
+			}
+
+		}
+	}
+}

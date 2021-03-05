@@ -1,0 +1,16 @@
+<div class="video">
+  <div class="contain contain--no-padding">
+    <div class="video-inline">
+      <video poster="{{ content.field_image }}" class="video-inline__video video-inline__video--controls">
+        <source src="{{ content.field_video_source }}" type="video/mp4"/>
+      </video>
+      <button class="video-button video-button--play-toggle video-button--play">
+        <span class="video-button__circle">
+          <span class="icon"></span>
+        </span>
+        <span class="a11y">Play</span>
+      </button>
+      {{ content.field_video_transcript }}
+    </div>
+  </div>
+</div>

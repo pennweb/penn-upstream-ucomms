@@ -1,0 +1,40 @@
+uuid: 87f5b5b7-d0d2-41cc-8273-28596d78ffac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.links_quick_links_wide.field_quick_link
+    - field.field.penn_entity.links_quick_links_wide.field_title
+    - penn_entity.penn_entity_type.links_quick_links_wide
+  module:
+    - link
+id: penn_entity.links_quick_links_wide.default
+targetEntityType: penn_entity
+bundle: links_quick_links_wide
+mode: default
+content:
+  field_quick_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

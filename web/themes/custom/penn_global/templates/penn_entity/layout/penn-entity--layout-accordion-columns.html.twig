@@ -1,0 +1,22 @@
+{# The maximum accordion column count is 3. 
+   More can be accommodated but will be moved to a new row #}
+{% set items_count = content.field_penn_entity_reference['#items'] | length %}
+{% set columns_count = items_count > 3 ? 3 : items_count %}
+{# Toggle the toggle #}
+{% set show_toggle = "on" in content.field_accordion_toggle.0 ? true : false %}
+{% set accordion_group_class = show_toggle ? 'js-wikit-accordion-group' : '' %}
+
+<section class="accordion-columns {{ accordion_group_class }} {{ content.field_margins }}">
+  <div class="{{ content.field_container_width }}">
+    {{ content.field_title }}
+    {% if show_toggle %}
+      <div class="js-wikit-accordion-toggle">
+        <button class="js-wikit-accordion-toggle__btn" data-toggle="expand">Expand All</button>
+        <button class="js-wikit-accordion-toggle__btn" data-toggle="collapse">Collapse All</button>
+      </div>
+    {% endif %}
+    <div class="accordion-columns__content accordion-columns__content--{{ columns_count }} ">
+      {{ content.field_penn_entity_reference }}
+    </div>
+  </div>
+</section>

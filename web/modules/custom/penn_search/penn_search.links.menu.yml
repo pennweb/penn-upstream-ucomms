@@ -1,0 +1,9 @@
+penn_search.admin:
+  route_name: penn_search.admin
+  title: 'Penn Search'
+  description: ''
+  parent: system.admin_config_search
+penn_search.results:
+  route_name: penn_search.results
+  title: Search
+  description: 'University of Pennsylvania Search Results'

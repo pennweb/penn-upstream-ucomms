@@ -1,0 +1,17 @@
+{% set alert_type = content.field_alert_type %}
+{% set data_alert = "On" in content.field_boolean.0 ? alert_type : '' %}
+<div class="alert alert--{{ alert_type }}" data-alert="{{ data_alert }}" style="display: none;">
+  <div class="contain">
+    <div class="alert__message">
+      {{ content.field_description_formatted }}
+    </div>
+    {% if "On" in content.field_alert_close.0 %}
+      <button class="alert__close" type="button">
+        <svg class="toggle-close" width="20" height="20">
+          <use xlink:href="#icon-close" href="#icon-close"></use>
+        </svg>
+        <span>Close</span>
+      </button>
+    {% endif %}
+  </div>
+</div>
