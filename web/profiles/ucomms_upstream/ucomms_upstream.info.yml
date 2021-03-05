@@ -1,6 +1,6 @@
 name: ucomms-upstream
 type: profile
-description: 'Boilerplate for University Communication's Drupal upstream'
+description: 'Boilerplate for the University Communication Drupal upstream'
 core: 8.x
 
 dependencies:
