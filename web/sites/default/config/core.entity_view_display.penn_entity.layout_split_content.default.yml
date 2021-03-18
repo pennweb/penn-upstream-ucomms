@@ -1,0 +1,47 @@
+uuid: 50234e85-d771-4c9c-be04-7f485dec2f72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_split_content.field_margins
+    - field.field.penn_entity.layout_split_content.field_padding
+    - field.field.penn_entity.layout_split_content.field_split_content_column
+    - penn_entity.penn_entity_type.layout_split_content
+  module:
+    - options
+    - text
+id: penn_entity.layout_split_content.default
+targetEntityType: penn_entity
+bundle: layout_split_content
+mode: default
+content:
+  field_margins:
+    weight: -2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_padding:
+    weight: -1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_split_content_column:
+    weight: -3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

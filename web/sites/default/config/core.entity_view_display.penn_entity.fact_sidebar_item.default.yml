@@ -1,0 +1,37 @@
+uuid: 926a5d20-0d98-4e17-a551-04f71f6648be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.fact_sidebar_item.field_description
+    - field.field.penn_entity.fact_sidebar_item.field_title
+    - penn_entity.penn_entity_type.fact_sidebar_item
+id: penn_entity.fact_sidebar_item.default
+targetEntityType: penn_entity
+bundle: fact_sidebar_item
+mode: default
+content:
+  field_description:
+    weight: -2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_title:
+    weight: -3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

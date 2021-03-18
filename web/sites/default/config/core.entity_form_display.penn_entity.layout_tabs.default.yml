@@ -1,0 +1,93 @@
+uuid: e5ad3186-d362-4733-997d-3b8bb91f8785
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_tabs.field_background_color
+    - field.field.penn_entity.layout_tabs.field_button_link
+    - field.field.penn_entity.layout_tabs.field_description_formatted
+    - field.field.penn_entity.layout_tabs.field_margins
+    - field.field.penn_entity.layout_tabs.field_padding
+    - field.field.penn_entity.layout_tabs.field_penn_entity_reference
+    - field.field.penn_entity.layout_tabs.field_title
+    - penn_entity.penn_entity_type.layout_tabs
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - link
+    - text
+id: penn_entity.layout_tabs.default
+targetEntityType: penn_entity
+bundle: layout_tabs
+mode: default
+content:
+  field_background_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_description_formatted:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_margins:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_padding:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_penn_entity_reference:
+    weight: 7
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Tab
+      label_plural: Tabs
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

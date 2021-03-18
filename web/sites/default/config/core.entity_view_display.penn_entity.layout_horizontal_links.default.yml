@@ -1,0 +1,35 @@
+uuid: 22bcd163-0217-4433-aaf9-8fc50c009913
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_horizontal_links.field_links
+    - penn_entity.penn_entity_type.layout_horizontal_links
+  module:
+    - link
+id: penn_entity.layout_horizontal_links.default
+targetEntityType: penn_entity
+bundle: layout_horizontal_links
+mode: default
+content:
+  field_links:
+    weight: -2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

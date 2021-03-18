@@ -1,0 +1,79 @@
+uuid: 78991ba1-fde5-49bb-a1df-6b0d7957bc70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.card_contact_information.field_contact_card_background
+    - field.field.penn_entity.card_contact_information.field_contact_card_column
+    - field.field.penn_entity.card_contact_information.field_link
+    - field.field.penn_entity.card_contact_information.field_subtitle
+    - field.field.penn_entity.card_contact_information.field_title
+    - penn_entity.penn_entity_type.card_contact_information
+  module:
+    - fences
+    - link
+    - options
+    - text
+id: penn_entity.card_contact_information.default
+targetEntityType: penn_entity
+bundle: card_contact_information
+mode: default
+content:
+  field_contact_card_background:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_contact_card_column:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_link:
+    weight: -2
+    label: above
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_subtitle:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: -3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

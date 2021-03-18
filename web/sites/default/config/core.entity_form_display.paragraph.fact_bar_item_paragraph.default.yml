@@ -1,0 +1,40 @@
+uuid: fe420ed3-0b31-41ed-ba2f-f8672aad7522
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fact_bar_item_paragraph.field_description_plain
+    - field.field.paragraph.fact_bar_item_paragraph.field_fact_percentage
+    - field.field.paragraph.fact_bar_item_paragraph.field_title
+    - paragraphs.paragraphs_type.fact_bar_item_paragraph
+id: paragraph.fact_bar_item_paragraph.default
+targetEntityType: paragraph
+bundle: fact_bar_item_paragraph
+mode: default
+content:
+  field_description_plain:
+    weight: 3
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_fact_percentage:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

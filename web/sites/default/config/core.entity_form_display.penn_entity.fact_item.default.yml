@@ -1,0 +1,50 @@
+uuid: cc77fe45-8570-4672-851c-86a610902c45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.fact_item.field_button_link
+    - field.field.penn_entity.fact_item.field_description
+    - field.field.penn_entity.fact_item.field_title
+    - penn_entity.penn_entity_type.fact_item
+  module:
+    - field_hidden
+    - link
+id: penn_entity.fact_item.default
+targetEntityType: penn_entity
+bundle: fact_item
+mode: default
+content:
+  field_button_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_description:
+    weight: 2
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: field_hidden_string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
