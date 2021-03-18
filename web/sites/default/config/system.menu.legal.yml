@@ -1,8 +1,0 @@
-uuid: 1578fb2e-39ca-4975-a1bb-e24c010ed191
-langcode: en
-status: true
-dependencies: {  }
-id: legal
-label: Legal
-description: ''
-locked: false
