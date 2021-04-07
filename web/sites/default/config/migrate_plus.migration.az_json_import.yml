@@ -1,0 +1,56 @@
+uuid: 1bcec3e7-0a49-4473-87a2-6dca09b91aca
+langcode: en
+status: true
+dependencies: {  }
+id: az_json_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: default
+label: 'Import A to Z via JSON'
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - modules/custom/penn_entity/data/exportaz-sep22.json
+  ids:
+    id:
+      type: integer
+  fields:
+    -
+      name: id
+      label: ID
+      selector: id
+    -
+      name: letter
+      label: Letter
+      selector: letter
+    -
+      name: links
+      label: Links
+      selector: links
+  constants:
+    name_prefix: 'Layout - A-Z > '
+process:
+  id: id
+  name:
+    -
+      plugin: concat
+      source:
+        - constants/name_prefix
+        - letter
+  field_title: letter
+  field_a_z_link:
+    plugin: sub_process
+    source: links
+    process:
+      uri: link
+      title: title
+  type:
+    plugin: default_value
+    default_value: layout_a_z
+destination:
+  plugin: 'entity:penn_entity'
+migration_dependencies: null

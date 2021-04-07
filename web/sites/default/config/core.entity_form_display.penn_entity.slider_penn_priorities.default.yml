@@ -1,0 +1,58 @@
+uuid: cc42c7f4-9b0d-4a1b-98a3-5098f9dc35b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.slider_penn_priorities.field_description
+    - field.field.penn_entity.slider_penn_priorities.field_penn_entity_reference
+    - field.field.penn_entity.slider_penn_priorities.field_title
+    - penn_entity.penn_entity_type.slider_penn_priorities
+  module:
+    - inline_entity_form
+id: penn_entity.slider_penn_priorities.default
+targetEntityType: penn_entity
+bundle: slider_penn_priorities
+mode: default
+content:
+  field_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_penn_entity_reference:
+    weight: 3
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Priority Card'
+      label_plural: 'Priority Cards'
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

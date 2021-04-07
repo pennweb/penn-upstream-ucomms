@@ -1,0 +1,67 @@
+uuid: 5f4ed752-3a74-42d6-97a4-d25da73d1f55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_api_entity.news_filter_item_4_across_cards.field_active
+    - field.field.penn_api_entity.news_filter_item_4_across_cards.field_feed_url
+    - field.field.penn_api_entity.news_filter_item_4_across_cards.field_filter_title
+    - field.field.penn_api_entity.news_filter_item_4_across_cards.field_title
+    - penn_api_entity.penn_api_entity_type.news_filter_item_4_across_cards
+  module:
+    - user
+id: penn_api_entity.news_filter_item_4_across_cards.default
+targetEntityType: penn_api_entity
+bundle: news_filter_item_4_across_cards
+mode: default
+content:
+  field_active:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_feed_url:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_filter_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

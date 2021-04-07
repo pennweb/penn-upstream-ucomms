@@ -1,0 +1,30 @@
+uuid: 8ecfb29c-aeb4-4419-80d9-a2a141544cef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.aside_card_sidebar_slider.field_penn_entity_reference
+    - penn_entity.penn_entity_type.aside_card_sidebar_slider
+id: penn_entity.aside_card_sidebar_slider.default
+targetEntityType: penn_entity
+bundle: aside_card_sidebar_slider
+mode: default
+content:
+  field_penn_entity_reference:
+    weight: -3
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

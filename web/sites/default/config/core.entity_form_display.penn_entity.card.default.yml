@@ -1,0 +1,75 @@
+uuid: 9af0c4f9-1ebc-480b-b0e1-2c55dde55159
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.card.field_button_link
+    - field.field.penn_entity.card.field_card_text_align
+    - field.field.penn_entity.card.field_description_formatted
+    - field.field.penn_entity.card.field_image
+    - field.field.penn_entity.card.field_link
+    - field.field.penn_entity.card.field_title
+    - penn_entity.penn_entity_type.card
+  module:
+    - link
+    - media_library
+    - text
+id: penn_entity.card.default
+targetEntityType: penn_entity
+bundle: card
+mode: default
+content:
+  field_button_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_card_text_align:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_description_formatted:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image:
+    weight: 4
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
