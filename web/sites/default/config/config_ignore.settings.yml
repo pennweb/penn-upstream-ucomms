@@ -1,5 +1,4 @@
 ignored_config_entities:
-  - '*'
   - ~core.extension
   - ~config_ignore.settings
 _core:
