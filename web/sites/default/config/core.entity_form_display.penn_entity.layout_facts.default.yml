@@ -1,0 +1,76 @@
+uuid: 11964212-4ad5-42e2-935a-02c9b837b2d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_facts.field_borders
+    - field.field.penn_entity.layout_facts.field_button_link
+    - field.field.penn_entity.layout_facts.field_facts_style
+    - field.field.penn_entity.layout_facts.field_penn_entity_reference
+    - field.field.penn_entity.layout_facts.field_title
+    - penn_entity.penn_entity_type.layout_facts
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - link
+id: penn_entity.layout_facts.default
+targetEntityType: penn_entity
+bundle: layout_facts
+mode: default
+content:
+  field_borders:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_facts_style:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_penn_entity_reference:
+    weight: 4
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Fact
+      label_plural: Facts
+      allow_new: true
+      match_operator: CONTAINS
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

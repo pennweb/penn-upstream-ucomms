@@ -1,0 +1,63 @@
+uuid: aebe85aa-2ad0-403a-ab57-af38346be603
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_api_entity.event_listing.field_borders
+    - field.field.penn_api_entity.event_listing.field_button_link
+    - field.field.penn_api_entity.event_listing.field_feed_url
+    - field.field.penn_api_entity.event_listing.field_title
+    - penn_api_entity.penn_api_entity_type.event_listing
+  module:
+    - link
+    - options
+id: penn_api_entity.event_listing.default
+targetEntityType: penn_api_entity
+bundle: event_listing
+mode: default
+content:
+  field_borders:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_button_link:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_feed_url:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  user_id: true

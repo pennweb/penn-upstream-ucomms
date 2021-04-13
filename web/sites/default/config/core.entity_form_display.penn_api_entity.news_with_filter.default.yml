@@ -1,0 +1,69 @@
+uuid: ad6d88eb-8ac8-442d-8e19-f8d6c98ece07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_api_entity.news_with_filter.field_container_width
+    - field.field.penn_api_entity.news_with_filter.field_filter_page
+    - field.field.penn_api_entity.news_with_filter.field_filter_title
+    - field.field.penn_api_entity.news_with_filter.field_title
+    - penn_api_entity.penn_api_entity_type.news_with_filter
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+id: penn_api_entity.news_with_filter.default
+targetEntityType: penn_api_entity
+bundle: news_with_filter
+mode: default
+content:
+  field_container_width:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_filter_page:
+    weight: 5
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Item
+      label_plural: Items
+      collapsible: true
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      revision: false
+      collapsed: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_filter_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true

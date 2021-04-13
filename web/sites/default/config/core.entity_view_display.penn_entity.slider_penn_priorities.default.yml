@@ -1,0 +1,70 @@
+uuid: a77b19dc-850d-4ad7-952f-6f9a14bddca4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.slider_penn_priorities.field_description
+    - field.field.penn_entity.slider_penn_priorities.field_penn_entity_reference
+    - field.field.penn_entity.slider_penn_priorities.field_title
+    - penn_entity.penn_entity_type.slider_penn_priorities
+  module:
+    - fences
+id: penn_entity.slider_penn_priorities.default
+targetEntityType: penn_entity
+bundle: slider_penn_priorities
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_penn_entity_reference:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

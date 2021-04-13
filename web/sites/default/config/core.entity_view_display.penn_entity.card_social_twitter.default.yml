@@ -1,0 +1,58 @@
+uuid: dabd7efd-5e3b-45aa-b1be-68d3703cab37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.card_social_twitter.field_description
+    - field.field.penn_entity.card_social_twitter.field_link
+    - penn_entity.penn_entity_type.card_social_twitter
+  module:
+    - fences
+    - link
+id: penn_entity.card_social_twitter.default
+targetEntityType: penn_entity
+bundle: card_social_twitter
+mode: default
+content:
+  field_description:
+    weight: -3
+    label: above
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_link:
+    weight: -2
+    label: above
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

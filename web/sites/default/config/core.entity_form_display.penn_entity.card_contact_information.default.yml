@@ -1,0 +1,66 @@
+uuid: 2a1e1768-e7ef-4735-bb62-6fb096d7b8a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.card_contact_information.field_contact_card_background
+    - field.field.penn_entity.card_contact_information.field_contact_card_column
+    - field.field.penn_entity.card_contact_information.field_link
+    - field.field.penn_entity.card_contact_information.field_subtitle
+    - field.field.penn_entity.card_contact_information.field_title
+    - penn_entity.penn_entity_type.card_contact_information
+  module:
+    - link
+    - text
+id: penn_entity.card_contact_information.default
+targetEntityType: penn_entity
+bundle: card_contact_information
+mode: default
+content:
+  field_contact_card_background:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_contact_card_column:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_subtitle:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
