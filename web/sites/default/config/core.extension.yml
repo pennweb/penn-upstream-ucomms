@@ -11,7 +11,6 @@ module:
   comment: 1
   config: 1
   config_filter: 1
-  config_ignore: 1
   contact: 1
   contextual: 1
   crop: 1
@@ -29,6 +28,7 @@ module:
   entity_embed: 1
   entity_reference_revisions: 1
   entity_usage: 1
+  externalauth: 1
   fences: 1
   field: 1
   field_hidden: 1
@@ -47,6 +47,7 @@ module:
   media: 1
   media_entity_browser: 1
   media_library: 1
+  menu_link_content: 1
   menu_ui: 1
   meta_position: 1
   metatag: 1
@@ -75,6 +76,7 @@ module:
   shortcut: 1
   simplify_menu: 1
   sophron: 1
+  standard: 1
   system: 1
   taxonomy: 1
   text: 1
@@ -84,13 +86,10 @@ module:
   twig_tweak: 1
   update: 1
   user: 1
-  views_ui: 1
-  menu_link_content: 1
-  xmlsitemap: 1
-  externalauth: 1
   views: 1
+  views_ui: 1
+  xmlsitemap: 1
   paragraphs: 11
-  standard: 1
 theme:
   stable: 1
   classy: 1

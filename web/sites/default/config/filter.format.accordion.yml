@@ -26,8 +26,8 @@ filters:
     weight: -47
     settings:
       default_view_mode: default
-      allowed_media_types: {  }
       allowed_view_modes: {  }
+      allowed_media_types: {  }
   entity_embed:
     id: entity_embed
     provider: entity_embed
