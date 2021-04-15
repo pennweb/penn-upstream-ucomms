@@ -1,0 +1,19 @@
+name: Penn Starter
+type: theme
+description: 'Customizable Penn Global Starter Theme'
+package: Other
+base theme: penn_global
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - penn_starter/style-overrides
+
+regions:
+  alert: Alert
+  header: Header
+  prefix: Main Prefix
+  filters: Filters
+  content: Content
+  suffix: Main Suffix
+  footer: Footer
+  hidden: Hidden
