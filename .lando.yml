@@ -1,9 +1,9 @@
-name: penn-upstream-test
+name: SITEID
 recipe: pantheon
 config:
   framework: drupal8
-  site: penn-upstream-test
-  id: 6440556b-de1e-4232-971c-18d59d201fd4
+  site: SITEID
+  id: GUID
 tooling:
   drupal:
     cmd:
@@ -11,7 +11,7 @@ tooling:
       - "--root=/app/web"
 proxy:
   mailhog:
-    - mail.penn-upstream-test.lndo.site
+    - mail.SITEID.lndo.site
 services:
   appserver:
     xdebug: true
