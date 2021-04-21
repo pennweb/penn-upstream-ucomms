@@ -3,9 +3,10 @@
 You can add custom CSS, change logos, and override templates here.
 
 ## Custom CSS
-Custom CSS should go in `assets/dist/overrides.css`.
 
-TODO: set up gulp
+- In terminal, navigate to this folder and run `npm install`.
+- Add your desired CSS to `assets/scss/overrides.scss`
+- Run `gulp build` to generate the final CSS file.
 
 ## To change the header logo:
 Modify this file:  `/penn_starter/templates/layouts/masthead.html.twig`
