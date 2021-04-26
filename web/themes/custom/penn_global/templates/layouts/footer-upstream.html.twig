@@ -1,0 +1,24 @@
+<footer class="footer">
+  <div class="contain contain--wide">
+    <div class="footer__columns">
+      <div class="footer__column">
+        <img src="{{ base_path ~ directory }}/assets/img/UPenn-logo.svg" alt="University of Pennsylvania" class="footer__logo">
+          {% set footer_utility = simplify_menu('footer-utility') %}
+      </div>
+      <div class="footer__column">
+        <ul class="footer__list footer__list--full">
+          {% set legal = simplify_menu('legal') %}
+          {% for legal in legal.menu_tree %}
+          <li class="footer__item">
+            <a href="{{ legal.url }}" class="footer__link">{{ legal.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="footer__info_container">
+          <p class="footer__info">Philadelphia, PA 19104</p>
+          <p class="footer__info">Telephone: <a href="tel:2158985000">(215) 898-5000</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
