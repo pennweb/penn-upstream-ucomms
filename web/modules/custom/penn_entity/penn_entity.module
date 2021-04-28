@@ -111,6 +111,7 @@ function penn_entity_preprocess_penn_entity(&$vars) {
       'layout_grid',
       'layout_card_slider',
       'layout_listing_cards',
+      'layout_social_grid',
     ];
     if(in_array($bundle, $bundles_with_background)) {
       $background_color = $penn_entity->get('field_background_color')->getString();
