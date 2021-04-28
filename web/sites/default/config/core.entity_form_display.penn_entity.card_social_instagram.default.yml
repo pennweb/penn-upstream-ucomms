@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.penn_entity.card_social_instagram.field_background_color
     - field.field.penn_entity.card_social_instagram.field_description
     - field.field.penn_entity.card_social_instagram.field_image
     - field.field.penn_entity.card_social_instagram.field_link
+    - field.field.penn_entity.card_social_instagram.field_title
     - penn_entity.penn_entity_type.card_social_instagram
   module:
     - link
@@ -15,6 +17,12 @@ targetEntityType: penn_entity
 bundle: card_social_instagram
 mode: default
 content:
+  field_background_color:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_description:
     weight: 3
     settings:
@@ -37,6 +45,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_title:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   name:
     type: string_textfield
