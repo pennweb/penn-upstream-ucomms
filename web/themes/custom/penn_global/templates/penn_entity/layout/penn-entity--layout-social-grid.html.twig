@@ -5,54 +5,75 @@
       <h2 class="section-header__title">{{ content.field_title }}</h2>
     </header>
     {% endif %}
+     
+    {# Social Cards #}
     <div class="social__grid" data-slider="three-across">
       {{ content.field_penn_entity_reference }}
     </div>
+
+    {# Social Icons #}
+    {% if content.bg_dark %}
+      {% set icon_color = '-white' %}
+    {% endif %}
+
     <div class="social__media">
       <h3 class="a11y">Follow us on social media</h3>
       <ul class="social__list">
-        <li class="social__item">
 
-          <a href="http://instagram.com/uofpenn" target="_blank" rel="noopener noreferrer" class="social__link">
+        {% if content.field_social_link_instagram_has_value %}
+        <li class="social__item">
+          <a href="{{ content.field_social_link_instagram }}" target="_blank" rel="noopener noreferrer" class="social__link">
             <span class="a11y">Instagram</span>
-            <img src="/{{ directory }}/assets/img/svg/icon-instagram.svg" alt="Instagram icon" class="social__icon">
+            <img src="/{{ directory }}/assets/img/svg/icon-instagram{{ icon_color }}.svg" alt="Instagram icon" class="social__icon">
           </a>
         </li>
-        <li class="social__item">
+        {% endif %}
 
-          <a href="https://www.facebook.com/UnivPennsylvania" target="_blank" rel="noopener noreferrer" class="social__link">
+        {% if content.field_social_link_facebook_has_value %}
+        <li class="social__item">
+          <a href="{{ content.field_social_link_facebook }}" target="_blank" rel="noopener noreferrer" class="social__link">
             <span class="a11y">Facebook</span>
-            <img src="/{{ directory }}/assets/img/svg/icon-facebook.svg" alt="Facebook icon" class="social__icon">
+            <img src="/{{ directory }}/assets/img/svg/icon-facebook{{ icon_color }}.svg" alt="Facebook icon" class="social__icon">
           </a>
         </li>
-        <li class="social__item">
+        {% endif %}
 
-          <a href="http://twitter.com/Penn" target="_blank" rel="noopener noreferrer" class="social__link">
+        {% if content.field_social_link_twitter_has_value %}
+        <li class="social__item">
+          <a href="{{ content.field_social_link_twitter }}" target="_blank" rel="noopener noreferrer" class="social__link">
             <span class="a11y">Twitter</span>
-            <img src="/{{ directory }}/assets/img/svg/icon-twitter.svg" alt="Twitter icon" class="social__icon">
+            <img src="/{{ directory }}/assets/img/svg/icon-twitter{{ icon_color }}.svg" alt="Twitter icon" class="social__icon">
           </a>
         </li>
-        <li class="social__item">
+        {% endif %}
 
-          <a href="http://www.flickr.com/photos/universityofpennsylvania" target="_blank" rel="noopener noreferrer" class="social__link flickr">
+        {% if content.field_social_link_flickr_has_value %}
+        <li class="social__item">
+          <a href="{{ content.field_social_link_flickr }}" target="_blank" rel="noopener noreferrer" class="social__link flickr">
             <span class="a11y">Flickr</span>
-            <img src="/{{ directory }}/assets/img/svg/icon-flickr.svg" alt="Flickr icon" class="social__icon">
+            <img src="/{{ directory }}/assets/img/svg/icon-flickr{{ icon_color }}.svg" alt="Flickr icon" class="social__icon">
           </a>
         </li>
-        <li class="social__item">
+        {% endif %}
 
-          <a href="http://www.youtube.com/user/univpennsylvania" target="_blank" rel="noopener noreferrer" class="social__link youtube">
+        {% if content.field_social_link_youtube_has_value %}
+        <li class="social__item">
+          <a href="{{ content.field_social_link_youtube }}" target="_blank" rel="noopener noreferrer" class="social__link youtube">
             <span class="a11y">YouTube</span>
-            <img src="/{{ directory }}/assets/img/svg/icon-youtube.svg" alt="YouTube icon" class="social__icon">
+            <img src="/{{ directory }}/assets/img/svg/icon-youtube{{ icon_color }}.svg" alt="YouTube icon" class="social__icon">
           </a>
         </li>
-        <li class="social__item">
+        {% endif %}
 
-          <a href="http://www.linkedin.com/company/university-of-pennsylvania" target="_blank" rel="noopener noreferrer" class="social__link linkedin">
+        {% if content.field_social_link_linkedin_has_value %}
+        <li class="social__item">
+          <a href="{{ content.field_social_link_linkedin }}" target="_blank" rel="noopener noreferrer" class="social__link linkedin">
             <span class="a11y">LinkedIn</span>
-            <img src="/{{ directory }}/assets/img/svg/icon-linkedin.svg" alt="LinkedIn icon" class="social__icon">
+            <img src="/{{ directory }}/assets/img/svg/icon-linkedin{{ icon_color }}.svg" alt="LinkedIn icon" class="social__icon">
           </a>
         </li>
+        {% endif %}
+
       </ul>
     </div>
   </div>
