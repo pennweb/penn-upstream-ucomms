@@ -14,8 +14,9 @@
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "*",
-        "drush/drush": "^8.3"
+        "drupal/structure_sync": "^2.0",
+        "drush/drush": "^8.3",
+        "pantheon-upstreams/upstream-configuration": "*"
     },
     "conflict": {
             "drupal/drupal": "*"
