@@ -928,6 +928,11 @@ drupal-entity {
   margin-right: 0px;
 }
 
+//remove the social link hover for background color compatibility
+.social__link:hover {
+  background: none;
+}
+
 /**
  * Navigation
  */

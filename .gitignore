@@ -140,4 +140,9 @@ node_modules
 
 # Vendor JS #
 ###############
-Web/themes/custom/penn_starter/assets/vendor
+web/themes/custom/penn_starter/assets/vendor
+web/themes/custom/penn_global/assets/vendor
+
+# OS System Files #
+###############
+*.DS_Store*
