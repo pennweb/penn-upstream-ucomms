@@ -1,0 +1,5 @@
+style-overrides:
+  version: 1.x
+  css:
+    theme:
+      assets/dist/overrides.css: {}

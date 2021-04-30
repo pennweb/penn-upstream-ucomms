@@ -1,7 +1,7 @@
 <header id="header" class="header ">
   <div class="contain contain--xl">
     <a href="/" class="header__logo">
-      {% include '@penn_global/layouts/masthead.html.twig' %}
+      {% include directory ~ '/templates/layouts/masthead.html.twig' %}
     </a>
     <button type="button" class="header__toggle-btn header__toggle-btn--menu">
       <span class="a11y">Toggle Site Navigation</span>
@@ -106,7 +106,7 @@
           {% endfor %}
         </ul>
       </div>
-      <a href="https://giving.aws.cloud.upenn.edu/?appeal=UPNWEB" class="btn btn--secondary btn--square">Give to Penn</a>
+      {% include directory ~ '/templates/layouts/menu-callout.html.twig' %}
     </nav>
   </div>
   <div id="siteSearch" class="search search--header">

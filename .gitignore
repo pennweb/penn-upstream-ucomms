@@ -129,3 +129,15 @@ upstream/web/
 
 # Ignore .env files as they are personal
 #/.env
+
+# SASS #
+##########
+.sass-cache
+
+# Node Modules #
+###############
+node_modules
+
+# Vendor JS #
+###############
+Web/themes/custom/penn_starter/assets/vendor
