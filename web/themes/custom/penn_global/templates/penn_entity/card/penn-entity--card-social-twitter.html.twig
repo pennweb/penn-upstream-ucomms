@@ -1,4 +1,4 @@
-<div class="social-card ">
+<div class="social-card social-card__twitter {{ content.field_background_color }}">
   <a href="{{ content.field_link }}" class="social-card__link">
     <div class="social-card__content">
       <div class="social-card__wrap">
@@ -7,7 +7,7 @@
           <span class="social-card__icon">
             <img src="/{{ directory }}/assets/img/svg/icon-twitter-white.svg" alt="Twitter">
           </span>
-          <span class="social-card__user">@penn</span>
+          <span class="social-card__user">{{ content.field_title }}</span>
         </div>
       </div>
     </div>
