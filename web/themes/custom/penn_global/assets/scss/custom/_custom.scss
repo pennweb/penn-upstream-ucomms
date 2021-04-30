@@ -827,6 +827,83 @@ drupal-entity {
  * Social Cards
  */
 
+// Twitter cards, background colors
+.social-card.social-card__twitter {
+  margin-bottom: 0;
+  &.bg-color {
+    margin: 0;
+  }
+  &.bg-red {
+    background: $red;
+  }
+  &.bg-blue {
+    background: $blue;
+  }
+  &.bg-gray {
+    background: $gray;
+    color: $blue;
+    .social-card__icon {
+      background: $blue;
+    }
+    .social-card__user {
+      color: $blue;
+    }
+  }
+  &:not(.bg-color) {
+    background: white;
+    color: $blue;
+    .social-card__icon {
+      background: $blue;
+    }
+    .social-card__user {
+      color: $blue;
+    }
+  }
+}
+
+//Instagram cards, background colors
+.social-card--image {
+  &.bg-color {
+    margin: 0;
+  }
+  &.bg-red {
+    .social-card__content {
+      background: rgba($red, 0.8);
+    }
+  }
+  &.bg-blue {
+    .social-card__content {
+      background: rgba($blue, 0.8);
+    }
+  }
+  &.bg-gray {
+    .social-card__content {
+      background: rgba($gray, 0.8);
+      color: $blue;
+      .social-card__icon {
+        background: $blue;
+        border: none;
+      }
+      .social-card__user {
+        color: $blue;
+      }
+    }
+  }
+  &:not(.bg-color) {
+    .social-card__content {
+      background: rgba(white, 0.8);
+      color: $blue;
+      .social-card__icon {
+        background: $blue;
+        border: none;
+      }
+      .social-card__user {
+        color: $blue;
+      }
+    }
+  }
+}
+
 // Keeps the social cards squared on Safari
 .social-card {
   max-height: 413px;

@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.penn_entity.card_social_twitter.field_background_color
     - field.field.penn_entity.card_social_twitter.field_description
     - field.field.penn_entity.card_social_twitter.field_link
+    - field.field.penn_entity.card_social_twitter.field_title
     - penn_entity.penn_entity_type.card_social_twitter
   module:
     - link
@@ -13,6 +15,12 @@ targetEntityType: penn_entity
 bundle: card_social_twitter
 mode: default
 content:
+  field_background_color:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_description:
     weight: 3
     settings:
@@ -28,6 +36,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_title:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   name:
     type: string_textfield

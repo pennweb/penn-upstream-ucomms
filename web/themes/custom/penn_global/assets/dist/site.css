@@ -13114,6 +13114,88 @@ drupal-entity {
 /**
  * Social Cards
  */
+.social-card.social-card__twitter {
+  margin-bottom: 0;
+}
+
+.social-card.social-card__twitter.bg-color {
+  margin: 0;
+}
+
+.social-card.social-card__twitter.bg-red {
+  background: #95001A;
+}
+
+.social-card.social-card__twitter.bg-blue {
+  background: #011F5B;
+}
+
+.social-card.social-card__twitter.bg-gray {
+  background: #F2F2F2;
+  color: #011F5B;
+}
+
+.social-card.social-card__twitter.bg-gray .social-card__icon {
+  background: #011F5B;
+}
+
+.social-card.social-card__twitter.bg-gray .social-card__user {
+  color: #011F5B;
+}
+
+.social-card.social-card__twitter:not(.bg-color) {
+  background: white;
+  color: #011F5B;
+}
+
+.social-card.social-card__twitter:not(.bg-color) .social-card__icon {
+  background: #011F5B;
+}
+
+.social-card.social-card__twitter:not(.bg-color) .social-card__user {
+  color: #011F5B;
+}
+
+.social-card--image.bg-color {
+  margin: 0;
+}
+
+.social-card--image.bg-red .social-card__content {
+  background: rgba(149, 0, 26, 0.8);
+}
+
+.social-card--image.bg-blue .social-card__content {
+  background: rgba(1, 31, 91, 0.8);
+}
+
+.social-card--image.bg-gray .social-card__content {
+  background: rgba(242, 242, 242, 0.8);
+  color: #011F5B;
+}
+
+.social-card--image.bg-gray .social-card__content .social-card__icon {
+  background: #011F5B;
+  border: none;
+}
+
+.social-card--image.bg-gray .social-card__content .social-card__user {
+  color: #011F5B;
+}
+
+.social-card--image:not(.bg-color) .social-card__content {
+  background: rgba(255, 255, 255, 0.8);
+  color: #011F5B;
+}
+
+.social-card--image:not(.bg-color) .social-card__content .social-card__icon {
+  background: #011F5B;
+  border: none;
+}
+
+.social-card--image:not(.bg-color) .social-card__content .social-card__user {
+  color: #011F5B;
+}
+
 .social-card {
   max-height: 413px;
 }
