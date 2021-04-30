@@ -285,3 +285,13 @@ function penn_global_fetch_image_style($image_id, $image_style) {
   }
   return $new_image_url;
 }
+
+/**
+ * Prepares global variables for all templates, including subthemes.
+ */
+function penn_global_preprocess(&$variables) {
+  $handler = \Drupal::service('theme_handler');
+  //Make the penn_global theme directory available to templates
+  //Use {{ penn_global_directory }} in twig templates
+  $variables['penn_global_directory'] = $handler->getTheme('penn_global')->getPath();
+}

@@ -13222,6 +13222,10 @@ drupal-entity {
   margin-right: 0px;
 }
 
+.social__link:hover {
+  background: none;
+}
+
 /**
  * Navigation
  */
