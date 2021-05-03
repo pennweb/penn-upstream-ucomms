@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.penn_entity.layout_social_grid.field_background_color
+    - field.field.penn_entity.layout_social_grid.field_padding
     - field.field.penn_entity.layout_social_grid.field_penn_entity_reference
     - field.field.penn_entity.layout_social_grid.field_social_link_facebook
     - field.field.penn_entity.layout_social_grid.field_social_link_flickr
@@ -23,6 +24,13 @@ mode: default
 content:
   field_background_color:
     weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_padding:
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }

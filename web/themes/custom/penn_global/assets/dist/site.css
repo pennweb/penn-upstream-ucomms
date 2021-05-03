@@ -13112,8 +13112,31 @@ drupal-entity {
 }
 
 /**
- * Social Cards
+ * Social Grid
  */
+.social__grid {
+  margin-top: 0;
+}
+
+.social {
+  padding: 0;
+}
+
+.social__media {
+  margin: 20px 0;
+}
+
+.social__item {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .social__item {
+    margin-top: 10px;
+  }
+}
+
 .social-card.social-card__twitter {
   margin-bottom: 0;
 }
