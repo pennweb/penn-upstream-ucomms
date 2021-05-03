@@ -824,8 +824,29 @@ drupal-entity {
 }
 
 /**
- * Social Cards
+ * Social Grid
  */
+
+//Readjust padding and margins on containers
+.social__grid {
+  margin-top: 0;
+}
+
+.social {
+  padding: 0;
+}
+
+.social__media {
+  margin: 20px 0;
+}
+
+.social__item {
+  margin-top: 0;
+  margin-bottom: 0;
+  @media #{$tablet-down} {
+    margin-top: 10px;
+  }
+}
 
 // Twitter cards, background colors
 .social-card.social-card__twitter {
