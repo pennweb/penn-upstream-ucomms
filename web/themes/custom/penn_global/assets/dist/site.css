@@ -12276,6 +12276,14 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 /*
  * Cards
  */
+.card .card__title {
+  color: #011F5B;
+}
+
+.content-aside .card a {
+  color: #011F5B;
+}
+
 .card-listing .card--align-left {
   text-align: left;
 }
@@ -12286,6 +12294,14 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 
 .card-listing .card--align-right {
   text-align: right;
+}
+
+/** 
+ * Content Aside
+ */
+.content-aside .wysiwyg-container {
+  padding: 15px 35px;
+  margin-bottom: 25px;
 }
 
 /**

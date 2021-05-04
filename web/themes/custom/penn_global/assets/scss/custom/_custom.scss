@@ -104,6 +104,16 @@
 /*
  * Cards
  */
+
+.card {
+  .card__title {
+    color: $blue;
+  }
+}
+.content-aside .card a {
+  color: $blue;
+}
+
 .card-listing .card--align-left {
   text-align: left;
 }
@@ -114,6 +124,16 @@
 
 .card-listing .card--align-right {
   text-align: right;
+}
+
+/** 
+ * Content Aside
+ */
+ .content-aside {
+  .wysiwyg-container {
+    padding: 15px 35px;
+    margin-bottom: 25px;
+  }
 }
 
 /**

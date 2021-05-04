@@ -11,6 +11,7 @@ dependencies:
     - penn_entity.penn_entity_type.aside_testimonial
     - penn_entity.penn_entity_type.card
     - penn_entity.penn_entity_type.card_contact_information
+    - penn_entity.penn_entity_type.layout_container
     - penn_entity.penn_entity_type.layout_content_aside
     - penn_entity.penn_entity_type.links_quick_links
 id: penn_entity.layout_content_aside.field_penn_entity_reference
@@ -35,6 +36,7 @@ settings:
       card: card
       card_contact_information: card_contact_information
       accordion: accordion
+      layout_container: layout_container
     sort:
       field: _none
     auto_create: false
