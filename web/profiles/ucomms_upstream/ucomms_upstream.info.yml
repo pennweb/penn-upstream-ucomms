@@ -8,8 +8,6 @@ dependencies:
   - 'admin_toolbar'
   - 'adminimal_admin_toolbar'
   - 'externalauth'
-  - 'config_filter'
-  - 'config_ignore'
   - 'penn_ckeditor'
   - 'penn_entity'
   - 'devel'
