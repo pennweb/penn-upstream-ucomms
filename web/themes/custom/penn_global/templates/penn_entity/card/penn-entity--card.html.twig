@@ -4,7 +4,12 @@
   </figure>
   <div class="card__content">
     <h2 class="card__title">
-      <a href="{{ content.field_link }}" class="card__title__link">{{ content.field_title }}</a>
+      {% set link = render_var(content.field_link) %}
+      {% if link is empty %}
+        {{ content.field_title }}
+      {% else %}
+        <a href="{{ content.field_link }}" class="card__title__link">{{ content.field_title }}</a>
+      {% endif %}
     </h2>
     {{ content.field_description_formatted }}
     {{ content.field_button_link }}
