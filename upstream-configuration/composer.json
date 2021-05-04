@@ -17,7 +17,6 @@
         "zaporylie/composer-drupal-optimizations": "^1.2",
         "drupal/adminimal_admin_toolbar": "^1.10",
         "drupal/adminimal_theme": "^1.5",
-        "drupal/config_ignore": "^2.3",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
@@ -53,7 +52,6 @@
         "oomphinc/composer-installers-extender": "^2.0",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
-        "slowprog/composer-copy-file": "^0.3.3",
-        "drupal/config_ignore": "^2.3"    },
-    "version": "1.0.0"
+        "slowprog/composer-copy-file": "^0.3.3"    },
+    "version": "1.0.1"
 }
