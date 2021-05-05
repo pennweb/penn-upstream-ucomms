@@ -1,9 +1,9 @@
-name: SITEID
+name: penn-pep
 recipe: pantheon
 config:
   framework: drupal8
-  site: SITEID
-  id: GUID
+  site: penn-pep
+  id: b5b0278e-12d5-4715-9387-5dc7a0e3ef53
 tooling:
   drupal:
     cmd:
@@ -11,7 +11,7 @@ tooling:
       - "--root=/app/web"
 proxy:
   mailhog:
-    - mail.SITEID.lndo.site
+    - mail.penn-pep.lndo.site
 services:
   appserver:
     xdebug: true
