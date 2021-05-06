@@ -129,13 +129,15 @@
 /** 
  * Content Aside
  */
- .content-aside {
+.content-aside {
+  //Style generic containers in asides
   .wysiwyg-container {
     padding: 15px 35px;
     margin-bottom: 25px;
   }
+  //Remove WDG's padding to use "section-padding" instead
+  padding: 0;
 }
-
 /**
  * Content Spotlight
  */
