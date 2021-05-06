@@ -12299,6 +12299,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 /** 
  * Content Aside
  */
+.content-aside {
+  padding: 0;
+}
+
 .content-aside .wysiwyg-container {
   padding: 15px 35px;
   margin-bottom: 25px;
