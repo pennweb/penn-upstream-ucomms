@@ -1019,3 +1019,42 @@ select {
     }
   }
 }
+
+/**
+ * Video
+ */
+
+ .video-inline {
+  .video-button__circle {
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 100%;
+    height: 80px;
+    left: calc(50% - 41px);
+    position: absolute;
+    top: calc(50% - 41px);
+    width: 80px;
+    @media #{$small-up} {
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      height: 140px;
+      left: calc(50% - 72px);
+      position: absolute;
+      top: calc(50% - 72px);
+      width: 140px;
+    }
+  }
+
+  .video-button--play .icon {
+    background: url(/themes/custom/penn_global/assets/img/svg/icon-play.svg)
+      no-repeat 53% 50%;
+    background-size: 30px 30px;
+    @media #{$small-up} {
+      background-size: 35px 50px;
+    }
+  }
+
+  .video-button:hover .video-button__circle,
+  .video-button:focus .video-button__circle {
+    background: rgba(0, 0, 0, 0.75);
+  }
+}
