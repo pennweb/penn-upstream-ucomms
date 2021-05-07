@@ -12372,7 +12372,8 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 /**
  * Local Tasks Menu
  */
-#block-penn-global-local-tasks {
+#block-penn-global-local-tasks,
+#block-penn-starter-local-tasks {
   z-index: 10;
   top: 200px;
   right: 0;
@@ -12382,14 +12383,16 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   border: 2px solid #ddd;
 }
 
-#block-penn-global-local-tasks li {
+#block-penn-global-local-tasks li,
+#block-penn-starter-local-tasks li {
   margin: 0 10px;
   list-style-type: none;
   color: #95001A;
   margin: 6px 0;
 }
 
-#block-penn-global-local-tasks li a {
+#block-penn-global-local-tasks li a,
+#block-penn-starter-local-tasks li a {
   color: #95001A;
   font-size: 14px;
 }
