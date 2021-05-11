@@ -17,6 +17,9 @@ settings:
     -
       value: featured-initiative-card--red
       label: Red
+    -
+      value: featured-initiative-card--gray
+      label: Gray
   allowed_values_function: ''
 module: options
 locked: false
