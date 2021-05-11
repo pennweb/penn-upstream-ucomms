@@ -1,0 +1,58 @@
+uuid: 6aa0a2f5-3930-43d0-93ba-bc4112fabe45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_offset_card_with_image.field_align
+    - field.field.penn_entity.layout_offset_card_with_image.field_featured_initiative_card
+    - field.field.penn_entity.layout_offset_card_with_image.field_image
+    - penn_entity.penn_entity_type.layout_offset_card_with_image
+  module:
+    - fences
+    - options
+id: penn_entity.layout_offset_card_with_image.default
+targetEntityType: penn_entity
+bundle: layout_offset_card_with_image
+mode: default
+content:
+  field_align:
+    weight: -2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_featured_initiative_card:
+    weight: -3
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_image:
+    weight: -1
+    label: above
+    settings:
+      view_mode: video_modal_poster
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

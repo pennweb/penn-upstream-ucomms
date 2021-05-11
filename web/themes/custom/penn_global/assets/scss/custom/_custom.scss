@@ -562,6 +562,30 @@ drupal-entity {
   }
 }
 
+//Add gray background color
+.featured-initiative-card--gray {
+  background: $gray;
+  .featured-initiative-card__wrap,
+  .featured-initiative-card__title__link,
+  .featured-initiative-card__category {
+    color: $blue;
+  }
+  .featured-initiative-card__wrap {
+    border: 1px solid rgba(1, 31, 91, 0.15);
+  }
+
+  //Lazy override of button color for gray/white background
+  .btn--outline-white-secondary {
+    background: #011f5b;
+    color: #fff;
+  }
+  .is-hovered .btn,
+  .btn:hover,
+  .btn:focus {
+    background: #00102f;
+  }
+}
+
 /**
  * Image Slider
  */
@@ -1024,7 +1048,7 @@ select {
  * Video
  */
 
- .video-inline {
+.video-inline {
   .video-button__circle {
     background: rgba(0, 0, 0, 0.75);
     border: 2px solid rgba(255, 255, 255, 0.9);
