@@ -1,0 +1,59 @@
+uuid: 3e410e5b-f927-4dca-b30a-0d5a63444b0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.layout_offset_card_with_image.field_align
+    - field.field.penn_entity.layout_offset_card_with_image.field_featured_initiative_card
+    - field.field.penn_entity.layout_offset_card_with_image.field_image
+    - penn_entity.penn_entity_type.layout_offset_card_with_image
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - media_library
+id: penn_entity.layout_offset_card_with_image.default
+targetEntityType: penn_entity
+bundle: layout_offset_card_with_image
+mode: default
+content:
+  field_align:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_featured_initiative_card:
+    weight: 2
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Card
+      label_plural: Cards
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
