@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.penn_entity.layout_quote.field_borders
     - field.field.penn_entity.layout_quote.field_image
+    - field.field.penn_entity.layout_quote.field_margins
     - field.field.penn_entity.layout_quote.field_padding
     - field.field.penn_entity.layout_quote.field_quote
     - field.field.penn_entity.layout_quote.field_quote_author
@@ -39,6 +40,13 @@ content:
         fences_label_tag: div
         fences_label_classes: ''
     type: entity_reference_entity_view
+    region: content
+  field_margins:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_padding:
     weight: 1

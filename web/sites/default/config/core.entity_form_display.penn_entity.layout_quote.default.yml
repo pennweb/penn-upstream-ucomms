@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.penn_entity.layout_quote.field_borders
     - field.field.penn_entity.layout_quote.field_image
+    - field.field.penn_entity.layout_quote.field_margins
     - field.field.penn_entity.layout_quote.field_padding
     - field.field.penn_entity.layout_quote.field_quote
     - field.field.penn_entity.layout_quote.field_quote_author
@@ -28,6 +29,12 @@ content:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
+    region: content
+  field_margins:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_padding:
     weight: 7
