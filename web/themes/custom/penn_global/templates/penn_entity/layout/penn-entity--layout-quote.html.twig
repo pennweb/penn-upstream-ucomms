@@ -1,5 +1,5 @@
-{% set quote__image = content.field_image|render is not empty ? 'quote--image' : ''%}
-<div class="quote {{ quote__image }} {{ content.field_borders }} {{ content.field_padding }} ">
+{% set quote_image = content.field_image|render is not empty ? 'quote--image' : ''%}
+<div class="contain quote {{ quote_image }} {{ content.field_borders }} {{ content.field_padding }} {{ content.field_margins }}">
   {{ content.field_image }}
   <blockquote class="quote__content">
     <p>{{ content.field_quote }}</p>
