@@ -1,0 +1,128 @@
+/**
+ * This is basically a duplicate of "Video with Card", 
+ * but with a static image instead of a video modal.
+ *
+ */
+
+.offset-card-w-image {
+	position: relative;
+
+	margin: 69px 0;
+
+	display: flex;
+	flex-direction: column-reverse;
+
+
+	@media #{$large-up} {
+		margin: 87px 0;
+
+		&__align-left {
+			align-items: flex-end;
+			.featured-initiative-card {
+				left: 0;
+			}
+		}
+	
+		&__align-right {
+			.featured-initiative-card {
+				right: 0;
+			}
+		}
+	
+		&__align-center {
+			align-items: center;
+			.featured-initiative-card {
+				// right: 0;
+			}
+		}		
+	}
+
+	&__image {
+		max-width: 1000px;
+		display: inline-block;
+		background: none;
+		border: none;
+		position: relative;
+		padding: 0;
+		margin: 0;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.6;
+			background-image: linear-gradient(180deg, rgba(0, 38, 106, 0.00) 50%, rgba(0, 0, 0, 0.70) 100%);
+		}
+
+	}	
+
+	&__image {
+		display: block;
+		width: 100%;
+	}
+
+	.featured-initiative-card {
+		text-align: left;
+		max-width: 518px;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: -15px;
+
+		@media (min-width:558px) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media #{$large-up} {
+			position: absolute;
+			// right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&__title {
+			@media #{$tablet-up} {
+				font-size: 2.8rem;
+			}
+
+			margin-bottom: .6em;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		p {
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+@media print {
+
+	.offset-card-w-image {
+		&__button {
+
+			&::before,
+			&::after,
+			&__circle {
+				display: none;
+			}
+		}
+
+		&__icons {
+			display: none;
+		}
+
+		&__image {
+			width: auto;
+		}
+	}
+
+}

@@ -121,7 +121,7 @@ function penn_entity_preprocess_penn_entity(&$vars) {
     ];
     //Helper variable to let templates know when a dark bg-color is used.
     $bg_dark = false;
-    if(in_array($bundle, $bundles_with_background)) {
+    if(in_array($bundle, $bundles_with_background) && $penn_entity->hasField('field_background_color') ) {
       $background_color = $penn_entity->get('field_background_color')->getString();
       $section_header_class = '';
       switch($background_color) {
