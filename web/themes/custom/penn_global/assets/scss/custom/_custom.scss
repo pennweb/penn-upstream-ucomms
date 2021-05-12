@@ -126,6 +126,22 @@
   text-align: right;
 }
 
+//override default border styling
+//make links the correct color
+.card {
+  &__content {
+    border: 2px solid #e3e4e6;
+    a {
+      color: $blue;
+    }
+  }
+  &__with-image {
+    .card__content {
+      border-top: none;
+    }
+  }
+}
+
 /** 
  * Content Aside
  */
@@ -832,7 +848,7 @@ drupal-entity {
 /**
  * Images 
  */
- 
+
 //centered images
 figure {
   &.align-center {

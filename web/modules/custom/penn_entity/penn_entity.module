@@ -134,6 +134,15 @@ function penn_entity_preprocess_penn_entity(&$vars) {
       $vars['content']['section_header_class'] = $section_header_class;
       $vars['content']['bg_dark'] = $bg_dark;
     }
+
+    //Check if images are populated
+    //Set a helper variable for twig 
+    if($penn_entity->hasField('field_image')) {
+      $vars['content']['field_image_has_value'] = true;
+      if($penn_entity->get('field_image')->isEmpty()) {
+        $vars['content']['field_image_has_value'] = false;
+      }
+    }
     
     //TODO: Image Slider Card: Pass along total slides/current slide count
     if($bundle == 'card_image_slider_card') {

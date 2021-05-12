@@ -1,7 +1,13 @@
-<article class="card {{ content.field_card_text_align }}">
-  <figure class="card__figure">
-    {{ content.field_image }}
-  </figure>
+{% if content.field_image_has_value %}
+  {% set with_image_class = 'card__with-image' %}
+{% endif %}
+
+<article class="card {{ with_image_class }} {{ content.field_card_text_align }}">
+  {% if content.field_image_has_value %}
+    <figure class="card__figure">
+      {{ content.field_image }}
+    </figure>
+  {% endif %}
   <div class="card__content">
     <h2 class="card__title">
       {% set link = render_var(content.field_link) %}
