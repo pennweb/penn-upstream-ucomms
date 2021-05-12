@@ -830,6 +830,17 @@ drupal-entity {
 }
 
 /**
+ * Images 
+ */
+ 
+//centered images
+figure {
+  &.align-center {
+    text-align: center;
+  }
+}
+
+/**
  * Content Gallery
  */
 
