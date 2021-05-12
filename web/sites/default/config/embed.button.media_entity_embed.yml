@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.align_center
     - core.entity_view_mode.media.wysiwyg_align_left
     - core.entity_view_mode.media.wysiwyg_align_right
     - core.entity_view_mode.media.wysiwyg_default
@@ -21,6 +22,7 @@ type_settings:
   bundles:
     - image
   display_plugins:
+    - 'view_mode:media.align_center'
     - 'view_mode:media.wysiwyg_align_left'
     - 'view_mode:media.wysiwyg_align_right'
     - 'view_mode:media.wysiwyg_default'
