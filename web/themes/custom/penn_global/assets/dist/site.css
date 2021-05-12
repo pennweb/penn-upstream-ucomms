@@ -12296,6 +12296,18 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   text-align: right;
 }
 
+.card__content {
+  border: 2px solid #e3e4e6;
+}
+
+.card__content a {
+  color: #011F5B;
+}
+
+.card__with-image .card__content {
+  border-top: none;
+}
+
 /** 
  * Content Aside
  */
@@ -13121,6 +13133,13 @@ drupal-entity {
 }
 
 /**
+ * Images 
+ */
+figure.align-center {
+  text-align: center;
+}
+
+/**
  * Content Gallery
  */
 .content-gallery__column .text-cta a {
@@ -13374,6 +13393,26 @@ select {
 .video-inline .video-button:hover .video-button__circle,
 .video-inline .video-button:focus .video-button__circle {
   background: rgba(0, 0, 0, 0.75);
+}
+
+.video-w-card__icons__circle {
+  background: rgba(0, 0, 0, 0.25);
+  border: 4px solid #FFF;
+  width: 64px;
+  height: 64px;
+}
+
+.video-w-card__icons .play {
+  background-position: 58% 50%;
+}
+
+.video-w-card__icons .expand {
+  width: 64px;
+  height: 64px;
+}
+
+.video-w-card__button:hover .video-w-card__icons__circle, .video-w-card__button:focus .video-w-card__icons__circle {
+  background: rgba(0, 0, 0, 0.25);
 }
 
 /**

@@ -126,6 +126,22 @@
   text-align: right;
 }
 
+//override default border styling
+//make links the correct color
+.card {
+  &__content {
+    border: 2px solid #e3e4e6;
+    a {
+      color: $blue;
+    }
+  }
+  &__with-image {
+    .card__content {
+      border-top: none;
+    }
+  }
+}
+
 /** 
  * Content Aside
  */
@@ -830,6 +846,17 @@ drupal-entity {
 }
 
 /**
+ * Images 
+ */
+
+//centered images
+figure {
+  &.align-center {
+    text-align: center;
+  }
+}
+
+/**
  * Content Gallery
  */
 
@@ -1080,5 +1107,27 @@ select {
   .video-button:hover .video-button__circle,
   .video-button:focus .video-button__circle {
     background: rgba(0, 0, 0, 0.75);
+  }
+}
+
+//Modal video with card
+//Modal Video
+.video-w-card {
+  &__icons__circle {
+    background: rgba(0, 0, 0, 0.25);
+    border: 4px solid #FFF;
+    width: 64px;
+    height: 64px;
+  }
+  &__icons .play {
+    background-position: 58% 50%;
+  }
+  &__icons .expand {
+    width: 64px;
+    height: 64px;
+  }
+  &__button:hover &__icons__circle,
+  &__button:focus &__icons__circle {
+    background: rgba(0, 0, 0, 0.25);
   }
 }
