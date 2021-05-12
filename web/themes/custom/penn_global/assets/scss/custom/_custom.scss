@@ -1109,3 +1109,25 @@ select {
     background: rgba(0, 0, 0, 0.75);
   }
 }
+
+//Modal video with card
+//Modal Video
+.video-w-card {
+  &__icons__circle {
+    background: rgba(0, 0, 0, 0.25);
+    border: 4px solid #FFF;
+    width: 64px;
+    height: 64px;
+  }
+  &__icons .play {
+    background-position: 58% 50%;
+  }
+  &__icons .expand {
+    width: 64px;
+    height: 64px;
+  }
+  &__button:hover &__icons__circle,
+  &__button:focus &__icons__circle {
+    background: rgba(0, 0, 0, 0.25);
+  }
+}

@@ -13395,6 +13395,26 @@ select {
   background: rgba(0, 0, 0, 0.75);
 }
 
+.video-w-card__icons__circle {
+  background: rgba(0, 0, 0, 0.25);
+  border: 4px solid #FFF;
+  width: 64px;
+  height: 64px;
+}
+
+.video-w-card__icons .play {
+  background-position: 58% 50%;
+}
+
+.video-w-card__icons .expand {
+  width: 64px;
+  height: 64px;
+}
+
+.video-w-card__button:hover .video-w-card__icons__circle, .video-w-card__button:focus .video-w-card__icons__circle {
+  background: rgba(0, 0, 0, 0.25);
+}
+
 /**
  * Upstream Footer 
  */
