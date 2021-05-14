@@ -31,6 +31,7 @@ dependencies:
     - penn_entity.penn_entity_type.layout_link_grid
     - penn_entity.penn_entity_type.layout_link_list
     - penn_entity.penn_entity_type.layout_listing_cards
+    - penn_entity.penn_entity_type.layout_offset_card_with_image
     - penn_entity.penn_entity_type.layout_quote
     - penn_entity.penn_entity_type.layout_quote_overlay
     - penn_entity.penn_entity_type.layout_quote_slider
@@ -58,9 +59,9 @@ type_settings:
     - links_quick_links
     - aside_fact_sidebar
     - aside_testimonial
-    - hero_article_card_hero
     - layout_accordion_columns
     - accordion
+    - hero_article_card_hero
     - layout_callout
     - layout_card_listing
     - layout_card_slider
@@ -82,6 +83,7 @@ type_settings:
     - layout_link_grid
     - layout_link_list
     - layout_listing_cards
+    - layout_offset_card_with_image
     - slider_penn_priorities
     - layout_quote
     - layout_quote_overlay
