@@ -12328,6 +12328,23 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 }
 
 /*
+ * Faculty Cards
+ */
+.faculty-card__description p, .faculty-card__description a {
+  opacity: 0.68;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #000f3a;
+  line-height: 1.5625;
+  margin-bottom: 7px;
+  margin-top: 0;
+}
+
+.faculty-card__description a {
+  opacity: 1;
+}
+
+/*
  * Grids
  */
 .bg-blue .grid-card p,
@@ -13397,7 +13414,7 @@ select {
 
 .video-w-card__icons__circle {
   background: rgba(0, 0, 0, 0.25);
-  border: 4px solid #FFF;
+  border: 4px solid #fff;
   width: 64px;
   height: 64px;
 }

@@ -1,0 +1,7 @@
+uuid: e2227d7b-79a2-46b4-8df1-6e61b3aee2b6
+langcode: en
+status: true
+dependencies: {  }
+name: faculty_card
+label: 'Faculty Card'
+effects: {  }

@@ -23,6 +23,7 @@ dependencies:
     - penn_entity.penn_entity_type.layout_content_spotlight
     - penn_entity.penn_entity_type.layout_fact_bars
     - penn_entity.penn_entity_type.layout_facts
+    - penn_entity.penn_entity_type.layout_faculty_grid
     - penn_entity.penn_entity_type.layout_featured_story
     - penn_entity.penn_entity_type.layout_grid
     - penn_entity.penn_entity_type.layout_hero_listing
@@ -75,6 +76,7 @@ type_settings:
     - layout_fact_bars
     - fact_list
     - layout_facts
+    - layout_faculty_grid
     - card_feat_initiative_card_group
     - layout_featured_story
     - layout_grid
