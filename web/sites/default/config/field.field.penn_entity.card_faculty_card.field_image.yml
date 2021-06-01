@@ -11,7 +11,7 @@ field_name: field_image
 entity_type: penn_entity
 bundle: card_faculty_card
 label: 'Faculty Image'
-description: ''
+description: 'Uses 1:1 crop.'
 required: false
 translatable: true
 default_value: {  }
