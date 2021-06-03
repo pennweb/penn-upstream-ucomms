@@ -179,6 +179,18 @@
   }
 }
 
+//Fix multi-line title bug
+.faculty-card__title {
+  line-height: 1.4;
+  margin-top: 8px;
+  margin-bottom: 42px;
+  text-transform: none;
+  &::after {
+    top: initial;
+    margin-top: 18px;
+  }
+}
+
 /*
  * Grids
  */
