@@ -187,6 +187,9 @@ function penn_global_preprocess_image(&$vars) {
   if ($vars['style_name'] == 'featured_story_mobile') {
     $vars['attributes']['class'][] = 'featured-story__image';
   }
+  if ($vars['style_name'] == 'faculty_card') {
+    $vars['attributes']['class'][] = 'faculty-card__image';
+  }
   if ($vars['style_name'] == 'gallery_card') {
     $vars['attributes']['class'][] = 'gallery-card__image';
   }
