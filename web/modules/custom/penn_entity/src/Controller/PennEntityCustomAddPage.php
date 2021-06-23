@@ -98,6 +98,9 @@ class PennEntityCustomAddPage extends ControllerBase {
       'bundle' => 'layout_listing_cards',
     ],
     [
+      'bundle' => 'layout_offset_card_with_image',
+    ],
+    [
       'bundle' => 'layout_quote',
     ],
     [
