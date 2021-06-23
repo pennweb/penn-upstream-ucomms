@@ -12,47 +12,127 @@ use Drupal\Core\Controller\ControllerBase;
 class PennEntityCustomAddPage extends ControllerBase {
 
   /**
-   * The list of which bundles we want to show on our custom 'Add Entity' page.
+   * The list of which bundles we want to show on our custom 'Add Entity' page, with optional descriptions.
    */
   private $bundleWhitelist = [
-    'accordion',
-    'aside_fact_card',
-    'card_feat_initiative_card_group',
-    'fact_list',
-    'hero_article_card_hero',
-    'layout_a_z',
-    'layout_accordion_columns',
-    'layout_callout',
-    'layout_card_listing',
-    'layout_card_slider',
-    'layout_columns',
-    'layout_contact_information',
-    'layout_container',
-    'layout_content_aside',
-    'layout_content_gallery',
-    'layout_content_spotlight',
-    'layout_fact_bars',
-    'layout_facts',
-    'layout_featured_story',
-    'layout_grid',
-    'layout_hero_listing',
-    'layout_horizontal_links',
-    'layout_image_slider',
-    'layout_link_grid',
-    'layout_link_list',
-    'layout_listing_cards',
-    'layout_quote',
-    'layout_quote_overlay',
-    'layout_quote_slider',
-    'layout_social_grid',
-    'layout_split_content',
-    'layout_student_spotlight',
-    'layout_tabs',
-    'links_quick_links_wide',
-    'slider_penn_priorities',
-    'video_inline',
-    'video_inline_poster_controls',
-    'video_modal',
+    [
+      'bundle' => 'accordion',
+    ],
+    [
+      'bundle' => 'accordion',
+    ],
+    [
+      'bundle' => 'aside_fact_card',
+    ],
+    [
+      'bundle' => 'card_feat_initiative_card_group',
+    ],
+    [
+      'bundle' => 'fact_list',
+    ],
+    [
+      'bundle' => 'hero_article_card_hero',
+    ],
+    [
+      'bundle' => 'layout_a_z',
+      'description' => 'See them in action in the <a style="display:inline-block" href="https://www.upenn.edu/penn-a-z">Penn A-Z</a>.',
+    ],
+    [
+      'bundle' => 'layout_accordion_columns',
+    ],
+    [
+      'bundle' => 'layout_callout',
+    ],
+    [
+      'bundle' => 'layout_card_listing',
+    ],
+    [
+      'bundle' => 'layout_card_slider',
+    ],
+    [
+      'bundle' => 'layout_columns',
+    ],
+    [
+      'bundle' => 'layout_contact_information',
+    ],
+    [
+      'bundle' => 'layout_container',
+    ],
+    [
+      'bundle' => 'layout_content_aside',
+    ],
+    [
+      'bundle' => 'layout_content_gallery',
+    ],
+    [
+      'bundle' => 'layout_content_spotlight',
+    ],
+    [
+      'bundle' => 'layout_fact_bars',
+    ],
+    [
+      'bundle' => 'layout_facts',
+    ],
+    [
+      'bundle' => 'layout_featured_story',
+    ],
+    [
+      'bundle' => 'layout_grid',
+    ],
+    [
+      'bundle' => 'layout_hero_listing',
+    ],
+    [
+      'bundle' => 'layout_horizontal_links',
+    ],
+    [
+      'bundle' => 'layout_image_slider',
+    ],
+    [
+      'bundle' => 'layout_link_grid',
+    ],
+    [
+      'bundle' => 'layout_link_list',
+    ],
+    [
+      'bundle' => 'layout_listing_cards',
+    ],
+    [
+      'bundle' => 'layout_quote',
+    ],
+    [
+      'bundle' => 'layout_quote_overlay',
+    ],
+    [
+      'bundle' => 'layout_quote_slider',
+    ],
+    [
+      'bundle' => 'layout_social_grid',
+    ],
+    [
+      'bundle' => 'layout_split_content',
+    ],
+    [
+      'bundle' => 'layout_student_spotlight',
+    ],
+    [
+      'bundle' => 'layout_tabs',
+    ],
+    [
+      'bundle' => 'links_quick_links_wide',
+    ],
+    [
+      'bundle' => 'slider_penn_priorities',
+    ],
+    [
+      'bundle' => 'video_inline',
+    ],
+    [
+      'bundle' => 'video_inline_poster_controls',
+    ],
+    [
+      'bundle' => 'video_modal',
+    ],
   ];
 
   /**
@@ -60,18 +140,22 @@ class PennEntityCustomAddPage extends ControllerBase {
    */
   public function content() {
     // Fetch a list of all Penn Entity bundles and their info (labels, etc). See API docs for "EntityTypeBundleInfo::getBundleInfo".
-    $entities = \Drupal::service('entity_type.bundle.info')->getBundleInfo('penn_entity');
+    $allEntities = \Drupal::service('entity_type.bundle.info')->getBundleInfo('penn_entity');
 
     // Sort the array of bundles alphabetically by label:
-    uasort($entities, function ($a,$b) {
+    uasort($allEntities, function ($a,$b) {
       return strcmp($a['label'], $b['label']);
     });
 
     // Create an unordered list of the bundles we've included in our whitelist:
     $list_items = '';
-    foreach ($entities as $bundle => $contents) {
-      if (in_array($bundle, $this->bundleWhitelist)) {
-        $link = '<a href="/admin/structure/penn_entity/add/' . $bundle . '"><span class="label">' . $contents['label'] . '</span></a>';
+    foreach ($this->bundleWhitelist as $entity_type) {
+      $bundle = $entity_type['bundle'];
+      if (array_key_exists($bundle, $allEntities)) {
+        $link = '<a href="/admin/structure/penn_entity/add/' . $bundle . '"><span class="label">' . $allEntities[$bundle]['label'] . '</span></a>';
+        if (array_key_exists('description', $entity_type)) {
+          $link .= '<div class="description">' . $entity_type['description'] . '</div>';
+        }
         $list_items .= '<li class="clearfix">' . $link . '</li>';
       }
     }
