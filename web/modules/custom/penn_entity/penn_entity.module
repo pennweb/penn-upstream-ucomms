@@ -130,9 +130,11 @@ function penn_entity_preprocess_penn_entity(&$vars) {
     //Check if images are populated
     //Set a helper variable for twig 
     if($penn_entity->hasField('field_image')) {
+      $vars['content']['field_image_class'] = 'with-image';
       $vars['content']['field_image_has_value'] = true;
       if($penn_entity->get('field_image')->isEmpty()) {
         $vars['content']['field_image_has_value'] = false;
+        $vars['content']['field_image_class'] = 'without-image';
       }
     }
     

@@ -1,19 +1,23 @@
-<article class="faculty-card">
-      {% set link = render_var(content.field_link) %}
-      {% if link is not empty %}    
-      <a href="{{ content.field_link }}" class="faculty-card__link">
-  {% endif %}
-        {{ content.field_image }}
+<article class="faculty-card {{ content.field_image_class }}">
+  {% set link = render_var(content.field_link) %}
+  {% if link is not empty %}
+    <a href="{{ content.field_link }}" class="faculty-card__link">
+    {% endif %}
+    {{ content.field_image }}
 
     {# <img src="/assets/temp/faculty-1.jpg" alt="Alt Text" class="faculty-card__image"> #}
-    <h2 class="faculty-card__name">
-      {{ content.field_title }}
-    </h2>
-      {% if link is not empty %}    
+    {% if content.field_title_has_value %}
+      <h2 class="faculty-card__name">
+        {{ content.field_title }}
+      </h2>
+    {% endif %}
+    {% if link is not empty %}
     </a>
   {% endif %}
+  {% if content.field_subtitle_has_value %}
 
-  <span class="faculty-card__title">{{ content.field_subtitle }}</span>
+    <span class="faculty-card__title">{{ content.field_subtitle }}</span>
+  {% endif %}
   <div class="faculty-card__description">
     {{ content.field_description_formatted }}
   </div>
