@@ -12356,6 +12356,55 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   margin-top: 18px;
 }
 
+.faculty-card.without-image::before {
+  display: block;
+  content: none;
+  width: calc(100% - 40px);
+  height: 1px;
+  background: #dfdfdf;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media (min-width: 1200px) {
+  .faculty-card.without-image:nth-child(-n + 4) {
+    padding-top: 20px;
+  }
+  .faculty-card.without-image:nth-child(-n + 4)::before {
+    content: "";
+  }
+}
+
+@media (min-width: 1024px) {
+  .faculty-card.without-image:nth-child(-n + 3) {
+    padding-top: 20px;
+  }
+  .faculty-card.without-image:nth-child(-n + 3)::before {
+    content: "";
+  }
+}
+
+@media (min-width: 640px) {
+  .faculty-card.without-image:nth-child(-n + 2) {
+    padding-top: 20px;
+  }
+  .faculty-card.without-image:nth-child(-n + 2)::before {
+    content: "";
+  }
+}
+
+@media (min-width: 0px) and (max-width: 639px) {
+  .faculty-card.without-image:nth-child(-n + 1) {
+    padding-top: 20px;
+  }
+  .faculty-card.without-image:nth-child(-n + 1)::before {
+    content: "";
+  }
+}
+
 /*
  * Grids
  */
