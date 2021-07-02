@@ -12296,6 +12296,14 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   text-align: right;
 }
 
+.card__content a.link--red {
+  color: #95001A;
+}
+
+.card__content.text-align--left {
+  text-align: left;
+}
+
 .card__content {
   border: 2px solid #e3e4e6;
 }
