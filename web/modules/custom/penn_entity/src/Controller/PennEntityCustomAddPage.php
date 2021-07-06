@@ -31,11 +31,14 @@ class PennEntityCustomAddPage extends ControllerBase {
       'bundle' => 'fact_list',
     ],
     [
+      'bundle' => 'layout_faculty_grid',
+    ],
+    [
       'bundle' => 'hero_article_card_hero',
     ],
     [
       'bundle' => 'layout_a_z',
-      'description' => 'See them in action in the <a style="display:inline-block" href="https://www.upenn.edu/penn-a-z">Penn A-Z</a>.',
+      // 'description' => 'See them in action in the <a style="display:inline-block" href="https://www.upenn.edu/penn-a-z">Penn A-Z</a>.',
     ],
     [
       'bundle' => 'layout_accordion_columns',
