@@ -11,6 +11,7 @@ dependencies:
     - field.field.penn_api_entity.layout_card_listing.field_listing_layout
     - field.field.penn_api_entity.layout_card_listing.field_margins
     - field.field.penn_api_entity.layout_card_listing.field_padding
+    - field.field.penn_api_entity.layout_card_listing.field_text_align
     - field.field.penn_api_entity.layout_card_listing.field_title
     - penn_api_entity.penn_api_entity_type.layout_card_listing
   module:
@@ -80,6 +81,13 @@ content:
     region: content
   field_padding:
     weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_text_align:
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
