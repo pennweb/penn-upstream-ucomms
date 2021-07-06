@@ -23,7 +23,6 @@ dependencies:
     - penn_api_entity.penn_api_entity_type.tabs_item
     - penn_api_entity.penn_api_entity_type.tabs_item_slider
     - system.menu.admin
-    - user.role.administrator
   module:
     - penn_api_entity
     - user
@@ -42,10 +41,9 @@ display:
     position: 0
     display_options:
       access:
-        type: role
+        type: perm
         options:
-          role:
-            administrator: administrator
+          perm: 'administer penn api entity entities'
       cache:
         type: tag
         options: {  }
@@ -464,7 +462,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user.roles
+        - user.permissions
       tags:
         - 'config:field.storage.penn_api_entity.field_title'
   page_1:
@@ -491,6 +489,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user.roles
+        - user.permissions
       tags:
         - 'config:field.storage.penn_api_entity.field_title'
