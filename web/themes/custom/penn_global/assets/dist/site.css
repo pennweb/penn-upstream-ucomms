@@ -12364,6 +12364,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   margin-top: 18px;
 }
 
+.faculty-grid .faculty-card:last-child {
+  border-right: 1px solid #DFDFDF;
+}
+
 .faculty-card.without-image::before {
   display: block;
   content: none;

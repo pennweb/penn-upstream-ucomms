@@ -200,6 +200,11 @@
   }
 }
 
+//Last child should have a border
+.faculty-grid .faculty-card:last-child {
+  border-right: 1px solid #DFDFDF;
+}
+
 //Add a top border to items in the first row
 //Adjust for device size
 .faculty-card.without-image {
