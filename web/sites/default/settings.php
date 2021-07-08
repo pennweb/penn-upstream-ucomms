@@ -16,14 +16,33 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  */
 include __DIR__ . "/settings.pantheon.php";
 
+# Provide universal absolute path to the installation.
+$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
+
 /**
- * Skipping permissions hardening will make scaffolding
- * work better, but will also raise a warning when you
- * install Drupal.
- *
- * https://www.drupal.org/project/drupal/issues/3091285
+ * Configure Redis
  */
-// $settings['skip_permissions_hardening'] = TRUE;
+if (defined('PANTHEON_ENVIRONMENT')) {
+  // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
+  $settings['container_yamls'][] = 'modules/contrib/redis/example.services.yml';
+
+  //phpredis is built into the Pantheon application container.
+  $settings['redis.connection']['interface'] = 'PhpRedis';
+  // These are dynamic variables handled by Pantheon.
+  $settings['redis.connection']['host']      = $_ENV['CACHE_HOST'];
+  $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
+  $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
+
+  $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
+  $settings['cache_prefix']['default'] = 'pantheon-redis';
+}
+
+/**
+ * Place the config directory outside of the Drupal root.
+ */
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
+);
 
 /**
  * If there is a local settings file, then include it
@@ -33,4 +52,9 @@ if (file_exists($local_settings)) {
   include $local_settings;
 }
 
-$config_directories['sync'] = __DIR__ . "/config";
+/**
+ * Always install the 'standard' profile to stop the installer from
+ * modifying settings.php.
+ */
+$settings['install_profile'] = 'standard';
+
