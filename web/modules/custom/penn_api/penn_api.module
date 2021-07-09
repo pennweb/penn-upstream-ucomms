@@ -72,6 +72,17 @@ function penn_api_preprocess_penn_api_entity(&$vars) {
       }
     }
 
+    //Check if images are populated
+    //Set a helper variable for twig 
+    if($penn_api_entity->hasField('field_image')) {
+      $vars['content']['field_image_class'] = 'with-image';
+      $vars['content']['field_image_has_value'] = true;
+      if($penn_api_entity->get('field_image')->isEmpty()) {
+        $vars['content']['field_image_has_value'] = false;
+        $vars['content']['field_image_class'] = 'without-image';
+      }
+    }    
+
     //Set appropriate header classes for entities with background colors. 
     $bundles_with_background = [
       'layout_grid',

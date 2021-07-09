@@ -126,6 +126,15 @@
   text-align: right;
 }
 
+// honor link--red class
+.card__content a.link--red {
+  color: $red;
+}
+
+.card__content.text-align--left {
+  text-align: left;
+}
+
 //override default border styling
 //make links the correct color
 .card {
@@ -188,6 +197,60 @@
   &::after {
     top: initial;
     margin-top: 18px;
+  }
+}
+
+//Last child should have a border
+.faculty-grid .faculty-card:last-child {
+  border-right: 1px solid #DFDFDF;
+}
+
+//Add a top border to items in the first row
+//Adjust for device size
+.faculty-card.without-image {
+  &::before {
+    display: block;
+    content: none;
+    width: calc(100% - 40px);
+    height: 1px;
+    background: #dfdfdf;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  @media #{$xlarge-up} {
+    &:nth-child(-n + 4) {
+      padding-top: 20px;
+      &::before {
+        content: "";
+      }
+    }
+  }
+  @media #{$large-up} {
+    &:nth-child(-n + 3) {
+      padding-top: 20px;
+      &::before {
+        content: "";
+      }
+    }
+  }
+  @media #{$small-up} {
+    &:nth-child(-n + 2) {
+      padding-top: 20px;
+      &::before {
+        content: "";
+      }
+    }
+  }
+  @media #{$xsmall-only} {
+    &:nth-child(-n + 1) {
+      padding-top: 20px;
+      &::before {
+        content: "";
+      }
+    }
   }
 }
 

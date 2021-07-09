@@ -1,0 +1,7 @@
+penn_entity.custom_add:
+  path: 'admin/content/add-entity'
+  defaults:
+    _controller: '\Drupal\penn_entity\Controller\PennEntityCustomAddPage::content'
+    _title: 'Add Penn Entity:'
+  requirements:
+    _permission: 'add penn entity entities'

@@ -11,6 +11,7 @@ dependencies:
     - field.field.penn_api_entity.layout_card_listing.field_listing_layout
     - field.field.penn_api_entity.layout_card_listing.field_margins
     - field.field.penn_api_entity.layout_card_listing.field_padding
+    - field.field.penn_api_entity.layout_card_listing.field_text_align
     - field.field.penn_api_entity.layout_card_listing.field_title
     - penn_api_entity.penn_api_entity_type.layout_card_listing
   module:
@@ -22,13 +23,13 @@ bundle: layout_card_listing
 mode: default
 content:
   field_background_color:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_button_link:
-    weight: 9
+    weight: 10
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -36,7 +37,7 @@ content:
     type: link_default
     region: content
   field_container_width:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -64,13 +65,19 @@ content:
     type: options_select
     region: content
   field_margins:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_padding:
-    weight: 8
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_align:
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
