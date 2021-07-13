@@ -34,9 +34,6 @@ if (file_exists($local_settings)) {
   include $local_settings;
 }
 
-/**
- * Always install the 'standard' profile to stop the installer from
- * modifying settings.php.
- */
-$settings['install_profile'] = 'standard';
-
+$config_directories['sync'] = __DIR__ . "/config";
+$config['system.site']['name'] = 'President\'s Engagement Prices';
+$config['system.site']['page']['front'] = '/home';
