@@ -21,11 +21,6 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "scripts": {
-        "post-install-cmd": [
-            "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
-        ]
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
