@@ -1,9 +1,9 @@
-name: penn-pep
+name: SITEID
 recipe: pantheon
 config:
   framework: drupal8
-  site: penn-pep
-  id: b5b0278e-12d5-4715-9387-5dc7a0e3ef53
+  site: SITEID
+  id: GUID
 tooling:
   drupal:
     cmd:
@@ -11,9 +11,11 @@ tooling:
       - "--root=/app/web"
 proxy:
   mailhog:
-    - mail.penn-pep.lndo.site
+    - mail.SITEID.lndo.site
 services:
   appserver:
+    composer_version: 2-latest
+    webroot: web
     xdebug: true
     config:
       php: .vscode/php.ini
