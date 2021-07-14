@@ -51,6 +51,7 @@
         "oomphinc/composer-installers-extender": "^2.0",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
-        "slowprog/composer-copy-file": "^0.3.3"    },
+        "slowprog/composer-copy-file": "^0.3.3",
+        "drupal/simplesamlphp_auth": "^3.2"    },
     "version": "1.0.1"
 }
