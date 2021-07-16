@@ -35,5 +35,5 @@ if (file_exists($local_settings)) {
 }
 
 $config_directories['sync'] = __DIR__ . "/config";
-$config['system.site']['name'] = 'President\'s Engagement Prices';
+$config['system.site']['name'] = 'Change to Site Name';
 $config['system.site']['page']['front'] = '/home';
