@@ -13695,7 +13695,7 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 950px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 30px 0;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
