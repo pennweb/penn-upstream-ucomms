@@ -12,6 +12,7 @@ dependencies:
     - field.field.penn_entity.hero_full_width.field_quote_author
     - field.field.penn_entity.hero_full_width.field_quote_formatted
     - field.field.penn_entity.hero_full_width.field_title
+    - field.field.penn_entity.hero_full_width.field_video_source_url
     - penn_entity.penn_entity_type.hero_full_width
   module:
     - link
@@ -82,6 +83,14 @@ content:
     region: content
   field_title:
     weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_video_source_url:
+    weight: 10
     settings:
       size: 60
       placeholder: ''
