@@ -1,0 +1,108 @@
+uuid: 992c4cea-d9fe-4d1f-932d-9fdc0637b16d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.penn_entity.hero_full_width.field_button_link
+    - field.field.penn_entity.hero_full_width.field_description_formatted
+    - field.field.penn_entity.hero_full_width.field_hero_size
+    - field.field.penn_entity.hero_full_width.field_image
+    - field.field.penn_entity.hero_full_width.field_image_mobile
+    - field.field.penn_entity.hero_full_width.field_opacity
+    - field.field.penn_entity.hero_full_width.field_quote_author
+    - field.field.penn_entity.hero_full_width.field_quote_formatted
+    - field.field.penn_entity.hero_full_width.field_title
+    - field.field.penn_entity.hero_full_width.field_video_source_url
+    - penn_entity.penn_entity_type.hero_full_width
+  module:
+    - link
+    - media_library
+    - text
+id: penn_entity.hero_full_width.default
+targetEntityType: penn_entity
+bundle: hero_full_width
+mode: default
+content:
+  field_button_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_description_formatted:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_hero_size:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_image:
+    weight: 6
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_image_mobile:
+    weight: 7
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_opacity:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_quote_author:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_quote_formatted:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_video_source_url:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
