@@ -1,0 +1,209 @@
+.hero-full-width {
+
+  &.cke_editable.wysiwyg {
+    background-color: $coal;
+    height: auto;
+  }
+  min-height: auto;
+  @media #{$tablet-up} {
+     height: 80vh;
+     &__small {
+      height: 70vh;
+     }
+     &__medium {
+      height: 80vh;
+     }
+     &__large{
+      height: 90vh;
+     }
+     &__x-large{
+      height: 100vh;
+     }
+  }
+
+
+  .hero__shadows {
+    // background: rgba(0, 0, 0, .25);
+    &::after {
+      background-image: none;
+      height: 100%;
+    }
+    &.opacity__0 {
+      background: rgba(0, 0, 0, 0);
+    }
+    &.opacity__25 {
+      background: rgba(0, 0, 0, .25);
+    }
+    &.opacity__35 {
+      background: rgba(0, 0, 0, .35);
+    }
+    &.opacity__50 {
+      background: rgba(0, 0, 0, .5);
+    }
+    &.opacity__75 {
+      background: rgba(0, 0, 0, .75);
+    }
+    &.opacity__100::after {
+      background: rgba(0, 0, 0, 1);
+      // background:blue;
+    }
+  
+  }
+
+//   .hero__content {
+//     max-width: 100%;
+//     // padding-bottom: 0;
+//     padding: 0;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     /* width: 50vw; */
+//     -webkit-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+// }
+ &__content {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   justify-content: center;
+  //  max-width: 100%;
+       max-width: 950px;
+       margin: 0 auto;
+
+   padding: 30px 0;
+   text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+
+   
+ }
+
+ .hero__title {
+   text-align: center;
+  //  font-size: 4.8rem;
+   @media #{$large-up} {
+    font-size: 6rem;
+  }
+ }
+
+ .hero__text {
+   padding: 0;
+ }
+
+  //Make headings white
+  @for $i from 1 through 6 {
+    h#{$i} {
+      color: #FFF;
+      &::after {
+        // content: none;
+        // background: white;
+      }
+      &.hero__title::after {
+        content: none;
+      }
+    }
+  }
+
+  //h1 and h2 don't need margins. Better to leave spacing to linebreaks for flexibility in hero wysiwyg
+  h1, h2 {
+    margin: 0;
+  }
+
+  .wysiwyg h2 {
+     font-size: 2.5rem;
+    
+    @media #{$small-up} {
+      font-size: 3rem;
+    }
+    @media #{$medium-up} {
+      font-size: 3.5rem;
+    }
+    @media #{$large-up} {
+      font-size: 4.5rem;
+    }
+  }
+
+  .wysiwyg   {
+    .text__x-large {
+      font-size: 5rem;
+      @media #{$small-up} {
+        font-size: 6.5rem;
+      }
+      @media #{$tablet-up} {
+        font-size: 10rem;
+      }
+    }
+  
+
+  }
+
+  .wysiwyg {
+    p, p a:not(.btn) {
+      color: white;
+    }
+  }
+
+  //Make paragraghs white
+  p {
+    color: white;
+  }
+
+
+  //Make Blockquotes white
+  blockquote {
+    p {
+      color: white;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  blockquote, .wysiwyg blockquote {
+    border-left: none;
+    padding-left: 0;
+    margin: 0 auto 30px;
+    max-width: 950px;
+    text-align: center;
+  }
+
+  .btn--outline-white {
+    border: 1px solid rgba(255, 255, 255, .75);
+  }
+
+  &__button-link {
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: none;
+    .btn--outline-white {
+      border: 1px solid rgba(255, 255, 255, .75);
+    }
+  }
+
+  cite {
+    color: #FFF;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-top: -12px;
+
+    @media #{$tablet-up} {
+      margin-bottom: 0;
+      margin-top: -36px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 4px;
+      background: rgba(255, 255, 255, .38)
+    }
+
+  }
+
+
+
+}

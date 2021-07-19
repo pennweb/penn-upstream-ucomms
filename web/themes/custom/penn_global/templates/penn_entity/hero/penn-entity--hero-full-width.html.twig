@@ -1,0 +1,40 @@
+<section class="hero hero-full-width {{ content.field_hero_size }} {{ content.field_hero_style}} {{ content.field_text_align }}" data-hero="hero1">
+  <div class="hero__shadows {{ content.field_opacity }}"></div>
+  <div class="contain contain--wide">
+    <div class="hero-full-width__content">
+
+      {# Title #}
+      {{ content.field_title }}
+      {# Hero Body #}
+          {{ content.field_description_formatted }}
+      {# Quote #}
+    
+    {% if content.field_quote_formatted_has_value %}
+    <blockquote>
+      {{ content.field_quote_formatted }}
+      {% if content.field_quote_author_has_value %}
+      <cite>{{ content.field_quote_author }}</cite>
+      {% endif %}
+    </blockquote>
+    {% endif %}
+    
+    {{ content.field_button_link }}
+
+    </div>
+    </div>
+
+    </div>
+</section>
+<style>
+  .hero[data-hero="hero1"] {
+    background-image: url({{ content.field_image_mobile }});
+  }
+  @media(min-width:640px) {
+    .hero[data-hero="hero1"] {
+      background-image: url({{ content.field_image }});
+    }
+  }
+  {# .hero[data-hero="hero2"] {
+    background-image: url({{ content.field_image }});
+  } #}
+</style>

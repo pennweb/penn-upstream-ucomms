@@ -886,8 +886,16 @@ drupal-entity {
     }
   }
 
-  h2.plain::after {
+  h2.plain::after,
+  h1.plain::after {
     content: none;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+    @media #{$small-down} {
+      font-size: 4rem;
+    }
   }
 
   // Make h2 match content aside h2
@@ -899,7 +907,24 @@ drupal-entity {
   p {
     color: #000;
   }
-}
+
+  //Colors
+  .text__light-blue {
+    color: $light_blue;
+  }
+  .text__yellow {
+    color: $yellow;
+  }
+
+  //Text
+  .text__sans-serif {
+    font-family: $sans;
+  }
+  .text__x-large {
+    font-size: 10rem;
+  }
+
+} // End .wysiwyg
 
 // Prevent image floating on smaller devices
 .wysiwyg {
@@ -935,6 +960,20 @@ drupal-entity {
         }
       }
     }
+  }
+}
+
+//Position the small line following positioned headings
+.text-align-center {
+  &::after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+.text-align-right {
+  &::after {
+    right: 0;
   }
 }
 

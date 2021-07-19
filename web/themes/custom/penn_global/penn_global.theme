@@ -244,6 +244,7 @@ function penn_global_preprocess_penn_entity(&$variables) {
 
   switch ($entity->bundle()) {
     case 'hero_homepage':
+    case 'hero_full_width':
       if ($entity->field_image->count() > 0) {
         $mediaEntity = $entity->field_image->referencedEntities()[0];
         penn_global_fetch_image_style($mediaEntity->field_media_image->target_id, 'crop_5x3');
