@@ -37,6 +37,9 @@ class PennEntityCustomAddPage extends ControllerBase {
       'bundle' => 'hero_article_card_hero',
     ],
     [
+      'bundle' => 'hero_full_width',
+    ],
+    [
       'bundle' => 'layout_a_z',
       // 'description' => 'See them in action in the <a style="display:inline-block" href="https://www.upenn.edu/penn-a-z">Penn A-Z</a>.',
     ],
