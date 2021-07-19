@@ -15,13 +15,18 @@
     ],
     "require": {
         "drush/drush": "^8.3",
-        "pantheon-upstreams/upstream-configuration": "*"
+        "pantheon-upstreams/upstream-configuration": "^1.0"
     },
     "conflict": {
             "drupal/drupal": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "scripts": {
+        "post-install-cmd": [
+            "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+        ]
+    },
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
