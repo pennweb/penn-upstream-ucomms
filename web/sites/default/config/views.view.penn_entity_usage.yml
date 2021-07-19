@@ -14,6 +14,7 @@ dependencies:
     - penn_entity.penn_entity_type.aside_testimonial
     - penn_entity.penn_entity_type.card
     - penn_entity.penn_entity_type.card_contact_information
+    - penn_entity.penn_entity_type.card_faculty_card
     - penn_entity.penn_entity_type.card_feat_initiative_card_group
     - penn_entity.penn_entity_type.card_featured_article_card_full
     - penn_entity.penn_entity_type.card_featured_initiative_card
@@ -33,6 +34,7 @@ dependencies:
     - penn_entity.penn_entity_type.fact_list_item
     - penn_entity.penn_entity_type.fact_sidebar_item
     - penn_entity.penn_entity_type.hero_article_card_hero
+    - penn_entity.penn_entity_type.hero_full_width
     - penn_entity.penn_entity_type.hero_homepage
     - penn_entity.penn_entity_type.hero_page_hero
     - penn_entity.penn_entity_type.hero_page_quote_hero
@@ -49,6 +51,7 @@ dependencies:
     - penn_entity.penn_entity_type.layout_content_spotlight
     - penn_entity.penn_entity_type.layout_fact_bars
     - penn_entity.penn_entity_type.layout_facts
+    - penn_entity.penn_entity_type.layout_faculty_grid
     - penn_entity.penn_entity_type.layout_featured_story
     - penn_entity.penn_entity_type.layout_grid
     - penn_entity.penn_entity_type.layout_hero_listing
@@ -57,6 +60,7 @@ dependencies:
     - penn_entity.penn_entity_type.layout_link_grid
     - penn_entity.penn_entity_type.layout_link_list
     - penn_entity.penn_entity_type.layout_listing_cards
+    - penn_entity.penn_entity_type.layout_offset_card_with_image
     - penn_entity.penn_entity_type.layout_quote
     - penn_entity.penn_entity_type.layout_quote_overlay
     - penn_entity.penn_entity_type.layout_quote_slider
@@ -601,6 +605,7 @@ display:
             cta_text: cta_text
             card: card
             card_contact_information: card_contact_information
+            card_faculty_card: card_faculty_card
             card_featured_article_card_full: card_featured_article_card_full
             card_featured_initiative_card: card_featured_initiative_card
             card_gallery_card: card_gallery_card
@@ -615,13 +620,14 @@ display:
             fact_list_item: fact_list_item
             fact_sidebar_item: fact_sidebar_item
             link_grid_item: link_grid_item
-            hero_article_card_hero: hero_article_card_hero
+            hero_full_width: hero_full_width
             hero_homepage: hero_homepage
             hero_page_hero: hero_page_hero
             hero_page_quote_hero: hero_page_quote_hero
             layout_a_z: layout_a_z
             layout_accordion_columns: layout_accordion_columns
             accordion: accordion
+            hero_article_card_hero: hero_article_card_hero
             layout_callout: layout_callout
             layout_card_listing: layout_card_listing
             layout_card_slider: layout_card_slider
@@ -635,6 +641,7 @@ display:
             layout_fact_bars: layout_fact_bars
             fact_list: fact_list
             layout_facts: layout_facts
+            layout_faculty_grid: layout_faculty_grid
             card_feat_initiative_card_group: card_feat_initiative_card_group
             layout_featured_story: layout_featured_story
             layout_grid: layout_grid
@@ -643,6 +650,7 @@ display:
             layout_link_grid: layout_link_grid
             layout_link_list: layout_link_list
             layout_listing_cards: layout_listing_cards
+            layout_offset_card_with_image: layout_offset_card_with_image
             slider_penn_priorities: slider_penn_priorities
             layout_quote: layout_quote
             layout_quote_overlay: layout_quote_overlay
@@ -677,6 +685,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              social: '0'
             reduce: true
           is_grouped: false
           group_info:

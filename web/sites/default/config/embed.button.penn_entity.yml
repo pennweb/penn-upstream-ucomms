@@ -11,6 +11,7 @@ dependencies:
     - penn_entity.penn_entity_type.card_feat_initiative_card_group
     - penn_entity.penn_entity_type.fact_list
     - penn_entity.penn_entity_type.hero_article_card_hero
+    - penn_entity.penn_entity_type.hero_full_width
     - penn_entity.penn_entity_type.layout_accordion_columns
     - penn_entity.penn_entity_type.layout_callout
     - penn_entity.penn_entity_type.layout_card_listing
@@ -60,6 +61,7 @@ type_settings:
     - links_quick_links
     - aside_fact_sidebar
     - aside_testimonial
+    - hero_full_width
     - layout_accordion_columns
     - accordion
     - hero_article_card_hero
