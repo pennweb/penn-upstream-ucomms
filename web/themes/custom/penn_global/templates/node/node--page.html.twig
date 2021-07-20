@@ -73,11 +73,30 @@
  */
 #}
 {# <article{{attributes}}> #}
+
+  {# booleans for hiding the title and breadcrumbs #}
+  {% set hide_title = "On" in content.field_hide_title.0 ? true : false %}
+  {% set hide_breadcrumb = "On" in content.field_hide_breadcrumb.0 ? true : false %}
+
+  {# Check if header has content #}
+  {% set header_hero = render_var(content.field_hero) %}
+  {% set subpage_listing = render_var(content.field_subpage_listing) %}
+  {% set description = render_var(content.field_description_formatted) %}
+
+
   
   {% set header_hero = render_var(content.field_hero) %}
   {% set header_class = header_hero is empty ?
     'page-header' : 'page-header-hero' %}
 
+  {# If header has any content, render it #}
+  {% if
+    not hide_title or
+    not hide_breadcrumb or
+    not header_hero is empty or
+    not subpage_listing is empty or
+    not description is empty
+  %}
   <header class="{{ header_class }}">
     <div class="contain">
 
@@ -85,13 +104,18 @@
         <div class="{{ header_class }}__content__contain">
 
           {# Embed breadcrumbs block #}
-          {{ drupal_block('system_breadcrumb_block') }}
+          {% if not hide_breadcrumb %}
+            {{ drupal_block('system_breadcrumb_block') }}
+          {% endif %}
           
           <div class="wysiwyg intro">
+            
             {# Page Title #}
-            <h1{{ title_attributes }}>{{ label }}</h1>
+            {% if not hide_title %}
+              <h1{{ title_attributes }}>{{ label }}</h1>
+            {% endif %}
+            
             {# Page Description #}
-            {{ content.field_description }}
             {{ content.field_description_formatted }}
           </div>
 
@@ -109,6 +133,7 @@
 
     </div>
   </header>
+  {% endif %}
 
   {{ content.field_introduction }}
 
