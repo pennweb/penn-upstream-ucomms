@@ -867,6 +867,11 @@ drupal-entity {
     color: #fff;
   }
 
+  //Remove list-style for tabs
+  .js-wikit-tabbed [role="tablist"] li::before {
+    content: none;
+  }
+
   //Fix <p> inside figcaption
   figcaption {
     p {
@@ -924,8 +929,7 @@ drupal-entity {
     font-size: 10rem;
   }
 
-} // End .wysiwyg
-
+} 
 // Prevent image floating on smaller devices
 .wysiwyg {
   figure {

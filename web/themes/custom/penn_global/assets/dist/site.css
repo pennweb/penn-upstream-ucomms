@@ -13164,6 +13164,10 @@ drupal-entity {
   color: #fff;
 }
 
+.wysiwyg .js-wikit-tabbed [role="tablist"] li::before {
+  content: none;
+}
+
 .wysiwyg figcaption p {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
@@ -13813,6 +13817,7 @@ select {
 
 .hero-full-width p {
   color: white;
+  max-width: 950px;
 }
 
 .hero-full-width blockquote p {
