@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.page.field_description_formatted
     - field.field.node.page.field_hero
     - field.field.node.page.field_hero_paragraph
+    - field.field.node.page.field_hide_breadcrumb
+    - field.field.node.page.field_hide_title
     - field.field.node.page.field_subpage_listing
     - field.field.node.page.field_subpage_listing_paragraph
     - node.type.page
@@ -43,6 +45,26 @@ content:
       link: true
       view_mode: default
     third_party_settings: {  }
+  field_hide_breadcrumb:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_hide_title:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_subpage_listing:
     weight: 2
     label: above

@@ -8,6 +8,8 @@ dependencies:
     - field.field.node.page.field_description_formatted
     - field.field.node.page.field_hero
     - field.field.node.page.field_hero_paragraph
+    - field.field.node.page.field_hide_breadcrumb
+    - field.field.node.page.field_hide_title
     - field.field.node.page.field_subpage_listing
     - field.field.node.page.field_subpage_listing_paragraph
     - node.type.page
@@ -36,5 +38,7 @@ hidden:
   field_description_formatted: true
   field_hero: true
   field_hero_paragraph: true
+  field_hide_breadcrumb: true
+  field_hide_title: true
   field_subpage_listing: true
   field_subpage_listing_paragraph: true
