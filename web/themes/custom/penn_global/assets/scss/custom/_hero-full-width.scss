@@ -98,7 +98,8 @@
     }
   }
 
-  //h1 and h2 don't need margins. Better to leave spacing to linebreaks for flexibility in hero wysiwyg
+  //h1 and h2 don't need margins. 
+  // Better to leave spacing to linebreaks for flexibility in hero wysiwyg
   h1,
   h2 {
     margin: 0;
@@ -137,10 +138,11 @@
     }
   }
 
-  //Make paragraghs white
   p {
     color: white;
     max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   //Make Blockquotes white
