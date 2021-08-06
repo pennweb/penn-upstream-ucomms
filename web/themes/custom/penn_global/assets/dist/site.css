@@ -13164,8 +13164,25 @@ drupal-entity {
   color: #fff;
 }
 
-.wysiwyg .js-wikit-tabbed [role="tablist"] li::before {
+.wysiwyg .js-wikit-tabbed [role="tablist"] li::before,
+.wysiwyg .social__item::before {
   content: none;
+}
+
+.wysiwyg .social__media .a11y {
+  display: none;
+}
+
+.wysiwyg .social__media .social__list {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-bottom: 0;
+}
+
+.wysiwyg .social__media .social__list li {
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .wysiwyg figcaption p {

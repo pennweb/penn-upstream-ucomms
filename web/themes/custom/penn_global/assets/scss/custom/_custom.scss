@@ -860,16 +860,33 @@ drupal-entity {
     margin-top: 0;
   }
 }
-
-.wysiwyg {
-  &.bg-blue p,
-  &.bg-red p {
-    color: #fff;
-  }
+  //WYSIWYG
+  .wysiwyg {
+    &.bg-blue p,
+    &.bg-red p {
+      color: #fff;
+    }
 
   //Remove list-style for tabs
-  .js-wikit-tabbed [role="tablist"] li::before {
+  // And social media icons
+  .js-wikit-tabbed [role="tablist"] li,
+  .social__item {
+    &::before {
     content: none;
+    }
+  }
+  .social__media {
+    .a11y {
+      display: none;
+    }    
+    .social__list {
+      justify-content: left;
+      margin-bottom: 0;
+      li {
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+    }    
   }
 
   //Fix <p> inside figcaption
