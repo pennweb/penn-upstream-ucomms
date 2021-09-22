@@ -3,7 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.penn_api_entity.listing_with_sidebar.field_borders
     - field.field.penn_api_entity.listing_with_sidebar.field_feed_url
+    - field.field.penn_api_entity.listing_with_sidebar.field_margins
+    - field.field.penn_api_entity.listing_with_sidebar.field_padding
     - field.field.penn_api_entity.listing_with_sidebar.field_sidebar
     - field.field.penn_api_entity.listing_with_sidebar.field_title
     - penn_api_entity.penn_api_entity_type.listing_with_sidebar
@@ -14,6 +17,12 @@ targetEntityType: penn_api_entity
 bundle: listing_with_sidebar
 mode: default
 content:
+  field_borders:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_feed_url:
     weight: 2
     settings:
@@ -21,6 +30,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_margins:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_padding:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_sidebar:
     weight: 3

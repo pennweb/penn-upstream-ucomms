@@ -126,6 +126,12 @@
   text-align: right;
 }
 
+.listing-card--no-image {
+  .listing-card__detail {
+    flex: auto;
+  }
+}
+
 // honor link--red class
 .card__content a.link--red {
   color: $red;
