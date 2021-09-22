@@ -12296,6 +12296,12 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   text-align: right;
 }
 
+.listing-card--no-image .listing-card__detail {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
 .card__content a.link--red {
   color: #95001A;
 }

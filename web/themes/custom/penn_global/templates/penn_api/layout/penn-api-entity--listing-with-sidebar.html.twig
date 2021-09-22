@@ -1,27 +1,45 @@
 {% if content.items|length > 0 %}
-<section class="content-aside border-top">
-  <div class="contain content-aside__flex">
-    <h2 class="content-aside__title">{{ content.field_title }}</h2>
+<section class="content-aside {{content.field_borders}} {{content.field_margins}}">
+  <div class="contain content-aside__flex {{ content.field_padding }}">
+    {% if content.field_title_has_value %}
+      <h2 class="content-aside__title">
+        {{ content.field_title }}
+      </h2>
+    {% endif %}
     <div class="content-aside__content">
       <div class="listing-cards">
-        {% for item in content.items %}
 
-          <article class="listing-card">
-            <figure class="listing-card__figure">
-              <a href="{{ item.url }}" class="list-card__figure__link">
-                <img src="{{ item.image }}" alt="{{ item.image_alt }}" class="listing-card__image">
-              </a>
-            </figure>
+        {% for item in content.items %}
+          <article class="listing-card{{ item.image is empty ? ' listing-card--no-image' : '' }}">
+            {% if not item.image is empty %}
+              <figure class="listing-card__figure">
+                <a href="{{ item.url }}" class="list-card__figure__link">
+                  <img src="{{ item.image }}" alt="{{ item.image_alt }}" class="listing-card__image">
+                </a>
+              </figure>
+            {% endif %}
             <div class="listing-card__detail">
               <h3 class="listing-card__title ">
-                <a href="{{ item.url }}" class="listing-card__title__link">{{ item.title }}</a>
+                <a href="{{ item.url }}" class="listing-card__title__link">
+                  {{ item.homepage_title is empty ? item.title : item.homepage_title }}
+                </a>
               </h3>
               <p>{{ item.summary }}</p>
-              <p class="listing-card__date">{{ item.date|date("n/j/Y") }}</p>
-
+              {% if item.source or item.date %}
+                <div class="listing-card__info">
+                  {% if item.source %}
+                  <a href="{{ item.url }}" class="link link--red">{{ item.source }}</a>
+                  <span class="listing-card__date"> | </span>
+                  {% endif %}
+                  {% if item.date %}
+                    <span class="listing-card__date">{{ item.date|date("n/j/Y") }}</span>
+                  {% endif %}
+                </div>
+              {% endif %}
             </div>
           </article>
         {% endfor %}
+        
       </div>
     </div>
     <div class="content-aside__divide"></div>
