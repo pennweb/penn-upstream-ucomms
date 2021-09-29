@@ -13905,6 +13905,158 @@ select {
 }
 
 /**
+ * Homepage Video Hero
+ */
+.hero.hero-homepage-video {
+  position: relative;
+  height: 100%;
+}
+
+.hero.hero-homepage-video .hero-full-width__content {
+  min-height: 650px;
+}
+
+@media all and (min-width: 1360px) {
+  .hero.hero-homepage-video .hero-full-width__content {
+    min-height: 750px;
+  }
+}
+
+@media all and (max-width: 1145px) {
+  .hero.hero-homepage-video .hero-full-width__content {
+    min-height: 540px;
+  }
+}
+
+.hero.hero-homepage-video::after {
+  content: " ";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 0;
+  -webkit-animation-name: fadefromblack;
+          animation-name: fadefromblack;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.hero.hero-homepage-video .video {
+  display: none;
+}
+
+@media all and (min-width: 980px) {
+  .hero.hero-homepage-video {
+    opacity: 1;
+    -webkit-animation-name: showvideo;
+            animation-name: showvideo;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+  }
+  .hero.hero-homepage-video .video {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  .hero.hero-homepage-video .video .fitvid {
+    padding-top: 56.25%;
+  }
+  .hero.hero-homepage-video .video-inline {
+    max-height: 650px;
+  }
+}
+
+@media all and (min-width: 980px) and (min-width: 1360px) {
+  .hero.hero-homepage-video .video-inline {
+    min-height: 750px;
+  }
+}
+
+@media all and (min-width: 980px) {
+  .hero.hero-homepage-video .video-button__circle {
+    position: absolute;
+    right: 27px;
+    left: initial;
+    top: initial;
+    bottom: 34px;
+    width: 43px;
+    height: 43px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 100%;
+    z-index: 4;
+  }
+  .hero.hero-homepage-video .video-button {
+    z-index: 4;
+    max-height: 740px;
+    top: initial;
+    left: initial;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  .hero.hero-homepage-video .video-button.video-button--play .icon {
+    background-size: 12px 30px;
+  }
+}
+
+@media all and (min-width: 980px) and (max-width: 1145px) {
+  .hero.hero-homepage-video .video-button {
+    bottom: 100px;
+  }
+}
+
+@media all and (min-width: 980px) and (max-width: 1120px) {
+  .hero.hero-homepage-video .video-button {
+    bottom: 70px;
+  }
+}
+
+@media all and (min-width: 980px) and (max-width: 1120px) {
+  .hero.hero-homepage-video .video-button {
+    bottom: 50px;
+  }
+}
+
+@-webkit-keyframes showvideo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showvideo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadefromblack {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadefromblack {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/**
  * This is basically a duplicate of "Video with Card", 
  * but with a static image instead of a video modal.
  *
