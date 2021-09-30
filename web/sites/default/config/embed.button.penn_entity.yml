@@ -48,6 +48,7 @@ dependencies:
     - penn_entity.penn_entity_type.video_inline
     - penn_entity.penn_entity_type.video_inline_poster_controls
     - penn_entity.penn_entity_type.video_modal
+    - penn_entity.penn_entity_type.video_vimeo
   module:
     - entity_embed
     - penn_entity
@@ -101,6 +102,7 @@ type_settings:
     - video_inline_poster_controls
     - video_inline
     - video_modal
+    - video_vimeo
   display_plugins:
     - 'view_mode:penn_entity.penn_entity_default'
   entity_browser: ''
