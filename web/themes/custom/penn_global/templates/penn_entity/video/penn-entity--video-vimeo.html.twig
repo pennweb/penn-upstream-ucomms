@@ -1,0 +1,25 @@
+{% set poster = false %}
+{# {% set poster = render_var(content.field_image) %} #}
+{% if poster is not empty %}
+  <div class="video">
+    <div class="contain contain--no-padding">
+      <div class="video-vimeo video-vimeo--poster" data-vimeo="{{ content.field_video_source_url }}" style="background-image:url({{ content.field_image }}">
+        <div class="video-vimeo__vimeo"></div>
+        <button class="video-button video-button--play">
+          <span class="video-button__circle">
+            <span class="icon"></span>
+          </span>
+          <span class="a11y">Play</span>
+        </button>
+      </div>
+    </div>
+  </div>
+{% else %}
+  <div class="video">
+    <div class="contain contain--no-padding">
+      <div class="video-vimeo " data-vimeo="{{ content.field_video_source_url }}">
+        <div class="video-vimeo__vimeo"></div>
+      </div>
+    </div>
+  </div>
+{% endif %}
