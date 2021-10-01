@@ -142,6 +142,9 @@ class PennEntityCustomAddPage extends ControllerBase {
     [
       'bundle' => 'video_modal',
     ],
+    [
+      'bundle' => 'video_vimeo',
+    ],    
   ];
 
   /**
