@@ -13570,6 +13570,14 @@ select {
 }
 
 /**
+ * 404
+ */
+.page-error__404 .page-header-hero__image {
+  height: 711px;
+  width: 711px;
+}
+
+/**
  * Upstream Footer 
  */
 .footer {

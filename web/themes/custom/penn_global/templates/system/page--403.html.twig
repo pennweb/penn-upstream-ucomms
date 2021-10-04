@@ -1,0 +1,57 @@
+{% if page.alert|render is not empty %}
+  <div class="alert-content">
+    {{ page.alert }}
+  </div>
+{% endif %}
+{% include '@penn_global/layouts/header.html.twig' %}
+<main id="content" class="page-error page-error__403">
+  <header class="page-header">
+    <div class="contain">
+      <div class="page-header__content">
+        <div class="page-header__content__contain">
+          <div>
+            <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+              <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+              <ul class="breadcrumb">
+                <li class="breadcrumb__item">
+                  <span>
+                    <a href="/">Home</a>
+                  </span>
+                  <span class="breadcrumb__divide">/</span>
+                </li>
+                <li class="breadcrumb__item">
+                  <span>
+                    403 - Forbidden
+                  </span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="wysiwyg intro">
+            <h1>
+              <span property="schema:name">403 - Forbidden</span>
+            </h1>
+            <div class="section-margin">
+            <p>You do not have access to this page, but the following pages and utilities might help you along your way:</p>
+            <p>
+              <a href="https://www.upenn.edu/">University Homepage</a><br>
+              <a href="https://www.upenn.edu/search">Search</a><br>
+              <a href="https://www.upenn.edu/penn-a-z">A-Z Index</a><br>
+              <a href="https://www.upenn.edu/about/faq">FAQ</a>
+            </p>
+            <p>If you have further questions or have a found a broken link, please send the&nbsp;<a href="mailto:webmaster@upenn.edu">webmaster</a>&nbsp;a quick note and include the URL of the page you were viewing and the link that was broken.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </header>
+
+  {% if page.suffix %}
+    {{ page.suffix }}
+  {% endif %}
+</main>
+{% include '@penn_global/layouts/footer-upstream.html.twig' %}
