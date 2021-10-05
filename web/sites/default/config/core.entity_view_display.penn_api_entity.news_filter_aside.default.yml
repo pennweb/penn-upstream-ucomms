@@ -5,8 +5,11 @@ dependencies:
   config:
     - field.field.penn_api_entity.news_filter_aside.field_filter_page
     - field.field.penn_api_entity.news_filter_aside.field_filter_title
+    - field.field.penn_api_entity.news_filter_aside.field_margins
     - field.field.penn_api_entity.news_filter_aside.field_title
     - penn_api_entity.penn_api_entity_type.news_filter_aside
+  module:
+    - options
 id: penn_api_entity.news_filter_aside.default
 targetEntityType: penn_api_entity
 bundle: news_filter_aside
@@ -28,6 +31,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_margins:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_title:
     weight: 1

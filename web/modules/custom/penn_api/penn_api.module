@@ -59,11 +59,15 @@ function penn_api_preprocess_penn_api_entity(&$vars) {
 
     //Set a <field>_has_value booleans for certain fields
     //This is a helper to prevent having to render fields in twig templates when determing to hide/show
+    //Can be used with fields that can be rendered to a string with getString()
     $fields = [
-      'field_title',
       'field_description',
       'field_description_formatted',
+      'field_filter_title',
+      'field_secondary_feed_title',
+      'field_show_tags', //this is a boolean, but is compatible      
       'field_subtitle',
+      'field_title',
       'field_video_source_url',
     ];
     foreach($fields as $field) {

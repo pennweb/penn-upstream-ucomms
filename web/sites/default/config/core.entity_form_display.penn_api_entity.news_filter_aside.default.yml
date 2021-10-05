@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.penn_api_entity.news_filter_aside.field_filter_page
     - field.field.penn_api_entity.news_filter_aside.field_filter_title
+    - field.field.penn_api_entity.news_filter_aside.field_margins
     - field.field.penn_api_entity.news_filter_aside.field_title
     - penn_api_entity.penn_api_entity_type.news_filter_aside
   module:
@@ -41,6 +42,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_margins:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_title:
     weight: 1
