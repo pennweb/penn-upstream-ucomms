@@ -10,7 +10,7 @@ field_name: field_filter_title
 entity_type: penn_api_entity
 bundle: news_filter_aside
 label: 'Filter Title'
-description: 'The default label shown in the dropdown. For Example: "Topics".'
+description: 'The default label shown in the dropdown. For Example: "Topics". Leave blank to hide the filter.'
 required: false
 translatable: true
 default_value: {  }

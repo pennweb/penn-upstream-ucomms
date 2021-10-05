@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.penn_api_entity.full
     - field.field.penn_api_entity.news_filter_aside.field_filter_page
     - field.field.penn_api_entity.news_filter_aside.field_filter_title
+    - field.field.penn_api_entity.news_filter_aside.field_margins
     - field.field.penn_api_entity.news_filter_aside.field_title
     - penn_api_entity.penn_api_entity_type.news_filter_aside
   module:
@@ -55,4 +56,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_margins: true

@@ -22,14 +22,16 @@
             </h3>
             <p>{{ item.summary }}</p>
             <div class="listing-card__info">
-              {# print the topics #}
-              {% for topic in item.topic %}
-                <a href="{{topic.url}}" class="listing-card__category">{{ topic.name }},</a>
-              {% endfor %}
-              {#print the subtopics #}
-              {% for subtopic in item.subtopic %}
-                <a href="{{ subtopic.url }}" class="listing-card__category">{{ subtopic.name }}{% if not loop.last %},{% endif %}</a>
-              {% endfor %}
+              {% if content.field_show_tags_has_value %}
+                {# print the topics #}
+                {% for topic in item.topic %}
+                  <a href="{{topic.url}}" class="listing-card__category">{{ topic.name }},</a>
+                {% endfor %}
+                {#print the subtopics #}
+                {% for subtopic in item.subtopic %}
+                  <a href="{{ subtopic.url }}" class="listing-card__category">{{ subtopic.name }}{% if not loop.last %},{% endif %}</a>
+                {% endfor %}
+              {% endif %}
               <span class="listing-card__date">{{ item.date|date("n/j/Y") }}</span>
             </div>
           </div>
@@ -45,9 +47,11 @@
     <div class="content-aside__divide"></div>
 
     <div class="content-aside__aside">
-      <div class="section-header">
-        <h2 class="section-header__title section-header__title--small">{{content.field_secondary_feed_title}}</h2>
-      </div>
+      {% if content.field_secondary_feed_title_has_value %}
+        <div class="section-header">
+          <h2 class="section-header__title section-header__title--small">{{content.field_secondary_feed_title}}</h2>
+        </div>
+      {% endif %}
       <div class="listing-cards">
           {% for item in content.secondary_items %}
 
@@ -67,9 +71,12 @@
       </div>
 
     </div>
-    <div class="content-aside__bottom medium-up">
-      <a href="{{content.field_link.0['#url']}}" class="link link--red">{{content.field_link.0['#title']}}</a>
-    </div>
+    {% set link = render_var(content.field_link) %}
+    {% if link is not empty %}
+      <div class="content-aside__bottom medium-up">
+        <a href="{{content.field_link.0['#url']}}" class="link link--red">{{content.field_link.0['#title']}}</a>
+      </div>
+    {% endif %}
   </div>
 
 </div>
