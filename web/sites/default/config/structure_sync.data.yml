@@ -51,14 +51,14 @@ menus:
     uuid: 8e47da53-3be3-456b-ab0c-58dd9680a9a2
   -
     menu_name: legal
-    title: Copyright
+    title: 'Emergency Services'
     parent: null
-    uri: 'https://www.isc.upenn.edu/computing/copyright-policy'
+    uri: 'https://www.publicsafety.upenn.edu/contact/'
     link_title: ''
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '0'
+    weight: '-49'
     langcode: en
     uuid: dc60a8e6-dba9-40c6-ac7b-5d7c21da3702
   -
@@ -70,7 +70,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '0'
+    weight: '-50'
     langcode: en
     uuid: 7f6901ac-807e-4a1b-ba8f-f9be3c1b5f99
   -
@@ -82,7 +82,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '0'
+    weight: '-48'
     langcode: en
     uuid: 66369815-4a8c-43de-80c0-f8cce19f728c
   -
@@ -94,9 +94,21 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '0'
+    weight: '-47'
     langcode: en
     uuid: 9ff617b6-6829-4ea2-908a-4320438defc4
+  -
+    menu_name: legal
+    title: 'Report Copyright Infringement'
+    parent: null
+    uri: 'https://www.upenn.edu/about/report-copyright-infringement'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-46'
+    langcode: en
+    uuid: 11462be1-afc7-4c79-a4b2-e5ccd85299f0
   -
     menu_name: resources
     title: 'Current Students'
