@@ -70,11 +70,6 @@ use Drupal\user\UserInterface;
  *     "translation_revert" = "/admin/structure/penn_api_entity/{penn_api_entity}/revisions/{penn_api_entity_revision}/revert/{langcode}",
  *     "collection" = "/admin/structure/penn_api_entity",
  *   },
- *   revision_metadata_keys = {
- *     "revision_user" = "revision_user",
- *     "revision_created" = "revision_created",
- *     "revision_log_message" = "revision_log_message",
- *   },
  *   bundle_entity_type = "penn_api_entity_type",
  *   field_ui_base_route = "entity.penn_api_entity_type.edit_form"
  * )

@@ -52,11 +52,6 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "delete-form" = "/admin/structure/penn_entity/{penn_entity}/delete",
  *     "collection" = "/admin/structure/penn_entity",
  *   },
- *  revision_metadata_keys = {
- *     "revision_user" = "revision_user",
- *     "revision_created" = "revision_created",
- *     "revision_log_message" = "revision_log_message",
- *   },
  *   bundle_entity_type = "penn_entity_type",
  *   field_ui_base_route = "entity.penn_entity_type.edit_form"
  * )
