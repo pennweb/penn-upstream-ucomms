@@ -87,6 +87,11 @@
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
+        "patches": {
+            "drupal/inline_entity_form": {
+                "Can't add more than two items with simple inline entity form widget under some circumstances": "https://www.drupal.org/files/issues/2019-11-04/3088901-3-cant-add-more-than-two-items.patch"
+            }
+        },     
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
