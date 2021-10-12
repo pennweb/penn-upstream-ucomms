@@ -27,6 +27,7 @@
         "drupal/adminimal_theme": "^1.5",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
+        "drupal/config_split": "^1.7",
         "drupal/console": "^1",
         "drupal/devel": "^2.1",
         "drupal/dropzonejs": "^2.5",
