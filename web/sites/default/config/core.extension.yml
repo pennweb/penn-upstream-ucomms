@@ -92,7 +92,6 @@ module:
   paragraphs: 11
 theme:
   stable: 1
-  classy: 1
   bartik: 1
   seven: 1
   penn_global: 1
