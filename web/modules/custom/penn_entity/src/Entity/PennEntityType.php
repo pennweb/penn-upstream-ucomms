@@ -30,6 +30,10 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     "label" = "label",
  *     "uuid" = "uuid"
  *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *   },
  *   links = {
  *     "canonical" = "/admin/structure/penn_entity_type/{penn_entity_type}",
  *     "add-form" = "/admin/structure/penn_entity_type/add",

@@ -16,7 +16,7 @@ view published penn api entity entities:
   title: 'View published Penn API Entity entities'
 
 view individual penn api entity entities:
-  title: ‘View individual Penn API Entity entities’
+  title: 'View individual Penn API Entity entities'
   
 view unpublished penn api entity entities:
   title: 'View unpublished Penn API Entity entities'

@@ -1,59 +1,59 @@
 <?php
 
-namespace Drupal\penn_entity\Entity;
+namespace Drupal\penn_api_entity\Entity;
 
 use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
 
 /**
- * Defines the Penn Entity type entity.
+ * Defines the Penn API Entity type entity.
  *
  * @ConfigEntityType(
- *   id = "penn_entity_type",
- *   label = @Translation("Penn Entity type"),
+ *   id = "penn_api_entity_type",
+ *   label = @Translation("Penn API Entity type"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\penn_entity\PennEntityTypeListBuilder",
+ *     "list_builder" = "Drupal\penn_api_entity\PennApiEntityTypeListBuilder",
  *     "form" = {
- *       "add" = "Drupal\penn_entity\Form\PennEntityTypeForm",
- *       "edit" = "Drupal\penn_entity\Form\PennEntityTypeForm",
- *       "delete" = "Drupal\penn_entity\Form\PennEntityTypeDeleteForm"
+ *       "add" = "Drupal\penn_api_entity\Form\PennApiEntityTypeForm",
+ *       "edit" = "Drupal\penn_api_entity\Form\PennApiEntityTypeForm",
+ *       "delete" = "Drupal\penn_api_entity\Form\PennApiEntityTypeDeleteForm"
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\penn_entity\PennEntityTypeHtmlRouteProvider",
+ *       "html" = "Drupal\penn_api_entity\PennApiEntityTypeHtmlRouteProvider",
  *     },
  *   },
- *   config_prefix = "penn_entity_type",
+ *   config_prefix = "penn_api_entity_type",
  *   admin_permission = "administer site configuration",
- *   bundle_of = "penn_entity",
+ *   bundle_of = "penn_api_entity",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "label",
  *     "uuid" = "uuid"
  *   },
- *   links = {
- *     "canonical" = "/admin/structure/penn_entity_type/{penn_entity_type}",
- *     "add-form" = "/admin/structure/penn_entity_type/add",
- *     "edit-form" = "/admin/structure/penn_entity_type/{penn_entity_type}/edit",
- *     "delete-form" = "/admin/structure/penn_entity_type/{penn_entity_type}/delete",
- *     "collection" = "/admin/structure/penn_entity_type"
- *   },
  *   config_export = {
  *     "id",
- *     "label"
+ *     "label",
+ *   },
+ *   links = {
+ *     "canonical" = "/admin/structure/penn_api_entity_type/{penn_api_entity_type}",
+ *     "add-form" = "/admin/structure/penn_api_entity_type/add",
+ *     "edit-form" = "/admin/structure/penn_api_entity_type/{penn_api_entity_type}/edit",
+ *     "delete-form" = "/admin/structure/penn_api_entity_type/{penn_api_entity_type}/delete",
+ *     "collection" = "/admin/structure/penn_api_entity_type"
  *   }
  * )
  */
-class PennEntityType extends ConfigEntityBundleBase implements PennEntityTypeInterface {
+class PennApiEntityType extends ConfigEntityBundleBase implements PennApiEntityTypeInterface {
 
   /**
-   * The Penn Entity type ID.
+   * The Penn API Entity type ID.
    *
    * @var string
    */
   protected $id;
 
   /**
-   * The Penn Entity type label.
+   * The Penn API Entity type label.
    *
    * @var string
    */

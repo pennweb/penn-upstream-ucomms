@@ -57,6 +57,10 @@ use Drupal\user\UserInterface;
  *     "langcode" = "langcode",
  *     "published" = "status",
  *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *   },
  *   links = {
  *     "canonical" = "/penn_api_entity/{penn_api_entity}",
  *     "add-page" = "/admin/structure/penn_api_entity/add",
