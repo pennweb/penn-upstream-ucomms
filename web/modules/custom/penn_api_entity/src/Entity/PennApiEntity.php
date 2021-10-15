@@ -251,7 +251,7 @@ class PennApiEntity extends EditorialContentEntityBase implements PennApiEntityI
     $fields['status']->setDescription(t('A boolean indicating whether the Penn API Entity is published.'))
       ->setDisplayOptions('form', [
         // 'type' => 'boolean_checkbox',
-        'type' => 'hidden',
+        'region' => 'hidden',
         'weight' => -3,
       ]);
 

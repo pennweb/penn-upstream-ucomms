@@ -52,6 +52,11 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "delete-form" = "/admin/structure/penn_entity/{penn_entity}/delete",
  *     "collection" = "/admin/structure/penn_entity",
  *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+
+ *   },
  *   revision_metadata_keys = {
  *     "revision_user" = "revision_user",
  *     "revision_created" = "revision_created",
@@ -130,7 +135,7 @@ class PennEntity extends ContentEntityBase implements PennEntityInterface {
       ->setDefaultValue(TRUE)
       ->setDisplayOptions('form', [
         // 'type' => 'boolean_checkbox',
-        'type' => 'hidden',
+        'region' => 'hidden',
         'weight' => -3,
       ]);
 
