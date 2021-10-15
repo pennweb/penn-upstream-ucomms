@@ -44,6 +44,10 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "langcode" = "langcode",
  *     "published" = "status",
  *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *   },
  *   links = {
  *     "canonical" = "/penn_entity/{penn_entity}",
  *     "add-page" = "/admin/structure/penn_entity/add",
@@ -51,11 +55,6 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "edit-form" = "/admin/structure/penn_entity/{penn_entity}/edit",
  *     "delete-form" = "/admin/structure/penn_entity/{penn_entity}/delete",
  *     "collection" = "/admin/structure/penn_entity",
- *   },
- *   config_export = {
- *     "id",
- *     "label",
-
  *   },
  *   revision_metadata_keys = {
  *     "revision_user" = "revision_user",
