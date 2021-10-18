@@ -12936,31 +12936,6 @@ drupal-entity {
   color: #fff;
 }
 
-.featured-initiative-card--gray {
-  background: #F2F2F2;
-}
-
-.featured-initiative-card--gray .featured-initiative-card__wrap,
-.featured-initiative-card--gray .featured-initiative-card__title__link,
-.featured-initiative-card--gray .featured-initiative-card__category {
-  color: #011F5B;
-}
-
-.featured-initiative-card--gray .featured-initiative-card__wrap {
-  border: 1px solid rgba(1, 31, 91, 0.15);
-}
-
-.featured-initiative-card--gray .btn--outline-white-secondary {
-  background: #011f5b;
-  color: #fff;
-}
-
-.featured-initiative-card--gray .is-hovered .btn,
-.featured-initiative-card--gray .btn:hover,
-.featured-initiative-card--gray .btn:focus {
-  background: #00102f;
-}
-
 /**
  * Image Slider
  */
