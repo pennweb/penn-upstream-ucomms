@@ -21,7 +21,7 @@
 }
 
 .bg-red {
-  background: #95001A;
+  background: #990000;
   color: #FFF;
 }
 
@@ -493,7 +493,7 @@ hr {
 }
 
 .btn--secondary {
-  background: #95001A;
+  background: #990000;
 }
 
 .is-hovered .btn--secondary, .btn--secondary:hover, .btn--secondary:focus {
@@ -512,7 +512,7 @@ hr {
 }
 
 .is-hovered .btn--outline-secondary, .btn--outline-secondary:hover, .btn--outline-secondary:focus {
-  background: #95001A;
+  background: #990000;
   color: #FFF;
 }
 
@@ -533,7 +533,7 @@ hr {
 
 .is-hovered .btn--outline-white-secondary, .btn--outline-white-secondary:hover, .btn--outline-white-secondary:focus {
   background: #FFF;
-  color: #95001A;
+  color: #990000;
 }
 
 .btn--square {
@@ -554,7 +554,7 @@ hr {
 }
 
 .link--red {
-  color: #95001A;
+  color: #990000;
 }
 
 .is-hovered .link, .is-hovered .video-meta__item, .link:hover, .video-meta__item:hover, .link:focus, .video-meta__item:focus {
@@ -1236,7 +1236,7 @@ hr {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #95001A;
+  background: #990000;
   content: '';
   opacity: 1;
 }
@@ -1661,7 +1661,7 @@ hr {
   display: block;
   position: absolute;
   bottom: -11px;
-  background: #95001A;
+  background: #990000;
   width: 40px;
   height: 4px;
 }
@@ -1823,7 +1823,7 @@ hr {
   content: '';
   display: block;
   position: absolute;
-  background: #95001A;
+  background: #990000;
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -1847,7 +1847,7 @@ hr {
 .wysiwyg ol li::before {
   counter-increment: section;
   content: counter(section) ". ";
-  color: #95001A;
+  color: #990000;
   font-size: 1.9rem;
   font-weight: 500;
 }
@@ -2195,11 +2195,11 @@ hr {
 }
 
 .a-z-search__button:hover, .a-z-search__button:focus {
-  color: #95001A;
+  color: #990000;
 }
 
 .a-z-search__button--active {
-  border-color: #95001A;
+  border-color: #990000;
 }
 
 .no-results {
@@ -2357,7 +2357,7 @@ hr {
 }
 
 .js-wikit-accordion__trigger[aria-expanded="true"] .stroke {
-  stroke: #95001A;
+  stroke: #990000;
 }
 
 .js-wikit-accordion__title {
@@ -2388,7 +2388,7 @@ hr {
   vertical-align: middle;
   width: 14px;
   height: 9px;
-  stroke: #95001A;
+  stroke: #990000;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
@@ -2776,7 +2776,7 @@ body.alert-emergency {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
-  color: #95001A;
+  color: #990000;
   letter-spacing: 1.6px;
   text-align: center;
   text-decoration: none;
@@ -2894,7 +2894,7 @@ body.alert-emergency {
 .breadcrumb a:hover,
 .breadcrumb a:focus {
   text-decoration: underline;
-  color: #95001A;
+  color: #990000;
 }
 
 .breadcrumb__divide {
@@ -3420,7 +3420,7 @@ body.alert-emergency {
 }
 
 .contact-information--red {
-  background: #95001A;
+  background: #990000;
 }
 
 .contact-information__wrap {
@@ -3864,7 +3864,7 @@ body.alert-emergency {
 }
 
 .content-spotlight--red {
-  background: #95001A;
+  background: #990000;
 }
 
 @media (max-width: 767px) {
@@ -4146,7 +4146,7 @@ body.alert-emergency {
 
 .event-card__month {
   height: 22px;
-  background: #95001A;
+  background: #990000;
   color: #FFF;
   text-transform: uppercase;
   display: block;
@@ -5345,7 +5345,7 @@ a.event-card__category:hover, a.event-card__category:focus {
 }
 
 .featured-initiative-card--red {
-  background: #95001A;
+  background: #990000;
 }
 
 .featured-initiative-card.is-hovered, .featured-initiative-card:focus-within {
@@ -5730,7 +5730,7 @@ a.featured-story:hover, a.featured-story:focus {
 }
 
 .filter__trigger:hover, .filter__trigger:focus {
-  color: #95001A;
+  color: #990000;
   text-decoration: underline;
 }
 
@@ -6257,7 +6257,7 @@ a.featured-story:hover, a.featured-story:focus {
 }
 
 .gallery-card__button:hover .fill, .gallery-card__button:focus .fill {
-  fill: #95001A;
+  fill: #990000;
 }
 
 .gallery-card__button[disabled] {
@@ -7861,7 +7861,7 @@ a.hero__category:hover, a.hero__category:focus {
 }
 
 .image-slider-card__button:hover .fill, .image-slider-card__button:focus .fill {
-  fill: #95001A;
+  fill: #990000;
 }
 
 .image-slider-card__button[disabled] {
@@ -8719,7 +8719,7 @@ a.hero__category:hover, a.hero__category:focus {
 
 .nav__menu-link:hover, .nav__menu-link:focus, .nav__menu-link--active {
   outline: none;
-  color: #95001A;
+  color: #990000;
 }
 
 .nav__menu-link:focus, .nav__menu-link[aria-expanded="true"] {
@@ -8978,7 +8978,7 @@ a.hero__category:hover, a.hero__category:focus {
     content: "";
     position: absolute;
     left: 20px;
-    background: #95001A;
+    background: #990000;
     height: 0;
     width: calc(100% - 40px);
     bottom: 0;
@@ -9186,7 +9186,7 @@ a.hero__category:hover, a.hero__category:focus {
 }
 
 .nav--secondary .nav__menu-link:hover, .nav--secondary .nav__menu-link:focus {
-  color: #95001A;
+  color: #990000;
 }
 
 .nav--secondary .nav__menu-link:focus {
@@ -9592,7 +9592,7 @@ a.hero__category:hover, a.hero__category:focus {
 }
 
 .page-header-hero__picture--red::after {
-  background: #95001A;
+  background: #990000;
 }
 
 .page-header-hero__image {
@@ -9932,7 +9932,7 @@ a.hero__category:hover, a.hero__category:focus {
   height: 100%;
   display: block;
   width: 74px;
-  background: #95001A url(/themes/custom/penn_global/assets/img/svg/icon-priority-arrow.svg) no-repeat 50% 50%;
+  background: #990000 url(/themes/custom/penn_global/assets/img/svg/icon-priority-arrow.svg) no-repeat 50% 50%;
   background-size: 8px 10px;
   -webkit-transition: inherit;
   transition: inherit;
@@ -10181,7 +10181,7 @@ a.hero__category:hover, a.hero__category:focus {
 }
 
 .quote-overlay__picture--red::after {
-  background: #95001A;
+  background: #990000;
 }
 
 .quote-overlay__image {
@@ -10571,7 +10571,7 @@ a.hero__category:hover, a.hero__category:focus {
 
 .search-results .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
   color: #011F5B;
-  border-bottom: 2px solid #95001A;
+  border-bottom: 2px solid #990000;
 }
 
 .search-results .gcsc-find-more-on-google {
@@ -10896,7 +10896,7 @@ a.hero__category:hover, a.hero__category:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(149, 0, 26, 0.8);
+  background: rgba(153, 0, 0, 0.8);
   opacity: 0;
   -webkit-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
@@ -11135,7 +11135,7 @@ a.hero__category:hover, a.hero__category:focus {
 }
 
 .student-spotlight--red {
-  background: #95001A;
+  background: #990000;
 }
 
 @media (max-width: 767px) {
@@ -11251,12 +11251,12 @@ a.hero__category:hover, a.hero__category:focus {
 }
 
 .js .js-wikit-tabbed [role="tab"].tab-nav__link:hover {
-  color: #95001A;
+  color: #990000;
 }
 
 .js .js-wikit-tabbed [role="tab"].tab-nav__link[aria-selected="true"] {
-  color: #95001A;
-  border-bottom: 2.5px solid #95001A;
+  color: #990000;
+  border-bottom: 2.5px solid #990000;
 }
 
 .js .bg-blue .js-wikit-tabbed [role="tab"].tab-nav__link,
@@ -11320,7 +11320,7 @@ a.hero__category:hover, a.hero__category:focus {
 }
 
 .accordion-toggle-tab__icon svg {
-  stroke: #95001A;
+  stroke: #990000;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
@@ -11446,7 +11446,7 @@ a.hero__category:hover, a.hero__category:focus {
 }
 
 .text-cta__subheading--cat {
-  color: #95001A;
+  color: #990000;
 }
 
 .bg-blue .text-cta__subheading,
@@ -11633,7 +11633,7 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 }
 
 .upcoming-events .slick-active::after {
-  background: #95001A;
+  background: #990000;
   height: 2px;
 }
 
@@ -12303,7 +12303,7 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 }
 
 .card__content a.link--red {
-  color: #95001A;
+  color: #990000;
 }
 
 .card__content.text-align--left {
@@ -12495,13 +12495,13 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 #block-penn-starter-local-tasks li {
   margin: 0 10px;
   list-style-type: none;
-  color: #95001A;
+  color: #990000;
   margin: 6px 0;
 }
 
 #block-penn-global-local-tasks li a,
 #block-penn-starter-local-tasks li a {
-  color: #95001A;
+  color: #990000;
   font-size: 14px;
 }
 
@@ -13454,7 +13454,7 @@ figure.align-center {
 }
 
 .social-card.social-card__twitter.bg-red {
-  background: #95001A;
+  background: #990000;
 }
 
 .social-card.social-card__twitter.bg-blue {
@@ -13492,7 +13492,7 @@ figure.align-center {
 }
 
 .social-card--image.bg-red .social-card__content {
-  background: rgba(149, 0, 26, 0.8);
+  background: rgba(153, 0, 0, 0.8);
 }
 
 .social-card--image.bg-blue .social-card__content {
