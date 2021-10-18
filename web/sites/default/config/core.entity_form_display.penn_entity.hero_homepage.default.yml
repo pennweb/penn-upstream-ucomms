@@ -11,6 +11,7 @@ dependencies:
     - field.field.penn_entity.hero_homepage.field_subtitle
     - field.field.penn_entity.hero_homepage.field_text_align
     - field.field.penn_entity.hero_homepage.field_title
+    - field.field.penn_entity.hero_homepage.field_video_source_url
     - penn_entity.penn_entity_type.hero_homepage
   module:
     - link
@@ -72,6 +73,14 @@ content:
     region: content
   field_title:
     weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_video_source_url:
+    weight: 9
     settings:
       size: 60
       placeholder: ''

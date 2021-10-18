@@ -11,6 +11,7 @@ dependencies:
     - field.field.penn_entity.hero_homepage.field_subtitle
     - field.field.penn_entity.hero_homepage.field_text_align
     - field.field.penn_entity.hero_homepage.field_title
+    - field.field.penn_entity.hero_homepage.field_video_source_url
     - penn_entity.penn_entity_type.hero_homepage
   module:
     - fences
@@ -128,6 +129,14 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
+    type: string
+    region: content
+  field_video_source_url:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     type: string
     region: content
   name:
