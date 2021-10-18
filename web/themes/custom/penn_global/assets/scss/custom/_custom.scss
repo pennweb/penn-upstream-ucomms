@@ -2,7 +2,7 @@
  * General
  */
 
-.section-padding-top {
+ .section-padding-top {
   @include section-padding-top(true);
 }
 
@@ -350,6 +350,19 @@ drupal-entity {
   width: 100%;
 }
 
+//make text white when ckeditor has red or blue background.
+.cke_editable.bg-color.bg-blue,
+.cke_editable.bg-color.bg-red {
+  a:not(.btn) {
+    color: white;
+  }
+  @for $i from 1 through 6 {
+    h#{$i} {
+      color: white;
+    }
+  }
+}
+
 /*
  * Contact Cards
  */
@@ -479,6 +492,19 @@ drupal-entity {
   @media #{$large-up} {
     margin-bottom: 0;
   }
+}
+
+/**
+ * Events
+ */
+ .event-card__event-end-date {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #000f3a;
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 /**
@@ -674,6 +700,45 @@ drupal-entity {
     @media #{$large-up} {
       max-width: 290px;
     }
+  }
+}
+
+//Gray initiative card
+.featured-initiative-card--gray {
+  background: $gray;
+  border: 1px solid rgba(1, 31, 91, 0.05);
+
+  .contact-information__title__link,
+  .featured-initiative-card__wrap,
+  p {
+    color: $blue;
+  }
+  .featured-initiative-card__title::after {
+    background: $blue;
+    opacity: 0.4;
+  }
+  .featured-initiative-card__wrap {
+    border: 1px solid rgba(1, 31, 91, 0.15);
+  }
+  .btn--outline-white-secondary {
+    background: none;
+    color: #011f5b;
+    border: 1px solid rgba(118, 118, 118, 0.2);
+  }
+   //possibly delete 
+  .is-hovered .btn,
+  .btn:hover,
+  .btn:focus {
+    background: #00102f;
+  }
+  //^
+
+  //override the button styles to match rather than changing the class in the template
+  .is-hovered .btn--outline-white-secondary,
+  .btn--outline-white-secondary:hover,
+  .btn--outline-white-secondary:focus {
+    background: #011f5b;
+    color: #fff;
   }
 }
 
@@ -1299,4 +1364,67 @@ select {
     height: 711px;
     width: 711px;
   }
+}
+
+/**
+ * Homepage Video Hero
+ */
+
+ .hero.hero-homepage-video {
+  position: relative;
+
+ &::after {
+   content: " ";
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   background: black;
+   opacity: 0;
+   animation-name: fadefromblack;
+   animation-duration: 3s;
+ }
+
+ .video {
+   display: none;
+ }
+ @media all and (min-width: 840px) {
+   height: auto;
+   min-height: auto;
+   opacity: 1;
+   animation-name: showvideo;
+   animation-duration: 2s;
+   .contain {
+     z-index: initial;
+   }
+   .video {
+     display: block;
+     margin: 0;
+
+     .fitvid {
+       padding-top: 56.25%;
+     }
+   }
+   &.hero--text-left {
+     .video-button__circle {
+       right: 27px;
+       left: initial;
+     }
+   }
+   .hero__shadows {
+     &:before {
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       content: '';
+       display: block;
+       width: 100%;
+       opacity: 0.8;
+       background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,.77)));
+       background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.77) 100%);
+       opacity: 0.8;
+       height: 35.9%;
+       height: 359px;
+     }
+   }
+ }
 }
