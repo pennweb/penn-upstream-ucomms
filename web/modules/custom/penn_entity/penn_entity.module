@@ -223,7 +223,7 @@ function penn_entity_form_alter(&$form, $form_state, $form_id) {
   // UX improvements for the entity_embed modal in CKeditor
   if ($form_id == 'entity_embed_dialog' && $form_state->get('step') == 'embed') {
     // Add a link to the entity edit page
-    $edit_url = $form_state->get('entity')->urlInfo('edit-form');
+    $edit_url = $form_state->get('entity')->toUrl('edit-form');
 
     //$form['actions']['entity_edit'] = [
     $form['entity_edit'] = [
