@@ -13398,11 +13398,12 @@ figure.align-center {
  * Social Grid
  */
 .social__grid {
-  margin-top: 0;
+  margin-right: 0px;
+  padding-bottom: 20px;
 }
 
-.social {
-  padding: 0;
+.social__grid.slick-dotted.slick-slider {
+  margin-bottom: 100px;
 }
 
 .social__media {
@@ -13526,11 +13527,6 @@ figure.align-center {
 
 .social__link.linkedin .social__icon {
   max-width: 16px;
-}
-
-.social__grid {
-  margin-right: 0px;
-  padding-bottom: 20px;
 }
 
 .social__link:hover {

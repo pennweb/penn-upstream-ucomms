@@ -1102,14 +1102,16 @@ figure {
  * Social Grid
  */
 
-//Readjust padding and margins on containers
+//Move the margins/padding from icons to the actual grid.
+//This is so the icons can be used independently of the cards
 .social__grid {
-  margin-top: 0;
+  margin-right: 0px;
+  padding-bottom: 20px;
+  &.slick-dotted.slick-slider {
+    margin-bottom: 100px;
+  }  
 }
 
-.social {
-  padding: 0;
-}
 
 .social__media {
   margin: 20px 0;
@@ -1200,7 +1202,7 @@ figure {
   }
 }
 
-//Make bg-gray -> bg-light-gray for the social grid background
+//Make the bg-gray bg-light-gray for social
 .social {
   &.bg-gray {
     background: $gray-light;
@@ -1225,11 +1227,6 @@ figure {
 
 .social__link.linkedin .social__icon {
   max-width: 16px;
-}
-
-.social__grid {
-  margin-right: 0px;
-  padding-bottom: 20px;
 }
 
 //remove the social link hover for background color compatibility
