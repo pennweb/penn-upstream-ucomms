@@ -1200,6 +1200,13 @@ figure {
   }
 }
 
+//Make bg-gray -> bg-light-gray for the social grid background
+.social {
+  &.bg-gray {
+    background: $gray-light;
+  }
+}
+
 // Keeps the social cards squared on Safari
 .social-card {
   max-height: 413px;
@@ -1222,6 +1229,7 @@ figure {
 
 .social__grid {
   margin-right: 0px;
+  padding-bottom: 20px;
 }
 
 //remove the social link hover for background color compatibility

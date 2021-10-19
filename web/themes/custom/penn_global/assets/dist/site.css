@@ -13502,6 +13502,10 @@ figure.align-center {
   color: #011F5B;
 }
 
+.social.bg-gray {
+  background: #F7F7F7;
+}
+
 .social-card {
   max-height: 413px;
 }
@@ -13526,6 +13530,7 @@ figure.align-center {
 
 .social__grid {
   margin-right: 0px;
+  padding-bottom: 20px;
 }
 
 .social__link:hover {
