@@ -203,10 +203,10 @@
 }
 
 /**
- * Homepage Video Hero
+ * Hero Full Width with Video
  */
 
- .hero.hero-homepage-video {
+ hero-full-width-video {
   position: relative;
   height: 100%;
 
@@ -306,14 +306,4 @@
       }
     }
  }
-}
-
-@keyframes showvideo {
- from {opacity: 0;}
- to {opacity: 1;}
-}
-
-@keyframes fadefromblack {
- from {opacity: 1;}
- to {opacity: 0;}
 }
