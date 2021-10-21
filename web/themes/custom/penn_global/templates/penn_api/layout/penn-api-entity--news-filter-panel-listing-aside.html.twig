@@ -18,7 +18,9 @@
           </figure>
           <div class="listing-card__detail">
             <h3 class="listing-card__title ">
-              <a href="{{item.url}}" class="listing-card__title__link">{{ item.title }}</a>
+              <a href="{{item.url}}" class="listing-card__title__link">
+                {{ item.homepage_title is empty ? item.title : item.homepage_title }}
+              </a>
             </h3>
             <p>{{ item.summary }}</p>
             <div class="listing-card__info">
