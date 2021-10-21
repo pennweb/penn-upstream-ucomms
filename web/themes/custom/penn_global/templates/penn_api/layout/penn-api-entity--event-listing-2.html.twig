@@ -30,6 +30,10 @@
                 <p>{{ item.summary|striptags|trim }}</p>
               {% endif %}
 
+                {# Show the end date for events longer than one day #}
+                {% if item.start_date|date("n/j/Y") != item.end_date|date("n/j/Y") %}
+                  <span class="event-card__event-end-date">Ends {{ item.end_date|date("F j, Y") }}</span>       
+                {% endif %}
             </div>
           </article>
         {% endfor %}

@@ -10,7 +10,9 @@
         </figure>
         <div class="card__content">
           <h2 class="card__title">
-            <a href="{{ item.url }}" class="card__title__link">{{ item.title }}</a>
+            <a href="{{ item.url }}" class="card__title__link">
+              {{ item.homepage_title is empty ? item.title : item.homepage_title }}
+            </a>
           </h2>
           <p>{{ item.summary }}</p>
 

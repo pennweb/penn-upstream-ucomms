@@ -25,7 +25,7 @@
         {% endfor %}
         <h3 class="article-card__title">
           <a href="{{ item.url }}" class="article-card__link">
-            {{item.title}}
+            {{ item.homepage_title is empty ? item.title : item.homepage_title }}
           </a>
         </h3>
       </article>
