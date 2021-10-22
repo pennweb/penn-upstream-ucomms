@@ -2,13 +2,15 @@
   <figure class="card__figure">
     {{ content.field_image }}
   </figure>
-  <div class="card__content wysiwyg">
+  <div class="card__content">
     {% if not content.field_link|render is empty %}
       <h2 class="card__title plain">
         <a href="{{ content.field_link.0['#url'] }}" class="card__title__link">{{ content.field_link[0]['#title'] }}</a>
       </h2>
     {% endif %}
-    <p>{{ content.field_description_formatted }}</p>
+    <div class="wysiwyg">
+      <p>{{ content.field_description_formatted }}</p>
+    </div>
     {% if not content.field_button_link|render is empty %}
       {{ content.field_button_link }}
     {% endif %}
