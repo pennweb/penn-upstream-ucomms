@@ -20,13 +20,32 @@ include __DIR__ . "/settings.pantheon.php";
 $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 
 /**
+ * If there is a site settings file, then include it
+ */
+$site_settings = __DIR__ . "/settings.site.php";
+if (file_exists($site_settings)) {
+  include $site_settings;
+}
+
+/**
  * If there is a local settings file, then include it
  */
 $local_settings = __DIR__ . "/settings.local.php";
 if (file_exists($local_settings)) {
   include $local_settings;
 }
+/**
+ * If there is a redis file, then include it
+ */
+$redis_settings = __DIR__ . "/settings.redis.php";
+if (file_exists($redis_settings)) {
+  include $redis_settings;
+}
 
-$config_directories['sync'] = __DIR__ . "/config";
-$config['system.site']['name'] = 'Change to Site Name';
-$config['system.site']['page']['front'] = '/home';
+/**
+ * If there is a redirects file, then include it
+ */
+$redirects = __DIR__ . "/settings.redirects.php";
+if (file_exists($redirects)) {
+  include $redirects;
+}
