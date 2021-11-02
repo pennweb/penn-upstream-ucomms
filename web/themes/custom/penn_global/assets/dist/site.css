@@ -12212,6 +12212,32 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 }
 
 /**
+ * Article Card Hero 
+ */
+.article-card--without-link.is-hovered .article-card__link, .article-card--without-link:focus-within .article-card__link {
+  text-decoration: none;
+}
+
+.article-card--without-link.is-hovered .article-card__image, .article-card--without-link:focus-within .article-card__image {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.article-card--without-link .article-card__category:hover,
+.article-card--without-link .article-card__category:focus,
+.article-card--without-link .article-card__link:hover,
+.article-card--without-link .article-card__link:focus {
+  text-decoration: none;
+}
+
+.article-card--without-link a.article-card__category:hover,
+.article-card--without-link a.article-card__category:focus,
+.article-card--without-link a.article-card__link:hover,
+.article-card--without-link a.article-card__link:focus {
+  text-decoration: underline;
+}
+
+/**
  * Search
  */
 #header:after {

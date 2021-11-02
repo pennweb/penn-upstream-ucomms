@@ -33,6 +33,39 @@
 }
 
 /**
+ * Article Card Hero 
+ */
+ 
+ .article-card {
+  //Remove eye candy for unlinked heroes
+  &--without-link {
+	  &.is-hovered,
+    &:focus-within {
+      .article-card__link {
+        text-decoration: none;
+      }
+      .article-card__image {
+        transform: none;
+      }
+    }
+    .article-card__category:hover, 
+    .article-card__category:focus,
+    .article-card__link:hover, 
+    .article-card__link:focus {
+      text-decoration: none;
+  
+    } 
+    a.article-card__category:hover, 
+    a.article-card__category:focus,
+    a.article-card__link:hover, 
+    a.article-card__link:focus {
+      text-decoration: underline;
+    }    
+  }
+}
+
+ 
+/**
  * Search
  */
 
