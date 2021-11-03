@@ -159,12 +159,6 @@
   text-align: right;
 }
 
-.listing-card--no-image {
-  .listing-card__detail {
-    flex: auto;
-  }
-}
-
 // honor link--red class
 .card__content a.link--red {
   color: $red;
@@ -189,6 +183,34 @@
     }
   }
 }
+
+/** 
+ * Listing Cards
+ */
+
+ .listing-card {
+  //Remove eye candy for unlinked heroes
+  &--without-link {
+	  &.is-hovered,
+    &:focus-within {
+      .listing-card__image {
+        transform: none;
+      }
+    } 
+  }
+  &--without-image {
+    .listing-card__detail {
+      flex: auto;
+    }
+  }
+}
+
+.listing-card--no-image {
+  .listing-card__detail {
+    flex: auto;
+  }
+}
+
 
 /** 
  * Content Aside

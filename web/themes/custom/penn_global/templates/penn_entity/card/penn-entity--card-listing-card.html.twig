@@ -1,15 +1,19 @@
 {% set has_link = content.field_link|render is not empty ? true : false %}
-<article class="listing-card listing-card--large  {{ content.field_borders }} {{ content.field_margins }}">
-  <figure class="listing-card__figure">
 
-  {% if has_link %}
-    <a href="{{ content.field_link }}" class="list-card__figure__link">
+{% set link_class = has_link ? 'with-link' : 'without-link' %}
+<article class="listing-card listing-card--large  listing-card--{{ link_class }} listing-card--{{ content.field_image_class }} {{ content.field_borders }} {{ content.field_margins }}">
+
+  {% if content.field_image_has_value %}
+    <figure class="listing-card__figure">
+    {% if has_link %}
+      <a href="{{ content.field_link }}" class="list-card__figure__link">
+        {{ content.field_image }}
+      </a>
+    {% else %}
       {{ content.field_image }}
-    </a>
-  {% else %}
-    {{ content.field_image }}
+    {% endif %}
+    </figure>
   {% endif %}
-  </figure>
 
   <div class="listing-card__detail">
     <h3 class="listing-card__title ">

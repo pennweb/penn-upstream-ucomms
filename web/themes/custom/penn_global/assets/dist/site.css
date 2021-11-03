@@ -12322,12 +12322,6 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   text-align: right;
 }
 
-.listing-card--no-image .listing-card__detail {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
-}
-
 .card__content a.link--red {
   color: #990000;
 }
@@ -12346,6 +12340,26 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 
 .card__with-image .card__content {
   border-top: none;
+}
+
+/** 
+ * Listing Cards
+ */
+.listing-card--without-link.is-hovered .listing-card__image, .listing-card--without-link:focus-within .listing-card__image {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.listing-card--without-image .listing-card__detail {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.listing-card--no-image .listing-card__detail {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 /** 
