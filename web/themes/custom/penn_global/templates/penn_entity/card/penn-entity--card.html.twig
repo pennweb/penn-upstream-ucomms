@@ -17,7 +17,9 @@
         <a href="{{ content.field_link }}" class="card__title__link">{{ content.field_title }}</a>
       {% endif %}
     </h2>
-    {{ content.field_description_formatted }}
+    <div class="wysiwyg">
+      {{ content.field_description_formatted }}
+    </div>
     {{ content.field_button_link }}
   </div>
 </article>

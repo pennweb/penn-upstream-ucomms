@@ -12310,6 +12310,22 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   color: #011F5B;
 }
 
+/**
+ * Card Listing (2 and 3 Across Cards)
+ */
+.bg-blue .card-listing .card__content .wysiwyg p,
+.bg-red .card-listing .card__content .wysiwyg p,
+.card-listing .card__content .wysiwyg p {
+  color: #434343;
+  margin-bottom: 2em;
+}
+
+.bg-blue .card-listing .card__content .wysiwyg a.btn:not(.btn--outline),
+.bg-red .card-listing .card__content .wysiwyg a.btn:not(.btn--outline),
+.card-listing .card__content .wysiwyg a.btn:not(.btn--outline) {
+  color: white;
+}
+
 .card-listing .card--align-left {
   text-align: left;
 }

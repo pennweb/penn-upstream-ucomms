@@ -147,6 +147,28 @@
   color: $blue;
 }
 
+/**
+ * Card Listing (2 and 3 Across Cards)
+ */
+
+//Correct text styling for bg-color wysiwyg
+.bg-blue .card-listing, 
+.bg-red .card-listing, 
+.card-listing { 
+    .card__content {
+      .wysiwyg {
+        p {
+          color: #434343;
+          margin-bottom: 2em;
+        }
+        a.btn:not(.btn--outline) {
+          color: white;
+        }        
+      }
+    }
+}
+
+
 .card-listing .card--align-left {
   text-align: left;
 }
