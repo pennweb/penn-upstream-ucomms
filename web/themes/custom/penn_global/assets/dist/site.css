@@ -12214,6 +12214,22 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 /**
  * Article Card Hero 
  */
+.article-card--without-borders {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.article-card--without-borders::after {
+  content: none;
+}
+
+.article-card--without-link .article-card__link::before {
+  content: none;
+}
+
 .article-card--without-link.is-hovered .article-card__link, .article-card--without-link:focus-within .article-card__link {
   text-decoration: none;
 }

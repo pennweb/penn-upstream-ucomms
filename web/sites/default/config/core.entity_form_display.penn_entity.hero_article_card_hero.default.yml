@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.penn_entity.hero_article_card_hero.field_boolean
     - field.field.penn_entity.hero_article_card_hero.field_description_formatted
     - field.field.penn_entity.hero_article_card_hero.field_image
     - field.field.penn_entity.hero_article_card_hero.field_image_mobile
@@ -22,6 +23,13 @@ targetEntityType: penn_entity
 bundle: hero_article_card_hero
 mode: default
 content:
+  field_boolean:
+    weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_description_formatted:
     weight: 3
     settings:

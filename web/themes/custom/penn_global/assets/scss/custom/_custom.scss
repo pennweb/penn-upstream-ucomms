@@ -37,8 +37,24 @@
  */
  
  .article-card {
+
+  //optional decorative borders
+  &--without-borders {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    &::after {
+      content: none;
+    }
+  }
+
   //Remove eye candy for unlinked heroes
   &--without-link {
+    .article-card__link::before {
+      content: none;
+    }
 	  &.is-hovered,
     &:focus-within {
       .article-card__link {

@@ -69,6 +69,7 @@ function penn_entity_preprocess_penn_entity(&$vars) {
     //Set a <field>_has_value boolean for certain TEXT fields
     //This is a helper to prevent having to render fields in twig templates when determing to hide/show
     $fields = [
+      'field_boolean', //this is a boolean, but is compatible
       'field_title',
       'field_description',
       'field_description_formatted',
