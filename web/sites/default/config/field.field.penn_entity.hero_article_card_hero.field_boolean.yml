@@ -9,7 +9,7 @@ id: penn_entity.hero_article_card_hero.field_boolean
 field_name: field_boolean
 entity_type: penn_entity
 bundle: hero_article_card_hero
-label: 'Hide Decorative Borders'
+label: 'Hide Borders'
 description: 'Hide the decorative borders around the Article Card entity. The default is OFF.'
 required: false
 translatable: true
