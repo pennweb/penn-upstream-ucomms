@@ -170,16 +170,22 @@
 //Correct text styling for bg-color wysiwyg
 .bg-blue .card-listing, 
 .bg-red .card-listing, 
-.card-listing { 
+.bg-blue .card-slider, 
+.bg-red .card-slider, 
+.card-listing,
+.card-slider { 
     .card__content {
       .wysiwyg {
         p {
-          color: #434343;
+          color: $text-color;
           margin-bottom: 2em;
+        }
+        a:not(.btn) {
+          color: $blue;
         }
         a.btn:not(.btn--outline) {
           color: white;
-        }        
+        }
       }
     }
 }

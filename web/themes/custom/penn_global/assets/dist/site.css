@@ -12331,14 +12331,29 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
  */
 .bg-blue .card-listing .card__content .wysiwyg p,
 .bg-red .card-listing .card__content .wysiwyg p,
-.card-listing .card__content .wysiwyg p {
+.bg-blue .card-slider .card__content .wysiwyg p,
+.bg-red .card-slider .card__content .wysiwyg p,
+.card-listing .card__content .wysiwyg p,
+.card-slider .card__content .wysiwyg p {
   color: #434343;
   margin-bottom: 2em;
 }
 
+.bg-blue .card-listing .card__content .wysiwyg a:not(.btn),
+.bg-red .card-listing .card__content .wysiwyg a:not(.btn),
+.bg-blue .card-slider .card__content .wysiwyg a:not(.btn),
+.bg-red .card-slider .card__content .wysiwyg a:not(.btn),
+.card-listing .card__content .wysiwyg a:not(.btn),
+.card-slider .card__content .wysiwyg a:not(.btn) {
+  color: #011F5B;
+}
+
 .bg-blue .card-listing .card__content .wysiwyg a.btn:not(.btn--outline),
 .bg-red .card-listing .card__content .wysiwyg a.btn:not(.btn--outline),
-.card-listing .card__content .wysiwyg a.btn:not(.btn--outline) {
+.bg-blue .card-slider .card__content .wysiwyg a.btn:not(.btn--outline),
+.bg-red .card-slider .card__content .wysiwyg a.btn:not(.btn--outline),
+.card-listing .card__content .wysiwyg a.btn:not(.btn--outline),
+.card-slider .card__content .wysiwyg a.btn:not(.btn--outline) {
   color: white;
 }
 
