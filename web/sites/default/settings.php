@@ -16,9 +16,6 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  */
 include __DIR__ . "/settings.pantheon.php";
 
-# Provide universal absolute path to the installation.
-$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
-
 /**
  * If there is a site settings file, then include it
  */
