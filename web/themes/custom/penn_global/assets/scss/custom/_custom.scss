@@ -267,7 +267,11 @@
   }
   //Remove WDG's padding to use "section-padding" instead
   padding: 0;
+  .social {
+    padding: 0;
+  }
 }
+
 /**
  * Content Spotlight
  */
