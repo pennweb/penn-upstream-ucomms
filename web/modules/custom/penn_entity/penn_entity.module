@@ -70,19 +70,21 @@ function penn_entity_preprocess_penn_entity(&$vars) {
     //This is a helper to prevent having to render fields in twig templates when determing to hide/show
     $fields = [
       'field_boolean', //this is a boolean, but is compatible
-      'field_title',
+      'field_day',
       'field_description',
       'field_description_formatted',
-      'field_subtitle',
+      'field_month',
       'field_quote_formatted',
       'field_quote_author',
-      'field_video_source_url',
       'field_social_link_instagram',
       'field_social_link_twitter',
       'field_social_link_facebook',
       'field_social_link_flickr',
       'field_social_link_youtube',
       'field_social_link_linkedin',
+      'field_subtitle',
+      'field_title',
+      'field_video_source_url',
     ];
     foreach($fields as $field) {
       if($penn_entity->hasField($field) && !empty($penn_entity->get($field)->getString())) {

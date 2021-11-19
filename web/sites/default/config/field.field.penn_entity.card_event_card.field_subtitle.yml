@@ -10,7 +10,7 @@ field_name: field_subtitle
 entity_type: penn_entity
 bundle: card_event_card
 label: Subtitle
-description: ''
+description: 'Appears along the bottom of the event image. Typically used as an event category such as "Special Events".'
 required: false
 translatable: true
 default_value: {  }

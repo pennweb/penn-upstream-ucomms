@@ -1,9 +1,13 @@
 {% set has_link = content.field_link|render is not empty ? true : false %}
-<article class="event-card{{ content.field_image_has_value is empty ? ' event-card--no-image' : '' }}">
-  <time class="event-card__date">
-    <span class="event-card__month">{{ content.field_month }}</span>
-    <span class="event-card__day">{{ content.field_day }}</span>
-  </time>
+
+<article class="event-card{{ content.field_image_has_value is empty ? ' event-card--no-image' : '' }} event-card--static">
+  
+  {% if content.field_month_has_value and content.field_day_has_value %}
+    <time class="event-card__date">
+      <span class="event-card__month">{{ content.field_month }}</span>
+      <span class="event-card__day">{{ content.field_day }}</span>
+    </time>
+  {% endif %}
 
   {% if content.field_image_has_value %}
     {% if has_link %}
@@ -18,6 +22,7 @@
   {% if content.field_subtitle_has_value %}
     <span class="event-card__category">{{ content.field_subtitle }}</span>
   {% endif %}
+  
   <div class="event-card__content">
     {% if content.field_title_has_value %}
       <h3 class="event-card__title">

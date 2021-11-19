@@ -606,6 +606,32 @@ drupal-entity {
   text-decoration: none;
 }
 
+.event-card.event-card--static {
+  //Fix event card styles when in a wysiwyg
+  .wysiwyg {
+    p {
+      @media #{$large-up} {
+        font-size: 1.6rem;
+        line-height: 1.5625;
+      }
+      font-size: 1.4rem;
+      color: rgba(1, 31, 91, 0.68);
+      letter-spacing: 0;
+      line-height: 1.785714286;
+    }
+  }
+  .contact-information__column__title {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;    
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #000f3a;
+    letter-spacing: 1.6px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
 /**
  * Facts
  */
