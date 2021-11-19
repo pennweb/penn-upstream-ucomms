@@ -1,0 +1,14 @@
+<section class="upcoming-events {{ content.field_borders }} {{ content.field_margins }}">
+  <div class="contain {{ content.field_padding }}">
+    {% if content.field_title_has_value %}
+      <header class="section-header">
+        <h2 class="section-header__title">{{ content.field_title }}</h2>
+      </header>
+    {% endif %}
+    <div class="upcoming-events__grid" data-slider="three-across">
+      {{ content.field_penn_entity_reference }}
+    </div>
+  {{ content.field_link }}
+    </div>
+
+</section>

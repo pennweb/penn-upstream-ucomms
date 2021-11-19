@@ -74,6 +74,9 @@ class PennEntityCustomAddPage extends ControllerBase {
       'bundle' => 'layout_content_spotlight',
     ],
     [
+      'bundle' => 'layout_event_cards',
+    ],
+    [
       'bundle' => 'layout_fact_bars',
     ],
     [

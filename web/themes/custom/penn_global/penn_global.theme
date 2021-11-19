@@ -184,6 +184,9 @@ function penn_global_preprocess_image(&$vars) {
   if ($vars['style_name'] == 'card_3x2') {
     $vars['attributes']['class'][] = 'card__image';
   }
+  if ($vars['style_name'] == 'event_card_1_1') {
+    $vars['attributes']['class'][] = 'event-card__image';
+  }
   if ($vars['style_name'] == 'featured_story_mobile') {
     $vars['attributes']['class'][] = 'featured-story__image';
   }
