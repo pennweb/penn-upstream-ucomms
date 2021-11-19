@@ -12421,6 +12421,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   margin-bottom: 25px;
 }
 
+.content-aside .social {
+  padding: 0;
+}
+
 /**
  * Content Spotlight
  */
