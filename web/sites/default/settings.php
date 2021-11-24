@@ -17,6 +17,16 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 include __DIR__ . "/settings.pantheon.php";
 
 /**
+ * Disable access to rebuild.php.
+ *
+ * This setting can be enabled to allow Drupal's php and database cached
+ * storage to be cleared via the rebuild.php page. Access to this page can also
+ * be gained by generating a query string from rebuild_token_calculator.sh and
+ * using these parameters in a request to rebuild.php.
+ */
+$settings['rebuild_access'] = FALSE;
+
+/**
  * If there is a site settings file, then include it
  */
 $site_settings = __DIR__ . "/settings.site.php";
