@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - johnml@upenn.edu
+  - haasj@upenn.edu
 reply: ''
 weight: 0
 message: 'Your message has been sent.'
