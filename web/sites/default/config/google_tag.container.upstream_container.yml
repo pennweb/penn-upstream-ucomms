@@ -1,11 +1,11 @@
-uuid: f15d735a-abff-44bf-bc79-e81d03c78f0e
+uuid: a3de7fff-f56f-4547-bba8-c3847e8114a1
 langcode: en
-status: false
+status: true
 dependencies: {  }
-id: penn_flagship_container
-label: 'Penn Flagship container'
+id: upstream_container
+label: 'Upstream Container'
 weight: 0
-container_id: GTM-PGCDMMD
+container_id: GTM-5X34LWC
 data_layer: dataLayer
 include_classes: false
 whitelist_classes: |-
