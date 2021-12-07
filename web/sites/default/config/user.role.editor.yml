@@ -17,6 +17,7 @@ permissions:
   - 'access toolbar'
   - 'add penn entity entities'
   - 'administer penn entity entities'
+  - 'bypass node access'
   - 'create alert content'
   - 'create document media'
   - 'create homepage content'
