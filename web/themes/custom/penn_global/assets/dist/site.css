@@ -12409,6 +12409,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
           flex: auto;
 }
 
+.listing-card__title {
+  color: #011F5B;
+}
+
 /** 
  * Content Aside
  */

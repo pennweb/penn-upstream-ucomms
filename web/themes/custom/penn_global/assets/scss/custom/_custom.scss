@@ -233,7 +233,6 @@
  */
 
  .listing-card {
-  //Remove eye candy for unlinked heroes
   &--without-link {
 	  &.is-hovered,
     &:focus-within {
@@ -255,6 +254,9 @@
   }
 }
 
+.listing-card__title  {
+  color: $blue;
+}
 
 /** 
  * Content Aside
