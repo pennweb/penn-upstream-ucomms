@@ -12950,6 +12950,7 @@ drupal-entity {
 @media (min-width: 768px) {
   .wysiwyg .fact .fact__title {
     font-size: 6.2rem;
+    line-height: 0.945;
   }
 }
 
