@@ -763,6 +763,7 @@ drupal-entity {
       margin: 0 0 2.4rem;
       @media #{$tablet-up} {
         font-size: 6.2rem;
+        line-height: 0.945;
       }
     }
     .fact__caption {
