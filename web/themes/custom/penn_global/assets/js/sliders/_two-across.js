@@ -20,7 +20,7 @@ function sliderInit() {
 				//mobileFirst: true,
 				speed: 500,
 				// adaptiveHeight: true,
-				//infinite: false,
+				infinite: false,
 				//variableWidth: true,
 				slidesToShow: 2,
 				arrows: false,
