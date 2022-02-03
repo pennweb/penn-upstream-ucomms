@@ -13967,7 +13967,7 @@ select {
 }
 
 .hero-full-width .hero__shadows {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0);
 }
 
 .hero-full-width .hero__shadows::after {
@@ -14194,6 +14194,10 @@ select {
   width: 20px;
   height: 4px;
   background: rgba(255, 255, 255, 0.38);
+}
+
+.hero-full-width::after {
+  display: none;
 }
 
 /**
