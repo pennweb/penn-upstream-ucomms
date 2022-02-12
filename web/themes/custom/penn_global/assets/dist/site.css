@@ -2613,14 +2613,6 @@ hr {
 
 .alert__message a {
   color: #011F5B;
-  margin-left: 20px;
-}
-
-@media (max-width: 1023px) {
-  .alert__message a {
-    display: block;
-    margin: 0;
-  }
 }
 
 .alert--emergency .alert__message a {
