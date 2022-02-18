@@ -16,32 +16,32 @@ bundle: layout_split_content
 mode: default
 content:
   field_margins:
-    weight: -2
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: -2
     region: content
   field_padding:
-    weight: -1
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: -1
     region: content
   field_split_content_column:
-    weight: -3
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: -3
     region: content
   name:
-    label: above
     type: string
-    weight: -4
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -4
+    region: content
 hidden: {  }

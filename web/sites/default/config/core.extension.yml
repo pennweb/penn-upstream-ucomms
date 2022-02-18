@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG1L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   structure_sync: 0
   admin_toolbar: 1
@@ -98,5 +100,3 @@ theme:
   adminimal_theme: 1
   penn_starter: 0
 profile: standard
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG1L7MgsLvfBIMAvi_skumNFQwkDc

@@ -17,7 +17,7 @@ bundle: hero_page_quote_hero
 mode: default
 content:
   field_image:
-    weight: 1
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: hero_page_hero
@@ -30,29 +30,29 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    weight: 1
     region: content
   field_quote:
-    weight: 2
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 2
     region: content
   field_quote_author:
-    weight: 3
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 3
     region: content
   field_select_list:
-    weight: 4
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 4
     region: content
 hidden:
   name: true

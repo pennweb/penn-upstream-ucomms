@@ -18,14 +18,14 @@ bundle: card_grid_card
 mode: default
 content:
   field_description:
-    weight: 2
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 2
     region: content
   field_image:
-    weight: 3
+    type: entity_reference_entity_view
     label: above
     settings:
       view_mode: grid_card_landscape
@@ -38,10 +38,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    weight: 3
     region: content
   field_link:
-    weight: 4
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -57,23 +57,23 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: link
+    weight: 4
     region: content
   field_title:
-    weight: 1
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   name:
-    label: above
     type: string
-    weight: 0
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_grid_borders: true

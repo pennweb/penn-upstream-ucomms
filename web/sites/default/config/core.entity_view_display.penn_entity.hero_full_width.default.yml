@@ -25,7 +25,7 @@ bundle: hero_full_width
 mode: default
 content:
   field_button_link:
-    weight: 7
+    type: link
     label: above
     settings:
       trim_length: null
@@ -41,24 +41,24 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: link
+    weight: 7
     region: content
   field_description_formatted:
-    weight: 2
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
   field_hero_size:
-    weight: 9
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 9
     region: content
   field_image:
-    weight: 3
+    type: entity_reference_entity_view
     label: above
     settings:
       view_mode: hero_homepage
@@ -71,10 +71,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    weight: 3
     region: content
   field_image_mobile:
-    weight: 4
+    type: entity_reference_entity_view
     label: above
     settings:
       view_mode: hero_homepage_mobile
@@ -87,17 +87,17 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    weight: 4
     region: content
   field_opacity:
-    weight: 8
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 8
     region: content
   field_quote_author:
-    weight: 6
+    type: string
     label: above
     settings:
       link_to_entity: false
@@ -109,10 +109,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: string
+    weight: 6
     region: content
   field_quote_formatted:
-    weight: 5
+    type: text_default
     label: above
     settings: {  }
     third_party_settings:
@@ -123,30 +123,30 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: text_default
+    weight: 5
     region: content
   field_title:
-    weight: 1
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_video_source_url:
-    weight: 10
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 10
     region: content
   name:
-    label: above
     type: string
-    weight: 0
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden: {  }

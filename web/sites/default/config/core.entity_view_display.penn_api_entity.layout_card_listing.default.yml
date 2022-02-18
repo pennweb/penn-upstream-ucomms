@@ -25,14 +25,14 @@ bundle: layout_card_listing
 mode: default
 content:
   field_background_color:
-    weight: 3
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 3
     region: content
   field_button_link:
-    weight: 7
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -41,79 +41,79 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 7
     region: content
   field_container_width:
-    weight: 5
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 5
     region: content
   field_description_formatted:
-    weight: 11
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 11
     region: content
   field_feed_url:
-    weight: 2
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_listing_layout:
-    weight: 6
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 6
     region: content
   field_margins:
-    weight: 8
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 8
     region: content
   field_padding:
-    weight: 9
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 9
     region: content
   field_text_align:
-    weight: 12
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 12
     region: content
   field_title:
-    weight: 10
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 10
     region: content
   name:
-    label: above
     type: string
-    weight: -4
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  user_id:
-    label: hidden
-    type: author
-    weight: 0
+    weight: -4
     region: content
+  user_id:
+    type: author
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden: {  }

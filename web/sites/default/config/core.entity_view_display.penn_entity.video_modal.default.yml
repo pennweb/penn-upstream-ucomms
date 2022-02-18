@@ -17,16 +17,16 @@ bundle: video_modal
 mode: default
 content:
   field_featured_initiative_card:
-    weight: -1
+    type: entity_reference_entity_view
     label: above
     settings:
-      link: true
       view_mode: default
+      link: true
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: -1
     region: content
   field_image:
-    weight: 0
+    type: entity_reference_entity_view
     label: above
     settings:
       view_mode: video_modal_poster
@@ -39,10 +39,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    weight: 0
     region: content
   field_video_source:
-    weight: -3
+    type: link
     label: above
     settings:
       trim_length: null
@@ -58,10 +58,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: link
+    weight: -3
     region: content
   field_video_transcript:
-    weight: -2
+    type: link
     label: above
     settings:
       trim_length: null
@@ -77,14 +77,14 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: link
+    weight: -2
     region: content
   name:
-    label: above
     type: string
-    weight: -4
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -4
+    region: content
 hidden: {  }

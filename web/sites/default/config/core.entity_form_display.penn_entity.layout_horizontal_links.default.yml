@@ -13,13 +13,13 @@ bundle: layout_horizontal_links
 mode: default
 content:
   field_links:
+    type: link_default
     weight: 4
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   name:
     type: string_textfield
     weight: -4
