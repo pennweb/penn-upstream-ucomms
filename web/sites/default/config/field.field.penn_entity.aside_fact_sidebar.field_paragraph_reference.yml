@@ -21,9 +21,9 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       fact_sidebar_item_paragraph: fact_sidebar_item_paragraph
+    negate: 0
     target_bundles_drag_drop:
       accordion_item_paragraph:
         weight: 7
@@ -41,6 +41,6 @@ settings:
         weight: 11
         enabled: false
       fact_sidebar_item_paragraph:
-        enabled: true
         weight: 12
+        enabled: true
 field_type: entity_reference_revisions

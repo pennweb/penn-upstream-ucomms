@@ -16,23 +16,23 @@ bundle: layout_offset_card_with_image
 mode: default
 content:
   field_align:
-    weight: -2
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: -2
     region: content
   field_featured_initiative_card:
-    weight: -3
+    type: entity_reference_entity_view
     label: above
     settings:
-      link: true
       view_mode: default
+      link: true
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: -3
     region: content
   field_image:
-    weight: -1
+    type: entity_reference_entity_view
     label: above
     settings:
       view_mode: video_modal_poster
@@ -45,14 +45,14 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    weight: -1
     region: content
   name:
-    label: above
     type: string
-    weight: -4
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -4
+    region: content
 hidden: {  }

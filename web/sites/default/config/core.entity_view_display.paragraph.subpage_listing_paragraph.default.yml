@@ -17,15 +17,14 @@ bundle: subpage_listing_paragraph
 mode: default
 content:
   field_description_plain:
-    weight: 4
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 4
     region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 1
     label: above
     settings:
       view_mode: subpage_listing_card
@@ -38,9 +37,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
+    weight: 1
     region: content
   field_link:
-    weight: 0
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -56,14 +56,14 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: link
+    weight: 0
     region: content
   field_title:
-    weight: 2
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
 hidden: {  }

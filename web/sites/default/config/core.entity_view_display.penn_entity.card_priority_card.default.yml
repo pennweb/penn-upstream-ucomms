@@ -16,7 +16,7 @@ bundle: card_priority_card
 mode: default
 content:
   field_image:
-    weight: 1
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: priority_card
@@ -29,10 +29,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    weight: 1
     region: content
   field_link:
-    weight: 2
+    type: link_separate
     label: hidden
     settings:
       trim_length: null
@@ -48,10 +48,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: link_separate
+    weight: 2
     region: content
   field_title:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
@@ -63,7 +63,7 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: string
+    weight: 0
     region: content
 hidden:
   name: true

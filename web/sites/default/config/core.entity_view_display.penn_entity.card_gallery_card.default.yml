@@ -14,14 +14,14 @@ bundle: card_gallery_card
 mode: default
 content:
   field_description:
-    weight: 0
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 0
     region: content
   field_image:
-    weight: 1
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: gallery_card
@@ -34,7 +34,7 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    weight: 1
     region: content
 hidden:
   name: true

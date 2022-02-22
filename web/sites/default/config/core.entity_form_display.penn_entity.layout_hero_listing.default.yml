@@ -14,7 +14,9 @@ bundle: layout_hero_listing
 mode: default
 content:
   field_penn_entity_reference:
+    type: inline_entity_form_complex
     weight: 3
+    region: content
     settings:
       form_mode: default
       override_labels: true
@@ -23,15 +25,13 @@ content:
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
-      revision: false
+      allow_duplicate: false
       collapsible: false
       collapsed: false
-      allow_duplicate: false
+      revision: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: _none
-    type: inline_entity_form_complex
-    region: content
   name:
     type: string_textfield
     weight: -4

@@ -21,7 +21,7 @@ bundle: card
 mode: default
 content:
   field_button_link:
-    weight: 0
+    type: link_separate
     label: above
     settings:
       trim_length: null
@@ -37,24 +37,24 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: link_separate
+    weight: 0
     region: content
   field_card_text_align:
-    weight: 3
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 3
     region: content
   field_description_formatted:
-    weight: 2
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
   field_image:
-    weight: 1
+    type: entity_reference_entity_view
     label: above
     settings:
       view_mode: card_3x2
@@ -67,10 +67,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    weight: 1
     region: content
   field_link:
-    weight: -1
+    type: link
     label: above
     settings:
       trim_length: null
@@ -86,22 +86,22 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: link
+    weight: -1
     region: content
   field_title:
-    weight: -3
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: -3
     region: content
   name:
-    label: above
     type: string
-    weight: -4
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -4
+    region: content
 hidden: {  }

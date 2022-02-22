@@ -19,10 +19,11 @@ bundle: image
 mode: crop_3x2
 content:
   field_media_image:
+    type: image
     label: visually_hidden
     settings:
-      image_style: crop_3x2
       image_link: ''
+      image_style: crop_3x2
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -31,7 +32,6 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: image
     weight: 1
     region: content
 hidden:

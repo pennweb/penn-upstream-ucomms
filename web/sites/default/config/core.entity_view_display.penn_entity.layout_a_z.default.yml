@@ -14,7 +14,7 @@ bundle: layout_a_z
 mode: default
 content:
   field_a_z_link:
-    weight: -2
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -23,22 +23,22 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: -2
     region: content
   field_title:
-    weight: -3
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: -3
     region: content
   name:
-    label: above
     type: string
-    weight: -4
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -4
+    region: content
 hidden: {  }

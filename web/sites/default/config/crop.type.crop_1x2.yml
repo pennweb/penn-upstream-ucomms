@@ -2,8 +2,8 @@ uuid: f89e9c47-6ad9-4614-bc55-2a6821b96240
 langcode: en
 status: true
 dependencies: {  }
-id: crop_1x2
 label: 'Crop 1:2'
+id: crop_1x2
 description: ''
 aspect_ratio: '1:2'
 soft_limit_width: null
