@@ -12,21 +12,21 @@ bundle: fact_sidebar_item_paragraph
 mode: default
 content:
   field_description_plain:
-    type: string_textarea
     weight: 2
-    region: content
     settings:
       rows: 2
       placeholder: ''
     third_party_settings: {  }
-  field_title:
-    type: string_textfield
-    weight: 0
+    type: string_textarea
     region: content
+  field_title:
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
 hidden:
   created: true
   status: true

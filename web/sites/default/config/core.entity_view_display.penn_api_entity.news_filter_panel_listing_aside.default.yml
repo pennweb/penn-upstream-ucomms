@@ -19,33 +19,33 @@ bundle: news_filter_panel_listing_aside
 mode: default
 content:
   field_active:
-    type: boolean
+    weight: 1
     label: hidden
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 1
+    type: boolean
     region: content
   field_feed_url:
-    type: string
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    type: string
     region: content
   field_filter_title:
-    type: string
+    weight: 7
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    type: string
     region: content
   field_link:
-    type: link
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -54,41 +54,41 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 5
+    type: link
     region: content
   field_secondary_feed_title:
-    type: string
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    type: string
     region: content
   field_secondary_feed_url:
-    type: string
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    type: string
     region: content
   field_show_tags:
-    type: boolean
+    weight: 8
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 8
+    type: boolean
     region: content
   name:
     type: string
+    weight: 0
+    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   user_id: true

@@ -16,21 +16,19 @@ bundle: layout_quote_slider
 mode: default
 content:
   field_borders:
-    type: options_select
     weight: 5
-    region: content
     settings: {  }
     third_party_settings: {  }
-  field_padding:
     type: options_select
-    weight: 4
     region: content
+  field_padding:
+    weight: 4
     settings: {  }
     third_party_settings: {  }
-  field_penn_entity_reference:
-    type: inline_entity_form_complex
-    weight: 3
+    type: options_select
     region: content
+  field_penn_entity_reference:
+    weight: 3
     settings:
       form_mode: default
       override_labels: true
@@ -39,13 +37,15 @@ content:
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
-      allow_duplicate: false
+      revision: false
       collapsible: false
       collapsed: false
-      revision: false
+      allow_duplicate: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
   name:
     type: string_textfield
     weight: -4

@@ -19,59 +19,59 @@ bundle: news_filter_panel_listing_aside
 mode: default
 content:
   field_active:
-    type: boolean_checkbox
     weight: 0
-    region: content
     settings:
       display_label: true
     third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_feed_url:
-    type: string_textfield
     weight: 2
-    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_filter_title:
     type: string_textfield
-    weight: 3
     region: content
+  field_filter_title:
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_link:
-    type: link_default
-    weight: 5
+    type: string_textfield
     region: content
+  field_link:
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+    type: link_default
+    region: content
   field_secondary_feed_title:
-    type: string_textfield
     weight: 6
-    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_secondary_feed_url:
     type: string_textfield
-    weight: 7
     region: content
+  field_secondary_feed_url:
+    weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_show_tags:
-    type: boolean_checkbox
-    weight: 26
+    type: string_textfield
     region: content
+  field_show_tags:
+    weight: 26
     settings:
       display_label: true
     third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   name:
     type: string_textfield
     weight: 1

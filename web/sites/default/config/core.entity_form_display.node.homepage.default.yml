@@ -27,9 +27,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_events_feed:
-    type: inline_entity_form_simple
     weight: 8
-    region: content
     settings:
       form_mode: default
       override_labels: true
@@ -39,10 +37,10 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
-  field_featured_initiatives:
     type: inline_entity_form_simple
-    weight: 9
     region: content
+  field_featured_initiatives:
+    weight: 9
     settings:
       form_mode: default
       override_labels: true
@@ -52,10 +50,10 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
-  field_featured_story:
     type: inline_entity_form_simple
-    weight: 7
     region: content
+  field_featured_story:
+    weight: 7
     settings:
       form_mode: default
       override_labels: true
@@ -65,40 +63,40 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
-  field_hero:
-    type: inline_entity_form_complex
-    weight: 5
+    type: inline_entity_form_simple
     region: content
+  field_hero:
+    weight: 5
     settings:
       form_mode: default
       override_labels: true
       label_singular: Hero
       label_plural: Heroes
+      collapsible: true
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
-      allow_duplicate: false
-      collapsible: true
-      collapsed: false
       revision: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings: {  }
-  field_news_feed:
-    type: inline_entity_form_simple
-    weight: 6
+    type: inline_entity_form_complex
     region: content
+  field_news_feed:
+    weight: 6
     settings:
       form_mode: default
-      override_labels: false
       label_singular: ''
       label_plural: ''
       collapsible: true
       collapsed: true
       revision: false
+      override_labels: false
     third_party_settings: {  }
-  field_penn_priorities:
     type: inline_entity_form_simple
-    weight: 10
     region: content
+  field_penn_priorities:
+    weight: 10
     settings:
       form_mode: default
       override_labels: true
@@ -108,10 +106,10 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
-  field_social_grid:
     type: inline_entity_form_simple
-    weight: 11
     region: content
+  field_social_grid:
+    weight: 11
     settings:
       form_mode: default
       override_labels: true
@@ -121,6 +119,8 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
   path:
     type: path
     weight: 2
@@ -129,10 +129,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 3
-    region: content
     settings:
       display_label: true
+    weight: 3
+    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -145,12 +145,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 0
-    region: content
     settings:
       match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
+      match_limit: 10
+    region: content
     third_party_settings: {  }
 hidden:
   body: true

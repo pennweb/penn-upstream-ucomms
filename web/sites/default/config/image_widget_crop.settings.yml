@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: UYGkeE2iH3UGp9lBPsELb3VSgHz9vkMJeaGzcYwE7Uw
 settings:
   library_url: 'https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.js'
   css_url: 'https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.css'
@@ -8,6 +6,8 @@ settings:
   crop_types_required: {  }
   warn_multiple_usages: false
   show_default_crop: true
-  show_crop_area: false
   notify_apply: true
   notify_update: true
+  show_crop_area: false
+_core:
+  default_config_hash: UYGkeE2iH3UGp9lBPsELb3VSgHz9vkMJeaGzcYwE7Uw

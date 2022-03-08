@@ -17,7 +17,7 @@ bundle: card_featured_article_card_full
 mode: default
 content:
   field_image:
-    type: entity_reference_entity_view
+    weight: -1
     label: above
     settings:
       view_mode: article_card
@@ -30,10 +30,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    weight: -1
+    type: entity_reference_entity_view
     region: content
   field_image_mobile:
-    type: entity_reference_entity_view
+    weight: 0
     label: above
     settings:
       view_mode: article_card_mobile
@@ -46,38 +46,38 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    weight: 0
+    type: entity_reference_entity_view
     region: content
   field_subtitle:
-    type: string
+    weight: -2
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -2
+    type: string
     region: content
   field_title:
-    type: string
+    weight: -3
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -3
+    type: string
     region: content
   field_video_source_url:
-    type: string
+    weight: 1
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    type: string
     region: content
   name:
-    type: string
     label: above
+    type: string
+    weight: -4
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -4
-    region: content
 hidden: {  }

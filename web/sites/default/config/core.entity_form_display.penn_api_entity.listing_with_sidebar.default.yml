@@ -18,56 +18,56 @@ bundle: listing_with_sidebar
 mode: default
 content:
   field_borders:
-    type: options_select
     weight: 28
-    region: content
     settings: {  }
     third_party_settings: {  }
-  field_feed_url:
-    type: string_textfield
-    weight: 2
+    type: options_select
     region: content
+  field_feed_url:
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_margins:
-    type: options_select
     weight: 27
-    region: content
     settings: {  }
     third_party_settings: {  }
-  field_padding:
     type: options_select
-    weight: 26
     region: content
+  field_padding:
+    weight: 26
     settings: {  }
     third_party_settings: {  }
-  field_sidebar:
-    type: inline_entity_form_complex
-    weight: 3
+    type: options_select
     region: content
+  field_sidebar:
+    weight: 3
     settings:
       form_mode: default
-      override_labels: false
       label_singular: ''
       label_plural: ''
+      collapsible: true
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
-      allow_duplicate: false
-      collapsible: true
-      collapsed: false
       revision: false
+      override_labels: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings: {  }
-  field_title:
-    type: string_textfield
-    weight: 1
+    type: inline_entity_form_complex
     region: content
+  field_title:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   name:
     type: string_textfield
     weight: 0

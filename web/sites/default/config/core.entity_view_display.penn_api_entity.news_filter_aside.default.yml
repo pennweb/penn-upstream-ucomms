@@ -16,44 +16,44 @@ bundle: news_filter_aside
 mode: default
 content:
   field_filter_page:
-    type: entity_reference_entity_view
+    weight: 3
     label: hidden
     settings:
-      view_mode: default
       link: true
+      view_mode: default
     third_party_settings: {  }
-    weight: 3
+    type: entity_reference_entity_view
     region: content
   field_filter_title:
-    type: string
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    type: string
     region: content
   field_margins:
-    type: list_key
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    type: list_key
     region: content
   field_title:
-    type: string
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    type: string
     region: content
   name:
-    type: string
     label: hidden
+    type: string
+    weight: 0
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   user_id: true

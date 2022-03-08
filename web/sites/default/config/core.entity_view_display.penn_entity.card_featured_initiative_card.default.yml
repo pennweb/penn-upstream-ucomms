@@ -21,7 +21,7 @@ bundle: card_featured_initiative_card
 mode: default
 content:
   field_button_link:
-    type: link_separate
+    weight: 5
     label: hidden
     settings:
       trim_length: null
@@ -37,10 +37,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    weight: 5
+    type: link_separate
     region: content
   field_description:
-    type: basic_string
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings:
@@ -51,17 +51,18 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    weight: 3
+    type: basic_string
     region: content
   field_fi_background_color:
-    type: list_key
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    type: list_key
     region: content
   field_image_title:
     type: entity_reference_entity_view
+    weight: 2
     label: above
     settings:
       view_mode: url_to_image
@@ -74,10 +75,9 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    weight: 2
     region: content
   field_link:
-    type: link
+    weight: 7
     label: above
     settings:
       trim_length: null
@@ -93,10 +93,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    weight: 7
+    type: link
     region: content
   field_subtitle:
-    type: string
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -108,10 +108,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    weight: 4
+    type: string
     region: content
   field_title:
-    type: string
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -123,14 +123,14 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    weight: 1
+    type: string
     region: content
   name:
-    type: string
     label: hidden
+    type: string
+    weight: 0
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden: {  }

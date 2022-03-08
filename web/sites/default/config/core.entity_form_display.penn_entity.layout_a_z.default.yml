@@ -14,21 +14,21 @@ bundle: layout_a_z
 mode: default
 content:
   field_a_z_link:
-    type: link_default
     weight: 4
-    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_title:
-    type: string_textfield
-    weight: 3
+    type: link_default
     region: content
+  field_title:
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   name:
     type: string_textfield
     weight: -4

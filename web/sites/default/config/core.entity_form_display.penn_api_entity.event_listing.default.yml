@@ -16,35 +16,35 @@ bundle: event_listing
 mode: default
 content:
   field_borders:
-    type: options_select
     weight: 27
-    region: content
     settings: {  }
     third_party_settings: {  }
-  field_button_link:
-    type: link_default
-    weight: 26
+    type: options_select
     region: content
+  field_button_link:
+    weight: 26
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+    type: link_default
+    region: content
   field_feed_url:
-    type: string_textfield
     weight: 2
-    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_title:
     type: string_textfield
-    weight: 1
     region: content
+  field_title:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   name:
     type: string_textfield
     weight: 0

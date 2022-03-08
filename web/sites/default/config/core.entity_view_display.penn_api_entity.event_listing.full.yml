@@ -17,7 +17,7 @@ bundle: event_listing
 mode: full
 content:
   field_button_link:
-    type: link
+    weight: 4
     label: above
     settings:
       trim_length: 80
@@ -26,32 +26,32 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 4
+    type: link
     region: content
   field_feed_url:
-    type: string
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    type: string
     region: content
   field_title:
-    type: string
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    type: string
     region: content
   name:
-    type: string
     label: hidden
+    type: string
+    weight: 0
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   field_borders: true
   user_id: true

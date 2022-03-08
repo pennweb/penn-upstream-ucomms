@@ -16,7 +16,7 @@ bundle: news_feed_sidebar
 mode: full
 content:
   field_button_link:
-    type: link
+    weight: 2
     label: hidden
     settings:
       trim_length: null
@@ -25,18 +25,18 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 2
+    type: link
     region: content
   field_feed_url:
-    type: string
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    type: string
     region: content
   field_link:
-    type: link_separate
+    weight: 3
     label: hidden
     settings:
       trim_length: 80
@@ -45,15 +45,15 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 3
+    type: link_separate
     region: content
   name:
-    type: string
     label: hidden
+    type: string
+    weight: 0
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   user_id: true

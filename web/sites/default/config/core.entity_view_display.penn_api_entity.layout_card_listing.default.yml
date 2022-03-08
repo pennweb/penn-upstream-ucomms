@@ -25,14 +25,14 @@ bundle: layout_card_listing
 mode: default
 content:
   field_background_color:
-    type: list_key
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    type: list_key
     region: content
   field_button_link:
-    type: link
+    weight: 7
     label: above
     settings:
       trim_length: 80
@@ -41,79 +41,79 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 7
+    type: link
     region: content
   field_container_width:
-    type: list_key
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    type: list_key
     region: content
   field_description_formatted:
-    type: text_default
+    weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 11
+    type: text_default
     region: content
   field_feed_url:
-    type: string
+    weight: 2
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    type: string
     region: content
   field_listing_layout:
-    type: list_key
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    type: list_key
     region: content
   field_margins:
-    type: list_key
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    type: list_key
     region: content
   field_padding:
-    type: list_key
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    type: list_key
     region: content
   field_text_align:
-    type: list_key
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 12
+    type: list_key
     region: content
   field_title:
-    type: string
+    weight: 10
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 10
+    type: string
     region: content
   name:
-    type: string
     label: above
+    type: string
+    weight: -4
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -4
-    region: content
   user_id:
-    type: author
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    type: author
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

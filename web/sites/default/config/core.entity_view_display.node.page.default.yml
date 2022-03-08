@@ -23,62 +23,62 @@ bundle: page
 mode: default
 content:
   body:
-    type: text_default
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    type: text_default
     weight: 4
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_description_formatted:
-    type: text_default
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    type: text_default
     region: content
   field_hero:
     type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: true
-    third_party_settings: {  }
     weight: 1
     region: content
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
   field_hide_breadcrumb:
-    type: boolean
+    weight: 8
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 8
+    type: boolean
     region: content
   field_hide_title:
-    type: boolean
+    weight: 7
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 7
+    type: boolean
     region: content
   field_subpage_listing:
-    type: entity_reference_entity_view
+    weight: 2
     label: above
     settings:
-      view_mode: default
       link: true
+      view_mode: default
     third_party_settings: {  }
-    weight: 2
+    type: entity_reference_entity_view
     region: content
   links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_hero_paragraph: true
   field_subpage_listing_paragraph: true

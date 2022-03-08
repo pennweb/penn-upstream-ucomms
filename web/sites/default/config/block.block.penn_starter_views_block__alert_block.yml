@@ -17,8 +17,8 @@ plugin: 'views_block:alert-alert_block'
 settings:
   id: 'views_block:alert-alert_block'
   label: ''
-  label_display: '0'
   provider: views
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility: {  }

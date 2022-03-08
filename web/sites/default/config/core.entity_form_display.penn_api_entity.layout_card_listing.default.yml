@@ -23,73 +23,73 @@ bundle: layout_card_listing
 mode: default
 content:
   field_background_color:
-    type: options_select
     weight: 6
-    region: content
     settings: {  }
     third_party_settings: {  }
-  field_button_link:
-    type: link_default
-    weight: 10
+    type: options_select
     region: content
+  field_button_link:
+    weight: 10
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_container_width:
-    type: options_select
-    weight: 7
+    type: link_default
     region: content
+  field_container_width:
+    weight: 7
     settings: {  }
     third_party_settings: {  }
-  field_description_formatted:
-    type: text_textarea
-    weight: 2
+    type: options_select
     region: content
+  field_description_formatted:
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_feed_url:
-    type: string_textfield
     weight: 3
-    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_listing_layout:
-    type: options_select
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_margins:
-    type: options_select
-    weight: 8
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_padding:
-    type: options_select
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_text_align:
-    type: options_select
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_title:
     type: string_textfield
-    weight: 1
     region: content
+  field_listing_layout:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_margins:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_padding:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_align:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   name:
     type: string_textfield
     weight: 0

@@ -13,22 +13,22 @@ bundle: card_feat_initiative_card_group
 mode: default
 content:
   field_penn_entity_reference:
-    type: inline_entity_form_complex
     weight: 3
-    region: content
     settings:
       form_mode: default
       override_labels: true
       label_singular: 'Featured Initiative Card'
       label_plural: 'Featured Initiative Cards'
+      collapsible: true
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
-      allow_duplicate: false
-      collapsible: true
-      collapsed: false
       revision: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
   name:
     type: string_textfield
     weight: -4

@@ -13,7 +13,7 @@ bundle: card_feat_initiative_card_group
 mode: default
 content:
   field_penn_entity_reference:
-    type: entity_reference_entity_view
+    weight: 0
     label: hidden
     settings:
       view_mode: default
@@ -26,7 +26,7 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    weight: 0
+    type: entity_reference_entity_view
     region: content
 hidden:
   name: true

@@ -21,61 +21,61 @@ bundle: layout_grid
 mode: default
 content:
   field_background_color:
-    type: options_select
     weight: 5
-    region: content
     settings: {  }
     third_party_settings: {  }
-  field_borders:
     type: options_select
-    weight: 7
     region: content
+  field_borders:
+    weight: 7
     settings: {  }
     third_party_settings: {  }
-  field_button_link:
-    type: link_default
-    weight: 4
+    type: options_select
     region: content
+  field_button_link:
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_container_width:
-    type: options_select
-    weight: 6
+    type: link_default
     region: content
+  field_container_width:
+    weight: 6
     settings: {  }
     third_party_settings: {  }
-  field_description_formatted:
-    type: text_textarea
-    weight: 2
+    type: options_select
     region: content
+  field_description_formatted:
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_feed_url:
-    type: string_textfield
-    weight: 3
+    type: text_textarea
     region: content
+  field_feed_url:
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_grid_layout:
-    type: options_select
-    weight: 8
+    type: string_textfield
     region: content
+  field_grid_layout:
+    weight: 8
     settings: {  }
     third_party_settings: {  }
-  field_title:
-    type: string_textfield
-    weight: 1
+    type: options_select
     region: content
+  field_title:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   name:
     type: string_textfield
     weight: 0

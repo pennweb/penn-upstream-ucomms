@@ -14,7 +14,7 @@ bundle: video_inline
 mode: default
 content:
   field_video_source:
-    type: link
+    weight: -2
     label: above
     settings:
       trim_length: null
@@ -30,14 +30,14 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    weight: -2
+    type: link
     region: content
   name:
-    type: string
     label: above
+    type: string
+    weight: -4
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -4
-    region: content
 hidden: {  }

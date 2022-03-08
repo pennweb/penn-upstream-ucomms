@@ -19,53 +19,53 @@ bundle: layout_container
 mode: default
 content:
   field_background_color:
-    type: list_key
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    type: list_key
     region: content
   field_borders:
-    type: list_key
+    weight: -1
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: -1
+    type: list_key
     region: content
   field_container_width:
-    type: list_key
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    type: list_key
     region: content
   field_margins:
-    type: list_key
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    type: list_key
     region: content
   field_padding:
-    type: list_key
+    weight: -2
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: -2
+    type: list_key
     region: content
   field_wysiwyg:
-    type: text_default
+    weight: -3
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: -3
+    type: text_default
     region: content
   name:
-    type: string
     label: above
+    type: string
+    weight: -4
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -4
-    region: content
 hidden: {  }

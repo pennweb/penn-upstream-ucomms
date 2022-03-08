@@ -23,21 +23,21 @@ bundle: layout_content_spotlight
 mode: default
 content:
   field_background_color:
-    type: list_key
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    type: list_key
     region: content
   field_borders:
-    type: list_key
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    type: list_key
     region: content
   field_button_link:
-    type: link_separate
+    weight: 5
     label: above
     settings:
       trim_length: 80
@@ -46,17 +46,17 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 5
+    type: link_separate
     region: content
   field_description_formatted:
-    type: text_default
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    type: text_default
     region: content
   field_image:
-    type: entity_reference_entity_view
+    weight: 4
     label: above
     settings:
       view_mode: card_3x2
@@ -69,38 +69,38 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    weight: 4
+    type: entity_reference_entity_view
     region: content
   field_subtitle:
-    type: string
+    weight: 2
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    type: string
     region: content
   field_title:
-    type: string
+    weight: 1
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    type: string
     region: content
   field_video_source_url:
-    type: string
+    weight: 8
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 8
+    type: string
     region: content
   name:
-    type: string
     label: above
+    type: string
+    weight: 0
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden: {  }
