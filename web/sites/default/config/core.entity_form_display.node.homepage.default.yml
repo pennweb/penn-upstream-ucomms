@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.homepage.field_featured_story
     - field.field.node.homepage.field_hero
     - field.field.node.homepage.field_news_feed
+    - field.field.node.homepage.field_nondiscrimination
     - field.field.node.homepage.field_penn_priorities
     - field.field.node.homepage.field_social_grid
     - node.type.homepage
@@ -27,7 +28,9 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_events_feed:
+    type: inline_entity_form_simple
     weight: 8
+    region: content
     settings:
       form_mode: default
       override_labels: true
@@ -37,10 +40,10 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
-    type: inline_entity_form_simple
-    region: content
   field_featured_initiatives:
+    type: inline_entity_form_simple
     weight: 9
+    region: content
     settings:
       form_mode: default
       override_labels: true
@@ -50,10 +53,10 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
-    type: inline_entity_form_simple
-    region: content
   field_featured_story:
+    type: inline_entity_form_simple
     weight: 7
+    region: content
     settings:
       form_mode: default
       override_labels: true
@@ -63,40 +66,53 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
-    type: inline_entity_form_simple
-    region: content
   field_hero:
+    type: inline_entity_form_complex
     weight: 5
+    region: content
     settings:
       form_mode: default
       override_labels: true
       label_singular: Hero
       label_plural: Heroes
-      collapsible: true
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
-      revision: false
-      collapsed: false
       allow_duplicate: false
+      collapsible: true
+      collapsed: false
+      revision: false
     third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
   field_news_feed:
+    type: inline_entity_form_simple
     weight: 6
+    region: content
     settings:
       form_mode: default
+      override_labels: false
       label_singular: ''
       label_plural: ''
       collapsible: true
       collapsed: true
       revision: false
-      override_labels: false
     third_party_settings: {  }
+  field_nondiscrimination:
     type: inline_entity_form_simple
+    weight: 26
     region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: true
+      collapsed: true
+      revision: false
+    third_party_settings: {  }
   field_penn_priorities:
+    type: inline_entity_form_simple
     weight: 10
+    region: content
     settings:
       form_mode: default
       override_labels: true
@@ -106,10 +122,10 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
-    type: inline_entity_form_simple
-    region: content
   field_social_grid:
+    type: inline_entity_form_simple
     weight: 11
+    region: content
     settings:
       form_mode: default
       override_labels: true
@@ -119,8 +135,6 @@ content:
       collapsed: true
       revision: false
     third_party_settings: {  }
-    type: inline_entity_form_simple
-    region: content
   path:
     type: path
     weight: 2
@@ -129,10 +143,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 3
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -145,12 +159,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 0
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden:
   body: true

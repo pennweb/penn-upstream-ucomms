@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.homepage.field_featured_story
     - field.field.node.homepage.field_hero
     - field.field.node.homepage.field_news_feed
+    - field.field.node.homepage.field_nondiscrimination
     - field.field.node.homepage.field_penn_priorities
     - field.field.node.homepage.field_social_grid
     - node.type.homepage
@@ -22,17 +23,17 @@ bundle: homepage
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 101
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   field_events_feed: true
@@ -40,5 +41,6 @@ hidden:
   field_featured_story: true
   field_hero: true
   field_news_feed: true
+  field_nondiscrimination: true
   field_penn_priorities: true
   field_social_grid: true
