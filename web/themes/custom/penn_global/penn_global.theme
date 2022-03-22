@@ -19,6 +19,11 @@ function penn_global_preprocess_html(array &$variables) {
   /*if (isset($variables['head_title_array']['title']) && isset($variables['head_title_array']['name']) && ($variables['head_title_array']['title'] == $variables['head_title_array']['name'])) {
     $variables['head_title'] = $variables['head_title_array']['name'];
   }*/
+  // Add node id to the body class.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if($node instanceof \Drupal\node\NodeInterface) {    
+    $variables['attributes']['class'][] = 'node-' . $node->id();
+  }  
 }
 
 /**
