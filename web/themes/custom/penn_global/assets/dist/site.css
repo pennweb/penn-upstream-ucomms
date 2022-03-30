@@ -12314,7 +12314,7 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   color: #011F5B;
 }
 
-.content-aside .card a {
+.content-aside .card a:not(.btn) {
   color: #011F5B;
 }
 
@@ -12373,7 +12373,7 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   border: 2px solid #e3e4e6;
 }
 
-.card__content a {
+.card__content a:not(.btn) {
   color: #011F5B;
 }
 

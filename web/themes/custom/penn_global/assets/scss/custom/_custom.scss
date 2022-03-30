@@ -159,7 +159,7 @@
     color: $blue;
   }
 }
-.content-aside .card a {
+.content-aside .card a:not(.btn) {
   color: $blue;
 }
 
@@ -217,7 +217,7 @@
 .card {
   &__content {
     border: 2px solid #e3e4e6;
-    a {
+    a:not(.btn)  {
       color: $blue;
     }
   }
