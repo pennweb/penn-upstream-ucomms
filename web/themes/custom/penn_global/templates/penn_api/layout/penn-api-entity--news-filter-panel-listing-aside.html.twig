@@ -22,7 +22,7 @@
                 {{ item.homepage_title is empty ? item.title : item.homepage_title }}
               </a>
             </h3>
-            <p>{{ item.summary }}</p>
+            <p>{{ item.dek is empty ? item.summary : item.dek }}</p>
             <div class="listing-card__info">
               {% if content.field_show_tags_has_value %}
                 {# print the topics #}
@@ -63,7 +63,7 @@
             <h3 class="listing-card__title listing-card__title--small">
               <a href="{{item.url}}" class="listing-card__title__link">{{item.title}}</a>
             </h3>
-            <p>{{item.summary}}</p>
+            <p>{{ item.dek is empty ? item.summary : item.dek }}</p>
             <div class="listing-card__info">
               <span class="listing-card__date">{{item.date|date("n/j/Y")}}</span>
             </div>

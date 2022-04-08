@@ -33,7 +33,7 @@
               {{ item.homepage_title is empty ? item.title : item.homepage_title }}
             </a>
           </h2>
-          <p>{{ item.summary }}</p>
+          <p>{{ item.dek is empty ? item.summary : item.dek }}</p>
         </div>
       </article>
       {% endfor %}

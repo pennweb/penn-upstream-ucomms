@@ -35,7 +35,7 @@
                 </div>
               {% endif %}
               {# summary #}
-              <p>{{ item.summary }}</p>
+            <p>{{ item.dek is empty ? item.summary : item.dek }}</p>            
             </div>
           </article>
         {% endfor %}
