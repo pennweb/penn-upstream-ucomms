@@ -1554,3 +1554,12 @@ select {
   from {opacity: 1;}
   to {opacity: 0;}
  }
+
+/**
+* Background Colors
+*/
+  
+//Overrides for WDGs mysterious negative margins go here
+.bg-color.card-slider + .bg-color {
+  margin-top: auto;
+}

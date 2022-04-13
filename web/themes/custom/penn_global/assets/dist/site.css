@@ -13856,6 +13856,13 @@ select {
 }
 
 /**
+* Background Colors
+*/
+.bg-color.card-slider + .bg-color {
+  margin-top: auto;
+}
+
+/**
  * Upstream Footer 
  */
 .footer.footer__upstream {
