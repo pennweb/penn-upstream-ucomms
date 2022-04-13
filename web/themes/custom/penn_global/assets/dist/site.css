@@ -13062,9 +13062,11 @@ drupal-entity {
 
 .bg-blue .image-slider-card__caption,
 .bg-blue .image-slider-card__title,
+.bg-blue .image-slider-card__title a,
 .bg-blue .wysiwyg,
 .bg-red .image-slider-card__caption,
 .bg-red .image-slider-card__title,
+.bg-red .image-slider-card__title a,
 .bg-red .wysiwyg {
   color: white;
 }
