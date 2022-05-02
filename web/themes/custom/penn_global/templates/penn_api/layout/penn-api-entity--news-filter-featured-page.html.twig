@@ -17,7 +17,9 @@
       <article class="article-card article-card--featured ">
         <picture class="article-card__figure">
           <!-- <source srcset="" media="(min-width: 1024px)"> -->
-          <img src="{{ item.image }}" alt="{{ featured.image_alt }}" class="article-card__image">
+          {# Set the featured image src to a higher-res image if available #}
+          {% set img_src = item.image_large is not empty ? item.image_large : item.image %}
+          <img src="{{ img_src }}" alt="{{ item.image_alt }}" class="article-card__image">
         </picture>
         {% for topic in item.topic %}
           <a href="{{ topic.url }}" class="article-card__category">{{ topic.name }}</a>
