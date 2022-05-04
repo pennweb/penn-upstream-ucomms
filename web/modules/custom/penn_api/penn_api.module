@@ -111,6 +111,7 @@ function penn_api_preprocess_penn_api_entity(&$vars) {
       $feed_url = $penn_api_entity->get('field_feed_url')->getString();
       if($feed_url) {
         $items = penn_api_get($feed_url)['items'];
+        $items = penn_api_preprocess_penn_api_feed($items);
       }
       $vars['content']['items'] = $items;
     }
@@ -120,8 +121,28 @@ function penn_api_preprocess_penn_api_entity(&$vars) {
       $secondary_feed_url = $penn_api_entity->get('field_secondary_feed_url')->getString();
       if($secondary_feed_url) {
         $secondary_items = penn_api_get($secondary_feed_url)['items'];
+        $secondary_items = penn_api_preprocess_penn_api_feed($secondary_items);
       }
       $vars['content']['secondary_items'] = $secondary_items;
     }
   }
+}
+
+/**
+ * Preprocess the feed data before outputting to twig templates
+ */
+function penn_api_preprocess_penn_api_feed($items) {
+  foreach($items as &$item) {
+    //Special case for Annnouncements, add a topic and url
+    if(isset($item['type']) && $item['type'] == 'University Announcement') {
+      if(array_key_exists('topic', $item)) {
+        $item['topic'][] = [
+          'name' => 'Announcements',
+          'url' => 'https://penntoday.upenn.edu/announcements',
+          'tid' => null,
+        ];
+      }
+    }
+  }
+  return $items;
 }
