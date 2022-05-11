@@ -2511,12 +2511,6 @@ hr {
   display: none;
 }
 
-@media (min-width: 1024px) {
-  .alert {
-    text-align: center;
-  }
-}
-
 .alert:after {
   content: "";
   position: absolute;
