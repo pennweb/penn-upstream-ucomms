@@ -9,14 +9,17 @@
     </figure>
   {% endif %}
   <div class="card__content">
-    <h2 class="card__title">
-      {% set link = render_var(content.field_link) %}
-      {% if link is empty %}
-        {{ content.field_title }}
-      {% else %}
-        <a href="{{ content.field_link }}" class="card__title__link">{{ content.field_title }}</a>
-      {% endif %}
-    </h2>
+    {% if content.field_title_has_value %}
+      <h2 class="card__title">
+        {% set link = render_var(content.field_link) %}
+        {% if link is empty %}
+          {{ content.field_title }}
+        {% else %}
+          <a href="{{ content.field_link }}" class="card__title__link">{{ content.field_title }}</a>
+        {% endif %}
+      </h2>
+    {% endif %}
+
     <div class="wysiwyg">
       {{ content.field_description_formatted }}
     </div>

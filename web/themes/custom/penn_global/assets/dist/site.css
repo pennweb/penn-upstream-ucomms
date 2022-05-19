@@ -2511,6 +2511,12 @@ hr {
   display: none;
 }
 
+@media (min-width: 1024px) {
+  .alert {
+    text-align: center;
+  }
+}
+
 .alert:after {
   content: "";
   position: absolute;
@@ -13395,9 +13401,11 @@ drupal-entity {
   }
 }
 
-.wysiwyg h2,
-.wysiwyg .h2 {
-  font-size: 4.5rem;
+@media (min-width: 1024px) {
+  .wysiwyg h2,
+  .wysiwyg .h2 {
+    font-size: 4.5rem;
+  }
 }
 
 .wysiwyg p {
@@ -13501,6 +13509,19 @@ figure.align-center {
 
 .section-footer .btn {
   margin-top: 20px;
+}
+
+.footer__logo {
+  min-width: 170px;
+  max-width: 200px;
+}
+
+/**
+ * Upstream Footer 
+ */
+.footer.footer__upstream .footer__logo {
+  min-width: 170px;
+  max-width: 200px;
 }
 
 /**
@@ -13854,6 +13875,15 @@ select {
 */
 .bg-color.card-slider + .bg-color {
   margin-top: auto;
+}
+
+/**
+* Alert
+*/
+@media (min-width: 1024px) {
+  .alert {
+    text-align: none;
+  }
 }
 
 /**

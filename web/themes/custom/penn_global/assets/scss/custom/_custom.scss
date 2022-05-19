@@ -1104,7 +1104,9 @@ drupal-entity {
   // Make h2 match content aside h2
   h2,
   .h2 {
-    font-size: 4.5rem;
+    @media #{$large-up} {
+      font-size: 4.5rem;
+    }
   }
 
   p {
@@ -1228,6 +1230,21 @@ figure {
   }
   .btn {
     margin-top: 20px;
+  }
+}
+
+.footer__logo {
+  min-width: 170px;
+  max-width: 200px;
+}
+
+/**
+ * Upstream Footer 
+ */
+ .footer.footer__upstream {
+  .footer__logo {
+    min-width: 170px;
+    max-width: 200px;
   }
 }
 
@@ -1562,4 +1579,14 @@ select {
 //Overrides for WDGs mysterious negative margins go here
 .bg-color.card-slider + .bg-color {
   margin-top: auto;
+}
+
+/**
+* Alert
+*/
+
+.alert {
+	@media #{$large-up} {
+		text-align: none;
+	}
 }
