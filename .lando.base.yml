@@ -1,0 +1,19 @@
+recipe: pantheon
+config:
+  framework: drupal9
+tooling:
+  drupal:
+    cmd:
+      - "/app/vendor/bin/drupal"
+      - "--root=/app/web"
+services:
+  appserver:
+    composer_version: 2-latest
+    webroot: web
+    xdebug: true
+    config:
+      php: .vscode/php.ini
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver

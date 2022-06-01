@@ -1,25 +1,7 @@
 name: SITEID
-recipe: pantheon
 config:
-  framework: drupal8
   site: SITEID
   id: GUID
-tooling:
-  drupal:
-    cmd:
-      - "/app/vendor/bin/drupal"
-      - "--root=/app/web"
 proxy:
   mailhog:
     - mail.SITEID.lndo.site
-services:
-  appserver:
-    composer_version: 2-latest
-    webroot: web
-    xdebug: true
-    config:
-      php: .vscode/php.ini
-  mailhog:
-    type: mailhog
-    hogfrom:
-      - appserver
