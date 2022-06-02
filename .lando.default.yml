@@ -1,7 +1,0 @@
-name: SITEID
-config:
-  site: SITEID
-  id: GUID
-proxy:
-  mailhog:
-    - mail.SITEID.lndo.site

@@ -1,0 +1,4 @@
+name: SITEID
+config:
+  site: name: SITEID
+  id: GUID
