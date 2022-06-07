@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_cron
+ */
+function penn_cron_cron() {
+  // Clear the cache on cron runs between min_hour and max_hour
+  date_default_timezone_set('America/New_York');
+  $current_hour = date('H'); //24 hour format
+  $min_hour = 22; 
+  $max_hour = 6;
+  if($current_hour >= $min_hour || $current_hour < $max_hour) {
+    drupal_flush_all_caches();
+    \Drupal::logger('penn_cron')->notice('All caches cleared');
+  }
+}
