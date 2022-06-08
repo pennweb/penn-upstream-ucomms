@@ -4,13 +4,40 @@
  * Implements hook_cron
  */
 function penn_cron_cron() {
-  // Clear the cache on cron runs between min_hour and max_hour
+  penn_cron_cc();
+}
+
+/**
+ * Clear the cache between min_hour and max_hour.
+ * Clear it once each day, after hours, to refresh content.
+ * 
+ * Cron scheduling is inconsistent, 
+ * so we are clearing the cache 'sometime' between min and max hours.
+ * It doesn't matter when as long as it's after hours. 
+ * It only needs to be cleared once per day, no sense doing it every cron run. 
+ * 
+ */
+function penn_cron_cc() {
   date_default_timezone_set('America/New_York');
   $current_hour = date('H'); //24 hour format
-  $min_hour = 22; 
+  $min_hour = 23; 
   $max_hour = 6;
-  if($current_hour >= $min_hour || $current_hour < $max_hour) {
+  $interval = 86400;
+  $now = time();
+  $penn_cron_cc = \Drupal::config('penn_cron.settings')
+  ->get('penn_cron_cc');
+  $last_run = !empty($penn_cron_cc) ? $penn_cron_cc : 0;
+  $elapsed = $now - $last_run; 
+
+  //If it's been longer than the interval, 
+  //and the current time is between the hours, clear the cache.
+  if(($elapsed > $interval) && ($current_hour >= $min_hour || $current_hour < $max_hour )) {
     drupal_flush_all_caches();
+    \Drupal::service('config.factory')->getEditable('penn_cron.settings')->set('penn_cron_cc', $now)->save();
     \Drupal::logger('penn_cron')->notice('All caches cleared');
+  }
+  else {
+    $hours_until_next = round( (($interval - $elapsed) / 3600), 2, PHP_ROUND_HALF_DOWN);
+    \Drupal::logger('penn_cron')->notice("$hours_until_next hours until next penn_cron cc.");
   }
 }
