@@ -55,9 +55,6 @@ module:
   metatag_open_graph: 1
   metatag_twitter_cards: 1
   metatag_verification: 1
-  migrate: 1
-  migrate_plus: 1
-  migrate_tools: 1
   node: 1
   options: 1
   page_cache: 1
