@@ -8,16 +8,31 @@ function penn_cron_cron() {
 }
 
 /**
+ * Clear the cache at a certain hour once per day
+ * Assumes cron runs hourly
+ * 
+ */
+function penn_cron_cc() {
+  date_default_timezone_set('America/New_York');
+  $current_hour = date('H'); //24 hour format
+  $cc_hour = 1;
+  if($current_hour == $cc_hour) {
+    drupal_flush_all_caches();
+    \Drupal::logger('penn_cron')->notice('All caches cleared');
+  }
+}
+
+/**
  * Clear the cache between min_hour and max_hour.
  * Clear it once each day, after hours, to refresh content.
  * 
- * Cron scheduling is inconsistent, 
- * so we are clearing the cache 'sometime' between min and max hours.
+ * When cron scheduling is inconsistent, 
+ * we can clear the cache 'sometime' between min and max hours.
  * It doesn't matter when as long as it's after hours. 
  * It only needs to be cleared once per day, no sense doing it every cron run. 
  * 
  */
-function penn_cron_cc() {
+function penn_cron_cc_between() {
   date_default_timezone_set('America/New_York');
   $current_hour = date('H'); //24 hour format
   $min_hour = 23; 
