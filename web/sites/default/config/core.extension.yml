@@ -64,6 +64,7 @@ module:
   penn_api: 1
   penn_api_entity: 1
   penn_ckeditor: 1
+  penn_cron: 1
   penn_entity: 1
   penn_search: 1
   quickedit: 1
