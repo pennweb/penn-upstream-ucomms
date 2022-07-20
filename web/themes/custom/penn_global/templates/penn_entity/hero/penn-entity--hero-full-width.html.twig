@@ -2,8 +2,9 @@
 {% if content.field_video_source_url_has_value %}
   {% set hero_full_width_video_class = 'hero-full-width-video' %}
 {% endif %}
+{% set entity_id = content.penn_entity.id() %}
 
-<section class="hero hero-full-width {{ content.field_hero_size }} {{ content.field_hero_style}} {{ content.field_text_align }} {{ hero_full_width_video_class }}" data-hero="hero1">
+<section class="hero hero-full-width {{ content.field_hero_size }} {{ content.field_hero_style}} {{ content.field_text_align }} {{ hero_full_width_video_class }}" data-hero="{{ entity_id }}">
   <div class="hero__shadows {{ content.field_opacity }}"></div>
   {# show video if source url field is set #}
   {% if content.field_video_source_url_has_value %}
@@ -47,11 +48,11 @@
     </div>
 </section>
 <style>
-  .hero[data-hero="hero1"] {
+  .hero[data-hero="{{ entity_id }}"] {
     background-image: url({{ content.field_image_mobile }});
   }
   @media(min-width:640px) {
-    .hero[data-hero="hero1"] {
+    .hero[data-hero="{{ entity_id }}"] {
       background-image: url({{ content.field_image }});
     }
   }
