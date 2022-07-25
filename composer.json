@@ -92,6 +92,9 @@
         "patches": {
             "drupal/inline_entity_form": {
                 "Can't add more than two items with simple inline entity form widget under some circumstances": "https://www.drupal.org/files/issues/2019-11-04/3088901-3-cant-add-more-than-two-items.patch"
+            },
+            "drupal/protected_pages": {
+                "Add template to protected pages": "https://www.drupal.org/files/issues/2020-10-09/3035962-6.patch"
             }
         },     
         "composer-exit-on-patch-failure": true,
