@@ -12,7 +12,7 @@ field_name: field_hero_size
 entity_type: penn_entity
 bundle: hero_full_width
 label: 'Hero Size'
-description: 'Sets the hero height. Medium (80vh) is the default for heroes per the parts kit.'
+description: 'Sets the hero height. Medium (80vh) is the default.'
 required: false
 translatable: false
 default_value:

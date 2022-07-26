@@ -1,13 +1,77 @@
 .hero-full-width {
   min-height: auto;
+  background-position: center top;
 
   &.cke_editable.wysiwyg {
     background-color: $coal;
     height: auto;
   }
 
+  &--on-small {
+    &__10 {
+      height: 10vh;
+    }
+    &__20 {
+      height: 20vh;
+    }
+    &__30 {
+      height: 30vh;
+    }
+    &__40 {
+      height: 40vh;
+    }
+    &__50 {
+      height: 50vh;
+    }
+    &__60 {
+      height: 60vh;
+    }
+    &__70 {
+      height: 70vh;
+    }
+    &__80 {
+      height: 80vh;
+    }
+    &__90 {
+      height: 90vh;
+    }
+    &__100 {
+      height: 100vh;
+    }
+  }
+
   @media #{$tablet-up} {
     height: 80vh;
+    &__10 {
+      height: 10vh;
+    }
+    &__20 {
+      height: 20vh;
+    }
+    &__30 {
+      height: 30vh;
+    }
+    &__40 {
+      height: 40vh;
+    }
+    &__50 {
+      height: 50vh;
+    }
+    &__60 {
+      height: 60vh;
+    }
+    &__70 {
+      height: 70vh;
+    }
+    &__80 {
+      height: 80vh;
+    }
+    &__90 {
+      height: 90vh;
+    }
+    &__100 {
+      height: 100vh;
+    }
     &__small {
       height: 70vh;
     }
