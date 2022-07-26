@@ -10,7 +10,7 @@ id: penn_entity.hero_full_width.field_image
 field_name: field_image
 entity_type: penn_entity
 bundle: hero_full_width
-label: Image
+label: 'Desktop Image'
 description: '<b>Set the (5:3) crop.</b>'
 required: false
 translatable: true
@@ -23,6 +23,7 @@ settings:
       image: image
     sort:
       field: _none
+      direction: ASC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

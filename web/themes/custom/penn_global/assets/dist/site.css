@@ -13966,6 +13966,7 @@ select {
 
 .hero-full-width {
   min-height: auto;
+  background-position: center top;
 }
 
 .hero-full-width.cke_editable.wysiwyg {
@@ -13973,9 +13974,79 @@ select {
   height: auto;
 }
 
+.hero-full-width--on-small__10 {
+  height: 10vh;
+}
+
+.hero-full-width--on-small__20 {
+  height: 20vh;
+}
+
+.hero-full-width--on-small__30 {
+  height: 30vh;
+}
+
+.hero-full-width--on-small__40 {
+  height: 40vh;
+}
+
+.hero-full-width--on-small__50 {
+  height: 50vh;
+}
+
+.hero-full-width--on-small__60 {
+  height: 60vh;
+}
+
+.hero-full-width--on-small__70 {
+  height: 70vh;
+}
+
+.hero-full-width--on-small__80 {
+  height: 80vh;
+}
+
+.hero-full-width--on-small__90 {
+  height: 90vh;
+}
+
+.hero-full-width--on-small__100 {
+  height: 100vh;
+}
+
 @media (min-width: 768px) {
   .hero-full-width {
     height: 80vh;
+  }
+  .hero-full-width__10 {
+    height: 10vh;
+  }
+  .hero-full-width__20 {
+    height: 20vh;
+  }
+  .hero-full-width__30 {
+    height: 30vh;
+  }
+  .hero-full-width__40 {
+    height: 40vh;
+  }
+  .hero-full-width__50 {
+    height: 50vh;
+  }
+  .hero-full-width__60 {
+    height: 60vh;
+  }
+  .hero-full-width__70 {
+    height: 70vh;
+  }
+  .hero-full-width__80 {
+    height: 80vh;
+  }
+  .hero-full-width__90 {
+    height: 90vh;
+  }
+  .hero-full-width__100 {
+    height: 100vh;
   }
   .hero-full-width__small {
     height: 70vh;
