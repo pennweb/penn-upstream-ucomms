@@ -13692,6 +13692,30 @@ select {
   background-position: center right;
 }
 
+#edit-password {
+  font-size: 2.2rem;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+#edit-submit {
+  position: relative;
+  width: 205px;
+  font-size: 2.2rem;
+  font-family: "EB Garamond", serif;
+  padding: 10px 20px;
+  border-radius: 0;
+  border: 0;
+  background-color: #011f5b;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.js-form-required.form-required {
+  visibility: hidden;
+  font-size: 0;
+}
+
 /**
  * Penn API News Filter
  */
