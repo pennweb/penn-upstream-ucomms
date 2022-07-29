@@ -658,6 +658,31 @@ drupal-entity {
   }
 }
 
+//Facts, but not facts--25
+.facts:not(.facts--25) {
+
+  //Make facts switch to the row layout below large
+  @media #{$large-down} {
+    .facts__wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+
+  //Border should be on last-child, not 4n
+  .fact {
+    &:nth-child(4n) {
+      border-right: none;
+    }
+  }
+}
+
+
 .fact {
   @media #{$tablet-down} {
     &:first-of-type {

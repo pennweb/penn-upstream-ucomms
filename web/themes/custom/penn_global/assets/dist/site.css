@@ -12831,6 +12831,22 @@ drupal-entity {
   }
 }
 
+@media (max-width: 1023px) {
+  .facts:not(.facts--25) .facts__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.facts:not(.facts--25) .fact:nth-child(4n) {
+  border-right: none;
+}
+
 @media (max-width: 767px) {
   .fact:first-of-type {
     padding-top: 0;
