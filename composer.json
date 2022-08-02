@@ -24,6 +24,7 @@
         "drupal/console": "^1",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "^9",
+        "drupal/ctools": "3.9.0",
         "drupal/devel": "^4.1",
         "drupal/dropzonejs": "^2.5",
         "drupal/emptyparagraphkiller": "^1.0@alpha",
