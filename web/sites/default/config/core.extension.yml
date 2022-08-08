@@ -1,4 +1,8 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG1L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  mysql: 0
+  simplesamlphp_auth: 0
   structure_sync: 0
   admin_toolbar: 1
   adminimal_admin_toolbar: 1
@@ -55,7 +59,6 @@ module:
   metatag_open_graph: 1
   metatag_twitter_cards: 1
   metatag_verification: 1
-  mysql: 0
   node: 1
   options: 1
   page_cache: 1
@@ -97,5 +100,3 @@ theme:
   adminimal_theme: 1
   penn_starter: 0
 profile: standard
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG1L7MgsLvfBIMAvi_skumNFQwkDc

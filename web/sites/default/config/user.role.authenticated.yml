@@ -1,7 +1,12 @@
 uuid: 66c3d848-c0fb-4ac2-aba4-25bc5089af7f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
+    - penn_search
+    - search
+    - system
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
