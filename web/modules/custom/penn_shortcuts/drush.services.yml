@@ -1,0 +1,5 @@
+services:
+  penn_shortcuts.commands:
+    class: \Drupal\penn_shortcuts\Commands\ShortcutDrushCommands
+    tags:
+      - { name: drush.command }

@@ -1,0 +1,7 @@
+penn_shortcuts.default_shortcuts:
+  path: '/admin/config/user-interface/shortcut/penn-shortcuts'
+  defaults:
+    _form: '\Drupal\penn_shortcuts\Form\DefaultShortcutsForm'
+    _title: 'Apply default shortcuts'
+  requirements:
+    _role: 'administrator'

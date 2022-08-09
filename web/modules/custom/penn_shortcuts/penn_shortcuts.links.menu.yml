@@ -1,0 +1,6 @@
+penn_shortcuts.default_shortcuts:
+  title: 'Add default Penn Upstream shortcuts'
+  description: 'A button that adds our shortcut links'
+  parent: entity.shortcut_set.collection
+  route_name: penn_shortcuts.default_shortcuts
+  weight: 100
