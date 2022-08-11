@@ -1,0 +1,6 @@
+name: 'Penn Stock Images'
+type: module
+description: 'Installs a default set of images with alts'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Custom
