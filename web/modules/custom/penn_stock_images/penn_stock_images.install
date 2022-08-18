@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_install
+ */
+function penn_stock_images_install() {
+  penn_stock_images_import();
+}

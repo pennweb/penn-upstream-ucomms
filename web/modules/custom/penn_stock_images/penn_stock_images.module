@@ -1,0 +1,288 @@
+<?php
+
+use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
+use Drupal\Core\File\Exception\FileException;
+use Drupal\Core\File\FileSystemInterface;
+
+
+function penn_stock_images_import(){
+  //Prepare the directory
+  $source = \Drupal::service('extension.list.module')->getPath('penn_stock_images') . '/images';
+  $destination = 'public://penn-stock-images';
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
+  $file_system->prepareDirectory($destination, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+
+  //Get the array of filenames and alts. The array 'filename' has to match the filenames in the images directory
+  $files = penn_stock_images_get_file_list();
+
+  //Import the images. First copy the image from the source to dest. If source file already exists at dest then assume it's already been imported and skip. After copying, create a managed file, then a media entity.
+  $langcode = \Drupal::languageManager()->getDefaultLanguage()->getId();
+  $status = \Drupal\node\NodeInterface::PUBLISHED; 
+  foreach($files as $file) {
+    $filename = $file['filename'];
+    $source_file_uri = $source . DIRECTORY_SEPARATOR . $filename;
+    $destination_file_uri = $destination . DIRECTORY_SEPARATOR . $filename;
+    if (!file_exists($destination_file_uri)) {
+      try {
+        $file_system->copy($source_file_uri, $destination, FileSystemInterface::EXISTS_ERROR);
+
+        //Create the file
+        $file_entity = File::create([  
+          'uid' => 1,
+          'filename' => $filename,
+          'uri' => $destination_file_uri,
+          'status' => 1,
+        ]);
+        $file_entity->save();
+        $file_entity_id = $file_entity->id();        
+        
+        //Create the media entity from the file
+        $media = Media::create([
+          'bundle' => 'image',
+          'name' => $filename,
+          'uid' => 1,
+          'langcode' => $langcode,
+          'status' => $status,
+          "thumbnail" => [
+            "target_id" => $file_entity_id,
+            "alt" => $file['alt'],
+            'title' => $filename,
+          ],
+          'field_media_image' => [
+            'target_id' => $file_entity_id,
+            'alt' => $file['alt'],
+            'title' => $filename,
+          ],
+        ]);
+        // $media->set('field_caption', $file['caption']);
+        $media->save();
+      }
+      catch (FileException $e) {
+        // Ignore and continue.
+      }
+    }
+  }
+}
+
+/**
+ * The list files to import
+ * Add new files here as needed
+ */
+function penn_stock_images_get_file_list() {
+  return [
+    0 => [
+      'filename' => 'love-statue.jpg',
+      'alt' => 'love statue on locust walk by robert indiana',
+    ],
+    1 => [
+      'filename' => 'college-hall-facade.jpg',
+      'alt' => 'detailed architecture on the front of college hall',
+    ],
+    2 => [
+      'filename' => 'students-circle-college-green.jpg',
+      'alt' => 'students sitting in a circle on college green',
+    ],
+    3 => [
+      'filename' => 'lauder-college-house.jpg',
+      'alt' => 'front of lauder college house dorm with flowers in foreground',
+    ],
+    4 => [
+      'filename' => 'college-hall-ben-franklin.jpg',
+      'alt' => 'college hall at twilight with ben franklin statue in foreground',
+    ],
+    5 => [
+      'filename' => 'college-hall-tree-tunnel.jpg',
+      'alt' => 'front of college hall looking through college green trees',
+    ],
+    6 => [
+      'filename' => 'campus-aerial-east.jpg',
+      'alt' => 'aerial view of campus looking east towards philadelphia',
+    ],
+    7 => [
+      'filename' => 'locust-walk-students-crowded.jpg',
+      'alt' => 'students walking on a crowded locust walk looking east',
+    ],
+    8 => [
+      'filename' => 'houston-hall-spruce.jpg',
+      'alt' => 'houston hall student union on spruce street',
+    ],
+    9 => [
+      'filename' => 'quadrangle-autumn-student-walking.jpg',
+      'alt' => 'student walking in the quadrangle during fall',
+    ],
+    10 => [
+      'filename' => 'ben-on-bench-rain.jpg',
+      'alt' => 'ben on the bench statue',
+    ],
+    11 => [
+      'filename' => 'claudia-cohen-hall-autumn-leaves.jpg',
+      'alt' => 'claudia cohen hall with autumn leaves',
+    ],
+    12 => [
+      'filename' => 'fisher-fine-arts-aerial-east.jpg',
+      'alt' => 'aerial skyline image of fisher fine arts library, looking east',
+    ],
+    13 => [
+      'filename' => 'fisher-fine-arts-details.jpg',
+      'alt' => 'architectural details on fisher fine arts library',
+    ],
+    14 => [
+      'filename' => 'quad-architecture-looking-up.jpg',
+      'alt' => 'looking up at quadrangle dorm from spruce street',
+    ],
+    15 => [
+      'filename' => 'quad-tree-line-angle.jpg',
+      'alt' => 'perspective angle of quadrangle dorm with streets on spruce street',
+    ],
+    16 => [
+      'filename' => 'angela-duckworth-lecture-class.jpg',
+      'alt' => 'angela duckworth lectures a class based on her grit lab',
+    ],
+    17 => [
+      'filename' => 'black-history-classroom.jpg',
+      'alt' => 'students sit in a lecture hall studying black history month',
+    ],
+    18 => [
+      'filename' => 'classroom-lecture.jpg',
+      'alt' => 'a professor lectures to a classroom',
+    ],
+    19 => [
+      'filename' => 'lab-technician-inspecting-slide.jpg',
+      'alt' => 'a technician looks closely at a microscope slide at a lab bench',
+    ],
+    20 => [
+      'filename' => 'library-special-collections-class.jpg',
+      'alt' => 'a class studies rare manuscripts in the charles lea library',
+    ],
+    21 => [
+      'filename' => 'pennovation-center-students-writing-board.jpg',
+      'alt' => 'a student lectures at a white board in the pennovation center',
+    ],
+    22 => [
+      'filename' => 'rooftop-lounge-studying.jpg',
+      'alt' => 'students study at a rooftop lounge overlooking the Philadelphia skyline',
+    ],
+    23 => [
+      'filename' => 'student-painting-artwork.jpg',
+      'alt' => 'a student paints a mural in the addams fine art building of penn design',
+    ],
+    24 => [
+      'filename' => 'student-painting-close-up.jpg',
+      'alt' => 'a student paints on an easel in the addams fine art building of penn design',
+    ],
+    25 => [
+      'filename' => 'student-pennovation-center-robotics.jpg',
+      'alt' => 'a student works in a robotics lab at the pennovation center',
+    ],
+    26 => [
+      'filename' => 'student-working-lab-microscopes.jpg',
+      'alt' => 'a student works in a lab and prepares to use a microscope',
+    ],
+    27 => [
+      'filename' => 'students-classroom-library-special-collections.jpg',
+      'alt' => 'students study manuscripts in the penn library kislak center',
+    ],
+    28 => [
+      'filename' => 'students-design-critique.jpg',
+      'alt' => 'penn design students sit through a final critique in meyerson hall',
+    ],
+    29 => [
+      'filename' => 'students-math-equations-blackboard.jpg',
+      'alt' => 'a student works through math equations on a blackboard in front of other students',
+    ],
+    30 => [
+      'filename' => 'students-studying-textiles.jpg',
+      'alt' => 'students study various textiles and objects at the penn museum',
+    ],
+    31 => [
+      'filename' => 'two-students-robotics-lab.jpg',
+      'alt' => 'students work in a robotics lab for healthcare therapy',
+    ],
+    32 => [
+      'filename' => 'angela-duckworth-large-lecture.jpg',
+      'alt' => 'angela duckworth teaching in a large lecture hall',
+    ],
+    33 => [
+      'filename' => 'grasp-lab-close-up-drone.jpg',
+      'alt' => 'two students holding a drone from the grasp lab',
+    ],
+    34 => [
+      'filename' => 'lab-beakers-foreground.jpg',
+      'alt' => 'lab technician working at a bench with beakers in the foreground',
+    ],
+    35 => [
+      'filename' => 'lab-close-up-student-yellow.jpg',
+      'alt' => 'student in a lab working with glove, scalpel and light',
+    ],
+    36 => [
+      'filename' => 'lab-technician-prepping-microscope.jpg',
+      'alt' => 'student in a lab prepping a specimen before using a microscope',
+    ],
+    37 => [
+      'filename' => 'looking-through-microscope.jpg',
+      'alt' => 'lab technician looking through a microscope',
+    ],
+    38 => [
+      'filename' => 'student-class-viewing-manuscript.jpg',
+      'alt' => 'large group of students viewing a long manuscript',
+    ],
+    39 => [
+      'filename' => 'student-pipette-red-hood.jpg',
+      'alt' => 'lab technician working under a lab fume hood with a pipette and red light',
+    ],
+    40 => [
+      'filename' => 'students-growing-plants.jpg',
+      'alt' => 'students in a lab inspecting plans growing in pots',
+    ],
+    41 => [
+      'filename' => 'students-reading-library.jpg',
+      'alt' => 'students in a library, reading and smiling',
+    ],
+    42 => [
+      'filename' => 'students-with-professor-textiles.jpg',
+      'alt' => 'two students inspecting textiles with a professor leaning over',
+    ],
+    43 => [
+      'filename' => 'three-students-studying-library.jpg',
+      'alt' => 'three students studying in the library with other students in the foreground',
+    ],
+    44 => [
+      'filename' => 'two-students-robotics-grasp-lab.jpg',
+      'alt' => 'two students working on a robot in the grasp lab, pennovation center',
+    ],
+    45 => [
+      'filename' => 'two-students-working-computers.jpg',
+      'alt' => 'two students working on computers behind slatted windows',
+    ],
+    46 => [
+      'filename' => 'penn-relays-aerial-race.jpg',
+      'alt' => 'students running the penn relays, view from above',
+    ],
+    47 => [
+      'filename' => 'arthur-ross-gallery.jpg',
+      'alt' => 'exterior of arthur ross gallery adjacent to fisher fine arts library',
+    ],
+    48 => [
+      'filename' => 'institute-contemporary-art.jpg',
+      'alt' => 'exterior of institute for contemporary art at 36th and sansom streets',
+    ],
+    49 => [
+      'filename' => 'penn-museum-eastern-central-america.jpg',
+      'alt' => 'eastern central america exhibit at the penn museum',
+    ],
+    50 => [
+      'filename' => 'penn-museum-egyptian.jpg',
+      'alt' => 'egyptian exhibit at the penn museum',
+    ],
+    51 => [
+      'filename' => 'museum-culture-press-tour.jpg',
+      'alt' => 'press tour taking place at the penn museum with people looking in display cases',
+    ],
+    52 => [
+      'filename' => 'philly-skyline-twilight.jpg',
+      'alt' => 'philadelphia skyline at night over the river',
+    ],
+  ];
+}

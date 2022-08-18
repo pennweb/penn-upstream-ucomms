@@ -72,6 +72,7 @@ module:
   penn_cron: 1
   penn_entity: 1
   penn_search: 1
+  penn_stock_images: 1
   quickedit: 1
   rdf: 1
   redis: 1
