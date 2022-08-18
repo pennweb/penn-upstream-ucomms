@@ -12278,6 +12278,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   margin-top: 40px;
 }
 
+.gs-per-result-labels {
+  display: none;
+}
+
 /**
  * Tabs
  */
