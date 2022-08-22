@@ -12998,8 +12998,8 @@ drupal-entity {
   transform: translateX(-50%);
 }
 
-/** Featured Story
- *
+/**
+ * Featured Story / Initiative Card
  */
 @media (min-width: 1024px) {
   .featured-story .featured-initiative-card {
@@ -13013,9 +13013,6 @@ drupal-entity {
   }
 }
 
-/**
- * Featured Initiative Card
- */
 .featured-initiative-card__wrap {
   height: 100%;
 }
@@ -13067,6 +13064,65 @@ drupal-entity {
 .featured-initiative-card--gray .btn--outline-white-secondary:focus {
   background: #011f5b;
   color: #fff;
+}
+
+@media (min-width: 768px) {
+  .featured-story.custom-width .featured-story__contain {
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1024px) {
+  .featured-story.custom-width .featured-initiative-card p {
+    max-width: 80%;
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .featured-story.custom-width .featured-initiative-card {
+    max-width: 100%;
+  }
+  .featured-story.custom-width.width--100 .featured-initiative-card {
+    width: 100%;
+  }
+  .featured-story.custom-width.width--95 .featured-initiative-card {
+    width: 95%;
+  }
+  .featured-story.custom-width.width--90 .featured-initiative-card {
+    width: 90%;
+  }
+  .featured-story.custom-width.width--85 .featured-initiative-card {
+    width: 85%;
+  }
+  .featured-story.custom-width.width--80 .featured-initiative-card {
+    width: 80%;
+  }
+  .featured-story.custom-width.width--75 .featured-initiative-card {
+    width: 75%;
+  }
+  .featured-story.custom-width.width--70 .featured-initiative-card {
+    width: 70%;
+  }
+  .featured-story.custom-width.width--65 .featured-initiative-card {
+    width: 65%;
+  }
+  .featured-story.custom-width.width--60 .featured-initiative-card {
+    width: 60%;
+  }
+  .featured-story.custom-width.width--55 .featured-initiative-card {
+    width: 55%;
+  }
+  .featured-story.custom-width.width--50 .featured-initiative-card {
+    width: 50%;
+  }
+  .featured-story.custom-width.width--45 .featured-initiative-card {
+    width: 45%;
+  }
+  .featured-story.custom-width.width--40 .featured-initiative-card {
+    width: 40%;
+  }
 }
 
 /**
