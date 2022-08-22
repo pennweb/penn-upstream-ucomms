@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_form_mode.penn_entity.featured_story_card
     - field.field.penn_entity.layout_featured_story.field_align
+    - field.field.penn_entity.layout_featured_story.field_custom_width
     - field.field.penn_entity.layout_featured_story.field_featured_initiative_card
     - field.field.penn_entity.layout_featured_story.field_image
     - field.field.penn_entity.layout_featured_story.field_image_mobile
@@ -18,41 +19,47 @@ bundle: layout_featured_story
 mode: default
 content:
   field_align:
-    weight: 6
+    type: options_select
+    weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
+  field_custom_width:
     type: options_select
+    weight: 6
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_featured_initiative_card:
-    weight: 5
+    type: inline_entity_form_simple
+    weight: 3
+    region: content
     settings:
       form_mode: featured_story_card
       override_labels: true
       label_singular: Card
       label_plural: Cards
-      revision: false
       collapsible: false
       collapsed: false
+      revision: false
     third_party_settings: {  }
-    type: inline_entity_form_simple
-    region: content
   field_image:
-    weight: 3
+    type: media_library_widget
+    weight: 1
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    type: media_library_widget
-    region: content
   field_image_mobile:
     type: media_library_widget
-    weight: 4
+    weight: 2
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   name:
     type: string_textfield
-    weight: -4
+    weight: 0
     region: content
     settings:
       size: 60

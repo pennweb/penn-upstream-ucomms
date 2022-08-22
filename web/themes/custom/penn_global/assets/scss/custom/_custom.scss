@@ -826,9 +826,10 @@ drupal-entity {
   }
 }
 
-/** Featured Story
- *
+/**
+ * Featured Story / Initiative Card
  */
+
 .featured-story {
   @media #{$large-up} {
     .featured-initiative-card {
@@ -846,10 +847,6 @@ drupal-entity {
     }
   }
 }
-
-/**
- * Featured Initiative Card
- */
 
 .featured-initiative-card__wrap {
   height: 100%;
@@ -903,6 +900,76 @@ drupal-entity {
     color: #fff;
   }
 }
+
+//Options to override card width
+.featured-story {
+  @media #{$tablet-up} {
+    &.custom-width {
+      .featured-story__contain {
+        padding: 0;
+        max-width: 100%;
+      }
+      @media #{$large-up} {
+        .featured-initiative-card p {
+          max-width: 80%;
+          width: 80%;
+        }
+      }
+      .featured-initiative-card {
+        max-width: 100%;
+      }
+
+      &.width {
+        &--100 .featured-initiative-card{
+          width: 100%;
+        }
+
+        &--95 .featured-initiative-card{
+          width: 95%;
+        }
+        &--90 .featured-initiative-card{
+          width: 90%;
+        }
+
+        &--85 .featured-initiative-card{
+          width: 85%;
+        }
+        &--80 .featured-initiative-card{
+          width: 80%;
+        }
+
+        &--75 .featured-initiative-card{
+          width: 75%;
+        }
+        &--70 .featured-initiative-card{
+          width: 70%;
+        }
+
+        &--65 .featured-initiative-card{
+          width: 65%;
+        }
+        &--60 .featured-initiative-card{
+          width: 60%;
+        }
+
+        &--55 .featured-initiative-card{
+          width: 55%;
+        }
+        &--50 .featured-initiative-card{
+          width: 50%;
+        }
+
+        &--45 .featured-initiative-card{
+          width: 45%;
+        }
+        &--40 .featured-initiative-card{
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
 
 
 /**
