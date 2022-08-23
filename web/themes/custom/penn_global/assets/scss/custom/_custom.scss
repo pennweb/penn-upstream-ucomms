@@ -1105,6 +1105,14 @@ drupal-entity {
   }
 }
 
+.hero-homepage {
+  &.background--center-top {
+    @media #{$small-up} {
+      background-position: center top;
+    }
+  }
+}
+
 /**
  * Page Quote Hero
  */

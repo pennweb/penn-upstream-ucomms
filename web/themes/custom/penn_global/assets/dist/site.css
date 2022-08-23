@@ -13318,6 +13318,12 @@ drupal-entity {
   }
 }
 
+@media (min-width: 640px) {
+  .hero-homepage.background--center-top {
+    background-position: center top;
+  }
+}
+
 /**
  * Page Quote Hero
  */
