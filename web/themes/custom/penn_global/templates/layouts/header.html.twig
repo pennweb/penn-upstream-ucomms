@@ -1,3 +1,6 @@
+{% set navigation = simplify_menu('navigation') %}
+{% set has_primary_nav = navigation.menu_tree is not empty ? true : false %}
+{% set has_primary_nav_class = has_primary_nav ? ' has-primary-nav ' : '' %}
 <header id="header" class="header ">
   <div class="contain contain--xl">
     <a href="/" class="header__logo">
@@ -22,10 +25,9 @@
       </svg>
     </button>
   </div>
-  <div id="headerMenus" class="header__menus">
+  <div id="headerMenus" class="header__menus{{ has_primary_nav_class }}">
     <nav aria-label="Primary" class="nav nav--primary" id="primary-navigation">
       <ul class="nav__menu nav__menu--level-0" role="menubar">
-        {% set navigation = simplify_menu('navigation') %}
         {% for navigation in navigation.menu_tree %}
           {% if navigation.submenu %}
             <li class="nav__menu-item nav__menu-item--level-0 nav__menu-item--children" role="none">
