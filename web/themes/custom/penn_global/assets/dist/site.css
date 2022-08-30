@@ -12568,16 +12568,6 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   outline: 1px dotted #fff;
 }
 
-#header .header__menus:not(.has-primary-nav) {
-  min-height: 48px;
-}
-
-@media (min-width: 1400px) {
-  #header .header__menus:not(.has-primary-nav) {
-    min-height: 51px;
-  }
-}
-
 /**
  * Local Tasks Menu
  */
