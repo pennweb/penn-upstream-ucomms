@@ -423,6 +423,18 @@
   }
 }
 
+//Set a min height on the header when there are no main nav items
+#header {
+  .header__menus {
+    &.without-primary-nav {
+      min-height: 48px;
+      @media #{$xxlarge-up} {
+        min-height: 51px;
+      }
+    }
+  }
+}
+
 /**
  * Local Tasks Menu
  */

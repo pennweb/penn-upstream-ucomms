@@ -1,6 +1,6 @@
 {% set navigation = simplify_menu('navigation') %}
 {% set has_primary_nav = navigation.menu_tree is not empty ? true : false %}
-{% set has_primary_nav_class = has_primary_nav ? ' has-primary-nav ' : '' %}
+{% set has_primary_nav_class = has_primary_nav ? ' with-primary-nav ' : ' without-primary-nav ' %}
 <header id="header" class="header ">
   <div class="contain contain--xl">
     <a href="/" class="header__logo">
