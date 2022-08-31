@@ -12365,6 +12365,30 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   text-align: right;
 }
 
+.card-listing .card__content .wysiwyg h1 {
+  color: #011F5B;
+}
+
+.card-listing .card__content .wysiwyg h2 {
+  color: #011F5B;
+}
+
+.card-listing .card__content .wysiwyg h3 {
+  color: #011F5B;
+}
+
+.card-listing .card__content .wysiwyg h4 {
+  color: #011F5B;
+}
+
+.card-listing .card__content .wysiwyg h5 {
+  color: #011F5B;
+}
+
+.card-listing .card__content .wysiwyg h6 {
+  color: #011F5B;
+}
+
 .card__content a.link--red {
   color: #990000;
 }

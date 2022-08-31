@@ -208,6 +208,19 @@
   text-align: right;
 }
 
+.card-listing {
+  .card {
+    &__content {
+      //Force blue headings
+      @for $i from 1 through 6 {
+        .wysiwyg h#{$i} {
+          color: $blue;
+        }
+      }
+    }
+  }  
+}
+
 // honor link--red class
 .card__content a.link--red {
   color: $red;
