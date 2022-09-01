@@ -1514,6 +1514,30 @@ figure {
   background: none;
 }
 
+//Modify the spacing on social to allow the icons to be used alone, without breaking existing layouts
+//Retain WDG's flagship social layout
+.penn-priorities + .social {
+  padding: 61px 0;
+  @media #{$large-up} {
+    padding: 20px 0 90px;
+  }
+}
+.social {
+  //Remove default padding, use the padding drop down on the entity
+  padding: 0;
+  //use modified spacing
+  .social__media {
+    margin: 0;
+    padding: 20px 0;  
+  }
+  //use default spacing
+  .section-header + .social__media,
+  .social__grid + .social__media {
+    margin: 20px 0;
+    padding: 0;
+  }
+}
+
 /**
  * Navigation
  */

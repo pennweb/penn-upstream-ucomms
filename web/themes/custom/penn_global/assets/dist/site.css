@@ -13779,6 +13779,31 @@ figure.align-center {
   background: none;
 }
 
+.penn-priorities + .social {
+  padding: 61px 0;
+}
+
+@media (min-width: 1024px) {
+  .penn-priorities + .social {
+    padding: 20px 0 90px;
+  }
+}
+
+.social {
+  padding: 0;
+}
+
+.social .social__media {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.social .section-header + .social__media,
+.social .social__grid + .social__media {
+  margin: 20px 0;
+  padding: 0;
+}
+
 /**
  * Navigation
  */
