@@ -23,6 +23,9 @@
                 {{ item.homepage_title is empty ? item.title : item.homepage_title }}   
               </a>
             </h3>
+            {% if item.source %}
+              <a href="{{ item.url }}" class="link link--red">{{ item.source }}</a>
+            {% endif %}
             <p class="grid-card__date">{{ item.date|date("F j, Y") }}</p>
           </div>
         </article>
