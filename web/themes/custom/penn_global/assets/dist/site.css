@@ -13867,6 +13867,13 @@ select {
 }
 
 /**
+ * Quicklinks
+ */
+.quick-links--wide {
+  margin-bottom: 0;
+}
+
+/**
  * Video
  */
 .video-inline:not(.video-autoplay) .video-button__circle {
