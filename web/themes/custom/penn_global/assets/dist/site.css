@@ -13789,7 +13789,7 @@ figure.align-center {
   }
 }
 
-.social {
+.social:not(.section-padding) {
   padding: 0;
 }
 
