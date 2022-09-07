@@ -13581,6 +13581,24 @@ drupal-entity {
   right: 0;
 }
 
+.subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 1.6px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.subtitle--red {
+  color: #990000;
+}
+
+.subtitle--blue {
+  color: #011F5B;
+}
+
 /**
  * Images 
  */
@@ -13858,12 +13876,16 @@ select {
 }
 
 /**
- * Penn API News Filter
+ * Penn API
  */
 @media (min-width: 640px) {
   .news-featured .filter-section .section-header__title {
     width: calc(100% - 235px);
   }
+}
+
+.subtitle + .grid-card__date {
+  margin-top: 0;
 }
 
 /**

@@ -1311,6 +1311,23 @@ drupal-entity {
   }
 }
 
+//custom subtitle style
+.subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 1.6px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  &--red {
+    color: $red; 
+  }
+  &--blue {
+    color: $blue;
+  }
+}
+
 /**
  * Images 
  */
@@ -1599,7 +1616,7 @@ select {
 }
 
 /**
- * Penn API News Filter
+ * Penn API
  */
 
 // Apply original padding to the news filter after moving it to a different twig template
@@ -1610,6 +1627,11 @@ select {
     }
   }
 }
+
+.subtitle + .grid-card__date {
+  margin-top: 0;
+}
+
 
 /**
  * Quicklinks
