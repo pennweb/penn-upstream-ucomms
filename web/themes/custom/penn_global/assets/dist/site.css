@@ -13544,6 +13544,31 @@ drupal-entity {
   font-size: 10rem;
 }
 
+.wysiwyg ul.horizontal-link {
+  padding: 0;
+  margin: 50px auto;
+  list-style: none;
+}
+
+.wysiwyg ul.horizontal-link li.horizontal-link__item {
+  margin-bottom: 0;
+  padding: 0 10px;
+  position: relative;
+}
+
+.wysiwyg ul.horizontal-link li.horizontal-link__item::before {
+  content: none;
+}
+
+.wysiwyg ul.horizontal-link li.horizontal-link__item a.horizontal-link__link {
+  padding: 12px;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #011F5B;
+  display: block;
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   .wysiwyg figure.align-left {
     float: initial;
@@ -13597,6 +13622,25 @@ drupal-entity {
 
 .subtitle--blue {
   color: #011F5B;
+}
+
+/**
+ * Horizontal Links
+ */
+.horizontal-link {
+  margin: 0 auto;
+}
+
+.horizontal-link.section-margin {
+  margin: 50px auto;
+}
+
+.horizontal-link.section-margin-top {
+  margin-top: 50px;
+}
+
+.horizontal-link.section-margin-bottom {
+  margin-bottom: 50px;
 }
 
 /**

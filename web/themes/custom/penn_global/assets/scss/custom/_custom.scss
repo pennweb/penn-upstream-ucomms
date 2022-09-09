@@ -1260,6 +1260,32 @@ drupal-entity {
   }
 
 } 
+
+//Make horizontal links layout work inside wysiwyg
+.wysiwyg {
+  ul.horizontal-link {
+    padding: 0;
+    margin: 50px auto;
+    list-style: none;
+    li.horizontal-link__item {
+      margin-bottom: 0;
+      padding: 0 10px;
+      position: relative;
+      &::before {
+        content: none;
+      }
+      a.horizontal-link__link {
+        padding: 12px;
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: #011F5B;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
 // Prevent image floating on smaller devices
 .wysiwyg {
   figure {
@@ -1327,6 +1353,24 @@ drupal-entity {
     color: $blue;
   }
 }
+
+/**
+ * Horizontal Links
+ */
+ 
+ //Override default section-margins for the native horizontal link margin
+.horizontal-link {
+  margin: 0 auto;
+  &.section-margin {
+    margin: 50px auto;
+  }
+  &.section-margin-top {
+    margin-top: 50px;
+  }
+  &.section-margin-bottom {
+    margin-bottom: 50px;
+  }
+ }
 
 /**
  * Images 

@@ -4,16 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.penn_entity.layout_horizontal_links.field_links
+    - field.field.penn_entity.layout_horizontal_links.field_margins
     - penn_entity.penn_entity_type.layout_horizontal_links
   module:
     - link
+    - options
 id: penn_entity.layout_horizontal_links.default
 targetEntityType: penn_entity
 bundle: layout_horizontal_links
 mode: default
 content:
   field_links:
-    weight: -2
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -22,14 +24,21 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: -2
+    region: content
+  field_margins:
+    type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: -1
     region: content
   name:
-    label: above
     type: string
-    weight: -4
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -4
+    region: content
 hidden: {  }
