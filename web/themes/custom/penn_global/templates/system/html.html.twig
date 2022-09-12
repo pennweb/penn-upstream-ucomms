@@ -50,6 +50,7 @@
     ]
   %}
       <body{{attributes.addClass(body_classes)}}>
+        {{ page_top }}
         <div id="top">
           <div class="skip-links">
             <a class="skip-link" href="#content">Skip to main content</a>
@@ -71,7 +72,6 @@
               <path d="M19.169 2.623c.507-.508.518-1.32.023-1.815-.494-.495-1.307-.484-1.815.023L.831 17.377c-.507.508-.518 1.32-.023 1.815.494.495 1.307.484 1.815-.023L19.169 2.623zM2.623.83C2.115.324 1.303.313.808.808.313 1.302.324 2.115.83 2.623l16.546 16.546c.508.507 1.32.518 1.815.023.495-.494.484-1.307-.023-1.815L2.623.831z" fill-rule="nonzero"/>
             </symbol>
           </svg>
-          {{ page_top }}
           {{ page }}
           {{ page_bottom }}
         </div>
