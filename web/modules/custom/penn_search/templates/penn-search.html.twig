@@ -20,38 +20,73 @@
 <div class="contain search-results">
 {% if search_terms %}
   {% if penn_search_label %} {# If there is a refinement label, do the tabbed search. Otherwise, do a single search. #}
-    <div class="js-wikit-tabbed">
-      <ul role="tablist">
-          <li role="presentation">
-              <a role="tab" class="tab-nav__link" href="#tabpanel-1" id="tab-1" aria-selected="true">{{ site_name }}</a>
-          </li>
-          <li role="presentation">
-              <a role="tab" class="tab-nav__link" href="#tabpanel-2" id="tab-2">All of Penn</a>
-          </li>
-      </ul>
+    {% if show_global_search_first %} {# Show the global search tab first #}
+      <div class="js-wikit-tabbed">
+        <ul role="tablist">
+            <li role="presentation">
+                <a role="tab" class="tab-nav__link" href="#tabpanel-1" id="tab-1">{{ global_search_title ? global_search_title : 'All of Penn' }}</a>
+            </li>
+            <li role="presentation">
+                <a role="tab" class="tab-nav__link" href="#tabpanel-2" id="tab-2">{{ refined_search_title ? refined_search_title : site_name }}</a>
+            </li>
+        </ul>
 
-      <button type="button" class="accordion-toggle-tab" aria-controls="tabpanel-1">
-        <span class="accordion-toggle-tab__icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"><g><g><path fill="none" class="strok" stroke-linecap="round" stroke-miterlimit="20" stroke-width="2.1" d="M1 1v0l6 6v0l6-6v0"/></g></g></svg>
-        </span>
-        <span class="accordion-toggle-tab_text">{{ site_name }}</span>
-      </button>
+        <button type="button" class="accordion-toggle-tab" aria-controls="tabpanel-1">
+          <span class="accordion-toggle-tab__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"><g><g><path fill="none" class="strok" stroke-linecap="round" stroke-miterlimit="20" stroke-width="2.1" d="M1 1v0l6 6v0l6-6v0"/></g></g></svg>
+          </span>
+          <span class="accordion-toggle-tab_text">{{ global_search_title ? global_search_title : 'All of Penn' }}</span>
+        </button>
 
-      <section class="wikit-tab" role="tabpanel" id="tabpanel-1" aria-labelledby="tab-1" tabindex="-1">
-          <gcse:searchresults-only defaultToRefinement="{{ penn_search_label }}" queryParameterName="{{ search_query_parameter }}" linkTarget="_self"></gcse:searchresults-only>
-      </section>
+        <section class="wikit-tab" role="tabpanel" id="tabpanel-1" aria-labelledby="tab-1" tabindex="-1">
+            <gcse:searchresults-only queryParameterName="{{ search_query_parameter }}" linkTarget="_self"></gcse:searchresults-only>
+        </section>
 
-      <button type="button" class="accordion-toggle-tab" aria-controls="tabpanel-2">
-        <span class="accordion-toggle-tab__icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"><g><g><path fill="none" class="strok" stroke-linecap="round" stroke-miterlimit="20" stroke-width="2.1" d="M1 1v0l6 6v0l6-6v0"/></g></g></svg>
-        </span>
-        <span class="accordion-toggle-tab_text">All of Penn</span>
-      </button>
+        <button type="button" class="accordion-toggle-tab" aria-controls="tabpanel-2">
+          <span class="accordion-toggle-tab__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"><g><g><path fill="none" class="strok" stroke-linecap="round" stroke-miterlimit="20" stroke-width="2.1" d="M1 1v0l6 6v0l6-6v0"/></g></g></svg>
+          </span>
+          <span class="accordion-toggle-tab_text">{{ refined_search_title ? refined_search_title : site_name }}</span>
+        </button>
 
-      <section class="wikit-tab" role="tabpanel" id="tabpanel-2" aria-labelledby="tab-2" tabindex="-1" hidden>
-          <gcse:searchresults-only queryParameterName="{{ search_query_parameter }}" linkTarget="_self"></gcse:searchresults-only>
-      </section>
-    </div>
+        <section class="wikit-tab" role="tabpanel" id="tabpanel-2" aria-labelledby="tab-2" tabindex="-1" hidden>
+            <gcse:searchresults-only defaultToRefinement="{{ penn_search_label }}" queryParameterName="{{ search_query_parameter }}" linkTarget="_self"></gcse:searchresults-only>        
+        </section>
+      </div>         
+    {% else %} {# Show the refined search tab first (default behavior) #}
+      <div class="js-wikit-tabbed">
+        <ul role="tablist">
+            <li role="presentation">
+                <a role="tab" class="tab-nav__link" href="#tabpanel-1" id="tab-1">{{ refined_search_title ? refined_search_title : site_name }}</a>
+            </li>
+            <li role="presentation">
+                <a role="tab" class="tab-nav__link" href="#tabpanel-2" id="tab-2">{{ global_search_title ? global_search_title : 'All of Penn' }}</a>
+            </li>
+        </ul>
+
+        <button type="button" class="accordion-toggle-tab" aria-controls="tabpanel-1">
+          <span class="accordion-toggle-tab__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"><g><g><path fill="none" class="strok" stroke-linecap="round" stroke-miterlimit="20" stroke-width="2.1" d="M1 1v0l6 6v0l6-6v0"/></g></g></svg>
+          </span>
+          <span class="accordion-toggle-tab_text">{{ refined_search_title ? refined_search_title : site_name }}</span>
+        </button>
+
+        <section class="wikit-tab" role="tabpanel" id="tabpanel-1" aria-labelledby="tab-1" tabindex="-1">
+            <gcse:searchresults-only defaultToRefinement="{{ penn_search_label }}" queryParameterName="{{ search_query_parameter }}" linkTarget="_self"></gcse:searchresults-only>
+        </section>
+
+        <button type="button" class="accordion-toggle-tab" aria-controls="tabpanel-2">
+          <span class="accordion-toggle-tab__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"><g><g><path fill="none" class="strok" stroke-linecap="round" stroke-miterlimit="20" stroke-width="2.1" d="M1 1v0l6 6v0l6-6v0"/></g></g></svg>
+          </span>
+          <span class="accordion-toggle-tab_text">{{ global_search_title ? global_search_title : 'All of Penn' }}</span>
+        </button>
+
+        <section class="wikit-tab" role="tabpanel" id="tabpanel-2" aria-labelledby="tab-2" tabindex="-1" hidden>
+            <gcse:searchresults-only queryParameterName="{{ search_query_parameter }}" linkTarget="_self"></gcse:searchresults-only>
+        </section>
+      </div>      
+    {% endif %}
   {% else %}
     <gcse:searchresults-only queryParameterName="{{ search_query_parameter }}" linkTarget="_self"></gcse:searchresults-only>
   {% endif %}

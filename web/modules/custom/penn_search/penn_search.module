@@ -7,6 +7,9 @@ function penn_search_theme($existing, $type, $theme, $path) {
   return [
     'penn_search' => [
       'variables' => [
+        'refined_search_title' => NULL,
+        'global_search_title' => NULL,
+        'show_global_search_first' => NULL,
         'penn_search_label' => NULL,
         'penn_search_cx' => NULL,
         'site_name' => NULL,

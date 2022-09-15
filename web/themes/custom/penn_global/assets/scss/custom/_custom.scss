@@ -117,9 +117,15 @@
   margin-top: 40px;
 }
 
-//Hide refinement labels
-.gs-per-result-labels {
+//Hide refinement labels, refinement area
+.gs-per-result-labels,
+.gsc-refinementsArea {
   display: none;
+}
+
+//Override tabbed inline-block
+.js .js-wikit-tabbed .gsc-above-wrapper-area-container[role="presentation"] {
+  display: table;
 }
 
 /**

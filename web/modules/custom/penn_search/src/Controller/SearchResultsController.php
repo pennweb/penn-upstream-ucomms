@@ -55,6 +55,9 @@ class SearchResultsController extends ControllerBase {
       '#search_query_parameter' => $search_query_parameter,
       '#search_terms' => Xss::filter($this->requestStack->getCurrentRequest()->query->get($search_query_parameter)),
       '#search_pg_title' => $config->get('search_pg_title'),
+      '#refined_search_title' => $config->get('refined_search_title'),
+      '#global_search_title' => $config->get('global_search_title'),
+      '#show_global_search_first' => $config->get('show_global_search_first'),
       '#search_pg_tagline' => $config->get('search_pg_tagline'),
       '#attached' => [
         'library' => ['penn_search/penn_search'],

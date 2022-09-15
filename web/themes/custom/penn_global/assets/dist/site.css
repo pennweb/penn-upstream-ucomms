@@ -12278,8 +12278,13 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   margin-top: 40px;
 }
 
-.gs-per-result-labels {
+.gs-per-result-labels,
+.gsc-refinementsArea {
   display: none;
+}
+
+.js .js-wikit-tabbed .gsc-above-wrapper-area-container[role="presentation"] {
+  display: table;
 }
 
 /**
