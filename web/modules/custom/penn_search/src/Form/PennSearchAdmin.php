@@ -66,6 +66,27 @@ class PennSearchAdmin extends ConfigFormBase {
       '#default_value' => $this->config('penn_search.settings')->get('search_pg_title'),
       '#required' => TRUE,
     ];
+    $form['refined_search_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Refined Search Title'),
+      '#default_value' => $this->config('penn_search.settings')->get('refined_search_title'),
+      '#description' => t('Optional: Customize the refined search tab title. Defaults to the site name if left empty.'),
+      '#required' => FALSE,
+    ];    
+    $form['global_search_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Global Search Title'),
+      '#default_value' => $this->config('penn_search.settings')->get('global_search_title'),
+      '#description' => t('Optional: Customize the global search tab title. Defaults to "All of Penn" if left empty.'),
+      '#required' => FALSE,
+    ];    
+    $form['show_global_search_first'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Show Global Search First'),
+      '#default_value' => $this->config('penn_search.settings')->get('show_global_search_first'),
+      '#description' => t('Show the global search tab first instead of the default refined search.'),
+      '#required' => FALSE,
+    ];    
     $form['search_pg_tagline'] = [
       '#type' => 'textfield',
       '#title' => t('Search Page Tagline'),
