@@ -52,7 +52,6 @@
         "drupal/simplify_menu": "^2.0",
         "drupal/structure_sync": "^2.0",
         "drupal/twig_tweak": "^2.6",
-        "drupal/webform": "^6.1",
         "drupal/xmlsitemap": "^1.0",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "^10",
