@@ -1644,6 +1644,7 @@ select {
 }
 
 .form-text, .form-email {
+  max-width: 100%;
   font-size: 1.8rem;
   padding: 15px;
 }
@@ -1653,6 +1654,7 @@ select {
 }
 
 .form-textarea {
+  max-width: 100%;
   font-family: sans-serif;
   padding: 20px 15px;
   font-size: 1.8rem;
