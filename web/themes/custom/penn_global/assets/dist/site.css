@@ -13906,6 +13906,22 @@ select {
   text-align: center;
 }
 
+.form-text, .form-email {
+  font-size: 1.8rem;
+  padding: 15px;
+}
+
+.form-autocomplete {
+  border: 1px solid #8f8f9d;
+}
+
+.form-textarea {
+  font-family: sans-serif;
+  padding: 20px 15px;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
 #edit-submit {
   position: relative;
   width: 205px;
@@ -13917,6 +13933,21 @@ select {
   background-color: #011f5b;
   color: #fff;
   margin-top: 20px;
+}
+
+.webform-submission-form {
+  padding: 25px;
+}
+
+.form-item {
+  margin-bottom: 20px;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 2.2rem;
+  font-family: "EB Garamond", serif;
 }
 
 .js-form-required.form-required {
