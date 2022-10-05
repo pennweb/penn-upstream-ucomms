@@ -13952,6 +13952,16 @@ select {
   font-family: "EB Garamond", serif;
 }
 
+.fieldset-legend {
+  font-size: 2.2rem;
+  font-family: "EB Garamond", serif;
+}
+
+.field--type-webform {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
 .js-form-required.form-required {
   visibility: hidden;
   font-size: 0;
