@@ -14587,23 +14587,7 @@ select {
  */
 .hero-full-width-video {
   position: relative;
-  height: 100%;
-}
-
-.hero-full-width-video .hero-full-width__content {
-  min-height: 650px;
-}
-
-@media all and (min-width: 1360px) {
-  .hero-full-width-video .hero-full-width__content {
-    min-height: 750px;
-  }
-}
-
-@media all and (max-width: 1145px) {
-  .hero-full-width-video .hero-full-width__content {
-    min-height: 540px;
-  }
+  overflow: hidden;
 }
 
 .hero-full-width-video::after {
@@ -14623,7 +14607,7 @@ select {
   display: none;
 }
 
-@media all and (min-width: 980px) {
+@media (min-width: 1024px) {
   .hero-full-width-video {
     opacity: 1;
     -webkit-animation-name: showvideo;
@@ -14635,24 +14619,20 @@ select {
     display: block;
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     margin: 0;
   }
   .hero-full-width-video .video .fitvid {
     padding-top: 56.25%;
+    height: 100% !important;
+  }
+  .hero-full-width-video .video .fitvid video {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .hero-full-width-video .video-inline {
-    max-height: 650px;
+    height: 100%;
   }
-}
-
-@media all and (min-width: 980px) and (min-width: 1360px) {
-  .hero-full-width-video .video-inline {
-    min-height: 750px;
-  }
-}
-
-@media all and (min-width: 980px) {
   .hero-full-width-video .video-button__circle {
     position: absolute;
     right: 27px;
@@ -14670,31 +14650,13 @@ select {
     max-height: 740px;
     top: initial;
     left: initial;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0;
+    right: 20px;
     width: 100px;
     height: 100px;
   }
   .hero-full-width-video .video-button.video-button--play .icon {
     background-size: 12px 30px;
-  }
-}
-
-@media all and (min-width: 980px) and (max-width: 1145px) {
-  .hero-full-width-video .video-button {
-    bottom: 100px;
-  }
-}
-
-@media all and (min-width: 980px) and (max-width: 1120px) {
-  .hero-full-width-video .video-button {
-    bottom: 70px;
-  }
-}
-
-@media all and (min-width: 980px) and (max-width: 1120px) {
-  .hero-full-width-video .video-button {
-    bottom: 50px;
   }
 }
 
