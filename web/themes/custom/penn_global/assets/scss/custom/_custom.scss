@@ -447,7 +447,9 @@
   .header__menus {
     //Set a background color, this helps with menu items that word-wrap
     //It's unclear why bg is set to "none" by default.
-    background: white;
+    @media #{$large-down} {
+      background: white;
+    }
     &.without-primary-nav {
       min-height: 48px;
       @media #{$xxlarge-up} {

@@ -12597,8 +12597,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   outline: 1px dotted #fff;
 }
 
-#header .header__menus {
-  background: white;
+@media (max-width: 1023px) {
+  #header .header__menus {
+    background: white;
+  }
 }
 
 #header .header__menus.without-primary-nav {
