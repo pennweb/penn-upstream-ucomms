@@ -445,15 +445,22 @@
 //Set a min height on the header when there are no main nav items
 #header {
   .header__menus {
-    //Set a background color, this helps with menu items that word-wrap
-    //It's unclear why bg is set to "none" by default.
-    @media #{$xxlarge-down} {
-      background: white;
-    }
     &.without-primary-nav {
       min-height: 48px;
       @media #{$xxlarge-up} {
         min-height: 51px;
+      }
+    }
+  }
+}
+
+body:not(.homepage) {
+  #header {
+    .header__menus {
+      //Set a background color, but not on flagship homepage
+      //this helps with menu items that word-wrap
+      @media #{$xxlarge-down} {
+        background: white;
       }
     }
   }

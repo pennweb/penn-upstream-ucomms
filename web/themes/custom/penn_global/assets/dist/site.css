@@ -12597,12 +12597,6 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   outline: 1px dotted #fff;
 }
 
-@media (max-width: 1399px) {
-  #header .header__menus {
-    background: white;
-  }
-}
-
 #header .header__menus.without-primary-nav {
   min-height: 48px;
 }
@@ -12610,6 +12604,12 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 @media (min-width: 1400px) {
   #header .header__menus.without-primary-nav {
     min-height: 51px;
+  }
+}
+
+@media (max-width: 1399px) {
+  body:not(.homepage) #header .header__menus {
+    background: white;
   }
 }
 
