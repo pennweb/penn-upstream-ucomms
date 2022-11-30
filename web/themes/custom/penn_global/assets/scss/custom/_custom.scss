@@ -454,6 +454,18 @@
   }
 }
 
+body:not(.homepage) {
+  #header {
+    .header__menus {
+      //Set a background color, but not on flagship homepage
+      //this helps with menu items that word-wrap
+      @media #{$xxlarge-down} {
+        background: white;
+      }
+    }
+  }
+}
+
 /**
  * Local Tasks Menu
  */
