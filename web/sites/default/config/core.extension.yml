@@ -16,7 +16,6 @@ module:
   color: 1
   comment: 1
   config: 1
-  config_split: 1
   contact: 1
   contextual: 1
   crop: 1
