@@ -12544,6 +12544,22 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
 }
 
 /*
+ * Margins
+ */
+.custom-margin:not(.section-margin):not(.section-margin-top):not(.section-margin-bottom) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.custom-margin.section-margin-top {
+  margin-bottom: 0;
+}
+
+.custom-margin.section-margin-bottom {
+  margin-top: 0;
+}
+
+/*
  * Grids
  */
 .bg-blue .grid-card p,
@@ -13204,9 +13220,17 @@ drupal-entity {
 /**
  * Layout Columns
  */
-.layout:not(.section-margin):not(.section-margin-top):not(section-margin-bottom) {
+.layout:not(.section-margin):not(.section-margin-top):not(.section-margin-bottom) {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.layout.section-margin-top {
+  margin-bottom: 0;
+}
+
+.layout.section-margin-bottom {
+  margin-top: 0;
 }
 
 /**

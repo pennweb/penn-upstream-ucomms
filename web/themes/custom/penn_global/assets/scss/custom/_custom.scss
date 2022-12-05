@@ -390,6 +390,23 @@
 }
 
 /*
+ * Margins
+ */
+//.custom-margin will remove the default margins on entities
+//instead, set margins by field_margins on the entity
+//Add this class in templates to the same element as {{ content.field_margins }}
+.custom-margin:not(.section-margin, .section-margin-top, .section-margin-bottom){
+  margin-top: 0;
+  margin-bottom: 0; 
+}
+.custom-margin.section-margin-top {
+  margin-bottom: 0;
+}
+.custom-margin.section-margin-bottom {
+  margin-top: 0;
+}
+
+/*
  * Grids
  */
 
@@ -1051,10 +1068,17 @@ drupal-entity {
  */
 //Remove default margin.
 //Margins are added by 'section-margin' instead.
-.layout:not(.section-margin, .section-margin-top, section-margin-bottom) {
+.layout:not(.section-margin, .section-margin-top, .section-margin-bottom) {
   margin-top: 0;
   margin-bottom: 0;
 }
+.layout.section-margin-top {
+  margin-bottom: 0;
+}
+.layout.section-margin-bottom {
+  margin-top: 0;
+}
+
 
 /**
  * Callouts
