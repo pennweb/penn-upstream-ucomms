@@ -15,6 +15,15 @@ settings:
       value: opacity__0
       label: 0%
     -
+      value: opacity__5
+      label: 5%
+    -
+      value: opacity__10
+      label: 10%
+    -
+      value: opacity__15
+      label: 15%
+    -
       value: opacity__25
       label: 25%
     -
