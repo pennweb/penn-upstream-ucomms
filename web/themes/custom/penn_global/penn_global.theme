@@ -275,6 +275,12 @@ function penn_global_preprocess_penn_entity(&$variables) {
         penn_global_fetch_image_style($mediaEntity->field_media_image->target_id, 'crop_2x1');
       }
       break;
+    case 'card_hero_card':
+      if ($entity->field_image->count() > 0) {
+        $mediaEntity = $entity->field_image->referencedEntities()[0];
+        penn_global_fetch_image_style($mediaEntity->field_media_image->target_id, 'crop_3x2');
+      }
+      break;
   }
 }
 

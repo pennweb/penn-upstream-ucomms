@@ -12394,6 +12394,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   color: #011F5B;
 }
 
+.section-padding .card-listing.section-padding {
+  padding-bottom: 0;
+}
+
 .card__content a.link--red {
   color: #990000;
 }
@@ -14203,6 +14207,201 @@ select {
 }
 
 /**
+ * Hero Card
+ */
+.card.hero-card {
+  width: 100%;
+  height: 400px;
+  text-align: initial;
+}
+
+.card.hero-card .hero {
+  height: 100%;
+  min-height: auto;
+  background-position: center top;
+  background-size: cover;
+}
+
+.card.hero-card .hero .hero-full-width__content {
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  margin-left: 35px;
+  margin-right: 35px;
+  width: 100%;
+}
+
+.card.hero-card .hero .hero-full-width__content .wysiwyg p, .card.hero-card .hero .hero-full-width__content .wysiwyg a {
+  color: white;
+}
+
+.card.hero-card .hero .hero-full-width__content .wysiwyg :last-child {
+  margin-bottom: 0;
+}
+
+.card.hero-card .hero .hero-full-width__content .wysiwyg :first-child {
+  margin-top: 0;
+}
+
+.card.hero-card .hero::after {
+  content: none;
+}
+
+.card.height--0 {
+  height: 0px;
+}
+
+.card.height--10 {
+  height: 40px;
+}
+
+.card.height--20 {
+  height: 80px;
+}
+
+.card.height--30 {
+  height: 120px;
+}
+
+.card.height--40 {
+  height: 160px;
+}
+
+.card.height--50 {
+  height: 200px;
+}
+
+.card.height--60 {
+  height: 240px;
+}
+
+.card.height--70 {
+  height: 280px;
+}
+
+.card.height--80 {
+  height: 320px;
+}
+
+.card.height--90 {
+  height: 360px;
+}
+
+.card.height--100 {
+  height: 400px;
+}
+
+.card.height--110 {
+  height: 440px;
+}
+
+.card.height--120 {
+  height: 480px;
+}
+
+.card.height--130 {
+  height: 520px;
+}
+
+.card.height--140 {
+  height: 560px;
+}
+
+.card.height--150 {
+  height: 600px;
+}
+
+.card.height--160 {
+  height: 640px;
+}
+
+.card.height--170 {
+  height: 680px;
+}
+
+.card.height--180 {
+  height: 720px;
+}
+
+.card.height--190 {
+  height: 760px;
+}
+
+.card.height--200 {
+  height: 800px;
+}
+
+/**
+ * Opacity
+ *
+ * Generally, this is the opacity of the "hero__shadows" class, but could re-used for other elements
+ * Just add a parent class in addition to .hero-card to add these options to another entity
+ */
+.hero-card .hero__shadows::after {
+  height: 100%;
+}
+
+.hero-card .hero__shadows.opacity__0::after {
+  background: rgba(0, 0, 0, 0);
+}
+
+.hero-card .hero__shadows.opacity__5::after {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.hero-card .hero__shadows.opacity__10::after {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.hero-card .hero__shadows.opacity__15::after {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.hero-card .hero__shadows.opacity__25::after {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-card .hero__shadows.opacity__35::after {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-card .hero__shadows.opacity__50::after {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-card .hero__shadows.opacity__75::after {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hero-card .hero__shadows.opacity__100::after {
+  background: black;
+}
+
+/**
+ * General Utility Classes
+ */
+.justify--flex-start,
+.hero-full-width__content.justify--flex-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.justify--center,
+.hero-full-width__content.justify--center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify--flex-end,
+.hero-full-width__content.justify--flex-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/**
  * Upstream Footer 
  */
 .footer.footer__upstream {
@@ -14430,6 +14629,10 @@ select {
   margin: 0 auto;
   padding: 30px 0;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.hero-full-width__content .btn--outline-white {
+  border: 1px solid rgba(255, 255, 255, 0.75);
 }
 
 .hero-full-width .hero__title {

@@ -227,6 +227,11 @@
   }  
 }
 
+//This prevents doubling-up of padding on the bottom of card listings
+.section-padding .card-listing.section-padding {
+  padding-bottom: 0;
+}
+
 // honor link--red class
 .card__content a.link--red {
   color: $red;
@@ -1931,4 +1936,119 @@ select {
 	@media #{$large-up} {
 		text-align: none;
 	}
+}
+
+/**
+ * Hero Card
+ */
+
+ $hero-card-base-height: 400px;
+ .card.hero-card {
+  width: 100%;
+  // min-height: 400px;
+  height: $hero-card-base-height;
+  // max-height: 400px;
+  // aspect-ratio: 3/2;
+  text-align: initial;
+  .hero {
+    // height: auto;
+    // max-height: 100%;
+    // min-height: 100%;
+    height: 100%;
+    min-height: auto;
+    background-position: center top;
+    background-size: cover;
+    .hero-full-width__content {
+      //This removes the auto margins, allowing the body text to be positioned from the wysiwyg instead of being forced to the center
+      align-items: normal;
+      margin-left: 35px;
+      margin-right: 35px;
+      width: 100%;
+      .wysiwyg {
+        p, a {
+          color: white;
+        }
+        //Remove the default margins on the first and last elements, let them add space in the wysiwyg instead
+        :last-child {
+          margin-bottom: 0;
+        }
+        :first-child {
+          margin-top: 0;
+        }
+      }
+    }
+    // Remove the default shadows added after a hero
+    &::after {
+      content: none;
+    }
+  }
+ }
+
+ //Generate rules for heights scaled from 0 to 200% in 10% increments
+ //generated custom-height__0 through custom-height_200
+$i: 0;
+@while $i <= 2 {
+  .card.height--#{$i * 100} {
+    height: $hero-card-base-height * $i;
+  }
+  $i: $i + .10;
+}
+
+/**
+ * Opacity
+ *
+ * Generally, this is the opacity of the "hero__shadows" class, but could re-used for other elements
+ * Just add a parent class in addition to .hero-card to add these options to another entity
+ */
+.hero-card {
+  .hero__shadows {
+    &::after {
+      height: 100%;
+    }
+    &.opacity__0::after {
+      background: rgba(0, 0, 0, 0);
+    }
+    &.opacity__5::after {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    &.opacity__10::after {
+      background: rgba(0, 0, 0, 0.10);
+    }
+    &.opacity__15::after {
+      background: rgba(0, 0, 0, 0.15);
+    }
+    &.opacity__25::after {
+      background: rgba(0, 0, 0, 0.25);
+    }
+    &.opacity__35::after {
+      background: rgba(0, 0, 0, 0.35);
+    }
+    &.opacity__50::after {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    &.opacity__75::after {
+      background: rgba(0, 0, 0, 0.75);
+    }
+    &.opacity__100::after {
+      background: rgba(0, 0, 0, 1.0);
+    }
+  }
+}
+
+/**
+ * General Utility Classes
+ */
+
+//Justify flexbox content
+.justify, 
+.hero-full-width__content.justify {
+  &--flex-start {
+    justify-content: flex-start;   
+  }
+  &--center {
+    justify-content: center;   
+  }
+  &--flex-end {
+    justify-content: flex-end;   
+  }
 }

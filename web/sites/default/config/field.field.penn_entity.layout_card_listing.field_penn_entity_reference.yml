@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.penn_entity.field_penn_entity_reference
     - penn_entity.penn_entity_type.card
+    - penn_entity.penn_entity_type.card_hero_card
     - penn_entity.penn_entity_type.layout_card_listing
 id: penn_entity.layout_card_listing.field_penn_entity_reference
 field_name: field_penn_entity_reference
@@ -21,8 +22,10 @@ settings:
   handler_settings:
     target_bundles:
       card: card
+      card_hero_card: card_hero_card
     sort:
       field: _none
+      direction: ASC
     auto_create: false
-    auto_create_bundle: card_default
+    auto_create_bundle: card
 field_type: entity_reference

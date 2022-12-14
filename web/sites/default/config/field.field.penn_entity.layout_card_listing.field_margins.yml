@@ -12,7 +12,7 @@ field_name: field_margins
 entity_type: penn_entity
 bundle: layout_card_listing
 label: Margins
-description: 'Add margins to the item.'
+description: 'Add margins.'
 required: false
 translatable: true
 default_value: {  }

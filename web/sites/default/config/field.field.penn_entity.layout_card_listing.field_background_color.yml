@@ -12,7 +12,7 @@ field_name: field_background_color
 entity_type: penn_entity
 bundle: layout_card_listing
 label: 'Background Color'
-description: 'Choose a background color for the item. Select -None- for a white background.'
+description: 'Choose a background color. Select "None" for a white background.'
 required: false
 translatable: true
 default_value: {  }
