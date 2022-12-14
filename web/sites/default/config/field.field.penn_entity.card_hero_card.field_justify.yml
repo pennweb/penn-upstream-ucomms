@@ -11,8 +11,8 @@ id: penn_entity.card_hero_card.field_justify
 field_name: field_justify
 entity_type: penn_entity
 bundle: card_hero_card
-label: 'Content Position'
-description: "This will position the body content at the top, center or bottom. The default is \"Center\".\r\n"
+label: Align
+description: "Align the body content to the top, center or bottom of the card. The default is \"Center\".\r\n"
 required: false
 translatable: false
 default_value:

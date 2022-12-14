@@ -12,10 +12,12 @@ field_name: field_padding
 entity_type: penn_entity
 bundle: layout_card_listing
 label: Padding
-description: 'Add padding to the item.'
+description: 'Add padding.'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: section-padding
 default_value_callback: ''
 settings: {  }
 field_type: list_string

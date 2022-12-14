@@ -227,6 +227,11 @@
   }  
 }
 
+//This prevents doubling-up of padding on the bottom of card listings
+.section-padding .card-listing.section-padding {
+  padding-bottom: 0;
+}
+
 // honor link--red class
 .card__content a.link--red {
   color: $red;
@@ -1936,13 +1941,15 @@ select {
 /**
  * Hero Card
  */
+
  $hero-card-base-height: 400px;
- .hero-card {
+ .card.hero-card {
   width: 100%;
   // min-height: 400px;
   height: $hero-card-base-height;
   // max-height: 400px;
   // aspect-ratio: 3/2;
+  text-align: initial;
   .hero {
     // height: auto;
     // max-height: 100%;
@@ -1956,11 +1963,23 @@ select {
       align-items: normal;
       margin-left: 35px;
       margin-right: 35px;
-      width: 100%;    
-      .wysiwyg :last-child {
-        margin-bottom: 0;
-
+      width: 100%;
+      .wysiwyg {
+        p, a {
+          color: white;
+        }
+        //Remove the default margins on the first and last elements, let them add space in the wysiwyg instead
+        :last-child {
+          margin-bottom: 0;
+        }
+        :first-child {
+          margin-top: 0;
+        }
       }
+    }
+    // Remove the default shadows added after a hero
+    &::after {
+      content: none;
     }
   }
  }
@@ -1969,7 +1988,7 @@ select {
  //generated custom-height__0 through custom-height_200
 $i: 0;
 @while $i <= 2 {
-  .height--#{$i * 100} {
+  .card.height--#{$i * 100} {
     height: $hero-card-base-height * $i;
   }
   $i: $i + .10;

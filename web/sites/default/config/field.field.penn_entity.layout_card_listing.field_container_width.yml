@@ -12,7 +12,7 @@ field_name: field_container_width
 entity_type: penn_entity
 bundle: layout_card_listing
 label: 'Container Width'
-description: 'Set the container width of the item.'
+description: "Set the width of the cards container.<br>\r\nThis affects the width and spacing of the cards.<br>\r\n\"Medium\" is the default."
 required: false
 translatable: true
 default_value:
