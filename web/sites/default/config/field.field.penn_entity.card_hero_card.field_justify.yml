@@ -15,7 +15,9 @@ label: 'Content Position'
 description: "This will position the body content at the top, center or bottom. The default is \"Center\".\r\n"
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: justify--center
 default_value_callback: ''
 settings: {  }
 field_type: list_string
