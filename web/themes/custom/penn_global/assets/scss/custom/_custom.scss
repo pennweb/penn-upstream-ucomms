@@ -1975,6 +1975,12 @@ select {
         :first-child {
           margin-top: 0;
         }
+        //Force white headings
+        @for $i from 1 through 6 {
+          h#{$i} {
+            color: #fff;
+          }
+        }
       }
     }
     // Remove the default shadows added after a hero

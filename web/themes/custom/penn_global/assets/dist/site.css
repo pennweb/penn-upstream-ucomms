@@ -14243,6 +14243,30 @@ select {
   margin-top: 0;
 }
 
+.card.hero-card .hero .hero-full-width__content .wysiwyg h1 {
+  color: #fff;
+}
+
+.card.hero-card .hero .hero-full-width__content .wysiwyg h2 {
+  color: #fff;
+}
+
+.card.hero-card .hero .hero-full-width__content .wysiwyg h3 {
+  color: #fff;
+}
+
+.card.hero-card .hero .hero-full-width__content .wysiwyg h4 {
+  color: #fff;
+}
+
+.card.hero-card .hero .hero-full-width__content .wysiwyg h5 {
+  color: #fff;
+}
+
+.card.hero-card .hero .hero-full-width__content .wysiwyg h6 {
+  color: #fff;
+}
+
 .card.hero-card .hero::after {
   content: none;
 }
