@@ -14226,8 +14226,8 @@ select {
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
-  margin-left: 35px;
-  margin-right: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
   width: 100%;
 }
 

@@ -1960,9 +1960,9 @@ select {
     background-size: cover;
     .hero-full-width__content {
       //This removes the auto margins, allowing the body text to be positioned from the wysiwyg instead of being forced to the center
-      align-items: normal;
-      margin-left: 35px;
-      margin-right: 35px;
+      align-items: normal;  //This removes the auto margins, allowing the body text to be positioned from the wysiwyg instead of being forced to the center
+      padding-left: 35px;
+      padding-right: 35px;
       width: 100%;
       .wysiwyg {
         p, a {
