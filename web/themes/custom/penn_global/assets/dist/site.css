@@ -13567,6 +13567,60 @@ drupal-entity {
   color: #000;
 }
 
+.wysiwyg .text--blue {
+  color: #011F5B;
+}
+
+.wysiwyg .text--light-blue {
+  color: #82AFD3;
+}
+
+.wysiwyg .text--yellow {
+  color: #f2C100;
+}
+
+.wysiwyg .text--red {
+  color: #990000;
+}
+
+.wysiwyg .text--black {
+  color: #000;
+}
+
+.wysiwyg .text--white {
+  color: #fff;
+}
+
+.wysiwyg .text--light-gray {
+  color: #F7F7F7;
+}
+
+.wysiwyg .text--dark-gray {
+  color: #434343;
+}
+
+.wysiwyg .text--padding--none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wysiwyg .text--margins--none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.wysiwyg .text--sans-serif {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.wysiwyg .text--serif {
+  font-family: "EB Garamond", serif;
+}
+
+.wysiwyg .text--x-large {
+  font-size: 10rem;
+}
+
 .wysiwyg .text__light-blue {
   color: #82AFD3;
 }

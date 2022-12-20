@@ -11,7 +11,7 @@ field_name: field_image
 entity_type: penn_entity
 bundle: card_hero_card
 label: 'Background Image'
-description: ''
+description: 'Set the (3:2) crop.'
 required: false
 translatable: true
 default_value: {  }

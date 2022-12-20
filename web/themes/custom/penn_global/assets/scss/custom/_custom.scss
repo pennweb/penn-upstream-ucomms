@@ -1291,14 +1291,58 @@ drupal-entity {
   }
 
   //Colors
+  .text {
+    &--blue {
+      color: $blue;
+    }
+    &--light-blue {
+      color: $light_blue;
+    }
+    &--yellow {
+      color: $yellow;
+    }
+    &--red {
+      color: $red;
+    }
+    &--black {
+      color: $black;
+    }
+    &--white {
+      color: #fff;
+    }
+    &--light-gray {
+      color: $gray-light;
+    }
+    &--dark-gray {
+      color: $text-color;
+    }
+    &--padding--none {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &--margins--none {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &--sans-serif {
+      font-family: $sans;
+    }
+    &--serif {
+      font-family: $serif;
+    }
+    &--x-large {
+      font-size: 10rem;
+    }
+  }
+
+  //Deprecated
   .text__light-blue {
     color: $light_blue;
   }
   .text__yellow {
     color: $yellow;
   }
-
-  //Text
+  //Deprecated
   .text__sans-serif {
     font-family: $sans;
   }
