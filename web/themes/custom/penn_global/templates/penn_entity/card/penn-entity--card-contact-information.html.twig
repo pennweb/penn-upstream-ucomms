@@ -1,8 +1,13 @@
+{% set has_link = content.field_link|render is not empty ? true : false %}
 <article class="contact-information contact-information{{ content.field_contact_card_background }}">
   <div class="contact-information__wrap">
     <img src="{{ '/' ~ penn_global_directory ~ '/assets/img/svg/icon-contact-building' }}{{ content.field_contact_card_background }}{{'.svg'}}" alt="Contact Building Icon" class="contact-information__icon">
     <h2 class="contact-information__title">
-      <a href="{{ content.field_link }}" class="contact-information__title__link">{{ content.field_title }}</a>
+      {% if has_link %}
+        <a href="{{ content.field_link }}" class="contact-information__title__link">{{ content.field_title }}</a>
+      {% else %}
+        {{ content.field_title }}
+      {% endif %}
     </h2>
     {{ content.field_subtitle }}
     <div class="contact-information__columns">
