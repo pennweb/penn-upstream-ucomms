@@ -1,5 +1,5 @@
 {% set entity_id = content.penn_entity.id() %}
-<article class="js-wikit-accordion__item">
+<article class="js-wikit-accordion__item {{ content.field_accordion_item_background_[0] }}">
   <div class="js-wikit-accordion__wrap">
     <h3 class="js-wikit-accordion__heading">
       <button aria-expanded="false" class="js-wikit-accordion__trigger" aria-controls="accordion-id-{{ entity_id }}" id="accordion-id-{{ entity_id }}-id">
@@ -18,7 +18,7 @@
       </button>
     </h3>
     <div id="accordion-id-{{ entity_id }}" role="region" aria-labelledby="accordion-id-{{ entity_id }}-id" class="js-wikit-accordion__panel ">
-      <div class="js-wikit-accordion__panel-content">
+      <div class="js-wikit-accordion__panel-content {{ content.field_accordion_item_background_[0] }}">
         {{ content.field_description_formatted }}
         {# {{ content.field_button_link }} #}
       </div>

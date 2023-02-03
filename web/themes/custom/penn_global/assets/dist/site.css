@@ -12164,6 +12164,77 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   }
 }
 
+.js-wikit-accordion__item.acc-red:after {
+  background: #990000;
+}
+
+.js-wikit-accordion__item.acc-gray:after {
+  background: #F2F2F3;
+}
+
+.js-wikit-accordion__item.acc-white:after {
+  background: #FFFFFF;
+}
+
+.js-wikit-accordion__item.is-expanded:not(.component__accordion__item):not(.acc-gray):not(.acc-white) {
+  color: #FFF;
+}
+
+.js-wikit-accordion__item.is-expanded:not(.component__accordion__item):not(.acc-gray):not(.acc-white) .js-wikit-accordion__title {
+  color: #FFF;
+}
+
+.js-wikit-accordion__item.is-expanded:not(.component__accordion__item):not(.acc-gray):not(.acc-white) .js-wikit-accordion__icon svg {
+  stroke: #fff;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.js-wikit-accordion__item.is-expanded:not(.component__accordion__item):not(.acc-gray):not(.acc-white) .js-wikit-accordion__wrap {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+}
+
+.js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-gray, .js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-white {
+  color: #011F5B;
+}
+
+.js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-gray *:not(.btn), .js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-white *:not(.btn) {
+  color: #011F5B;
+}
+
+.js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-gray .js-wikit-accordion__title, .js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-white .js-wikit-accordion__title {
+  color: #011F5B;
+}
+
+.js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-gray .js-wikit-accordion__icon svg, .js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-white .js-wikit-accordion__icon svg {
+  stroke: #011F5B;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-gray .js-wikit-accordion__wrap, .js-wikit-accordion__item.is-expanded:not(.component__accordion__item).acc-white .js-wikit-accordion__wrap {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  color: #011F5B;
+}
+
+.js-wikit-accordion__panel-content:not(.acc-gray):not(.acc-white) {
+  color: #FFF;
+}
+
+.js-wikit-accordion__panel-content:not(.acc-gray):not(.acc-white) a {
+  color: #FFF;
+}
+
+.js-wikit-accordion__panel-content.acc-white, .js-wikit-accordion__panel-content.acc-gray {
+  color: #011F5B;
+}
+
+.js-wikit-accordion__panel-content.acc-white a, .js-wikit-accordion__panel-content.acc-gray a {
+  color: #011F5B;
+}
+
 /**
  * General
  */
