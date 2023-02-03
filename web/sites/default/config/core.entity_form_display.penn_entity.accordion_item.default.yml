@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.penn_entity.accordion_item.field_accordion_item_background_
     - field.field.penn_entity.accordion_item.field_description_formatted
     - field.field.penn_entity.accordion_item.field_title
     - penn_entity.penn_entity_type.accordion_item
@@ -14,22 +15,28 @@ targetEntityType: penn_entity
 bundle: accordion_item
 mode: default
 content:
+  field_accordion_item_background_:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_description_formatted:
+    type: text_textarea
     weight: 2
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_title:
+    type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   name:
     type: field_hidden_string_textfield
     weight: 0

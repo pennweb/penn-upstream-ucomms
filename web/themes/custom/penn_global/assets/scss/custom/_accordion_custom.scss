@@ -1,0 +1,94 @@
+.js-wikit-accordion {
+
+	&__item {
+
+		&.acc-red {
+			&:after {
+			    background: $red;
+			}
+		}
+		&.acc-gray {
+			&:after {
+			    background: #F2F2F3;
+			}
+		}
+		&.acc-white {
+			&:after {
+			    background: #FFFFFF;
+			}
+		}
+
+		&.is-expanded:not(.component__accordion__item) {
+
+			&:not(.acc-gray):not(.acc-white) {
+				color: #FFF;
+				.js-wikit-accordion {
+					&__title {
+						color: #FFF;
+					}
+	
+					&__icon {
+						svg {
+							stroke: #fff;
+							transform: rotate(180deg);
+						}
+					}
+	
+					&__wrap {
+						border: 1px solid rgba(255, 255, 255, 0.1);
+						height: 100%;
+					}
+				}
+			}
+
+			&.acc-gray,
+			&.acc-white {
+				color: $primary;
+				*:not(.btn) {
+					color: $primary;
+				}
+				.js-wikit-accordion {
+					&__title {
+						color: $primary;
+					}
+	
+					&__icon {
+						svg {
+							stroke: $primary;
+							transform: rotate(180deg);
+						}
+					}
+	
+					&__wrap {
+						border: 1px solid rgba(255, 255, 255, 0.1);
+						height: 100%;
+						color: $primary
+					}
+				}
+			}
+
+
+		}
+	}
+
+	&__panel {
+
+		&-content {
+
+			&:not(.acc-gray):not(.acc-white) {
+				color: #FFF;
+				a {
+					color: #FFF;
+				}
+			}
+
+			&.acc-white,
+			&.acc-gray {
+				color: $primary;
+				a {
+					color: $primary;
+				}
+			}
+		}
+	}
+}
