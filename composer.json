@@ -46,7 +46,6 @@
         "drupal/multiple_fields_remove_button": "^1.0@alpha",
         "drupal/paragraphs": "^1.11",
         "drupal/pathauto": "^1.8",
-        "drupal/protected_pages": "^1.4",
         "drupal/redis": "^1.4",
         "drupal/simplesamlphp_auth": "^3.2",
         "drupal/simplify_menu": "^2.0",
