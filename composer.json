@@ -46,10 +46,7 @@
         "drupal/multiple_fields_remove_button": "^1.0@alpha",
         "drupal/paragraphs": "^1.11",
         "drupal/pathauto": "^1.8",
-        "drupal/recaptcha": "^3.1",
-        "drupal/recaptcha_v3": "^1.6",
         "drupal/redis": "^1.4",
-        "drupal/sendgrid_integration": "^2.0",
         "drupal/simplesamlphp_auth": "^3.2",
         "drupal/simplify_menu": "^2.0",
         "drupal/structure_sync": "^2.0",
@@ -59,7 +56,6 @@
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "^10",
         "enyo/dropzone": "^5.7",
-        "fastglass/sendgrid": ">=2.0.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "pantheon-systems/drupal-integrations": "^9",
         "pantheon-systems/quicksilver-pushback": "^2",
@@ -97,9 +93,6 @@
         "patches": {
             "drupal/inline_entity_form": {
                 "Can't add more than two items with simple inline entity form widget under some circumstances": "https://www.drupal.org/files/issues/2019-11-04/3088901-3-cant-add-more-than-two-items.patch"
-            },
-            "drupal/sendgrid_integration": {
-                "Fix Error": "https://www.drupal.org/files/issues/2022-06-22/sendgrid_integration.3291891.patch"
             }
         },     
         "composer-exit-on-patch-failure": true,
