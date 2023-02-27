@@ -37,16 +37,21 @@ if (file_exists($site_settings)) {
 /**
  * If there is a local settings file, then include it
  */
-$local_settings = __DIR__ . "/settings.local.php";
-if (file_exists($local_settings)) {
-  include $local_settings;
+if(isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'lando' ) {
+  $local_settings = __DIR__ . "/settings.local.php";
+  if (file_exists($local_settings)) {
+    include $local_settings;
+  }
 }
+
 /**
  * If there is a redis file, then include it
  */
-$redis_settings = __DIR__ . "/settings.redis.php";
-if (file_exists($redis_settings)) {
-  include $redis_settings;
+if(isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] != 'lando' ) {
+  $redis_settings = __DIR__ . "/settings.redis.php";
+  if (file_exists($redis_settings)) {
+    include $redis_settings;
+  }
 }
 
 /**
