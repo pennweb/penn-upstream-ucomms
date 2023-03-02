@@ -913,58 +913,6 @@ drupal-entity {
   }
 }
 
-.featured-initiative-card__wrap {
-  height: 100%;
-}
-
-//constrain initiative card image titles
-.featured-initiative-card {
-  .featured-initiative-card__image {
-    max-width: 90%;
-    @media #{$large-up} {
-      max-width: 290px;
-    }
-  }
-}
-
-//Gray initiative card
-.featured-initiative-card--gray {
-  background: $gray;
-  border: 1px solid rgba(1, 31, 91, 0.05);
-
-  .contact-information__title__link,
-  .featured-initiative-card__wrap,
-  p {
-    color: $blue;
-  }
-  .featured-initiative-card__title::after {
-    background: $blue;
-    opacity: 0.4;
-  }
-  .featured-initiative-card__wrap {
-    border: 1px solid rgba(1, 31, 91, 0.15);
-  }
-  .btn--outline-white-secondary {
-    background: none;
-    color: #011f5b;
-    border: 1px solid rgba(118, 118, 118, 0.2);
-  }
-   //possibly delete 
-  .is-hovered .btn,
-  .btn:hover,
-  .btn:focus {
-    background: #00102f;
-  }
-  //^
-
-  //override the button styles to match rather than changing the class in the template
-  .is-hovered .btn--outline-white-secondary,
-  .btn--outline-white-secondary:hover,
-  .btn--outline-white-secondary:focus {
-    background: #011f5b;
-    color: #fff;
-  }
-}
 
 //Options to override card width
 .featured-story {
@@ -1429,7 +1377,8 @@ drupal-entity {
 }
 
 //custom subtitle style
-.subtitle {
+.subtitle, .wysiwyg .subtitle {
+  font-family: $sans;
   font-size: 1.2rem;
   letter-spacing: 1.6px;
   text-align: center;

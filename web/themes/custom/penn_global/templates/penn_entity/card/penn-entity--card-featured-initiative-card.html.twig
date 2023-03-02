@@ -24,7 +24,12 @@
       {% endif %}
 
     </h2>
-    {{ content.field_description }}
+    {% if content.field_description_formatted_has_value %}    
+      <div class="wysiwyg">
+        {{ content.field_description_formatted }}    
+      </div>
+    {% endif %}
+    {{ content.field_description }} {# this unformatted text field is deprecated #}
     {{ content.section_header_class }}
     {{ content.field_button_link }}
   </div>

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.penn_entity.card_featured_initiative_card.field_button_link
     - field.field.penn_entity.card_featured_initiative_card.field_description
+    - field.field.penn_entity.card_featured_initiative_card.field_description_formatted
     - field.field.penn_entity.card_featured_initiative_card.field_fi_background_color
     - field.field.penn_entity.card_featured_initiative_card.field_image_title
     - field.field.penn_entity.card_featured_initiative_card.field_link
@@ -15,13 +16,14 @@ dependencies:
     - fences
     - link
     - options
+    - text
 id: penn_entity.card_featured_initiative_card.default
 targetEntityType: penn_entity
 bundle: card_featured_initiative_card
 mode: default
 content:
   field_button_link:
-    weight: 5
+    type: link_separate
     label: hidden
     settings:
       trim_length: null
@@ -37,10 +39,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: link_separate
+    weight: 5
     region: content
   field_description:
-    weight: 3
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings:
@@ -51,18 +53,24 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: basic_string
+    weight: 3
     region: content
-  field_fi_background_color:
-    weight: 9
+  field_description_formatted:
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 10
+    region: content
+  field_fi_background_color:
     type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_image_title:
     type: entity_reference_entity_view
-    weight: 2
     label: above
     settings:
       view_mode: url_to_image
@@ -75,9 +83,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
+    weight: 2
     region: content
   field_link:
-    weight: 7
+    type: link
     label: above
     settings:
       trim_length: null
@@ -93,10 +102,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: div
         fences_label_classes: ''
-    type: link
+    weight: 7
     region: content
   field_subtitle:
-    weight: 4
+    type: string
     label: hidden
     settings:
       link_to_entity: false
@@ -108,10 +117,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: string
+    weight: 4
     region: content
   field_title:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
@@ -123,14 +132,14 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: string
+    weight: 1
     region: content
   name:
-    label: hidden
     type: string
-    weight: 0
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden: {  }

@@ -13149,59 +13149,6 @@ drupal-entity {
   }
 }
 
-.featured-initiative-card__wrap {
-  height: 100%;
-}
-
-.featured-initiative-card .featured-initiative-card__image {
-  max-width: 90%;
-}
-
-@media (min-width: 1024px) {
-  .featured-initiative-card .featured-initiative-card__image {
-    max-width: 290px;
-  }
-}
-
-.featured-initiative-card--gray {
-  background: #F2F2F2;
-  border: 1px solid rgba(1, 31, 91, 0.05);
-}
-
-.featured-initiative-card--gray .contact-information__title__link,
-.featured-initiative-card--gray .featured-initiative-card__wrap,
-.featured-initiative-card--gray p {
-  color: #011F5B;
-}
-
-.featured-initiative-card--gray .featured-initiative-card__title::after {
-  background: #011F5B;
-  opacity: 0.4;
-}
-
-.featured-initiative-card--gray .featured-initiative-card__wrap {
-  border: 1px solid rgba(1, 31, 91, 0.15);
-}
-
-.featured-initiative-card--gray .btn--outline-white-secondary {
-  background: none;
-  color: #011f5b;
-  border: 1px solid rgba(118, 118, 118, 0.2);
-}
-
-.featured-initiative-card--gray .is-hovered .btn,
-.featured-initiative-card--gray .btn:hover,
-.featured-initiative-card--gray .btn:focus {
-  background: #00102f;
-}
-
-.featured-initiative-card--gray .is-hovered .btn--outline-white-secondary,
-.featured-initiative-card--gray .btn--outline-white-secondary:hover,
-.featured-initiative-card--gray .btn--outline-white-secondary:focus {
-  background: #011f5b;
-  color: #fff;
-}
-
 @media (min-width: 768px) {
   .featured-story.custom-width .featured-story__contain {
     padding: 0;
@@ -13770,7 +13717,8 @@ drupal-entity {
   right: 0;
 }
 
-.subtitle {
+.subtitle, .wysiwyg .subtitle {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   letter-spacing: 1.6px;
   text-align: center;
@@ -13780,11 +13728,11 @@ drupal-entity {
   display: inline-block;
 }
 
-.subtitle--red {
+.subtitle--red, .wysiwyg .subtitle--red {
   color: #990000;
 }
 
-.subtitle--blue {
+.subtitle--blue, .wysiwyg .subtitle--blue {
   color: #011F5B;
 }
 
@@ -14548,6 +14496,68 @@ select {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.featured-initiative-card__wrap {
+  height: 100%;
+}
+
+.featured-initiative-card__image {
+  max-width: 90%;
+}
+
+@media (min-width: 1024px) {
+  .featured-initiative-card__image {
+    max-width: 290px;
+  }
+}
+
+.featured-initiative-card p, .featured-initiative-card a, .featured-initiative-card h1, .featured-initiative-card h2, .featured-initiative-card h3, .featured-initiative-card h4, .featured-initiative-card h5, .featured-initiative-card h6, .featured-initiative-card .wysiwyg a:not(.btn) {
+  color: white;
+}
+
+.featured-initiative-card--gray {
+  background: #F2F2F2;
+  border: 1px solid rgba(1, 31, 91, 0.05);
+}
+
+.featured-initiative-card--gray .contact-information__title__link,
+.featured-initiative-card--gray .featured-initiative__title__link,
+.featured-initiative-card--gray .featured-initiative-card__wrap,
+.featured-initiative-card--gray .featured-initiative-card__title,
+.featured-initiative-card--gray .featured-initiative-card__category,
+.featured-initiative-card--gray .wysiwyg p,
+.featured-initiative-card--gray .wysiwyg a:not(.btn),
+.featured-initiative-card--gray p, .featured-initiative-card--gray a:not(.btn), .featured-initiative-card--gray h1, .featured-initiative-card--gray h2, .featured-initiative-card--gray h3, .featured-initiative-card--gray h4, .featured-initiative-card--gray h5, .featured-initiative-card--gray h6 {
+  color: #011F5B;
+}
+
+.featured-initiative-card--gray .featured-initiative-card__title::after {
+  background: #011F5B;
+  opacity: 0.4;
+}
+
+.featured-initiative-card--gray .featured-initiative-card__wrap {
+  border: 1px solid rgba(1, 31, 91, 0.15);
+}
+
+.featured-initiative-card--gray .btn--outline-white-secondary {
+  background: none;
+  color: #011f5b;
+  border: 1px solid rgba(118, 118, 118, 0.2);
+}
+
+.featured-initiative-card--gray .is-hovered .btn,
+.featured-initiative-card--gray .btn:hover,
+.featured-initiative-card--gray .btn:focus {
+  background: #00102f;
+}
+
+.featured-initiative-card--gray .is-hovered .btn--outline-white-secondary,
+.featured-initiative-card--gray .btn--outline-white-secondary:hover,
+.featured-initiative-card--gray .btn--outline-white-secondary:focus {
+  background: #011f5b;
+  color: #fff;
 }
 
 /**

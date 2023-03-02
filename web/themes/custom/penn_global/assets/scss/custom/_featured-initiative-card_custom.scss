@@ -1,0 +1,66 @@
+.featured-initiative-card {
+
+  &__wrap {
+    height: 100%;
+  }
+
+  //constrain initiative card image titles
+  &__image {
+    max-width: 90%;
+    @media #{$large-up} {
+      max-width: 290px;
+    }
+  }
+
+  //blue and red cards
+  //the default is 
+    p, a, h1, h2, h3, h4, h5, h6, .wysiwyg a:not(.btn) {
+      color: white;
+    }
+
+
+  //gray cards
+  &--gray {
+    background: $gray;
+    border: 1px solid rgba(1, 31, 91, 0.05);
+  
+    .contact-information__title__link,
+    .featured-initiative__title__link,
+    .featured-initiative-card__wrap,
+    .featured-initiative-card__title,
+    .featured-initiative-card__category,
+    .wysiwyg p,
+    .wysiwyg a:not(.btn),
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $blue;
+    }
+    .featured-initiative-card__title::after {
+      background: $blue;
+      opacity: 0.4;
+    }
+    .featured-initiative-card__wrap {
+      border: 1px solid rgba(1, 31, 91, 0.15);
+    }
+    .btn--outline-white-secondary {
+      background: none;
+      color: #011f5b;
+      border: 1px solid rgba(118, 118, 118, 0.2);
+    }
+     //possibly delete 
+    .is-hovered .btn,
+    .btn:hover,
+    .btn:focus {
+      background: #00102f;
+    }
+    //^
+  
+    //override the button styles to match rather than changing the class in the template
+    .is-hovered .btn--outline-white-secondary,
+    .btn--outline-white-secondary:hover,
+    .btn--outline-white-secondary:focus {
+      background: #011f5b;
+      color: #fff;
+    }    
+  }
+}
+
