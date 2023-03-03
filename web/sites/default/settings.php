@@ -61,3 +61,8 @@ $redirects = __DIR__ . "/settings.redirects.php";
 if (file_exists($redirects)) {
   include $redirects;
 }
+
+/**
+ * Set the location of the config directory
+ */
+$settings['config_sync_directory'] = 'sites/default/config';
