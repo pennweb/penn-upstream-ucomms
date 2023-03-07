@@ -27,6 +27,12 @@ include __DIR__ . "/settings.pantheon.php";
 $settings['rebuild_access'] = FALSE;
 
 /**
+ * Set the default location of the config directory
+ * This can be customized per site in settings.site.php
+ */
+$settings['config_sync_directory'] = 'sites/default/config';
+
+/**
  * If there is a site settings file, then include it
  */
 $site_settings = __DIR__ . "/settings.site.php";
@@ -61,8 +67,3 @@ $redirects = __DIR__ . "/settings.redirects.php";
 if (file_exists($redirects)) {
   include $redirects;
 }
-
-/**
- * Set the location of the config directory
- */
-$settings['config_sync_directory'] = 'sites/default/config';
