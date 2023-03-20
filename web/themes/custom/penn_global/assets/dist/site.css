@@ -14013,7 +14013,7 @@ select {
   text-align: center;
 }
 
-.form-text, .form-email {
+.form-text, .form-email, .form-tel {
   max-width: 100%;
   font-size: 1.8rem;
   padding: 15px;
