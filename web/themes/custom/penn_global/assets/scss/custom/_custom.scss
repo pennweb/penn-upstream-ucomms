@@ -227,6 +227,11 @@
   }  
 }
 
+//Remove all default padding on card listings, use the entity padding/margins dropdown instead
+.card-listing:not(.section-padding) {
+  padding: 0;
+}
+
 //This prevents doubling-up of padding on the bottom of card listings
 .section-padding .card-listing.section-padding {
   padding-bottom: 0;

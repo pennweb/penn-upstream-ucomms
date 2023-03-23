@@ -12465,6 +12465,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   color: #011F5B;
 }
 
+.card-listing:not(.section-padding) {
+  padding: 0;
+}
+
 .section-padding .card-listing.section-padding {
   padding-bottom: 0;
 }
