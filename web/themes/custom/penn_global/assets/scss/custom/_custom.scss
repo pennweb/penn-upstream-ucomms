@@ -1940,6 +1940,19 @@ select {
  * Hero Card
  */
 
+.hero-card__link {
+  color: #011F5B;
+  position: absolute;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
  $hero-card-base-height: 400px;
  .card.hero-card {
   width: 100%;
@@ -1956,6 +1969,13 @@ select {
     min-height: auto;
     background-position: center top;
     background-size: cover;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(1.025);
+      a {
+        text-decoration: none;
+      }
+    }
     .hero-full-width__content {
       //This removes the auto margins, allowing the body text to be positioned from the wysiwyg instead of being forced to the center
       align-items: normal;  //This removes the auto margins, allowing the body text to be positioned from the wysiwyg instead of being forced to the center

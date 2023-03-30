@@ -1,17 +1,26 @@
+{% set link = render_var(content.field_link) %}
+{% set has_link = link is not empty ? true : false %}
+{% set link_class = has_link ? 'with-link' : 'without-link' %}
 {% set entity_id = content.penn_entity.id() %}
 <article class="card hero-card {{ content.field_custom_height }}">
   <div class="hero" data-hero="{{ entity_id }}">
   <div class="hero__shadows {{ content.field_opacity }}"></div>  
-    {% if content.field_description_formatted_has_value %}
-   <div class="contain contain--wide">
-    <div class="hero-full-width__content {{ content.field_justify }}"> 
-    <div class="wysiwyg">
-      {{ content.field_description_formatted }}
+  {% if content.field_description_formatted_has_value %}
+    <div class="contain contain--wide">
+      <div class="hero-full-width__content {{ content.field_justify }}">
+        {% if has_link %}
+          <a href="{{ content.field_link }}" class="hero-card__link">
+            <span class="sr-only">{{ content.field_link }}</span>
+          </a>
+        {% endif %}  
+        <div class="wysiwyg">
+          {{ content.field_description_formatted }}
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-    {% endif %}
+  {% endif %}
   </div>
+
 </article>
 <style>
   .hero[data-hero="{{ entity_id }}"] {
