@@ -142,6 +142,14 @@ function penn_entity_preprocess_penn_entity(&$vars) {
         $vars['content']['field_image_class'] = 'without-image';
       }
     }
+
+    //For Layout - View Embed, set up the args as strings
+    if($penn_entity->hasField('field_view_name')) {
+      $vars['content']['view_name'] = $penn_entity->get('field_view_name')->getString();
+    }    
+    if($penn_entity->hasField('field_view_display_name')) {
+      $vars['content']['view_display_name'] = $penn_entity->get('field_view_display_name')->getString();
+    }    
     
     //TODO: Image Slider Card: Pass along total slides/current slide count
     if($bundle == 'card_image_slider_card') {

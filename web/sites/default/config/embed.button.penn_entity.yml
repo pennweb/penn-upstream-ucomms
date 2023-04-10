@@ -43,6 +43,7 @@ dependencies:
     - penn_entity.penn_entity_type.layout_split_content
     - penn_entity.penn_entity_type.layout_student_spotlight
     - penn_entity.penn_entity_type.layout_tabs
+    - penn_entity.penn_entity_type.layout_view_embed
     - penn_entity.penn_entity_type.links_quick_links
     - penn_entity.penn_entity_type.links_quick_links_wide
     - penn_entity.penn_entity_type.slider_penn_priorities
@@ -105,6 +106,7 @@ type_settings:
     - video_inline
     - video_modal
     - video_vimeo
+    - layout_view_embed
   display_plugins:
     - 'view_mode:penn_entity.penn_entity_default'
   entity_browser: ''
