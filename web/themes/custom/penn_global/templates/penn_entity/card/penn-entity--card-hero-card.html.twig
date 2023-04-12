@@ -20,13 +20,12 @@
     </div>
   {% endif %}
   </div>
-
+  <style>
+    .hero[data-hero="{{ entity_id }}"] {
+      background-image: url({{ content.field_image }});
+    }
+    {# .hero[data-hero="hero2"] {
+      background-image: url({{ content.field_image }});
+    } #}
+  </style>
 </article>
-<style>
-  .hero[data-hero="{{ entity_id }}"] {
-    background-image: url({{ content.field_image }});
-  }
-  {# .hero[data-hero="hero2"] {
-    background-image: url({{ content.field_image }});
-  } #}
-</style>
