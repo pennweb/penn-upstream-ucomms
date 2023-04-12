@@ -15,8 +15,25 @@
     </a>
   {% endif %}
   {% if content.field_subtitle_has_value %}
+    <span class="faculty-card__title">{{ content.field_subtitle }}
 
-    <span class="faculty-card__title">{{ content.field_subtitle }}</span>
+      {% if content.field_faculty_department|render %}
+        {{ content.field_faculty_department }}
+      {% endif %}
+  
+      {% if content.field_faculty_email|render %}
+        {{ content.field_faculty_email }}
+      {% endif %}
+  
+      {% if content.field_faculty_phone|render %}
+        {{ content.field_faculty_phone }}
+      {% endif %}
+  
+      {% if content.field_faculty_fax|render %}
+        {{ content.field_faculty_fax }}
+      {% endif %}
+
+    </span>
   {% endif %}
   <div class="faculty-card__description">
     {{ content.field_description_formatted }}

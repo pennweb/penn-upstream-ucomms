@@ -343,6 +343,14 @@
     top: initial;
     margin-top: 18px;
   }
+  .field--name-field-faculty-fax {
+    .field__label, .field__item {
+      display: inline;
+    }
+  }
+  .field {
+    margin-top: 8px;
+  }
 }
 
 //Last child should have a border
