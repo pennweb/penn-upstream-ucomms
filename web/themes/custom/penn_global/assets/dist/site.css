@@ -14086,11 +14086,6 @@ select {
   font-size: 0;
 }
 
-.webform-submission-arrange-a-consultation-form .js-form-required.form-required {
-  visibility: unset;
-  font-size: 2.2rem;
-}
-
 /**
  * Penn API
  */
