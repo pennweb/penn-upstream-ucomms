@@ -21,8 +21,8 @@
 	}
 
 	&--primary {
-		background: $light_blue;
-		color: $primary;
+		// background: $light_blue;
+		// color: $primary;
 	}
 
 	&--secondary {
@@ -95,7 +95,7 @@
 		}
 
 		a {
-			color: $primary;
+			// color: $primary;
 
 			.alert--emergency & {
 				color: #fff;

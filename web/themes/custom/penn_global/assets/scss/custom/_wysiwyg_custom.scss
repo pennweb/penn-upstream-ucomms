@@ -1,0 +1,63 @@
+.wysiwyg {
+  &.bg-color {
+    &--blue, &--red {
+      a:not(.btn), p, li, h1, h2, h3, h4, h5, h6 {
+        color: #FFF;
+      }
+    }
+    &--light-blue, &--yellow {
+      a:not(.btn), p, h1, h2, h3, h4, h5, h6 {
+        color: $blue;
+      }
+    }
+    //Red
+    &--red {
+      li:before{
+        background: $blue;
+      }
+    }
+    &--black {
+      color: #FFF;
+      a:not(.btn), p, ul, li, h1, h2, h3, h4, h5, h6 {
+        color: #FFF;
+      }
+      background-color: $black;
+    }    
+  }
+}
+
+.bg-color {
+  &--red {
+    background-color: $red;
+  }
+  &--blue {
+    background-color: $blue;
+  }
+  &--gray {
+    background-color: $gray;
+  }
+  &--light-blue {
+    background-color: $light_blue;
+    color: $blue;
+    p, ul, li {
+      color: $blue;
+    }
+  }
+  &--yellow {
+    background-color: $yellow;
+    color: $blue;
+    p, ul, li {
+      color: $blue;
+    }    
+  }
+  &--white {
+    background-color: #FFF;
+  }
+  &--black {
+    color: #FFF;
+    a:not(.btn), p, ul, li, h1, h2, h3, h4, h5, h6 {
+      color: #FFF;
+    }
+    background-color: $black;
+  }
+}

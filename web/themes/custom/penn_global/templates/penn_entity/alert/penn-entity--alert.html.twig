@@ -1,9 +1,11 @@
-{% set alert_type = content.field_alert_type %}
+{% set alert_type = content.field_alert_type_2 %}
 {% set data_alert = "On" in content.field_boolean.0 ? alert_type : '' %}
-<div class="alert alert--{{ alert_type }}" data-alert="{{ data_alert }}" style="display: none;">
-  <div class="contain">
+<div class="alert alert--{{ alert_type }} {{ content.field_bg_color_full }}" data-alert="{{ data_alert }}" style="display: none;">
+  <div class="{{ content.field_container_width }}">
     <div class="alert__message">
+    <div class="wysiwyg {{ content.field_bg_color_full }}">
       {{ content.field_description_formatted }}
+    </div>
     </div>
     {% if "On" in content.field_alert_close.0 %}
       <button class="alert__close" type="button">

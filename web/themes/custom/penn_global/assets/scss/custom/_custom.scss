@@ -1746,15 +1746,6 @@ select {
   margin: 0 auto;
 }
 
-.js-form-required {
-
-  &.form-required {
-    visibility: hidden;
-    font-size: 0;
-  }
-
-}
-
 /**
  * Penn API
  */
@@ -1932,16 +1923,6 @@ select {
 //Overrides for WDGs mysterious negative margins go here
 .bg-color.card-slider + .bg-color {
   margin-top: auto;
-}
-
-/**
-* Alert
-*/
-
-.alert {
-	@media #{$large-up} {
-		text-align: none;
-	}
 }
 
 /**

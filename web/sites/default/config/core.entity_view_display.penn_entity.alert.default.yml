@@ -5,7 +5,10 @@ dependencies:
   config:
     - field.field.penn_entity.alert.field_alert_close
     - field.field.penn_entity.alert.field_alert_type
+    - field.field.penn_entity.alert.field_alert_type_2
+    - field.field.penn_entity.alert.field_bg_color_full
     - field.field.penn_entity.alert.field_boolean
+    - field.field.penn_entity.alert.field_container_width
     - field.field.penn_entity.alert.field_description_formatted
     - penn_entity.penn_entity_type.alert
   module:
@@ -17,45 +20,66 @@ bundle: alert
 mode: default
 content:
   field_alert_close:
-    weight: 0
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 0
     region: content
   field_alert_type:
-    weight: -1
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: -1
+    region: content
+  field_alert_type_2:
     type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_bg_color_full:
+    type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_boolean:
-    weight: -2
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: -2
     region: content
-  field_description_formatted:
-    weight: -3
+  field_container_width:
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description_formatted:
     type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: -3
     region: content
   name:
-    label: above
     type: string
-    weight: -4
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -4
+    region: content
 hidden: {  }

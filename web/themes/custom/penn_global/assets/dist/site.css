@@ -2528,11 +2528,6 @@ hr {
   border: 1px solid rgba(255, 255, 255, 0.72);
 }
 
-.alert--primary {
-  background: #82AFD3;
-  color: #011F5B;
-}
-
 .alert--secondary {
   background: #f2C100;
   color: #011F5B;
@@ -2609,10 +2604,6 @@ hr {
 .alert__message p.alert__title {
   font-size: 2.3rem;
   margin-bottom: 10px;
-}
-
-.alert__message a {
-  color: #011F5B;
 }
 
 .alert--emergency .alert__message a {
@@ -12235,6 +12226,51 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   color: #011F5B;
 }
 
+.alert {
+  text-align: initial;
+}
+
+.alert :not(.contain) .alert__message {
+  margin-left: 30px;
+}
+
+.alert .wysiwyg p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.alert.bg-color--gray, .alert--emergency.bg-color--gray {
+  color: #011F5B;
+}
+
+.alert.bg-color--gray a:not(.btn), .alert.bg-color--gray p, .alert.bg-color--gray ul, .alert.bg-color--gray li, .alert--emergency.bg-color--gray a:not(.btn), .alert--emergency.bg-color--gray p, .alert--emergency.bg-color--gray ul, .alert--emergency.bg-color--gray li {
+  color: #011F5B;
+}
+
+.alert.bg-color--gray:after, .alert--emergency.bg-color--gray:after {
+  border: 1px solid rgba(1, 31, 91, 0.15);
+}
+
+.alert.bg-color--blue:after {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.alert.bg-color--red:after {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.alert.bg-color--white:after {
+  border: 1px solid #DFDFDF;
+}
+
+.alert.bg-color--black .alert__close, .alert.bg-color--blue .alert__close, .alert.bg-color--red .alert__close {
+  color: #FFF;
+}
+
+.alert.bg-color--black .toggle-close, .alert.bg-color--blue .toggle-close, .alert.bg-color--red .toggle-close {
+  fill: #FFF;
+}
+
 /**
  * General
  */
@@ -14081,11 +14117,6 @@ select {
   margin: 0 auto;
 }
 
-.js-form-required.form-required {
-  visibility: hidden;
-  font-size: 0;
-}
-
 /**
  * Penn API
  */
@@ -14280,15 +14311,6 @@ select {
 */
 .bg-color.card-slider + .bg-color {
   margin-top: auto;
-}
-
-/**
-* Alert
-*/
-@media (min-width: 1024px) {
-  .alert {
-    text-align: none;
-  }
 }
 
 /**
@@ -15209,4 +15231,68 @@ select {
   .offset-card-w-image__image {
     width: auto;
   }
+}
+
+.wysiwyg.bg-color--blue a:not(.btn), .wysiwyg.bg-color--blue p, .wysiwyg.bg-color--blue li, .wysiwyg.bg-color--blue h1, .wysiwyg.bg-color--blue h2, .wysiwyg.bg-color--blue h3, .wysiwyg.bg-color--blue h4, .wysiwyg.bg-color--blue h5, .wysiwyg.bg-color--blue h6, .wysiwyg.bg-color--red a:not(.btn), .wysiwyg.bg-color--red p, .wysiwyg.bg-color--red li, .wysiwyg.bg-color--red h1, .wysiwyg.bg-color--red h2, .wysiwyg.bg-color--red h3, .wysiwyg.bg-color--red h4, .wysiwyg.bg-color--red h5, .wysiwyg.bg-color--red h6 {
+  color: #FFF;
+}
+
+.wysiwyg.bg-color--light-blue a:not(.btn), .wysiwyg.bg-color--light-blue p, .wysiwyg.bg-color--light-blue h1, .wysiwyg.bg-color--light-blue h2, .wysiwyg.bg-color--light-blue h3, .wysiwyg.bg-color--light-blue h4, .wysiwyg.bg-color--light-blue h5, .wysiwyg.bg-color--light-blue h6, .wysiwyg.bg-color--yellow a:not(.btn), .wysiwyg.bg-color--yellow p, .wysiwyg.bg-color--yellow h1, .wysiwyg.bg-color--yellow h2, .wysiwyg.bg-color--yellow h3, .wysiwyg.bg-color--yellow h4, .wysiwyg.bg-color--yellow h5, .wysiwyg.bg-color--yellow h6 {
+  color: #011F5B;
+}
+
+.wysiwyg.bg-color--red li:before {
+  background: #011F5B;
+}
+
+.wysiwyg.bg-color--black {
+  color: #FFF;
+  background-color: #000;
+}
+
+.wysiwyg.bg-color--black a:not(.btn), .wysiwyg.bg-color--black p, .wysiwyg.bg-color--black ul, .wysiwyg.bg-color--black li, .wysiwyg.bg-color--black h1, .wysiwyg.bg-color--black h2, .wysiwyg.bg-color--black h3, .wysiwyg.bg-color--black h4, .wysiwyg.bg-color--black h5, .wysiwyg.bg-color--black h6 {
+  color: #FFF;
+}
+
+.bg-color--red {
+  background-color: #990000;
+}
+
+.bg-color--blue {
+  background-color: #011F5B;
+}
+
+.bg-color--gray {
+  background-color: #F2F2F2;
+}
+
+.bg-color--light-blue {
+  background-color: #82AFD3;
+  color: #011F5B;
+}
+
+.bg-color--light-blue p, .bg-color--light-blue ul, .bg-color--light-blue li {
+  color: #011F5B;
+}
+
+.bg-color--yellow {
+  background-color: #f2C100;
+  color: #011F5B;
+}
+
+.bg-color--yellow p, .bg-color--yellow ul, .bg-color--yellow li {
+  color: #011F5B;
+}
+
+.bg-color--white {
+  background-color: #FFF;
+}
+
+.bg-color--black {
+  color: #FFF;
+  background-color: #000;
+}
+
+.bg-color--black a:not(.btn), .bg-color--black p, .bg-color--black ul, .bg-color--black li, .bg-color--black h1, .bg-color--black h2, .bg-color--black h3, .bg-color--black h4, .bg-color--black h5, .bg-color--black h6 {
+  color: #FFF;
 }
