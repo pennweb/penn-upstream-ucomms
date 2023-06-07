@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.penn_entity.hero_full_width.field_background_position
     - field.field.penn_entity.hero_full_width.field_boolean
     - field.field.penn_entity.hero_full_width.field_button_link
     - field.field.penn_entity.hero_full_width.field_description_formatted
@@ -26,6 +27,13 @@ targetEntityType: penn_entity
 bundle: hero_full_width
 mode: default
 content:
+  field_background_position:
+    type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
   field_boolean:
     type: boolean
     label: above

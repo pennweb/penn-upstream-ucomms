@@ -1138,14 +1138,6 @@ drupal-entity {
   }
 }
 
-.hero-homepage {
-  &.background--center-top {
-    @media #{$small-up} {
-      background-position: center top;
-    }
-  }
-}
-
 /**
  * Page Quote Hero
  */
@@ -2063,5 +2055,18 @@ $i: 0;
   }
   &--flex-end {
     justify-content: flex-end;   
+  }
+}
+
+//"Background Position" field
+@media #{$small-up} {
+  .background--center-top {
+    background-position: center top;
+  }
+  .background--center-center {
+    background-position: center center;
+  }
+  .background--center-bottom {
+    background-position: center bottom;
   }
 }

@@ -1,11 +1,23 @@
 .hero-full-width {
   min-height: auto;
-  background-position: center top;
+  background-position: center top; //this can be overridden with the "background position" field.
 
-  &.cke_editable.wysiwyg {
-    background-color: $coal;
-    height: auto;
+  //"Background Position" field
+  @media #{$small-up} {
+    &.background--center-top {
+      background-position: center top;
+    }
+    &.background--center-center {
+      background-position: center center;
+    }
+    &.background--center-bottom {
+      background-position: center bottom;
+    }
   }
+  // &.cke_editable.wysiwyg{
+  //   background-color: $coal;
+  //   height: auto;
+  // }
 
   &--on-small {
     &__10 {

@@ -13457,12 +13457,6 @@ drupal-entity {
   }
 }
 
-@media (min-width: 640px) {
-  .hero-homepage.background--center-top {
-    background-position: center top;
-  }
-}
-
 /**
  * Page Quote Hero
  */
@@ -14556,6 +14550,18 @@ select {
           justify-content: flex-end;
 }
 
+@media (min-width: 640px) {
+  .background--center-top {
+    background-position: center top;
+  }
+  .background--center-center {
+    background-position: center center;
+  }
+  .background--center-bottom {
+    background-position: center bottom;
+  }
+}
+
 .featured-initiative-card__wrap {
   height: 100%;
 }
@@ -14701,9 +14707,16 @@ select {
   background-position: center top;
 }
 
-.hero-full-width.cke_editable.wysiwyg {
-  background-color: #333;
-  height: auto;
+@media (min-width: 640px) {
+  .hero-full-width.background--center-top {
+    background-position: center top;
+  }
+  .hero-full-width.background--center-center {
+    background-position: center center;
+  }
+  .hero-full-width.background--center-bottom {
+    background-position: center bottom;
+  }
 }
 
 .hero-full-width--on-small__10 {
