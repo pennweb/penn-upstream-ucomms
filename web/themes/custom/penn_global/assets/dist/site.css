@@ -14719,6 +14719,11 @@ select {
   }
 }
 
+.hero-full-width.cke_editable.wysiwyg {
+  background-color: #333;
+  height: auto;
+}
+
 .hero-full-width--on-small__10 {
   height: 10vh;
 }

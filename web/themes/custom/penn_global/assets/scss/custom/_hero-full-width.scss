@@ -14,10 +14,11 @@
       background-position: center bottom;
     }
   }
-  // &.cke_editable.wysiwyg{
-  //   background-color: $coal;
-  //   height: auto;
-  // }
+  //Make the ckeditor textarea dark to mimic what it will look like over an image background.
+  &.cke_editable.wysiwyg{
+    background-color: $coal;
+    height: auto;
+  }
 
   &--on-small {
     &__10 {
