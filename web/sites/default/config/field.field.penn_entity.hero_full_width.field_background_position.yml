@@ -11,8 +11,8 @@ id: penn_entity.hero_full_width.field_background_position
 field_name: field_background_position
 entity_type: penn_entity
 bundle: hero_full_width
-label: 'Background Position'
-description: "\"Top\" is the default. <br>\r\nAligns the focal point of the image to the top, center or bottom.<br>\r\nThis is useful for making certain images fit better in the hero space, especially as the window size shrinks."
+label: 'Background Align'
+description: "Align the focal point of the background image to the top, center or bottom.<br>\r\nThis is useful for making certain images fit better in the hero space, especially as the window size shrinks.<br>\r\n\"Top\" is the default."
 required: false
 translatable: true
 default_value:

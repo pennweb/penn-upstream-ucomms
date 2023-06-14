@@ -11,6 +11,7 @@ dependencies:
     - field.field.penn_entity.hero_full_width.field_hero_size_small
     - field.field.penn_entity.hero_full_width.field_image
     - field.field.penn_entity.hero_full_width.field_image_mobile
+    - field.field.penn_entity.hero_full_width.field_justify
     - field.field.penn_entity.hero_full_width.field_opacity
     - field.field.penn_entity.hero_full_width.field_quote_author
     - field.field.penn_entity.hero_full_width.field_quote_formatted
@@ -115,6 +116,13 @@ content:
         fences_label_tag: none
         fences_label_classes: ''
     weight: 4
+    region: content
+  field_justify:
+    type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_opacity:
     type: list_key

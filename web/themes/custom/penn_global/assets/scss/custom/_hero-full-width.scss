@@ -150,6 +150,16 @@
     .btn--outline-white {
       border: 1px solid rgba(255, 255, 255, 0.75);
     }
+    //Justify flexbox content
+    &.justify {
+      &--flex-start {
+        //Add some deeper padding when content is top justified
+        padding-top: 90px;
+      }
+      &--flex-end {
+        padding-bottom: 90px;
+      }
+    }
   }
 
   .hero__title {
