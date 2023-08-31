@@ -12239,6 +12239,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   font-weight: 400;
 }
 
+.alert__message p {
+  margin: 17px 0 36px 0;
+}
+
 .alert.bg-color--gray, .alert--emergency.bg-color--gray {
   color: #011F5B;
 }

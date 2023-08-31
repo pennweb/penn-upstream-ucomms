@@ -8,6 +8,12 @@
     font-size: 1.8rem;
     font-weight: 400;
   }
+  &__message {
+    //override wdg margin: 0 for alert message
+    p {
+      margin: 17px 0 36px 0;
+    }
+  }
   &.bg-color--gray, &--emergency.bg-color--gray {
     color: $blue;
     a:not(.btn), p, ul, li {
