@@ -88,6 +88,7 @@ module:
   user: 1
   views: 1
   views_ui: 1
+  xmlsitemap: 1
   paragraphs: 11
 theme:
   penn_global: 1

@@ -30,6 +30,7 @@
         "drupal/redis": "^1.4",
         "drupal/structure_sync": "^2.0",
         "drupal/twig_tweak": "^3.2",
+        "drupal/xmlsitemap:": "^1.5", 
         "drupal/webform": "^6.0",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "enyo/dropzone": "^5.7",
