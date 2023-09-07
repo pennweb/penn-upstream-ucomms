@@ -1,6 +1,7 @@
 {
     "name": "pantheon-upstreams/upstream-configuration",
     "type": "project",
+    "version": "dev-main",
     "repositories": [
         {
             "type": "composer",
@@ -8,6 +9,35 @@
         }
     ],
     "require": {
+        "drupal/adminimal_admin_toolbar": "^1.10",
+        "drupal/config_split": "^1.9",
+        "drupal/ctools": "^4.0",
+        "drupal/devel": "^5.0",
+        "drupal/dropzonejs": "^2.5",
+        "drupal/emptyparagraphkiller": "^2.0",
+        "drupal/entity_browser": "^2.5",
+        "drupal/entity_embed": "^1.1",
+        "drupal/entity_usage": "^2.0@beta",
+        "drupal/fences": "^2.0@RC",
+        "drupal/google_tag": "^1.4",
+        "drupal/image_widget_crop": "^2.3",
+        "drupal/imagemagick": "^3.1",
+        "drupal/media_entity_browser": "^2.0@alpha",
+        "drupal/metatag": "^1.14",
+        "drupal/multiple_fields_remove_button": "^1.0@alpha",
+        "drupal/paragraphs": "^1.11",
+        "drupal/pathauto": "^1.8",
+        "drupal/redis": "^1.4",
+        "drupal/structure_sync": "^2.0",
+        "drupal/twig_tweak": "^3.2",
+        "drupal/webform": "^6.0",
+        "drush-ops/behat-drush-endpoint": "^9.3",
+        "enyo/dropzone": "^5.7",
+        "drupal/twig_tweak": "^3.2",
+        "drupal/simplify_menu": "^3.0@beta",
+        "drupal/inline_entity_form": "^2.0@RC",
+        "drupal/upgrade_status": "^4.0",
+        "drupal/ckeditor": "^1.0"
     },
     "extra": {
         "_README": "To make a custom upstream, clone this repository and add any dependencies to be provided by this upstream to this composer.json file. Leave the root-level composer.json file for the exclusive use of each individual site; do not modify it after your custom upstream has been published. See https://pantheon.io/docs/create-custom-upstream for more information."
