@@ -9,9 +9,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Homepage
+name: 'Homepage (Flagship)'
 type: homepage
-description: 'Use <em>homepages</em> for homepage content.'
+description: 'A flagship-style homepage with a large hero and navigation overlay'
 help: ''
 new_revision: true
 preview_mode: 1
