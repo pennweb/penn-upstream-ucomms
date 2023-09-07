@@ -2,6 +2,10 @@ name: Penn Shortcuts
 description: 'This module auto-populates our default shortcuts menu (similar to Structure Sync). It can be triggered by a Drush command or a button in the Admin UI.'
 package: Custom
 type: module
+<<<<<<< HEAD
 core_version_requirement: ^8 || ^9
+=======
+core_version_requirement: ^9 || ^10
+>>>>>>> eebd452 (Added Custom Modules and THemes)
 dependencies:
   - drupal:shortcut

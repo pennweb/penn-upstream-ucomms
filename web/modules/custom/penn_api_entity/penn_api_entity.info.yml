@@ -1,5 +1,9 @@
 name: 'penn_api_entity'
 type: module
 description: 'My Awesome Module'
+<<<<<<< HEAD
 core_version_requirement: ^8.8 || ^9
+=======
+core_version_requirement: ^9 || ^10
+>>>>>>> eebd452 (Added Custom Modules and THemes)
 package: 'Penn'

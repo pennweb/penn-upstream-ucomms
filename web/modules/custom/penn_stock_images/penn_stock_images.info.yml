@@ -1,8 +1,12 @@
 name: 'Penn Stock Images'
 type: module
 description: 'Installs a default set of images with alts'
+<<<<<<< HEAD
 core: 8.x
 core_version_requirement: ^8 || ^9
+=======
+core_version_requirement: ^9 || ^10
+>>>>>>> eebd452 (Added Custom Modules and THemes)
 package: Custom
 
 dependencies:

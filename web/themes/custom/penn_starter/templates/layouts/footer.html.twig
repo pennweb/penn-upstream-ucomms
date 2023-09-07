@@ -1,0 +1,70 @@
+<footer class="footer">
+  <div class="contain contain--wide">
+    <div class="footer__columns">
+      <div class="footer__column">
+        <img src="{{ base_path ~ directory }}/assets/img/UPenn-logo.svg" alt="University of Pennsylvania" class="footer__logo">
+        <p class="footer__info">Philadelphia, PA 19104</p>
+        <p class="footer__info">Telephone: <a href="tel:2158985000">(215) 898-5000</a>
+          {% set footer_utility = simplify_menu('footer-utility') %}
+          <ul class="footer__list">
+            {% for footer_utility in footer_utility.menu_tree %}
+            <li class="footer__item">
+              <a href="{{ footer_utility.url }}" class="footer__link">{{ footer_utility.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+      </div>
+      <div class="footer__column">
+        <section class="footer__section">
+          <h2 class="footer__section__title">Navigate</h2>
+          <ul class="footer__list">
+            {% set footer_links = simplify_menu('footer-links') %}
+            {% for footer_links in footer_links.menu_tree %}
+            <li class="footer__item">
+              <a href="{{ footer_links.url }}" class="footer__link">{{ footer_links.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <section class="footer__section">
+        {# Quote block configured in admin #}
+          {{ drupal_block('block_content:2d62d8e4-daa5-4ad4-804e-98d78ecd7fd8') }}
+        </section>
+
+        <ul class="footer__list footer__list--full">
+          {% set legal = simplify_menu('legal') %}
+          {% for legal in legal.menu_tree %}
+          <li class="footer__item">
+            <a href="{{ legal.url }}" class="footer__link">{{ legal.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <a href="#top" class="footer__to-top">
+        <span class="footer__to-top__arrow" aria-hidden="true">
+          <svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g transform="translate(-122.000000, -7189.000000)" stroke="#FFFFFF" stroke-width="1.5">
+                <g transform="translate(0.000000, 5844.000000)">
+                  <g>
+                    <g transform="translate(94.000000, 1318.000000)">
+                      <g>
+                        <g transform="translate(29.000000, 28.000000)">
+                          <polyline id="Path" points="0 6.26086957 6 -1.77191595e-13 12 6.26086957"></polyline>
+                          <line x1="6" y1="0.75" x2="6" y2="14.25" stroke-linecap="square"></line>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="footer__to-top__text">Back To Top</span>
+      </a>
+    </div>
+  </div>
+</footer>

@@ -14,13 +14,22 @@
       {% for item in breadcrumb %}
         <li class="breadcrumb__item">
         <span>
+<<<<<<< HEAD
           {% if item.url %}
+=======
+          {% set itemText = render_var(item.text) %}
+          {% if itemText is not empty %}
+>>>>>>> eebd452 (Added Custom Modules and THemes)
             <a href="{{ item.url }}">{{ item.text }}</a>
           {% else %}
             {{ item.text }}
           {% endif %}
           </span>
+<<<<<<< HEAD
           {% if not loop.last %}
+=======
+          {% if not loop.last and itemText is not empty %}
+>>>>>>> eebd452 (Added Custom Modules and THemes)
             <span class="breadcrumb__divide">/</span>
           {% endif %}
         </li>

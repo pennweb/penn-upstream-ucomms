@@ -227,11 +227,14 @@
   }  
 }
 
+<<<<<<< HEAD
 //Remove all default padding on card listings, use the entity padding/margins dropdown instead
 .card-listing:not(.section-padding) {
   padding: 0;
 }
 
+=======
+>>>>>>> eebd452 (Added Custom Modules and THemes)
 //This prevents doubling-up of padding on the bottom of card listings
 .section-padding .card-listing.section-padding {
   padding-bottom: 0;
@@ -343,6 +346,7 @@
     top: initial;
     margin-top: 18px;
   }
+<<<<<<< HEAD
   .field--name-field-faculty-fax {
     .field__label, .field__item {
       display: inline;
@@ -351,6 +355,8 @@
   .field {
     margin-top: 8px;
   }
+=======
+>>>>>>> eebd452 (Added Custom Modules and THemes)
 }
 
 //Last child should have a border
@@ -1138,6 +1144,17 @@ drupal-entity {
   }
 }
 
+<<<<<<< HEAD
+=======
+.hero-homepage {
+  &.background--center-top {
+    @media #{$small-up} {
+      background-position: center top;
+    }
+  }
+}
+
+>>>>>>> eebd452 (Added Custom Modules and THemes)
 /**
  * Page Quote Hero
  */
@@ -1738,6 +1755,18 @@ select {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
+=======
+.js-form-required {
+
+  &.form-required {
+    visibility: hidden;
+    font-size: 0;
+  }
+
+}
+
+>>>>>>> eebd452 (Added Custom Modules and THemes)
 /**
  * Penn API
  */
@@ -1918,6 +1947,7 @@ select {
 }
 
 /**
+<<<<<<< HEAD
  * Hero Card
  */
 
@@ -1934,6 +1964,21 @@ select {
   z-index: 100;
 }
 
+=======
+* Alert
+*/
+
+.alert {
+	@media #{$large-up} {
+		text-align: none;
+	}
+}
+
+/**
+ * Hero Card
+ */
+
+>>>>>>> eebd452 (Added Custom Modules and THemes)
  $hero-card-base-height: 400px;
  .card.hero-card {
   width: 100%;
@@ -1950,6 +1995,7 @@ select {
     min-height: auto;
     background-position: center top;
     background-size: cover;
+<<<<<<< HEAD
     transition: all 0.5s ease;
     &:hover {
       transform: scale(1.025);
@@ -1957,6 +2003,8 @@ select {
         text-decoration: none;
       }
     }
+=======
+>>>>>>> eebd452 (Added Custom Modules and THemes)
     .hero-full-width__content {
       //This removes the auto margins, allowing the body text to be positioned from the wysiwyg instead of being forced to the center
       align-items: normal;  //This removes the auto margins, allowing the body text to be positioned from the wysiwyg instead of being forced to the center
@@ -2056,6 +2104,7 @@ $i: 0;
   &--flex-end {
     justify-content: flex-end;   
   }
+<<<<<<< HEAD
 }
 
 //"Background Position" field
@@ -2069,4 +2118,6 @@ $i: 0;
   .background--center-bottom {
     background-position: center bottom;
   }
+=======
+>>>>>>> eebd452 (Added Custom Modules and THemes)
 }
