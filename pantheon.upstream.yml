@@ -9,9 +9,13 @@ drush_version: 10
 build_step: true
 protected_web_paths:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - /private/
 =======
   - /private
 >>>>>>> 55deb7a (Correct protected_web_paths)
+=======
+  - /private/
+>>>>>>> 9c00ddf (Need a trailing slash on `/private/`)
   - /sites/default/files/private/
   - /sites/default/files/config/
