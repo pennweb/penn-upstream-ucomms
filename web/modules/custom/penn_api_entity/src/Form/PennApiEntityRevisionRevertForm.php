@@ -129,11 +129,7 @@ class PennApiEntityRevisionRevertForm extends ConfirmFormBase {
   protected function prepareRevertedRevision(PennApiEntityInterface $revision, FormStateInterface $form_state) {
     $revision->setNewRevision();
     $revision->isDefaultRevision(TRUE);
-<<<<<<< HEAD
-    $revision->setRevisionCreationTime(REQUEST_TIME);
-=======
     $revision->setRevisionCreationTime(Drupal::time()->getRequestTime());
->>>>>>> eebd452 (Added Custom Modules and THemes)
 
     return $revision;
   }

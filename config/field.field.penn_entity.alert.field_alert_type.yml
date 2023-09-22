@@ -11,8 +11,8 @@ id: penn_entity.alert.field_alert_type
 field_name: field_alert_type
 entity_type: penn_entity
 bundle: alert
-label: 'Alert Type'
-description: ''
+label: 'Alert Type (Deprecated)'
+description: 'Deprecated. Do not use.'
 required: true
 translatable: false
 default_value: {  }

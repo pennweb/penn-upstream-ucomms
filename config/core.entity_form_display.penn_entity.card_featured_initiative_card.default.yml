@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.penn_entity.card_featured_initiative_card.field_button_link
     - field.field.penn_entity.card_featured_initiative_card.field_description
+    - field.field.penn_entity.card_featured_initiative_card.field_description_formatted
     - field.field.penn_entity.card_featured_initiative_card.field_fi_background_color
     - field.field.penn_entity.card_featured_initiative_card.field_image_title
     - field.field.penn_entity.card_featured_initiative_card.field_link
@@ -14,6 +15,7 @@ dependencies:
   module:
     - link
     - media_library
+    - text
 id: penn_entity.card_featured_initiative_card.default
 targetEntityType: penn_entity
 bundle: card_featured_initiative_card
@@ -29,6 +31,14 @@ content:
     third_party_settings: {  }
   field_description:
     type: string_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_description_formatted:
+    type: text_textarea
     weight: 4
     region: content
     settings:
@@ -37,7 +47,7 @@ content:
     third_party_settings: {  }
   field_fi_background_color:
     type: options_select
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

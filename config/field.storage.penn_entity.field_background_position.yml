@@ -13,7 +13,13 @@ settings:
   allowed_values:
     -
       value: background--center-top
+      label: Top
+    -
+      value: background--center-center
       label: Center
+    -
+      value: background--center-bottom
+      label: Bottom
   allowed_values_function: ''
 module: options
 locked: false

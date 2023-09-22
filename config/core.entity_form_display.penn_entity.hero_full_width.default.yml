@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.penn_entity.hero_full_width.field_background_position
     - field.field.penn_entity.hero_full_width.field_boolean
     - field.field.penn_entity.hero_full_width.field_button_link
     - field.field.penn_entity.hero_full_width.field_description_formatted
@@ -10,6 +11,7 @@ dependencies:
     - field.field.penn_entity.hero_full_width.field_hero_size_small
     - field.field.penn_entity.hero_full_width.field_image
     - field.field.penn_entity.hero_full_width.field_image_mobile
+    - field.field.penn_entity.hero_full_width.field_justify
     - field.field.penn_entity.hero_full_width.field_opacity
     - field.field.penn_entity.hero_full_width.field_quote_author
     - field.field.penn_entity.hero_full_width.field_quote_formatted
@@ -25,6 +27,12 @@ targetEntityType: penn_entity
 bundle: hero_full_width
 mode: default
 content:
+  field_background_position:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_boolean:
     type: boolean_checkbox
     weight: 7
@@ -50,13 +58,13 @@ content:
     third_party_settings: {  }
   field_hero_size:
     type: options_select
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_hero_size_small:
     type: options_select
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -74,9 +82,15 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_justify:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_opacity:
     type: options_select
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -106,7 +120,7 @@ content:
     third_party_settings: {  }
   field_video_source_url:
     type: string_textfield
-    weight: 12
+    weight: 14
     region: content
     settings:
       size: 60

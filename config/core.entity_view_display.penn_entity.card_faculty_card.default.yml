@@ -4,6 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.penn_entity.card_faculty_card.field_description_formatted
+    - field.field.penn_entity.card_faculty_card.field_faculty_department
+    - field.field.penn_entity.card_faculty_card.field_faculty_email
+    - field.field.penn_entity.card_faculty_card.field_faculty_fax
+    - field.field.penn_entity.card_faculty_card.field_faculty_phone
     - field.field.penn_entity.card_faculty_card.field_image
     - field.field.penn_entity.card_faculty_card.field_link
     - field.field.penn_entity.card_faculty_card.field_subtitle
@@ -24,6 +28,37 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_faculty_department:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_faculty_email:
+    type: email_mailto
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_faculty_fax:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_faculty_phone:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_image:
     type: entity_reference_entity_view
