@@ -3,12 +3,7 @@ type: theme
 description: 'Customizable Penn Global Starter Theme'
 package: Other
 base theme: penn_global
-<<<<<<< HEAD
-core: 8.x
-core_version_requirement: ^8 || ^9
-=======
 core_version_requirement: ^8 || ^9 || ^10
->>>>>>> eebd452 (Added Custom Modules and THemes)
 libraries:
   - penn_starter/style-overrides
 
