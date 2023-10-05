@@ -12,8 +12,4 @@ textarea_bgcolor:
     - core/jquery
     - core/drupal
     - core/drupalSettings
-<<<<<<< HEAD
-    - core/jquery.once
-=======
     - core/once
->>>>>>> eebd452 (Added Custom Modules and THemes)
