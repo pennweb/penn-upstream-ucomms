@@ -18,7 +18,6 @@
         "drupal/entity_browser": "^2.5",
         "drupal/entity_embed": "^1.1",
         "drupal/entity_usage": "^2.0@beta",
-        "drupal/field_hidden": "^2.0",
         "drupal/fences": "^2.0@RC",
         "drupal/google_tag": "^1.4",
         "drupal/image_widget_crop": "^2.3",
