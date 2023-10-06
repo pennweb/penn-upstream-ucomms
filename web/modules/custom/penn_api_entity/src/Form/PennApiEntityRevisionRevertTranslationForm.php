@@ -89,7 +89,7 @@ class PennApiEntityRevisionRevertTranslationForm extends PennApiEntityRevisionRe
 
     $latest_revision_translation->setNewRevision();
     $latest_revision_translation->isDefaultRevision(TRUE);
-    $revision->setRevisionCreationTime(Drupal::time()->getRequestTime());
+    $revision->setRevisionCreationTime(REQUEST_TIME);
 
     return $latest_revision_translation;
   }

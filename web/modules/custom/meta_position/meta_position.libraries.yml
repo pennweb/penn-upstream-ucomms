@@ -1,5 +1,0 @@
-node_meta:
-  version: VERSION
-  css:
-    base:
-      css/node_meta.css: {}

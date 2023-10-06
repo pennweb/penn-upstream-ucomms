@@ -1,5 +1,6 @@
 name: 'Penn CKEditor'
 type: module
 description: 'CKEditor enhancements'
-core_version_requirement: ^9 || ^10
+core: 8.x
+core_version_requirement: ^8 || ^9
 package: Custom

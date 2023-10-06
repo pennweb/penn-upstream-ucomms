@@ -38,6 +38,12 @@ function penn_ckeditor_form_alter(&$form, &$form_state, $form_id) {
       $form['#attached']['drupalSettings']['penn_ckeditor']['textarea_bgcolor']['dropdownID'] = '#edit-field-background-color';
       $form['#attached']['drupalSettings']['penn_ckeditor']['textarea_bgcolor']['constantClasses'] = 'wysiwyg';
       break;
+    case 'node_alert_add_form':
+    case 'node_alert_edit_form':      
+      $form['#attached']['library'][] = 'penn_ckeditor/textarea_bgcolor';
+      $form['#attached']['drupalSettings']['penn_ckeditor']['textarea_bgcolor']['dropdownID'] = '#edit-field-alert-0-inline-entity-form-field-bg-color-full';
+      $form['#attached']['drupalSettings']['penn_ckeditor']['textarea_bgcolor']['constantClasses'] = 'wysiwyg';
+      break;
     case 'penn_entity_hero_full_width_add_form':
     case 'penn_entity_hero_full_width_edit_form':
       $form['#attached']['library'][] = 'penn_ckeditor/textarea_bgcolor';

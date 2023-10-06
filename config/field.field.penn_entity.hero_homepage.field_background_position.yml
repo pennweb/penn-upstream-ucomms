@@ -11,11 +11,13 @@ id: penn_entity.hero_homepage.field_background_position
 field_name: field_background_position
 entity_type: penn_entity
 bundle: hero_homepage
-label: 'Background Position'
-description: "\"Center\" will keep the background image centered as screen size decreases.<br>\r\n\"None\" is the default.<br>\r\nApplies to the \"Desktop Image\" only.<br><br>"
+label: 'Background Align'
+description: "Align the focal point of the background image to the top, center or bottom.<br>\r\nThis is useful for making certain images fit better in the hero space, especially as the window size shrinks.<br>\r\n\"Top\" is the default."
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: background--center-top
 default_value_callback: ''
 settings: {  }
 field_type: list_string

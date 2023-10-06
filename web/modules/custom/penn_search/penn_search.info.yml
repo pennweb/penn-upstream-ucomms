@@ -1,6 +1,7 @@
 name: 'Penn Search'
 description: 'Google Custom Search for University of Pennsylvania'
 package: 'Penn Custom Modules'
-core_version_requirement: ^9 || ^10
+core: 8.x
+core_version_requirement: ^8 || ^9
 type: module
 dependencies: {  }

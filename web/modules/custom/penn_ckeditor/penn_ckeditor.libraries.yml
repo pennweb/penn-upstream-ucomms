@@ -12,4 +12,4 @@ textarea_bgcolor:
     - core/jquery
     - core/drupal
     - core/drupalSettings
-    - core/once
+    - core/jquery.once
