@@ -33,7 +33,6 @@ module:
   entity_usage: 1
   fences: 1
   field: 1
-  field_hidden: 1
   field_ui: 1
   file: 1
   file_mdm: 1
