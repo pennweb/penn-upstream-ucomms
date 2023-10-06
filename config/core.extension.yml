@@ -3,7 +3,6 @@ _core:
 module:
   mysql: 0
   penn_shortcuts: 0
-  simplesamlphp_auth: 0
   structure_sync: 0
   admin_toolbar: 1
   adminimal_admin_toolbar: 1
@@ -13,7 +12,6 @@ module:
   block_content: 1
   breakpoint: 1
   ckeditor: 1
-  color: 1
   comment: 1
   config: 1
   contact: 1
@@ -33,7 +31,6 @@ module:
   entity_embed: 1
   entity_reference_revisions: 1
   entity_usage: 1
-  externalauth: 1
   fences: 1
   field: 1
   field_hidden: 1
@@ -54,7 +51,6 @@ module:
   media_library: 1
   menu_link_content: 1
   menu_ui: 1
-  meta_position: 1
   metatag: 1
   metatag_facebook: 1
   metatag_open_graph: 1
@@ -72,8 +68,6 @@ module:
   penn_cron: 1
   penn_entity: 1
   penn_search: 1
-  quickedit: 1
-  rdf: 1
   redis: 1
   search: 1
   shortcut: 1
@@ -91,13 +85,8 @@ module:
   user: 1
   views: 1
   views_ui: 1
-  xmlsitemap: 1
   paragraphs: 11
 theme:
-  stable: 1
-  bartik: 1
-  seven: 1
   penn_global: 1
-  adminimal_theme: 1
   penn_starter: 0
 profile: standard
