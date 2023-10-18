@@ -3,14 +3,11 @@
     {% if content.field_subtitle_has_value %}
       <h3 class="featured-initiative-card__category">{{ content.field_subtitle }}</h3>
     {% endif %}
-<<<<<<< HEAD
         
     {# Component can have a text title or an image as a title #}
     {# Don't show the h2 if there is neither text or image title #}
     {% set image_title = render_var(content.field_image_title) %}
     {% if content.field_title_has_value or image_title is not empty %}
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
     <h2 class="featured-initiative-card__title">
       {% set link = render_var(content.field_link) %}
 
@@ -18,32 +15,18 @@
       {% if link is not empty %}
         <a href="{{ content.field_link }}" class="featured-initiative-card__title__link">
       {% endif %}
-<<<<<<< HEAD
-=======
-        {# Component can have an image or text title #}
-        {% set image_title = render_var(content.field_image_title) %}
->>>>>>> eebd452 (Added Custom Modules and THemes)
         {% if image_title is not empty %}
           <img src="{{ content.field_image_title }}" alt="{{ content.field_title }}" class="featured-initiative-card__image" aria-hidden="true"/>
           <span class="a11y">{{ content.field_title }}</span>
         {% else %}
           {{ content.field_title }}
         {% endif %}
-<<<<<<< HEAD
       {% if link is not empty %}
         </a>
       {% endif %}
     </h2>
     {% endif %}
 
-=======
-
-      {% if link is not empty %}
-        </a>
-      {% endif %}
-
-    </h2>
->>>>>>> eebd452 (Added Custom Modules and THemes)
     {% if content.field_description_formatted_has_value %}    
       <div class="wysiwyg">
         {{ content.field_description_formatted }}    

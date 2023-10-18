@@ -2,7 +2,8 @@ name: Penn Global
 type: theme
 description: 'Penn Global Theme'
 package: Other
-core_version_requirement: ^8 || ^9 || ^10
+core: 8.x
+core_version_requirement: ^8 || ^9
 ckeditor_stylesheets:
   - assets/dist/site.css
   # - assets/dist/site.js

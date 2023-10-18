@@ -1,6 +1,5 @@
 .hero-full-width {
   min-height: auto;
-<<<<<<< HEAD
   background-position: center top; //this can be overridden with the "background position" field.
 
   //"Background Position" field
@@ -17,11 +16,6 @@
   }
   //Make the ckeditor textarea dark to mimic what it will look like over an image background.
   &.cke_editable.wysiwyg{
-=======
-  background-position: center top;
-
-  &.cke_editable.wysiwyg {
->>>>>>> eebd452 (Added Custom Modules and THemes)
     background-color: $coal;
     height: auto;
   }
@@ -156,7 +150,6 @@
     .btn--outline-white {
       border: 1px solid rgba(255, 255, 255, 0.75);
     }
-<<<<<<< HEAD
     //Justify flexbox content
     &.justify {
       &--flex-start {
@@ -167,8 +160,6 @@
         padding-bottom: 90px;
       }
     }
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
   }
 
   .hero__title {

@@ -43,7 +43,6 @@
               <div class="nav__submenu" role="menu" aria-label="{{ navigation.text }}">
                 <div class="contain">
                   {% set submenus = navigation.submenu %}
-<<<<<<< HEAD
                   {# {% set count = (submenu.length/ 3)|round %} #}
                   {% for submenuitems in submenus %}
                     {% set position = (loop.length /3)|number_format(2, '.') %}
@@ -83,34 +82,6 @@
                         {% if loop.last or loop.index == ((loop.length /3)|round) or loop.index == ((loop.length /3)|round) * 2 %}
                         </ul>
                       {% endif %}
-=======
-                  {% set count = (submenu.length/ 3)|round %}
-                  {% for submenuitems in submenus %}
-                    {% if loop.first or loop.index == (((loop.length /3)|round) + 1) or loop.index == ((((loop.length /3)|round) * 2) + 1) %}
-                      <ul class="nav__menu nav__menu--level-1" role="none">
-                      {% endif %}
-                      <li class="nav__menu-item" role="none">
-                        <a href="{{ submenuitems.url }}" class="nav__menu-link" role="menuitem">{{ submenuitems.text }}</a>
-                        {% if submenuitems.submenu %}
-                          <button type="button" aria-haspopup="true" aria-expanded="false" class="nav__menu-button nav__menu-button--level-1">
-                            <span class="a11y">More {{ submenuitems.text }}</span>
-                            <svg width="10" height="6">
-                              <use xlink:href="#icon-caret" href="#icon-caret"></use>
-                            </svg>
-                          </button>
-                          <ul class="nav__menu nav__menu--level-2" role="menu" aria-label="{{submenuitems.text}}">
-                            {% for tertiary in submenuitems.submenu %}
-                              <li class="nav__menu-item" role="none">
-                                <a href="{{tertiary.url }}" class="nav__menu-link" role="menuitem">{{tertiary.text}}</a>
-                              </li>
-                            {% endfor %}
-                          </ul>
-                        {% endif %}
-
-                      </li>
-                      {% if loop.last or loop.index == ((loop.length /3)|round) or loop.index == ((loop.length /3)|round) * 2 %}
-                      </ul>
->>>>>>> eebd452 (Added Custom Modules and THemes)
                     {% endif %}
                   {% endfor %}
                 </div>

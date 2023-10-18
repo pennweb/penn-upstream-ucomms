@@ -2528,14 +2528,6 @@ hr {
   border: 1px solid rgba(255, 255, 255, 0.72);
 }
 
-<<<<<<< HEAD
-=======
-.alert--primary {
-  background: #82AFD3;
-  color: #011F5B;
-}
-
->>>>>>> eebd452 (Added Custom Modules and THemes)
 .alert--secondary {
   background: #f2C100;
   color: #011F5B;
@@ -2614,13 +2606,6 @@ hr {
   margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
-=======
-.alert__message a {
-  color: #011F5B;
-}
-
->>>>>>> eebd452 (Added Custom Modules and THemes)
 .alert--emergency .alert__message a {
   color: #fff;
   margin: 0;
@@ -12241,7 +12226,6 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   color: #011F5B;
 }
 
-<<<<<<< HEAD
 .alert {
   text-align: initial;
 }
@@ -12291,8 +12275,6 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   fill: #FFF;
 }
 
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
 /**
  * General
  */
@@ -12523,13 +12505,10 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   color: #011F5B;
 }
 
-<<<<<<< HEAD
 .card-listing:not(.section-padding) {
   padding: 0;
 }
 
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
 .section-padding .card-listing.section-padding {
   padding-bottom: 0;
 }
@@ -12630,7 +12609,6 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   margin-top: 18px;
 }
 
-<<<<<<< HEAD
 .faculty-card__title .field--name-field-faculty-fax .field__label, .faculty-card__title .field--name-field-faculty-fax .field__item {
   display: inline;
 }
@@ -12639,8 +12617,6 @@ a.text-cta__taxonomy:hover, a.text-cta__taxonomy:focus {
   margin-top: 8px;
 }
 
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
 .faculty-grid .faculty-card:last-child {
   border-right: 1px solid #DFDFDF;
 }
@@ -13485,15 +13461,6 @@ drupal-entity {
   }
 }
 
-<<<<<<< HEAD
-=======
-@media (min-width: 640px) {
-  .hero-homepage.background--center-top {
-    background-position: center top;
-  }
-}
-
->>>>>>> eebd452 (Added Custom Modules and THemes)
 /**
  * Page Quote Hero
  */
@@ -14148,14 +14115,6 @@ select {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
-=======
-.js-form-required.form-required {
-  visibility: hidden;
-  font-size: 0;
-}
-
->>>>>>> eebd452 (Added Custom Modules and THemes)
 /**
  * Penn API
  */
@@ -14353,7 +14312,6 @@ select {
 }
 
 /**
-<<<<<<< HEAD
  * Hero Card
  */
 .hero-card__link {
@@ -14369,19 +14327,6 @@ select {
   z-index: 100;
 }
 
-=======
-* Alert
-*/
-@media (min-width: 1024px) {
-  .alert {
-    text-align: none;
-  }
-}
-
-/**
- * Hero Card
- */
->>>>>>> eebd452 (Added Custom Modules and THemes)
 .card.hero-card {
   width: 100%;
   height: 400px;
@@ -14393,7 +14338,6 @@ select {
   min-height: auto;
   background-position: center top;
   background-size: cover;
-<<<<<<< HEAD
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -14405,8 +14349,6 @@ select {
 
 .card.hero-card .hero:hover a {
   text-decoration: none;
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
 }
 
 .card.hero-card .hero .hero-full-width__content {
@@ -14612,7 +14554,6 @@ select {
           justify-content: flex-end;
 }
 
-<<<<<<< HEAD
 @media (min-width: 640px) {
   .background--center-top {
     background-position: center top;
@@ -14625,8 +14566,6 @@ select {
   }
 }
 
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
 .featured-initiative-card__wrap {
   height: 100%;
 }
@@ -14772,7 +14711,6 @@ select {
   background-position: center top;
 }
 
-<<<<<<< HEAD
 @media (min-width: 640px) {
   .hero-full-width.background--center-top {
     background-position: center top;
@@ -14785,8 +14723,6 @@ select {
   }
 }
 
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
 .hero-full-width.cke_editable.wysiwyg {
   background-color: #333;
   height: auto;
@@ -14938,7 +14874,6 @@ select {
   border: 1px solid rgba(255, 255, 255, 0.75);
 }
 
-<<<<<<< HEAD
 .hero-full-width__content.justify--flex-start {
   padding-top: 90px;
 }
@@ -14947,8 +14882,6 @@ select {
   padding-bottom: 90px;
 }
 
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
 .hero-full-width .hero__title {
   text-align: center;
 }
@@ -15329,7 +15262,6 @@ select {
     width: auto;
   }
 }
-<<<<<<< HEAD
 
 .wysiwyg.bg-color--blue a:not(.btn), .wysiwyg.bg-color--blue p, .wysiwyg.bg-color--blue li, .wysiwyg.bg-color--blue h1, .wysiwyg.bg-color--blue h2, .wysiwyg.bg-color--blue h3, .wysiwyg.bg-color--blue h4, .wysiwyg.bg-color--blue h5, .wysiwyg.bg-color--blue h6, .wysiwyg.bg-color--red a:not(.btn), .wysiwyg.bg-color--red p, .wysiwyg.bg-color--red li, .wysiwyg.bg-color--red h1, .wysiwyg.bg-color--red h2, .wysiwyg.bg-color--red h3, .wysiwyg.bg-color--red h4, .wysiwyg.bg-color--red h5, .wysiwyg.bg-color--red h6 {
   color: #FFF;
@@ -15394,5 +15326,3 @@ select {
 .bg-color--black a:not(.btn), .bg-color--black p, .bg-color--black ul, .bg-color--black li, .bg-color--black h1, .bg-color--black h2, .bg-color--black h3, .bg-color--black h4, .bg-color--black h5, .bg-color--black h6 {
   color: #FFF;
 }
-=======
->>>>>>> eebd452 (Added Custom Modules and THemes)
